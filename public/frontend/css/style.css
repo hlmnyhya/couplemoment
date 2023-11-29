@@ -1552,8 +1552,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   .hero-slant .slant {
     position: relative;
     width: calc(100% + 1px);
-    height: 180px;
-    top: -8px;
+    height: 240px;
+    top: -12px;
     right: -2px;
     z-index: 1;
     background-size: cover;

@@ -62,19 +62,15 @@
     </div>
     
     <div class="container">
-
-
       <nav class="site-nav">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
-  <path d="M21.3065 9.29158C16.7288 5.20697 11.3277 3.71506 7.39792 5.98388C1.82781 9.19976 1.32312 18.7536 6.27067 27.3231C9.52348 32.9571 14.3231 36.7628 18.8126 37.7952" stroke="#FCFCFC" stroke-width="4.07759" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M16.3561 15.6773C11.4086 24.2466 11.9132 33.8005 17.4833 37.0165C23.0535 40.2323 31.5797 35.8925 36.5273 27.3231C41.4748 18.7536 40.9701 9.19976 35.4 5.98388C29.8299 2.76797 21.3036 7.10785 16.3561 15.6773Z" stroke="#FCFCFC" stroke-width="4.07759" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+              <path d="M21.3065 9.29158C16.7288 5.20697 11.3277 3.71506 7.39792 5.98388C1.82781 9.19976 1.32312 18.7536 6.27067 27.3231C9.52348 32.9571 14.3231 36.7628 18.8126 37.7952" stroke="#FCFCFC" stroke-width="4.07759" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.3561 15.6773C11.4086 24.2466 11.9132 33.8005 17.4833 37.0165C23.0535 40.2323 31.5797 35.8925 36.5273 27.3231C41.4748 18.7536 40.9701 9.19976 35.4 5.98388C29.8299 2.76797 21.3036 7.10785 16.3561 15.6773Z" stroke="#FCFCFC" stroke-width="4.07759" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           <a href="index.html" class="text-white">Couple Moment.</a>
         </div>
         <div class="row align-items-center">
-          
-          
           <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
               <li class="active"><a href="#home">Home</a></li>
@@ -206,13 +202,20 @@
                 <p>Undangan yang telah dibuat <p>
               </div>
             </div>
-              <div class="unit-4 d-flex pl-lg-5 ml-lg-5">
+            <div class="unit-4 d-flex mb-4">
               <div class="unit-4-icon mr-4">
                   <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
               </div>
               <div>
                 <h3 class=" text-danger">999.999</h3>
-                <p>Total template <p>
+                <p>Undangan yang sedang berjalan <p>
+              </div>
+              <div class="unit-4-icon mr-4">
+                  <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+              </div>
+              <div>
+                <h3 class=" text-danger">999.999</h3>
+                <p>Undangan yang telah dibuat <p>
               </div>
             </div>
           </div>
@@ -222,7 +225,7 @@
     
     <div class="site-section" id="desain">
       <div class="hero-slant overlay" data-stellar-background-ratio="1" style="background-image: url('frontend/images/mesh-gradient3.png')">
-        <div class="slant" style="background-image: url('frontend/images/vector2.svg');" width="100%"></div>
+        <div class="slant" style="background-image: url('frontend/images/vector2.svg');"></div>
         <div class="container">
           <div class="card mt-5 p-5">
         {{-- <div class="row"> --}}
