@@ -1502,9 +1502,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .hero-slant {
   background-color: #ccc;
   position: relative;
+  /* overflow: hidden;
+  z-index: 1; */
   background-size: cover; }
   .hero-slant.overlay {
     position: relative;
+    height: auto;
+
+    
    }
     .hero-slant.overlay:before {
       position: relative;
@@ -1553,8 +1558,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     position: relative;
     width: calc(100% + 1px);
     height: 180px;
-    top: -8px;
-    right: -2px;
+    top: -9px;
+    right: 1px;
     z-index: 1;
     background-size: cover;
     background-position: left top;
