@@ -223,67 +223,133 @@
       </div>
     </div>
     
-    <div class="site-section" id="desain">
-      <div class="hero-slant overlay" data-stellar-background-ratio="1" style="background-image: url('frontend/images/mesh-gradient3.png')">
-        <div class="slant" style="background-image: url('frontend/images/vector2.svg');"></div>
+    {{-- <div class="site-section" id="desain">
+      <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="height: 100%; background-image: url('frontend/images/mesh-gradient3.png')">
+        <div class="slant" style="background-image: url('frontend/images/vector2.svg'); " width="100%"></div>
         <div class="container">
           <div class="card mt-5 p-5">
-        {{-- <div class="row"> --}}
-          {{-- <div class="col-7 mb-4 position-relative text-center mx-auto"> --}}
             <h2 class="font-weight-bold text-danger">Galeri Undangan</h2>
             <h4><strong> Undangan Digital yang Berkesan</strong></h4>
             <p>Buat undangan pernikahan secara digital dengan mudah. Pilih template, lalu sesuaikan dengan gaya desainmu sendiri. Setelah selesai, kamu dapat langsung membagikannya kepada orang-orang terdekatmu. </p>
-            {{-- </div> --}}
-        {{-- </div> --}}
-        {{-- <div class="row">
-          
-          
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+        <div class="row">          
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
                 <h3><a href="#">Far far away, behind the word mountains</a></h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="#">Continue reading...</a></p>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <div class="blog_entry">
+              <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+              <div class="p-4 bg-white">
+                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_5-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
                 <h3><a href="#">Far far away, behind the word mountains</a></h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="#">Continue reading...</a></p>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_7-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
                 <h3><a href="#">Far far away, behind the word mountains</a></h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="#">Continue reading...</a></p>
               </div>
             </div>
           </div>
-        </div> --}}
-        {{-- <div class="row mt-5">
+        </div>
+        <div class="row mt-2">
           <div class="col-lg-4 mx-auto">
             <a href="#" class="btn btn-primary btn-block">See All Posts</a>
           </div>
-        </div> --}}
+        </div>
           </div>
       </div>
     </div>
-    
+    </div> --}}
+
+<div class="site-section" id="desain">
+  <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="min-height: 100vh; background-image: url('frontend/images/mesh-gradient3.png')">
+    <div class="slant" style="background-image: url('frontend/images/vector2.svg'); " width="100%"></div>
+    <div class="container">
+      <div class="card mt-5 p-5">
+        <h2 class="font-weight-bold text-danger">Galeri Undangan</h2>
+        <h4><strong>Undangan Digital yang Berkesan</strong></h4>
+        <p>Buat undangan pernikahan secara digital dengan mudah. Pilih template, lalu sesuaikan dengan gaya desainmu sendiri. Setelah selesai, kamu dapat langsung membagikannya kepada orang-orang terdekatmu.</p>
+        <div class="row">
+           <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <div class="blog_entry">
+              <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+              <div class="p-4 bg-white">
+                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <div class="blog_entry">
+              <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+              <div class="p-4 bg-white">
+                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <div class="blog_entry">
+              <a href="#"><img src="{{ asset('frontend/images/img_h_5-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+              <div class="p-4 bg-white">
+                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <div class="blog_entry">
+              <a href="#"><img src="{{ asset('frontend/images/img_h_7-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+              <div class="p-4 bg-white">
+                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-4 mx-auto">
+            <a href="#" class="btn btn-primary btn-block">See All Posts</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="142" height="146" viewBox="0 0 142 146" fill="none" class=" mt-4">
+  <ellipse cx="10.5291" cy="11.2778" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="10.5291" cy="42.3134" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="38.6065" cy="42.3134" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 142 124.587)" fill="white"/>
+  <ellipse cx="10.5291" cy="73.3488" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="38.6065" cy="73.3488" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="69.492" cy="74.7597" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 111.116 124.273)" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 111.119 94.0186)" fill="white"/>
+  <ellipse cx="10.5291" cy="104.384" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 80.2324 123.958)" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 80.2339 94.0186)" fill="white"/>
+  <ellipse cx="10.5291" cy="135.42" rx="10.5291" ry="10.5803" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 49.3481 123.643)" fill="white"/>
+  <ellipse cx="10.5803" cy="10.5291" rx="10.5803" ry="10.5291" transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 49.3481 94.0186)" fill="white"/>
+  </svg>
+  </div>
+</div>
+
 
      <div class="site-section">
       <div class="container">
