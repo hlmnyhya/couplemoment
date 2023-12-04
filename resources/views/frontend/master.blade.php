@@ -30,7 +30,7 @@
 
   <title>Couple Moment</title>
 
-  <style>
+  {{-- <style>
     /* Tambahkan CSS berikut pada bagian stylesheet Anda */
 .svg-container {
   width: 100%;
@@ -47,7 +47,7 @@
   z-index: 1;
 }
 
-  </style>
+  </style> --}}
 </head>
 <body>
 
@@ -123,14 +123,14 @@
 
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1">
             <h3 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="0">When your -</h3>
             <h2 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="0">Dream Wedding Come True💕</h2>
             <p class="text-white mb-3" data-aos="fade-up" data-aos-delay="100">Buat undangan digitalmu sendiri dan jadikan pernikahan impianmu menjadi nyata !</p>
             <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="200">
-              <input type="text" class="form-control " disabled placeholder="Buruan Daftar, Temukan Keajaiban di Setiap Pendaftaranmu !!">
+              {{-- <input type="text" class="form-control " disabled placeholder="Buruan Daftar, Temukan Keajaiban di Setiap Pendaftaranmu !!"> --}}
               <input type="submit" class="btn btn-danger" value="Daftar Sekarang">
-            </form>    
+            </form>
           </div>
           <div class="col-lg-5 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="{{ asset('frontend/images/pic-1.png') }}" alt=" images" class="img-fluid animated" alt="">
@@ -144,7 +144,7 @@
       </div>
       <div class="slant-overlay" style="background-image: url('frontend/images/Vector.svg');"></div>
       {{-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L26.7,202.7C53.3,213,107,235,160,245.3C213.3,256,267,256,320,245.3C373.3,235,427,213,480,192C533.3,171,587,149,640,144C693.3,139,747,149,800,138.7C853.3,128,907,96,960,112C1013.3,128,1067,192,1120,213.3C1173.3,235,1227,213,1280,186.7C1333.3,160,1387,128,1413,112L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg> --}}
-    </div>
+      </div>
 
     {{-- <div class="py-3">
       <div class="container">
@@ -184,28 +184,48 @@
           <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
             <h2 class="font-weight-bold mb-2 heading text-danger">No. 1 Platform</h2>
             <h4 class="mb-2"><strong> Undangan Pernikanan</strong></h4>
-            <p class="mb-2">Buat website undangan pernikahanmu secara ekslusif dengan mudah, murah dan cepat. 
+            <p class="mb-2" style="text-align: justify">Buat website undangan pernikahanmu secara ekslusif dengan mudah, murah dan cepat. 
               Solusi website undangan pernikahan kamu jadi lebih berkesan!</p>
             {{-- <p><a href="#" class="btn btn-primary">Get Started</a></p> --}}
             </div>
         
-          <div class="col-lg-7 section-title" data-aos="fade-up" data-aos-delay="500">
-            <div class="unit-4 d-flex mb-4">
-              <div class="unit-4-icon mr-4">
-                  <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+          <div class="col-lg-7 section-title items-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="row col-12">
+              <div class="unit-4 d-flex mb-4 col-md-6">
+                <div class="unit-4-icon mr-4">
+                    <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+                  <h3 class="text-danger mt-2">999.999</h3>
+                        <p>Undangan yang sedang berjalan <p>
+                </div>
               </div>
-              <div>
-                <h3 class=" text-danger">999.999</h3>
-                <p>Undangan yang sedang berjalan <p>
+              <div class="unit-4 d-flex mb-4 col-md-6">
+                <div class="unit-4-icon mr-4">
+                    <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+                  <h3 class="text-danger mt-2">999.999</h3>
+                        <p>Undangan yang telah dibuat <p>
+                </div>
               </div>
-              <div class="unit-4-icon mr-4">
+            </div>
+            <div class="row col-12">
+              <div class="unit-4 d-flex mb-4 align-content-center col-md-12">
+                <div class="unit-4-icon mr-4">
+                    <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+                  <h3 class="text-danger mt-2">999.999</h3>
+                        <p>Total Tamplate <p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              {{-- <div class="unit-4-icon mr-4">
                   <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
               </div>
               <div>
                 <h3 class=" text-danger">999.999</h3>
                 <p>Undangan yang telah dibuat <p>
               </div>
-            </div>
+            
+
               <div class="unit-4 d-flex pl-lg-5 ml-lg-5">
               <div class="unit-4-icon mr-4">
                   <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
@@ -214,11 +234,10 @@
                 <h3 class=" text-danger">999.999</h3>
                 <p>Total template <p>
               </div>
-            </div>
-          </div>
+            </div> --}}
+      </div>
         </div>
       </div>
-    </div>
     
     {{-- <div class="site-section" id="desain">
       <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="height: 100%; background-image: url('frontend/images/mesh-gradient3.png')">
@@ -288,7 +307,7 @@
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+                <h3><a href="#">Tema 01</a></h3>
               </div>
             </div>
           </div>
@@ -297,7 +316,7 @@
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+                <h3><a href="#">Tema 02</a></h3>
               </div>
             </div>
           </div>
@@ -306,7 +325,7 @@
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_5-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+                <h3><a href="#">Tema 03</a></h3>
               </div>
             </div>
           </div>
@@ -315,7 +334,7 @@
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_7-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="#">Far far away, behind the word mountains</a></h3>
+                <h3><a href="#">Tema 04</a></h3>
               </div>
             </div>
           </div>
@@ -363,8 +382,8 @@
               </div>
               <div>
                 <h3>Costum Nama Tamu Sepuasnya</h3>
-                <p>Undang sebanyak mungkin tamu yang kamu inginkan tanpa batasan. Buat secara personal, untuk mengundang tamu yang lebih sopan.</p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Undang sebanyak mungkin tamu yang kamu inginkan tanpa batasan. Buat secara personal, untuk mengundang tamu yang lebih sopan.</p>
+                {{-- <p style="text-align:justify;"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
@@ -375,8 +394,7 @@
               </div>
               <div>
                 <h3>Detail Mempelai</h3>
-                <p>Lihat informasi lengkap kedua mempelai, seperti nama mempelai, nama orang tua, dan tautan akun instagram mempelai.</p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Lihat informasi lengkap kedua mempelai, seperti nama mempelai, nama orang tua, dan tautan akun instagram mempelai.</p>
               </div>
             </div>
           </div>
@@ -387,12 +405,22 @@
               </div>
               <div>
                 <h3>Detail Acara</h3>
-                <p>Menampilkan tanggal, waktu, dan lokasi untuk akad & resepsi pernikahanmu.</p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Menampilkan tanggal, waktu, dan lokasi untuk akad & resepsi pernikahanmu.</p>
               </div>
             </div>
           </div>
 
+                    <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4">
+                  <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+              </div>
+              <div>
+                <h3>Galeri Foto & Video</h3>
+                <p class=" mr-4" style="text-align:justify;">Unggah foto & video spesial atau momen prewedding di dalam undangan digitalmu. <p>
+              </div>
+            </div>
+          </div>
 
           <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="unit-4 d-flex">
@@ -401,8 +429,7 @@
               </div>
               <div>
                 <h3>Hitung Mundur</h3>
-                <p>Menampilkan waktu hitung mundur mulai dari saat pembuatan undangan hingga hari H resepsi. Jangan biarkan tamu kamu kehilangan momen spesialmu. </p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Menampilkan waktu hitung mundur mulai dari saat pembuatan undangan hingga hari H resepsi. Jangan biarkan tamu kamu kehilangan momen spesialmu. </p>
               </div>
             </div>
           </div>
@@ -413,23 +440,11 @@
               </div>
               <div>
                 <h3>Navigasi Lokal</h3>
-                <p>Jangan khawatir tamu undangan akan susah mencari tempat resepsimu. Couple Moment menyediakan petunjuk lokasi dengan integrasi dengan Google Maps. </p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Jangan khawatir tamu undangan akan susah mencari tempat resepsimu. Couple Moment menyediakan petunjuk lokasi dengan integrasi dengan Google Maps. </p>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4">
-                  <img src="{{ asset('frontend/images/frame-49.svg') }}" alt=" images" alt="">
-              </div>
-              <div>
-                <h3>Kirimkan Ucapan & Konfirmasi Kehadiran</h3>
-                <p>Mau mengetahui siapa saja yang hadir dan mengirimkan ucapan manis untuk pernikahanmu? Couple Moment menyediakan fitur kepada tamu undangan untuk dapat memberikan ucapan dan konfirmasi kehadiran langsung dalam undangan digitalmu. </p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
+ 
           <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4">
@@ -437,20 +452,19 @@
               </div>
               <div>
                 <h3>Kisah Cintamu</h3>
-                <p>Beritahu tamu undangan kisah cintamu, contohnya kapan kalian bertemu, kapan kalian menyatakan cinta, dan kapan akhirnya lamaran itu tiba. Kisah cintamu akan terpajang rapi di undangan digitalmu. </p>
-                <p><a href="#">Learn More</a></p>
+                <p class=" mr-4" style="text-align:justify;">Beritahu tamu undangan kisah cintamu, contohnya kapan kalian bertemu, kapan kalian menyatakan cinta, dan kapan akhirnya lamaran itu tiba. Kisah cintamu akan terpajang rapi di undangan digitalmu. </p>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+
+                   <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4">
-                  <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images" alt="">
+                  <img src="{{ asset('frontend/images/frame-49.svg') }}" alt=" images" alt="">
               </div>
               <div>
-                <h3>Galeri Foto & Video</h3>
-                <p>Unggah foto & video spesial atau momen prewedding di dalam undangan digitalmu. <p>
-                <p><a href="#">Learn More</a></p>
+                <h3>Kirimkan Ucapan & Konfirmasi Kehadiran</h3>
+                <p class=" mr-4" style="text-align:justify;">Mau mengetahui siapa saja yang hadir dan mengirimkan ucapan manis untuk pernikahanmu? Couple Moment menyediakan fitur kepada tamu undangan untuk dapat memberikan ucapan dan konfirmasi kehadiran langsung dalam undangan digitalmu. </p>
               </div>
             </div>
           </div>
@@ -465,34 +479,32 @@
           <h2 class="heading font-weight-bold mb-5">Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
 
           <div class="switch-plan">
-            
             <div class="d-inline-flex align-items-center">
               <div class="period">Monthly</div>
               <a href="#" class="period-toggle js-period-toggle"></a>
               <div class="period"><span class="mr-2">Yearly</span><span class="save-percent">Save 25%</span></div>
             </div>
-
           </div>
         </div>
         
 
         <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="0">
             <div class="pricing-item active">
-              <h3 class=" fa-border-all">Paket Kontol</h3>
+              <h3 class=" fa-border-all">Paket Free</h3>
               <div class="description">
-                <p>Far far away, behind the word mountains</p>
+                <p>12 Jam</p>
               </div>
               <div class="period-change mb-4 d-block">
                 <div class="price-wrap">
                   <div class="price">
                     <div>
-                      <div>$29</div>
-                      <div>$299</div>
+                      <div>Free</div>
+                      <div>Free</div>
                     </div>
                   </div>
                 </div>
-                <div class="d-inline-flex align-items-center text-center period-wrap">
+                {{-- <div class="d-inline-flex align-items-center text-center period-wrap">
                   <div class="d-inline-block mr-1">Per</div>
                   <div class="d-block text-left period">
                     <div>
@@ -500,7 +512,7 @@
                       <div>Year</div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
               </div>
               <ul class="list-unstyled mb-4">
                 <li class="d-flex"><span class="feather-check-square mr-2 mt-1"></span><span>Far far away, behind the word mountains</span></li>
@@ -512,11 +524,11 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="100">
             <div class="pricing-item active">
-              <h3>Paket Kalantit</h3>
+              <h3>Paket Basic</h3>
               <div class="description">
-                <p>Far far away, behind the word mountains</p>
+                <p>1 Minggu</p>
               </div>
               <div class="period-change mb-4 d-block">
                 <div class="price-wrap">
@@ -547,11 +559,11 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item active">
-              <h3>Paket Lengkap</h3>
+              <h3>Paket Premium</h3>
               <div class="description">
-                <p>Far far away, behind the word mountains</p>
+                <p>1 Bulan</p>
               </div>
               <div class="period-change mb-4 d-block">
                 <div class="price-wrap">
@@ -801,24 +813,22 @@
           <div class="col-lg-3">
             <div class="widget">
               <h3>Connect with us</h3>
-            <div class="info">
               <div class="address">
-                <h6><a href="https://www.instagram.com/couplemoment.id/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><span class="icon-instagram"><strong> Instagram</strong></span></a></h6>
+                <h6><span class="icon-instagram"></span><a href="https://www.instagram.com/couplemoment.id/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><strong> Instagram</strong></a></h6>
                 <p>couplemoment.id</p>
               </div>
 
               <div class="email">
-                <h6><a href="mailto:cs@couplemoment.com" target="_blank"><span class="icon-envelope"><strong> Email</strong></span></a></h6>
+                <h6><span class="icon-envelope"></span><a href="mailto:cs@couplemoment.com" target="_blank"><strong> Email</strong></a></h6>
                 <p>cs@couplemoment.com</p>
               </div>
 
               <div class="phone">
-                <h6><a href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20bagaimana%20cara%20memesan%20undangan%20online%20?" target="_blank"><span class="icon-whatsapp"><strong> Whatsapp</strong></span></a></h6>
+                <h6><span class="icon-whatsapp"></span><a href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20bagaimana%20cara%20memesan%20undangan%20online%20?" target="_blank"><strong> Whatsapp</strong></a></h6>
                 <p>+62 815-2846-4820</p>
               </div>
 
               {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> --}}
-            </div>
           </div>
         </div>
 
