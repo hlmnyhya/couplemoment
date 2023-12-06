@@ -152,6 +152,20 @@
                     </div>
                 </div>
             </div>
+            {{-- <svg xmlns="http://www.w3.org/2000/svg" width="132" height="272" viewBox="0 0 132 272"
+                fill="none" class="svg-shape">
+                <path
+                    d="M278.731 136.13C278.731 211.169 216.453 272 139.628 272C62.8039 272 0.525391 211.169 0.525391 136.13C0.525391 61.0913 62.8039 0.260254 139.628 0.260254C216.453 0.260254 278.731 61.0913 278.731 136.13Z"
+                    fill="url(#paint0_radial_7_445)" />
+                <defs>
+                    <radialGradient id="paint0_radial_7_445" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(139.628 136.13) rotate(90) scale(135.87 139.103)">
+                        <stop stop-color="#CCB8FF" />
+                        <stop offset="1" stop-color="#CCB8FF" stop-opacity="0" />
+                    </radialGradient>
+                </defs>
+            </svg> --}}
         </div>
     </div>
 
