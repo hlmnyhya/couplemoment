@@ -1581,6 +1581,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   @media (max-width: 991.98px) {
     .pricing-section {
       padding: 30px 0; } }
+      
+  .pricing-section .card-header{
+		border-radius: 12.83px;
+		background: #CCB8FF;
+	}
   .pricing-section .save-percent {
     font-size: 10px;
     background: #e84545;
@@ -1633,7 +1638,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       background: #ffffff;
       -webkit-box-shadow: 0 10px 30px -7px rgba(0, 0, 0, 0.1);
       box-shadow: 0 10px 30px -7px rgba(0, 0, 0, 0.1);
-      border-radius: 7px; }
+      ;border-radius: 12.83px; }
       .pricing-section .pricing-item.active h3 {
         color: #CCB8FF; }
     .pricing-section .pricing-item ul {
