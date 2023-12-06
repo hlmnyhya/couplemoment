@@ -10,14 +10,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> 
+  <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.default.min.css') }}">
@@ -60,7 +60,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
+
     <div class="container">
       <nav class="site-nav">
         <div class="logo">
@@ -100,7 +100,7 @@
             </ul>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right menu-absolute">
-              <li class="cta-button"><a href="https://untree.co/" target="_blank"><strong>Daftar / Masuk</strong></a></li>
+              <li class="cta-button"><a href="{{ route('login-page') }}" target="_blank"><strong>Daftar / Masuk</strong></a></li>
             </ul>
 
             <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -109,7 +109,7 @@
 
           </div>
 
-        </div>  
+        </div>
       </nav> <!-- END nav -->
 
     </div> <!-- END container -->
@@ -126,17 +126,17 @@
             <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="200">
               <input type="text" class="form-control " disabled placeholder="Buruan Daftar, Temukan Keajaiban di Setiap Pendaftaranmu !!">
               <input type="submit" class="btn btn-danger" value="Daftar Sekarang">
-            </form>    
+            </form>
           </div>
           <div class="col-lg-5 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="{{ asset('frontend/images/pic-1.png') }}" alt=" images" class="img-fluid animated" alt="">
         </div>
         </div>
-        
+
         {{-- <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="167" viewBox="0 0 1440 167" fill="none">
           <path d="M0 0.599976L60 14.445C120 28.55 240 55.85 360 69.955C480 83.8 600 83.8 720 66.445C840 49.35 960 14.25 1080 11C1200 7.74998 1320 35.05 1380 49.155L1440 63V167H1380C1320 167 1200 167 1080 167C960 167 840 167 720 167C600 167 480 167 360 167C240 167 120 167 60 167H0V0.599976Z" fill="#FCFCFC"/>
         </svg> --}}
-        
+
       </div>
       <div class="slant-overlay" style="background-image: url('frontend/images/Vector.svg');"></div>
       {{-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L26.7,202.7C53.3,213,107,235,160,245.3C213.3,256,267,256,320,245.3C373.3,235,427,213,480,192C533.3,171,587,149,640,144C693.3,139,747,149,800,138.7C853.3,128,907,96,960,112C1013.3,128,1067,192,1120,213.3C1173.3,235,1227,213,1280,186.7C1333.3,160,1387,128,1413,112L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg> --}}
@@ -164,13 +164,13 @@
           <div class="item">
             <img src="{{ asset('frontend/images/logo-google.p')}}ng" alt="Image" class="img-fluid">
           </div>
-          
+
 
         </div>
-        
-            
+
+
       </div>
-      
+
     </div> --}}
 
       <div class="features-lg ">
@@ -180,11 +180,11 @@
           <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
             <h2 class="font-weight-bold mb-2 heading text-danger">No. 1 Platform</h2>
             <h4 class="mb-2"><strong> Undangan Pernikanan</strong></h4>
-            <p class="mb-2">Buat website undangan pernikahanmu secara ekslusif dengan mudah, murah dan cepat. 
+            <p class="mb-2">Buat website undangan pernikahanmu secara ekslusif dengan mudah, murah dan cepat.
               Solusi website undangan pernikahan kamu jadi lebih berkesan!</p>
             {{-- <p><a href="#" class="btn btn-primary">Get Started</a></p> --}}
             </div>
-        
+
           <div class="col-lg-7 section-title" data-aos="fade-up" data-aos-delay="500">
             <div class="unit-4 d-flex mb-4">
               <div class="unit-4-icon mr-4">
@@ -222,7 +222,7 @@
         </div>
       </div>
     </div>
-    
+
     {{-- <div class="site-section" id="desain">
       <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="height: 100%; background-image: url('frontend/images/mesh-gradient3.png')">
         <div class="slant" style="background-image: url('frontend/images/vector2.svg'); " width="100%"></div>
@@ -231,7 +231,7 @@
             <h2 class="font-weight-bold text-danger">Galeri Undangan</h2>
             <h4><strong> Undangan Digital yang Berkesan</strong></h4>
             <p>Buat undangan pernikahan secara digital dengan mudah. Pilih template, lalu sesuaikan dengan gaya desainmu sendiri. Setelah selesai, kamu dapat langsung membagikannya kepada orang-orang terdekatmu. </p>
-        <div class="row">          
+        <div class="row">
           <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
             <div class="blog_entry">
               <a href="#"><img src="{{ asset('frontend/images/img_h_3-min.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
@@ -468,7 +468,7 @@
           <h2 class="heading font-weight-bold mb-5">Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
 
           <div class="switch-plan">
-            
+
             <div class="d-inline-flex align-items-center">
               <div class="period">Monthly</div>
               <a href="#" class="period-toggle js-period-toggle"></a>
@@ -477,7 +477,7 @@
 
           </div>
         </div>
-        
+
 
         <div class="row">
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
@@ -587,27 +587,27 @@
         </div>
       </div>
     </div>
-    
+
     {{-- <div class="features-lg">
       <div class="container">
-        
+
         <div class="row feature align-items-center justify-content-between">
           <div class="col-lg-7 mb-4 mb-lg-0 section-stack" data-aos="fade-up" data-aos-delay="0">
             <img src="{{ asset('frontend/images/img_h_5-min.jpg')}}" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
-            
+
             <h2 class="font-weight-bold mb-4">Far far away, behind the word mountains</h2>
-            <p class="mb-4">Aku Suka banget warnanya pink pink kaya memek aku.</p>
+            <p class="mb-4">Aku Suka banget warnanya pink pink kaya ***** aku.</p>
             <p><a href="#" class="btn btn-primary">Get Started</a></p>
 
           </div>
-          
+
         </div>
 
       </div>
     </div> --}}
-    
+
 
     <div class="testimonial-section" id="portofolio">
       <div class="container">
@@ -660,9 +660,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
 
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
@@ -675,9 +675,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
 
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
@@ -690,9 +690,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
               </div>
               <div class="owl-single owl-carousel no-dots no-nav">
                 <div class="testimonial-item">
@@ -706,9 +706,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
 
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
@@ -721,9 +721,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
 
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
@@ -736,9 +736,9 @@
                     </div>
                   </div>
                   <blockquote>
-                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya memek aku.&rdquo;</p>
+                    <p>&ldquo;Aku Suka banget warnanya pink pink kaya ***** aku.&rdquo;</p>
                   </blockquote>
-                </div>  
+                </div>
               </div>
               <div class="custom-nav-wrap">
                 <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
@@ -828,13 +828,13 @@
         {{-- <div class="row justify-content-center text-center copyright">
           <div class="col-md-8">
             <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
-            </p> </br> 
+            </p> </br>
             <p> Dsitributed by <a href="https://themewagon.com">themewagon</a> </p>
           </div>
         </div> --}}
       </div>
     </div>
-    
+
 
     {{-- <div id="overlayer"></div>
     <div class="loader">
@@ -857,6 +857,6 @@
     <script src="{{ asset('frontend/js/jquery.fancybox.min.js') }}"></script>
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
 
-    
+
   </body>
   </html>
