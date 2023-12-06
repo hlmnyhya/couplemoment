@@ -108,7 +108,7 @@
 
                 <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="font-weight-bold mb-2 heading text-danger">No. 1 Platform</h2>
-                    <h4 class="mb-2"><strong> Undangan Pernikanan</strong></h4>
+                    <h4 class="mb-2"><strong> Undangan Pernikahan</strong></h4>
                     <p class="mb-2" style="text-align: justify">Buat website undangan pernikahanmu secara ekslusif
                         dengan mudah, murah dan cepat.
                         Solusi website undangan pernikahan kamu jadi lebih berkesan!</p>
@@ -119,22 +119,22 @@
                     <div class="row col-12">
                         <div class="unit-4 d-flex mb-4 col-6" style="justify-content: center">
                             <div class="unit-4-icon mr-4">
-                                <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images"
+                                <img src="{{ asset('frontend/images/frame-53.svg') }}" alt=" images"
                                     alt="">
                                 <h3 class="text-danger mt-2">999.999</h3>
-                                <p>Undangan yang sedang berjalan
-                                <p>
                             </div>
+                            <p style="font-weight: bold;color: black;align-self: center;">Undangan yang sedang berjalan
+                            <p>
                         </div>
 
                         <div class="unit-4 d-flex mb-4 col-6" style="justify-content: center">
                             <div class="unit-4-icon mr-4">
-                                <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images"
+                                <img src="{{ asset('frontend/images/frame-52.svg') }}" alt=" images"
                                     alt="">
                                 <h3 class="text-danger mt-2">999.999</h3>
-                                <p>Undangan yang telah dibuat
-                                <p>
                             </div>
+                            <p style="font-weight: bold;color: black;align-self: center;">Undangan yang telah dibuat
+                            <p>
                         </div>
                     </div>
 
@@ -142,12 +142,12 @@
                         <div class="unit-4 d-flex mb-4 align-content-center col-md-12"
                             style="justify-content: center">
                             <div class="unit-4-icon mr-4">
-                                <img src="{{ asset('frontend/images/frame-51.svg') }}" alt=" images"
+                                <img src="{{ asset('frontend/images/frame-54.svg') }}" alt=" images"
                                     alt="">
                                 <h3 class="text-danger mt-2">999.999</h3>
-                                <p>Total Template
-                                <p>
                             </div>
+                            <p style="font-weight: bold;color: black;align-self: center;">Total template undangan
+                            <p>
                         </div>
                     </div>
                 </div>
@@ -373,7 +373,7 @@
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up" data-aos-delay="0">
                 <h2 class="heading font-weight-bold mb-2">Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
-                <h4 class="heading font-weight-lighter mb-5">"Segera Manfaatkan Promo 50% - Penawaran Terbatas!"</h4>
+                <h4 class="heading font-weight-lighter mb-5">"Segera Manfaatkan Promo 50% - Penawaran Terbatas !"</h4>
             </div>
 
             <div class="row">
@@ -385,15 +385,15 @@
                                 <div class="price-wrap">
                                     <div class="price">
                                         <div>
-                                            <div>Free</div>
+                                            <div>Gratis</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-inline-flex align-items-center text-center period-wrap">
-                                    <div class="d-inline-block mr-1">Per</div>
+                                    <div class="d-inline-block mr-1"></div>
                                     <div class="d-block text-left period">
                                         <div>
-                                            <div>Bulan</div>
+                                            {{-- <div>Bulan</div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -422,7 +422,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn btn-primary">Get Started</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -473,7 +473,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn btn-primary">Get Started</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -524,7 +524,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn btn-primary">Get Started</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
                             </div>
                         </div>
                     </div>
