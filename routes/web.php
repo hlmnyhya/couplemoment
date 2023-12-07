@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
-
+// Dashboard admin
 Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
 
