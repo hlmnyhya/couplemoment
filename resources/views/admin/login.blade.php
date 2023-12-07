@@ -523,7 +523,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-12 d-grid mt-2">
-                                    <a href="{{ route('admin.dashboard') }}" class="btn btn-lg btn-primary">Sign In</a>
+                                    <a href="{{ route('admin-dashboard') }}" class="btn btn-lg btn-primary">Sign In</a>
                                 </div>
                             </div>
                             <div class="text-center">
