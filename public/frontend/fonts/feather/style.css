@@ -33,6 +33,7 @@
 }
 .feather-alert-circle:before {
   content: "\e902";
+  color: red;
 }
 .feather-alert-octagon:before {
   content: "\e903";
@@ -159,6 +160,7 @@
 }
 .feather-check-circle:before {
   content: "\e92c";
+  color: greenyellow;
 }
 .feather-check-square:before {
   content: "\e92d";
