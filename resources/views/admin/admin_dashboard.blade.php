@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Sash – Bootstrap 5  Admin &amp; Dashboard Template </title>
+    <title> Couple Moment </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Spruko Technologies Private Limited">
 	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
@@ -58,6 +58,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
 
+    <!-- Sweetalerts CSS -->
+    <link rel="stylesheet" href="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
 
 <body>
@@ -1087,6 +1090,9 @@
     <!-- Internal Datatables JS -->
     <script src="{{asset('backend')}}/dist/assets/js/datatables.js"></script>
 
+    <!-- Sweetalerts JS -->
+    <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
 </body>
 
 </html>

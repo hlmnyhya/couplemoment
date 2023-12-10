@@ -40,10 +40,12 @@ Route::get('/admin-dashboard', [AdminController::class, 'AdminDashboard'])->name
 // My undangan
 Route::get('/my-undangan', [UndanganController::class, 'index'])->name('my-undangan');
 // Invoice
-Route::get('invoice', [InvoiceController::class, 'index'])->name('invoice');
+Route::get('/invoice', [InvoiceController::class, 'index'])->name('invoice');
 // Affiliate
 Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate');
 // History bonus
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
+
+// CMS Route
 
 require __DIR__.'/auth.php';
