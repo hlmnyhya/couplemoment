@@ -71,7 +71,10 @@
                         <li class="cta-button"><a href="https://untree.co/" target="_blank">
                                 <strong>Daftar / Masuk</strong></a></li>
                     </ul>
-
+                    <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none"
+                        data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
                 </div>
             </div>
         </nav> <!-- END nav -->
@@ -109,15 +112,26 @@
                 <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="font-weight-bold mb-2 heading text-danger">No. 1 Platform</h2>
                     <h4 class="mb-2"><strong> Undangan Pernikahan</strong></h4>
-                    <p class="mb-2" style="text-align: justify">Buat website undangan pernikahanmu secara ekslusif
-                        dengan mudah, murah dan cepat.
-                        Solusi website undangan pernikahan kamu jadi lebih berkesan!</p>
+                    <p class="mb-2" style="text-align: justify">Dapatkan Pernikahan Impianmu! Kreasikan Website
+                        Undangan Pernikahan dengan Mudah, Hemat, dan Cepat. Solusi Terbaik untuk Membuat Pernikahanmu
+                        Jadi Lebih Berkesan dan Tak Terlupakan! 💑✨</p>
                 </div>
 
                 <div class="col-lg-7 section-title items-center" data-aos="fade-up" data-aos-delay="500"
                     style="margin-top: 20px">
-                    <div class="row col-12">
-                        <div class="unit-4 d-flex mb-4 col-6" style="justify-content: center">
+                    <div class="row col-12" style="justify-content: center">
+                        <div class="unit-4 d-flex mb-4 col-lg-6">
+                            <div class="unit-4-icon mr-4">
+                                <img src="{{ asset('frontend/images/frame-55.svg') }}" alt=" images"
+                                    alt="">
+                                <h3 class="text-danger mt-2">999.999</h3>
+                            </div>
+                            <p style="font-weight: bold;color: black;align-self: center;">Undangan dalam proses
+                                peluncuran
+                            </p>
+                        </div>
+
+                        <div class="unit-4 d-flex mb-4 col-lg-6">
                             <div class="unit-4-icon mr-4">
                                 <img src="{{ asset('frontend/images/frame-53.svg') }}" alt=" images"
                                     alt="">
@@ -127,26 +141,24 @@
                             <p>
                         </div>
 
-                        <div class="unit-4 d-flex mb-4 col-6" style="justify-content: center">
+                        <div class="unit-4 d-flex mb-4 col-lg-6">
                             <div class="unit-4-icon mr-4">
                                 <img src="{{ asset('frontend/images/frame-52.svg') }}" alt=" images"
                                     alt="">
                                 <h3 class="text-danger mt-2">999.999</h3>
                             </div>
-                            <p style="font-weight: bold;color: black;align-self: center;">Undangan yang telah dibuat
+                            <p style="font-weight: bold;color: black;align-self: center;">Undangan yang sudah
+                                diluncurkan
                             <p>
                         </div>
-                    </div>
 
-                    <div class="row col-12">
-                        <div class="unit-4 d-flex mb-4 align-content-center col-md-12"
-                            style="justify-content: center">
+                        <div class="unit-4 d-flex mb-4 col-lg-6">
                             <div class="unit-4-icon mr-4">
                                 <img src="{{ asset('frontend/images/frame-54.svg') }}" alt=" images"
                                     alt="">
                                 <h3 class="text-danger mt-2">999.999</h3>
                             </div>
-                            <p style="font-weight: bold;color: black;align-self: center;">Total template undangan
+                            <p style="font-weight: bold;color: black;align-self: center;">Jumlah template undangan
                             <p>
                         </div>
                     </div>
@@ -226,7 +238,7 @@
 
                     <div class="row mt-4">
                         <div class="col-lg-4 mx-auto">
-                            <a href="#" class="btn btn-primary btn-block">See All Posts</a>
+                            <a href="#" class="btn btn-danger btn-block">See All Posts</a>
                         </div>
                     </div>
                 </div>
@@ -579,7 +591,7 @@
                             </div>
 
                             <div>
-                                <a href="#" class="btn btn-primary">Get Started</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
                             </div>
                         </form>
                     </div>
@@ -769,6 +781,11 @@
             </div>
         </div>
 
+      <div class="preloader" alt="Loading.....">
+          <div class="spinner">
+            {{-- <img src="{{ asset('frontend/images/icon-park-oval-love-two.png') }}" alt="Loading..."> --}}
+        </div>
+    </div>
 
         <script src="{{ asset('frontend/js/jquery-3.5.1.min.js') }}"></script>
         <script src="{{ asset('frontend/js/jquery-migrate-3.0.0.min.js') }}"></script>

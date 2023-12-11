@@ -703,7 +703,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     color: #e84545; }
 
 .site-section {
-  padding: 5rem 0; }
+  /* padding: 5rem 0; */
+  margin-bottom: 100px;
+}
 
 .hero {
   padding: 70px 0;
@@ -1557,7 +1559,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   .hero-slant .slant {
     position: relative;
     width: calc(100% + 1px);
-    height: 240px;
+    height: 176px;
     top: -12px;
     z-index: 1;
     background-size: cover;
@@ -2095,3 +2097,38 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       content: "";
       height: 1px;
       background: #ebedee; }
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Ganti warna latar belakang sesuai keinginan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #FF477E; /* Ganti warna spinner sesuai keinginan */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+
+    /* width: 440px;
+    height: 440px;
+    background: url("{{ asset('frontend/images/icon-park-oval-love-two.png') }}") center center no-repeat;  
+    background-size: cover;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

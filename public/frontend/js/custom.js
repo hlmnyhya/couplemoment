@@ -297,4 +297,10 @@ $(function(){
 	}
 	pricing();
 
+	// Gunakan window.onload untuk memastikan bahwa halaman sepenuhnya dimuat
+window.onload = function() {
+    // Seleksi elemen preloader dan hilangkan
+    var preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
+};
 })
