@@ -223,7 +223,10 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> caffab85aeeacec537403ae57a87ead86b439a84
                     <div class="row mt-4">
                         <div class="col-lg-4 mx-auto">
                             <a href="#" class="btn btn-primary btn-block">See All Posts</a>
@@ -552,7 +555,6 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-5 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
                     <div class=" container" style="border-radius: 5%;background-color: #FAE8E0;padding: 30px;">
-
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="form-group col-md-6">
@@ -711,7 +713,6 @@
                                 <h3>Navigations</h3>
                             </div>
                         </div>
-
                         <div class="col-6 col-sm-6">
                             <div class="widget">
                                 <ul class="links list-unstyled">

@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Sash – Bootstrap 5  Admin &amp; Dashboard Template </title>
+    <title> Couple Moment </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Spruko Technologies Private Limited">
 	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
@@ -44,15 +44,23 @@
     <!-- Choices Css -->
     <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/choices.js/public/assets/styles/choices.min.css">
 
- <!-- Jsvector Css -->
-<link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/jsvectormap/css/jsvectormap.min.css">
+    <!-- Jsvector Css -->
+    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/jsvectormap/css/jsvectormap.min.css">
 
- <!-- Swiper Css -->
-<link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/swiper/swiper-bundle.min.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/swiper/swiper-bundle.min.css">
 
- <!-- Grid Css -->
-<link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/gridjs/theme/mermaid.min.css">
+    <!-- Grid Css -->
+    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/gridjs/theme/mermaid.min.css">
 
+    {{-- Datatables --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
+
+    <!-- Sweetalerts CSS -->
+    <link rel="stylesheet" href="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
 
 <body>
@@ -1011,7 +1019,7 @@
 
     </div>
 
-    
+
     <!-- Scroll To Top -->
     <div class="scrollToTop">
         <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
@@ -1058,13 +1066,33 @@
     <!-- index -->
     <script src="{{asset('backend')}}/dist/assets/js/index.js"></script>
 
-    
+
     <!-- Custom-Switcher JS -->
     <script src="{{asset('backend')}}/dist/assets/js/custom-switcher.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{asset('backend')}}/dist/assets/js/custom.js"></script>
 
+    <!-- Jquery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Datatables Cdn -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.6/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- Internal Datatables JS -->
+    <script src="{{asset('backend')}}/dist/assets/js/datatables.js"></script>
+
+    <!-- Sweetalerts JS -->
+    <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
 </body>
 
 </html>
