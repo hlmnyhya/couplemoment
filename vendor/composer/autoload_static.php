@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
+class ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -354,8 +354,8 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -536,6 +536,7 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
+        'App\\Http\\Controllers\\AffiliateController' => __DIR__ . '/../..' . '/app/Http/Controllers/AffiliateController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -545,8 +546,18 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         'App\\Http\\Controllers\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordResetLinkController.php',
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
+        'App\\Http\\Controllers\\CMS\\AssetsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/AssetsController.php',
+        'App\\Http\\Controllers\\CMS\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/GalleryController.php',
+        'App\\Http\\Controllers\\CMS\\GuestBookController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/GuestBookController.php',
+        'App\\Http\\Controllers\\CMS\\InvitationController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/InvitationController.php',
+        'App\\Http\\Controllers\\CMS\\SoundBankController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/SoundBankController.php',
+        'App\\Http\\Controllers\\CMS\\ThemeController' => __DIR__ . '/../..' . '/app/Http/Controllers/CMS/ThemeController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HistoryBonusController' => __DIR__ . '/../..' . '/app/Http/Controllers/HistoryBonusController.php',
+        'App\\Http\\Controllers\\HistoryPenarikanController' => __DIR__ . '/../..' . '/app/Http/Controllers/HistoryPenarikanController.php',
+        'App\\Http\\Controllers\\InvoiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/InvoiceController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
+        'App\\Http\\Controllers\\UndanganController' => __DIR__ . '/../..' . '/app/Http/Controllers/UndanganController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -559,6 +570,12 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
+        'App\\Models\\Assets' => __DIR__ . '/../..' . '/app/Models/Assets.php',
+        'App\\Models\\Gallery' => __DIR__ . '/../..' . '/app/Models/Gallery.php',
+        'App\\Models\\GuestBook' => __DIR__ . '/../..' . '/app/Models/GuestBook.php',
+        'App\\Models\\Invitation' => __DIR__ . '/../..' . '/app/Models/Invitation.php',
+        'App\\Models\\SoundBank' => __DIR__ . '/../..' . '/app/Models/SoundBank.php',
+        'App\\Models\\Theme' => __DIR__ . '/../..' . '/app/Models/Theme.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3315,6 +3332,7 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         'Mockery\\Matcher\\IsEqual' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/IsEqual.php',
         'Mockery\\Matcher\\IsSame' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/IsSame.php',
         'Mockery\\Matcher\\MatcherAbstract' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
+        'Mockery\\Matcher\\MatcherInterface' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MatcherInterface.php',
         'Mockery\\Matcher\\MultiArgumentClosure' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MultiArgumentClosure.php',
         'Mockery\\Matcher\\MustBe' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MustBe.php',
         'Mockery\\Matcher\\NoArgs' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/NoArgs.php',
@@ -6552,9 +6570,9 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CMS\ThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,15 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
+Route::prefix('cms')->group(function () {
+    Route::resource('theme', ThemeController::class)->names([
+        'index' => 'theme.index',
+        'create' => 'theme.create',
+        'store' => 'theme.store',
+        'edit' => 'theme.edit',
+        'update' => 'theme.update',
+        'destroy' => 'theme.destroy',
+    ]);
+});
 
 require __DIR__.'/auth.php';
