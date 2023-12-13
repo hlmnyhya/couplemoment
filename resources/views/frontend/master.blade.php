@@ -59,11 +59,12 @@
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
                     <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
-                        <li class="active"><a href="#home">Home</a></li>
-                        <li><a href="#harga">Harga</a></li>
-                        <li><a href="#desain">Preset / Desain</a></li>
-                        <li><a href="#portofolio">Portofolio</a></li>
-                        <li><a href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?"
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#desain">Preset / Desain</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?"
                                 target="_blank">Menjadi Reseller</a></li>
                     </ul>
 
@@ -781,12 +782,13 @@
             </div>
         </div>
 
-      <div class="preloader" alt="Loading.....">
-          <div class="spinner">
-            {{-- <img src="{{ asset('frontend/images/icon-park-oval-love-two.png') }}" alt="Loading..."> --}}
+        <div class="preloader" alt="Loading.....">
+            <div class="spinner">
+                {{-- <img src="{{ asset('frontend/images/icon-park-oval-love-two.png') }}" alt="Loading..."> --}}
+            </div>
         </div>
-    </div>
 
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="{{ asset('frontend/js/jquery-3.5.1.min.js') }}"></script>
         <script src="{{ asset('frontend/js/jquery-migrate-3.0.0.min.js') }}"></script>
         <script src="{{ asset('frontend/js/popper.min.js') }}"></script>

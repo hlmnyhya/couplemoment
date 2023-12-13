@@ -303,4 +303,18 @@ window.onload = function() {
     var preloader = document.querySelector('.preloader');
     preloader.style.display = 'none';
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.querySelector('.site-nav');
+
+    document.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            nav.classList.add('swing');
+        } else {
+            nav.classList.remove('swing');
+        }
+    });
+});
+
+
 })
