@@ -304,17 +304,24 @@ window.onload = function() {
     preloader.style.display = 'none';
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.site-nav');
+	let sections = document.querySelectorAll('section');
+	let navlinks = document.querySelectorAll('body nav ul li a');
 
-    document.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            nav.classList.add('swing');
-        } else {
-            nav.classList.remove('swing');
-        }
-    });
-});
+	window.onscroll = () => {
+		sections.forEach(sec => {
+			let top = window.scrollY;
+			let offset = sec.offsetTop;
+			let height = sec.offsetHeight;
+			let id = sec.getAttribute('id');
+
+			if (top >= offset && top < offset + height) {
+				navlinks.forEach(links => {
+					links.classList.remove('active');
+					document.querySelector('body nav ul li a[href*=' + id + ']').classList.add('active');
+				});
+			};
+		});
+	};
 
 
 })

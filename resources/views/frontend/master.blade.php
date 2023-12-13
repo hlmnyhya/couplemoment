@@ -7,7 +7,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<head id="header" class="fixed-top ">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Untree.co">
@@ -18,6 +18,7 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
@@ -54,7 +55,7 @@
                         d="M16.3561 15.6773C11.4086 24.2466 11.9132 33.8005 17.4833 37.0165C23.0535 40.2323 31.5797 35.8925 36.5273 27.3231C41.4748 18.7536 40.9701 9.19976 35.4 5.98388C29.8299 2.76797 21.3036 7.10785 16.3561 15.6773Z"
                         stroke="#FCFCFC" stroke-width="4.07759" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <a href="index.html" class="text-white">Couple Moment.</a>
+                <a href="#" class="text-white">Couple Moment.</a>
             </div>
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
@@ -182,7 +183,7 @@
         </div>
     </div>
 
-    <div class="site-section" id="desain">
+    <section class="site-section" id="desain">
         <div class="hero-slant overlay" data-stellar-background-ratio="0.5"
             style="min-height: 100vh; background-image: url('frontend/images/mesh-gradient3.png')">
             <div class="slant" style="background-image: url('frontend/images/vector2.svg'); " width="100%"></div>
@@ -271,7 +272,7 @@
                     transform="matrix(-0.0100874 0.999949 -0.999948 -0.0101856 49.3481 94.0186)" fill="white" />
             </svg>
         </div>
-    </div>
+    </section>
 
     <div class="site-section">
         <div class="container">
@@ -396,7 +397,7 @@
         </div>
     </div>
 
-    <div class="pricing-section" id="harga" style="background-color: #FAE8E0">
+    <section class="pricing-section" id="harga" style="background-color: #FAE8E0">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up" data-aos-delay="0">
                 <h2 class="heading font-weight-bold mb-2">Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
@@ -558,7 +559,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="testimonial-section" id="portofolio">
         <div class="container">
