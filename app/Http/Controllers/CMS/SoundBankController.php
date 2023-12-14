@@ -41,12 +41,10 @@ public function store(Request $request)
         $file->move(public_path('audio'), $fileName);
         $soundBank->file_mp3 = 'audio/' . $fileName;
 
-        // Get the duration using getID3
         $getID3 = new getID3;
         $fileInfo = $getID3->analyze(public_path($soundBank->file_mp3));
         $duration = $fileInfo['playtime_seconds'];
 
-        // Format the duration (you can customize the format)
         $formattedDuration = gmdate("i:s", $duration);
 
         $soundBank->duration = $formattedDuration;
@@ -68,37 +66,44 @@ public function edit($id)
 public function update(Request $request, $id)
 {
     $soundBank = SoundBank::findOrFail($id);
-    
-    $rules = $request->validate([
+
+    $request->validate([
         'title' => 'required',
         'singer' => 'required',
-        'duration' => 'required',
         'file_mp3' => 'nullable|mimes:mp3',
     ]);
 
-        if ($request->hasFile('file_mp3')) {
-            $rules['file_mp3'] = 'required|mimes:mp3';
+    // Handle file upload only if a new file is provided
+    if ($request->hasFile('file_mp3')) {
+        // Delete the old file if it exists
+        if ($soundBank->file_mp3) {
+            Storage::disk('public')->delete($soundBank->file_mp3);
         }
-    
-        if ($request->hasFile('file_mp3')) {
-            // Hapus gambar lama jika ada
-            if ($soundBank->file_mp3) {
-                Storage::disk('public')->delete($soundBank->file_mp3);
-            }
-            $audioPath = $request->file('file_mp3')->store('audio', 'public');
-            $soundBank->file_mp3 = $audioPath;
-        }
-    
-        $soundBank->title = $request->input('title');
-        $soundBank->singer = $request->input('singer');
-        $soundBank->duration = $request->input('duration');
-    
-        $soundBank->save();
-    
 
+        // Move the new file to the 'audio' directory
+        $file = $request->file('file_mp3');
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        $file->move(public_path('audio'), $fileName);
+
+        // Update file_mp3 and duration in the SoundBank model
+        $soundBank->file_mp3 = 'audio/' . $fileName;
+        $getID3 = new getID3;
+        $fileInfo = $getID3->analyze(public_path($soundBank->file_mp3));
+        $duration = $fileInfo['playtime_seconds'];
+        $formattedDuration = gmdate("i:s", $duration);
+        $soundBank->duration = $formattedDuration;
+    }
+
+    // Update other fields in the SoundBank model
+    $soundBank->title = $request->input('title');
+    $soundBank->singer = $request->input('singer');
+
+    // Save the changes to the database
+    $soundBank->save();
+
+    // Redirect to the index page with a success message
     return redirect()->route('soundbank.index')->with('success', 'Sound bank updated successfully.');
 }
-
 
 
     public function destroy($id)
