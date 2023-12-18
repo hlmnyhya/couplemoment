@@ -18,7 +18,13 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css"
+        integrity="sha512-+pwQ1JBCDk3EJnDMJkIylD98GjOygtUbTAIN2J4s8GXuOvB9j8THTJZBmwhw59oI75Wl8FpIJkbw72/tlFDGhA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css"
+        integrity="sha512-N2IsWuKsBYYiHNYdaEuK4eaRJ0onfUG+cdZilndYaMEhUGQq/McsFU75q3N+jbJUNXm6O+K52DRrK+bSpBGj0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
@@ -61,8 +67,8 @@
                 <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
                     <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
                         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
                         <li class="nav-item"><a class="nav-link" href="#desain">Preset / Desain</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?"
@@ -89,10 +95,12 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1">
-                    <h3 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="0">When your -</h3>
+                    <h3 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="0">When your -
+                    </h3>
                     <h2 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="0">Dream Wedding
                         Come True💕</h2>
-                    <p class="text-white mb-3" data-aos="fade-up" data-aos-delay="100">Buat undangan digitalmu sendiri
+                    <p class="text-white mb-3" data-aos="fade-up" data-aos-delay="100">Buat undangan digitalmu
+                        sendiri
                         dan jadikan pernikahan impianmu menjadi nyata !</p>
                     <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="200">
                         <input type="submit" class="btn btn-danger" value="Daftar Sekarang">
@@ -789,7 +797,33 @@
             </div>
         </div>
 
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var swiper = new Swiper('.site-nav', {
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    grabCursor: true,
+                });
+
+                // Inisialisasi smooth scrolling
+                $('.nav-link').on('click', function() {
+                    var target = $(this).data('target');
+                    var offset = $('#' + target).offset().top;
+
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 800); // Sesuaikan kecepatan scrolling sesuai kebutuhan
+                });
+            });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"
+            integrity="sha512-h5Vv+n+z0eRnlJoUlWMZ4PLQv4JfaCVtgU9TtRjNYuNltS5QCqi4D4eZn4UkzZZuG2p4VBz3YIlsB7A2NVrbww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.js"
+            integrity="sha512-XqCgdJe/bPcaO+zhk3u4rfWCgC3F0cysbSkvrknOuOT2BUYS6s05wnGi6jn++kNQUoU7TZWJHC5StVwZt3b2cQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="{{ asset('frontend/js/jquery-3.5.1.min.js') }}"></script>
         <script src="{{ asset('frontend/js/jquery-migrate-3.0.0.min.js') }}"></script>
         <script src="{{ asset('frontend/js/popper.min.js') }}"></script>
