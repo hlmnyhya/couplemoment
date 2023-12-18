@@ -68,7 +68,7 @@
                     <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
                         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#desain">Preset / Desain</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#harga">Harga </a></li>
                         <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?"
