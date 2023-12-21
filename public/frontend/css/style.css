@@ -51,7 +51,8 @@ section {
 }
 
 .section-header h1 {
-  font-size: 13px;
+  font-size: 20px;
+  line-height: 42px;
   letter-spacing: 1px;
   font-weight: 700;
   margin: 0;
@@ -71,6 +72,7 @@ section {
 .section-header p {
   margin: 10px 0 0 0;
   padding: 0;
+  font-size: 15px;
   line-height: 42px;
   color: #000;
 }
@@ -505,7 +507,7 @@ line-height: normal;
 
 .hero p {
 color: #FFF;
-font-family: Poppins;
+font-family: 'nunito';
 font-size: 20px;
 font-style: normal;
 font-weight: 380;
@@ -597,7 +599,8 @@ line-height: normal;
 
 .about h3 {
   font-size: 26px;
-  font-weight: 1000;
+  font-weight: 700;
+  line-height: 42px;
   color: #ff477e;
   text-transform: uppercase;
 }
@@ -611,6 +614,7 @@ line-height: normal;
 .about p {
   margin: 15px 0 30px 0;
   line-height: 24px;
+  font-size: 12px;
   text-align: justify;
 }
 
@@ -803,7 +807,7 @@ line-height: normal;
 .features .feature-icons h3 {
   color: #ff477e;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 38px;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -821,6 +825,7 @@ line-height: normal;
 .features .feature-icons .content .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
+  line-height: 42px;
   margin: 0 0 10px 0;
   color: #000;
 }
@@ -837,8 +842,8 @@ line-height: normal;
   }
 
 .features .feature-icons .content .icon-box p {
-  font-size: 15px;
-  color: #848484;
+  font-size: 12px;
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -2349,7 +2354,7 @@ line-height: normal;
 }
 
 .footer .footer-top {
-  background: #FAE8E0 url(../img/footer-bg.png) no-repeat right top;
+  background: #FAE8E0;
   background-size: contain;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;

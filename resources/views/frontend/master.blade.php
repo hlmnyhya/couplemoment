@@ -335,10 +335,10 @@
                 <header class="section-header">
                     <h1>Preset / Desain</h1>
                     <h2>Inovasi Kreatif dalam Bentuk Undangan Digital</h2>
-                    <p>Buat undangan pernikahan secara digital dengan mudah. Pilih template, lalu sesuaikan dengan
+                    <p>"Buat undangan pernikahan secara digital dengan mudah. Pilih template, lalu sesuaikan dengan
                         gaya
                         desainmu sendiri. Setelah selesai, kamu dapat langsung membagikannya kepada orang-orang
-                        terdekatmu</p>
+                        terdekatmu."</p>
                 </header>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -467,7 +467,7 @@
                 <header class="section-header">
                     <h1>Harga</h1>
                     <h2>Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
-                    <p>"Segera Manfaatkan Promo 50% - Penawaran Terbatas !"</p>
+                    <p>"Segera manfaatkan promo 50% - penawaran terbatas!"</p>
                 </header>
 
                 <div class="row gy-4" style="place-content: center" data-aos="fade-left">
@@ -577,10 +577,10 @@
                 <header class="section-header">
                     <h1>Portofolio</h1>
                     <h2>Testimonials</h2>
-                    <p>Kami selalu membuka diri untuk menerima ulasan, saran, dan kritik Anda yang berharga. Setiap
+                    <p>"Kami selalu membuka diri untuk menerima ulasan, saran, dan kritik Anda yang berharga. Setiap
                         pandangan dari Anda bukan hanya sebagai masukan, tetapi sebagai bahan bakar yang mendorong
                         inovasi dan pengembangan kami. Jangan ragu untuk berbagi pengalaman Anda, karena bersama-sama,
-                        kita membangun perjalanan yang lebih baik.</p>
+                        kita membangun perjalanan yang lebih baik."</p>
                 </header>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
@@ -701,6 +701,10 @@
 
         <!-- ======= Contact Section ======= -->
         <section class="contact" style="background-image: url('frontend/img/hero-bg1.png')">
+            <header class="section-header">
+                <h2>Contact</h2>
+                <p>"Kami di sini untuk merespons setiap permintaan ataupun pertanyaan Anda."</p>
+            </header>
 
             <div class="container" data-aos="fade-up">
                 <div class="row gy-4">
