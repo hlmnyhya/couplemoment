@@ -63,8 +63,14 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
 
     <!-- Sweetalerts CSS -->
-    <link rel="stylesheet" href="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.css">
+    {{-- <link rel="stylesheet" href="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.css"> --}}
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/filepond/filepond.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css">
 </head>
 
 <body>
@@ -1193,8 +1199,38 @@
     <script src="{{ asset('backend') }}/dist/assets/js/datatables.js"></script>
 
     <!-- Sweetalerts JS -->
-    <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
-    <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script>
+    {{-- <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script> --}}
+
+    <!-- Filepond JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond/filepond.min.js"></script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js">
+    </script>
+
 </body>
 
 </html>

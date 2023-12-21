@@ -9,5 +9,11 @@ class Assets extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['theme_id', 'assets_img'];
+
+
+    public function theme()
+    {
+        return $this->belongsTo(Theme::class);
+    }
 }

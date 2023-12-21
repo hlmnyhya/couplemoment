@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CMS\AssetsController;
 use App\Http\Controllers\CMS\ThemeController;
 
 /*
@@ -57,6 +58,15 @@ Route::prefix('cms')->group(function () {
         'update' => 'theme.update',
         'destroy' => 'theme.destroy',
     ]);
+    Route::get('/assets/search', [AssetsController::class, 'search'])->name('assets.search');
+    Route::resource('assets', AssetsController::class)->names([
+        'index' => 'assets.index',
+        'create' => 'assets.create',
+        'store' => 'assets.store',
+        'edit' => 'assets.edit',
+        'update' => 'assets.update',
+        'destroy' => 'assets.destroy',
+    ]);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
