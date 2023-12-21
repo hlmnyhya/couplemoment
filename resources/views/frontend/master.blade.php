@@ -824,6 +824,13 @@
                                     href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?">Menjadi
                                     Reseller</a></li>
                         </ul>
+
+                         {{-- <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Whatsapp</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Instagram</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Email</a></li>
+                        </ul> --}}
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
@@ -836,15 +843,9 @@
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Jl. A.Yani Km. 63, RT.18 / RW.3 <br>
-                            Desa Panggung, Kecamatan Pelaihari, <br>
-                            Kabupaten Tanah Laut, Provinsi Kalimantan Selatan, 70815 <br><br>
-                            <strong>Instagram:</strong> couplemoment.id<br>
-                            <strong>Phone:</strong> +62 815-2846-4820<br>
-                            <strong>Email:</strong> cs@couplemoment.com<br>
-                        </p>
+                        <h4>Payment Method</h4>
+                        <img src="{{ asset('frontend/img/subsection-channel-alt-latest.png') }}" alt=" images"
+                            class="img-fluid animated" alt="">
 
                     </div>
 
