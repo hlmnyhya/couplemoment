@@ -153,7 +153,7 @@
                     <div class="row">
 
                         <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                            <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4" alt="">
+                            <img src="{{ asset('frontend/img/features-3.png') }}"  class="img-fluid p-4" alt="" style="max-width: 85%;margin-bottom: 20px;">>
                         </div>
 
                         <div class="col-xl-8 d-flex content">
@@ -272,7 +272,7 @@
                     <div class="col-lg-7 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
                         <section id="counts" class="counts">
                             <div class="row col-12" style="justify-content: center">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
                                         <i class="bi bi-calendar3" style="color: #cad018;"></i>
                                         <div>
@@ -283,7 +283,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
                                         <i class="bi bi-envelope-paper-heart" style="color: #15be56;"></i>
                                         <div>
@@ -294,7 +294,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
                                         <i class="bi bi-rocket-takeoff" style="color: #153cbe;"></i>
                                         <div>
@@ -305,7 +305,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
                                         <i class="bi bi-file-earmark-richtext"></i>
                                         <div>

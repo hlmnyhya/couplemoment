@@ -41,7 +41,7 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 70px 0;
   overflow: hidden;
 }
 
@@ -79,8 +79,27 @@ section {
 
 @media (max-width: 768px) {
   .section-header p {
-    font-size: 28px;
-    line-height: 32px;
+    margin: 10px 5px 0 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+  }
+  .section-header h1 {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #ff477e;
+  text-transform: uppercase;
+  }
+  .section-header h2 {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
   }
 }
 
@@ -210,6 +229,23 @@ section {
   margin-top: 3px;
 }
 
+@media (max-width: 992px) {
+ .header .logo span {
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+  }
+  .header .logo img {
+  padding-top: 10px;
+  max-height: 40px;
+  margin-right: 6px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -273,7 +309,7 @@ section {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #5969f3;
+  background: #FF477E;
 }
 
 .navbar .dropdown ul {
@@ -372,7 +408,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #012970;
+  color: #000;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -429,13 +465,13 @@ section {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #012970;
+  color: #000;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #4154f1;
+  color: #FF477E;
 }
 
 .navbar-mobile .getstarted,
@@ -574,11 +610,15 @@ line-height: normal;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .hero h2 {
-    font-size: 24px;
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 14px;
   }
 
   .hero .hero-img img {
@@ -643,6 +683,27 @@ line-height: normal;
 
 .about .btn-read-more:hover i {
   transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+.about h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #ff477e;
+  text-transform: uppercase;
+  }
+  .about h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  }
+  .about p {
+  margin: 15px 0 30px 0;
+  line-height: 24px;
+  font-size: 12px;
+  text-align: justify;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -714,6 +775,12 @@ line-height: normal;
   margin: 0;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .counts {
+    padding: 40px 0px 0px 20px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -800,9 +867,9 @@ line-height: normal;
   color: #4154f1;
 }
 
-.features .feature-icons {
+/* .features .feature-icons {
   margin-top: 120px;
-}
+} */
 
 .features .feature-icons h3 {
   color: #ff477e;
@@ -814,7 +881,7 @@ line-height: normal;
 
 @media (max-width: 768px) {
   .features .feature-icons h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -844,6 +911,21 @@ line-height: normal;
 .features .feature-icons .content .icon-box p {
   font-size: 12px;
   color: #000;
+}
+
+@media (max-width: 768px) {
+  .features .feature-icons .content .icon-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  /* line-height: 42px; */
+  margin: 0 0 4px 0;
+  color: #000;
+  }
+
+  .features .feature-icons .content .icon-box p {
+  font-size: 12px;
+  color: #000;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1105,6 +1187,20 @@ line-height: normal;
   padding: 1px 0 3px 0;
   background: #ff477e;
   color: #fff;
+}
+
+@media (max-width: 992px) {
+  .pricing .box {
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
 }
 
 /*--------------------------------------------------------------
@@ -1457,6 +1553,14 @@ line-height: normal;
   opacity: 0.3;
 }
 
+@media (max-width: 992px) {
+  .testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+  font-size: 12px;
+  }
+}
+
 @media (max-width: 1199px) {
   .testimonials .swiper-slide-active {
     opacity: 1;
@@ -1775,6 +1879,31 @@ line-height: normal;
 .contact .php-email-form button[type=submit]:hover {
   background: #ffaef2;
 }
+
+@media (max-width: 992px) {
+  .contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-left: 52px;
+  text-align: justify;
+  }
+  .contact .info-box i {
+  font-size: 30px;
+  line-height: 0;
+  margin-right: 20px;
+  color: #ff477e;
+}
+
+.contact .info-box h3 {
+  font-size: 16px;
+  color: #012970;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+}
+
 
 @keyframes animate-loading {
   0% {
@@ -2299,7 +2428,7 @@ line-height: normal;
 --------------------------------------------------------------*/
 .footer {
   background: #f6f9ff;
-  padding: 0 0 30px 0;
+  /* padding: 0 0 30px 0; */
   font-size: 14px;
 }
 
@@ -2408,7 +2537,7 @@ line-height: normal;
 }
 
 .footer .footer-top .social-links a:hover {
-  color: #012970;
+  color: #ff477e;
 }
 
 .footer .footer-top h4 {
@@ -2473,6 +2602,37 @@ line-height: normal;
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+@media (max-width: 992px) {
+  .footer .footer-top .footer-info .logo span {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+  }
+  .footer .footer-top .footer-info p {
+  font-size: 12px;
+  padding: 0 10px 0 10px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Nunito", sans-serif;
+  }
+  .footer .footer-top .social-links a {
+  font-size: 20px;
+  padding: 0 10px 0 10px;
+  display: inline-block;
+  color: rgba(1, 41, 112, 0.5);
+  line-height: 0;
+  margin-right: 10px;
+  transition: 0.3s;
+  }
+  .footer .footer-top .footer-links {
+  margin-bottom: 30px;
+  padding: 0 0 0 22px;
+}
 }
 
 /* CSS untuk Preloader */
