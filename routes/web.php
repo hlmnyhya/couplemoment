@@ -8,6 +8,7 @@ use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CMS\SoundBankController;
+use App\Http\Controllers\CMS\InvitationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,9 +60,12 @@ Route::prefix('cms')->group(function () {
     ]);
 });
 
-// Route::controller('/cms/soundbank', SoundBankController::class)->group(function () {
-//     Route::get('/edit/{id}', 'edit')->name('soundbank.edit');
-//     Route::post('/update', 'update')->name('soundbank.update');
-// });
+// CMS Route
+Route::prefix('cms')->group(function () {
+     Route::resource('invitation', InvitationController::class)->names([
+        'index' => 'invitation.index',
+    ]);
+});
+
 
 require __DIR__.'/auth.php';
