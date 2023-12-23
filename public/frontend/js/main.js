@@ -300,6 +300,37 @@
         document.querySelector('.preloader').style.visibility = 'hidden';
     }, 2000); // Sesuaikan waktu pemuatan sesuai kebutuhan
 });
+  
+  
+  document.addEventListener('DOMContentLoaded', () => {
 
+// Set the target date to January 1, 2024
+// var targetDate = new Date("December 22, 2023 10:20:00").getTime();
+
+// Set the target date to January 1, 2024
+var targetDate = new Date("January 1, 2024 00:00:00").getTime();
+
+// Set up FlipDown with the target date
+var flipdown = new FlipDown(targetDate / 1000) // Convert milliseconds to seconds
+  .start()
+  .ifEnded(() => {
+    console.log('The countdown has ended!');
+    // Tambahkan logika untuk menampilkan pesan atau melakukan aksi setelah waktu habis
+    document.getElementById('countdown').style.display = 'none'; // Menyembunyikan elemen countdown
+    document.getElementById('messageAfterCountdown').style.display = 'block'; // Menampilkan pesan setelah countdown
+  });
+
+// Toggle theme
+var interval = setInterval(() => {
+  let body = document.body;
+  body.classList.toggle('light-theme');
+  body.querySelector('#flipdown').classList.toggle('flipdown__theme-dark');
+  body.querySelector('#flipdown').classList.toggle('flipdown__theme-pink');
+}, 5000);
+
+// Show version number
+var ver = document.getElementById('ver');
+ver.innerHTML = flipdown.version;
+});
 
 })();

@@ -29,6 +29,18 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
+
+    <link href="{{ asset('frontend/css/flipdown.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/flipcountdown/3.0.5/jquery.flipcountdown.min.css"
+        integrity="sha512-yEPX2VrmVL4P5jjC+BHDF65yJ3MP8QTwENYWz/3ckIX/dPUIA5p/m/mpIvX7TFKTTncaFhtGThnBokKaqenpmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-grid.min.css"
+        integrity="sha512-EAgFb1TGFSRh1CCsDotrqJMqB2D+FLCOXAJTE16Ajphi73gQmfJS/LNl6AsjDqDht6Ls7Qr1KWsrJxyttEkxIA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- =======================================================
   * Template Name: FlexStart
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -44,7 +56,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a class="logo d-flex align-items-center">
                 <img src="{{ asset('frontend/img/icon-couple.png') }}" alt="">
                 <span>Couple Moment</span>
             </a>
@@ -58,53 +70,6 @@
                     <li><a class="nav-link scrollto"
                             href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?">Menjadi
                             Reseller</a></li>
-                    {{-- <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li>
-                                <a href="#">Column 1 link 1</a>
-                                <a href="#">Column 1 link 2</a>
-                                <a href="#">Column 1 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 2 link 1</a>
-                                <a href="#">Column 2 link 2</a>
-                                <a href="#">Column 3 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 3 link 1</a>
-                                <a href="#">Column 3 link 2</a>
-                                <a href="#">Column 3 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 4 link 1</a>
-                                <a href="#">Column 4 link 2</a>
-                                <a href="#">Column 4 link 3</a>
-                            </li>
-                        </ul>
-                    </li> --}}
-
-                    {{-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> --}}
                     <li><a class="getstarted scrollto" href="#about">Daftar / Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -153,7 +118,8 @@
                     <div class="row">
 
                         <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                            <img src="{{ asset('frontend/img/features-3.png') }}"  class="img-fluid p-4" alt="" style="max-width: 85%;margin-bottom: 20px;">>
+                            <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4" alt=""
+                                style="max-width: 85%;margin-bottom: 20px;">>
                         </div>
 
                         <div class="col-xl-8 d-flex content">
@@ -264,7 +230,7 @@
                                 Hemat, dan Cepat. Dengan solusi terbaik kami, Anda dapat menciptakan pengalaman undangan
                                 pernikahan yang tak terlupakan. Dari desain yang elegan hingga fitur hemat waktu, kami
                                 menyediakan alat yang Anda butuhkan untuk membuat pernikahan Anda menjadi momen
-                                berkesan. Mulailah perjalanan Anda menuju undangan pernikahan yang sempurna! 💑✨
+                                berkesan. Mulailah perjalanan Anda menuju undangan pernikahan yang sempurna! 💑
                             </p>
                         </div>
                     </div>
@@ -696,94 +662,92 @@
                 </div>
 
             </div>
+            <!-- ======= Contact Section ======= -->
+            <section class="contact" style="background-image: url('frontend/img/hero-bg1.png')">
+                <header class="section-header">
+                    <h2>Contact</h2>
+                    <p>"Kami di sini untuk merespons setiap permintaan ataupun pertanyaan Anda."</p>
+                </header>
 
-        </section><!-- End Testimonials Section -->
+                <div class="container" data-aos="fade-up">
+                    <div class="row gy-4">
 
-        <!-- ======= Contact Section ======= -->
-        <section class="contact" style="background-image: url('frontend/img/hero-bg1.png')">
-            <header class="section-header">
-                <h2>Contact</h2>
-                <p>"Kami di sini untuk merespons setiap permintaan ataupun pertanyaan Anda."</p>
-            </header>
+                        <div class="col-lg-6">
 
-            <div class="container" data-aos="fade-up">
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <h3><i class="bi bi-telephone"></i>Call Us</h3>
-                                    <p>+62 815-2846-4820</p>
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                        <h3><i class="bi bi-telephone"></i>Call Us</h3>
+                                        <p>+62 815-2846-4820</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                        <h3><i class="bi bi-envelope"></i>Email Us</h3>
+                                        <p>cs@couplemoment.com</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                        <h3><i class="bi bi-geo-alt"></i>Address</h3>
+                                        <p>Jl. A.Yani Km. 63, RT.18 / RW.3, Desa Panggung, Kecamatan Pelaihari,
+                                            Kabupaten Tanah Laut, Provinsi Kalimantan Selatan, 70815</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                        <h3><i class="bi bi-clock"></i>Open Hours</h3>
+                                        <p>Senin - Minggu<br>9:00 AM - 05:00 PM</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <h3><i class="bi bi-envelope"></i>Email Us</h3>
-                                    <p>cs@couplemoment.com</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <h3><i class="bi bi-geo-alt"></i>Address</h3>
-                                    <p>Jl. A.Yani Km. 63, RT.18 / RW.3, Desa Panggung, Kecamatan Pelaihari,
-                                        Kabupaten Tanah Laut, Provinsi Kalimantan Selatan, 70815</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <h3><i class="bi bi-clock"></i>Open Hours</h3>
-                                    <p>Senin - Minggu<br>9:00 AM - 05:00 PM</p>
-                                </div>
-                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="col-lg-6">
+                            <form action="forms/contact.php" method="post" class="php-email-form">
+                                <div class="row gy-4">
 
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
-                            <div class="row gy-4">
+                                    <div class="col-md-6">
+                                        <input type="text" name="name" class="form-control"
+                                            placeholder="Your Name" required>
+                                    </div>
 
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control"
-                                        placeholder="Your Name" required>
+                                    <div class="col-md-6 ">
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Your Email" required>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="subject"
+                                            placeholder="Subject" required>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Maksimal 100 Karakter" maxlength="100"
+                                            required></textarea>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                        <button type="submit">Send Message</button>
+                                    </div>
+
                                 </div>
+                            </form>
 
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email"
-                                        placeholder="Your Email" required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                        required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Maksimal 100 Karakter" maxlength="100"
-                                        required></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
+            </section><!-- End Contact Section -->
 
-        </section><!-- End Contact Section -->
-
+        </section><!-- End Testimonials Section -->
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -825,7 +789,7 @@
                                     Reseller</a></li>
                         </ul>
 
-                         {{-- <h4>Useful Links</h4>
+                        {{-- <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Whatsapp</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Instagram</a></li>
@@ -854,6 +818,29 @@
         </div>
     </footer><!-- End Footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="example">
+                        <h1>
+                            <img src="{{ asset('frontend/img/icon-couple.png') }}"
+                                alt=""style="padding-bottom: 5px;height: 70px;">
+                            Couple Moment.
+                        </h1>
+                        <p>⏰ Segera Hadir, Website Kami Akan Meluncur Dalam Waktu...</p>
+                        <div id="flipdown" class="flipdown"></div>
+                    </div>
+                    <div id="messageAfterCountdown" style="display: none;">
+                        <p>Waktu telah habis! Pesan atau aksi lain dapat ditambahkan di sini.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Preloader Section -->
     <div class="preloader">
         <img src="{{ asset('frontend/img/icon-footer.svg') }}" alt="Couple Moment">
@@ -874,6 +861,30 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+
+    <script src="{{ asset('frontend/js/flipdown.js') }}"></script>
+
+    {{-- <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipcountdown/3.0.5/jquery.flipcountdown.min.js"
+        integrity="sha512-F0FIfRwSAll6Re1pINfu3ROOuk5q3WoRXsN4Ex6t42AV1hllPS2cFwHyNxra/pbMQb2lK9ip/ZEEvkDmEbPBsQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"
+        integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+        <script>
+        // Fungsi untuk menampilkan modal saat halaman dimuat
+        $(document).ready(function(){
+            $('#exampleModalCenter').modal('show');
+
+            // Fungsi untuk menutup modal setelah 7 detik
+            setTimeout(function(){
+                $('#exampleModalCenter').modal('hide');
+            }, 7000);
+        });
+    </script>
 
 </body>
 
