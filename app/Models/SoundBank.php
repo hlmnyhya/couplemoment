@@ -9,5 +9,5 @@ class SoundBank extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+     protected $fillable = ['title', 'singer', 'duration', 'file_mp3'];
 }
