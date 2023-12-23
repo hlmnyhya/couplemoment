@@ -74,7 +74,7 @@
 </head>
 
 <body>
-
+    @include('sweetalert::alert')
     <!-- Start Switcher -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header border-bottom">
@@ -1156,8 +1156,6 @@
     <!-- Color Picker JS -->
     <script src="{{ asset('backend') }}/dist/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
 
-
-
     <!-- JSVector Maps JS -->
     <script src="{{ asset('backend') }}/dist/assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
 
@@ -1199,6 +1197,7 @@
     <script src="{{ asset('backend') }}/dist/assets/js/datatables.js"></script>
 
     <!-- Sweetalerts JS -->
+
     {{-- <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script> --}}
 
@@ -1231,6 +1230,55 @@
         src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js">
     </script>
 
+    <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
+
+    {{-- Plus and Minus Guest Book Form --}}
+    <script>
+        $(function() {
+            $('.table-data').on('click', '.btn-add', function() {
+                var $tr = $(this).closest('.tr-clone');
+                var $clone = $tr.clone();
+                $clone.find(':text').val('');
+                $tr.after($clone);
+            });
+            $('.table-data').on('click', '.btn-remove', function() {
+                var $tr = $(this).closest('.tr-clone');
+                var $clone = $tr.clone();
+                $clone.find(':text').val('');
+                $tr.remove();
+            });
+        })
+    </script>
+
+    {{-- Copy URL --}}
+    <script>
+        $(document).ready(function() {
+            $('.contact-hover-dropdown1').click(function() {
+                var url = $(this).data('url');
+
+                navigator.clipboard.writeText(url).then(function() {
+                    console.log('URL berhasil disalin:', url);
+
+                    $('#copySuccessMessage').fadeIn().delay(2000).fadeOut();
+                }, function(err) {
+                    console.error('Gagal menyalin URL: ', err);
+                });
+            });
+        });
+    </script>
+
+    {{-- Search Guest --}}
+    <script>
+        $(document).ready(function() {
+            $('#searchGuest').on('keyup', function() {
+                var value = $(this).val().toLowerCase();
+                $('.col-xxl-3').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
