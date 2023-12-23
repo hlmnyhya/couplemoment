@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item">
                             <a href="javascript:void(0)">Assets</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                        <li class="breadcrumb-item active" aria-current="page">Create</li>
                     </ol>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="card custom-card">
                     <div class="card-header justify-content-between">
                         <div class="card-title">
-                            Edit Assets
+                            Create Assets
                         </div>
                     </div>
                     @if ($errors->any())
@@ -37,10 +37,8 @@
                     @endif
                     <div class="card-body">
                         <div class="col">
-                            <form action="{{ route('assets.update', $assets->id) }}" method="POST"
-                                enctype="multipart/form-data">
+                            <form action="{{ route('assets.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -48,9 +46,7 @@
                                         <select class="form-control" id="theme_id" name="theme_id" required>
                                             <option value="" selected disabled>Select Theme</option>
                                             @foreach ($themes as $theme)
-                                                <option value="{{ $theme->id }}"
-                                                    {{ $assets->theme_id == $theme->id ? 'selected' : '' }}>
-                                                    {{ $theme->name }}</option>
+                                                <option value="{{ $theme->id }}">{{ $theme->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -58,50 +54,40 @@
 
                                 <div class="row g-2">
                                     <div class="col-sm-6">
-                                        <label for="assets_img" class="form-label">Background Image</label>
-                                        <input type="file" class="form-control" id="assets_img" name="assets_img"
-                                            placeholder="Background Image" onchange="previewImage(event)">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        @if ($assets->assets_img)
-                                            <img id="image_preview"
-                                                src="{{ asset('uploads/assets/' . $assets->assets_img) }}"
-                                                class="img-fluid rounded mt-2" alt="Current Image"
-                                                style="max-width: 250px; max-height: 200px;">
-                                        @else
-                                            <img id="image_preview"
-                                                src="{{ asset('backend') }}/dist/assets/images/media/media-49.jpg"
-                                                class="img-fluid rounded mt-2" alt="Preview"
-                                                style="max-width: 250px; max-height: 200px;">
-                                        @endif
+                                        <label for="assets_img" class="form-label">Assets Image</label>
+                                        <input type="file" id="assets_img" name="assets_img[]" class="form-control"
+                                            multiple required>
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
 
                         </div>
                     </div>
                 </div>
             </div>
-            {{-- End Input --}}
-            <!-- End::app-content -->
-
         </div>
     </div>
 
+    {{-- End Input --}}
+    <!-- End::app-content -->
+
     {{-- Preview Image JS START --}}
-    <script>
-        function previewImage(event) {
-            var reader = new FileReader();
-            reader.onload = function() {
-                var imgElement = document.getElementById('image_preview');
-                imgElement.src = reader.result;
-                imgElement.style.display = 'block';
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        }
-    </script>
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            FilePond.registerPlugin(
+                FilePondPluginImagePreview
+            );
+
+            const inputElement = document.getElementById('assets_img');
+            const pond = FilePond.create(inputElement, {
+                allowMultiple: true,
+                imagePreviewHeight: 150 // Sesuaikan dengan ukuran yang diinginkan untuk tampilan pratinjau
+                // ...konfigurasi lainnya
+            });
+        });
+    </script> --}}
     {{-- Preview Image JS END --}}
 
 @endsection

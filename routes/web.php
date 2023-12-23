@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AffiliateController;
+use App\Http\Controllers\CMS\GuestBookController;
 use App\Http\Controllers\HistoryBonusController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProfileController;
@@ -9,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
+use App\Http\Controllers\CMS\AssetsController;
+use App\Http\Controllers\CMS\ThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,5 +70,31 @@ Route::prefix('cms')->group(function () {
     ]);
 });
 
+    Route::resource('theme', ThemeController::class)->names([
+        'index' => 'theme.index',
+        'create' => 'theme.create',
+        'store' => 'theme.store',
+        'edit' => 'theme.edit',
+        'update' => 'theme.update',
+        'destroy' => 'theme.destroy',
+    ]);
+    Route::get('/assets/search', [AssetsController::class, 'search'])->name('assets.search');
+    Route::resource('assets', AssetsController::class)->names([
+        'index' => 'assets.index',
+        'create' => 'assets.create',
+        'store' => 'assets.store',
+        'edit' => 'assets.edit',
+        'update' => 'assets.update',
+        'destroy' => 'assets.destroy',
+    ]);
+Route::controller(GuestBookController::class)->group(function() {
+    Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
+    Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
+    Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
+    Route::get('/cms/guestbook/edit/{id}', [GuestBookController::class, 'edit'])->name('guestbook.edit');
+    Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
+    Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
+    Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
+});
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

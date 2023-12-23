@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="light" data-toggled="close">
 
 <head>
 
@@ -11,47 +12,50 @@
     <title> Couple Moment </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Spruko Technologies Private Limited">
-	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
+    <meta name="keywords"
+        content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('backend')}}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('backend') }}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
 
     <!-- Choices JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <!-- Main Theme Js -->
-    <script src="{{asset('backend')}}/dist/assets/js/main.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/main.js"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href="{{asset('backend')}}/dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link id="style" href="{{ asset('backend') }}/dist/assets/libs/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Style Css -->
-    <link href="{{asset('backend')}}/dist/assets/css/styles.min.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}/dist/assets/css/styles.min.css" rel="stylesheet">
 
     <!-- Icons Css -->
-    <link href="{{asset('backend')}}/dist/assets/css/icons.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}/dist/assets/css/icons.css" rel="stylesheet">
 
     <!-- Node Waves Css -->
-    <link href="{{asset('backend')}}/dist/assets/libs/node-waves/waves.min.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}/dist/assets/libs/node-waves/waves.min.css" rel="stylesheet">
 
     <!-- Simplebar Css -->
-    <link href="{{asset('backend')}}/dist/assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}/dist/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/@simonwep/pickr/themes/nano.min.css">
 
     <!-- Choices Css -->
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('backend') }}/dist/assets/libs/choices.js/public/assets/styles/choices.min.css">
 
     <!-- Jsvector Css -->
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/jsvectormap/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/jsvectormap/css/jsvectormap.min.css">
 
     <!-- Swiper Css -->
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/swiper/swiper-bundle.min.css">
 
     <!-- Grid Css -->
-    <link rel="stylesheet" href="{{asset('backend')}}/dist/assets/libs/gridjs/theme/mermaid.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/gridjs/theme/mermaid.min.css">
 
     {{-- Datatables --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
@@ -59,12 +63,18 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
 
     <!-- Sweetalerts CSS -->
-    <link rel="stylesheet" href="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+    {{-- <link rel="stylesheet" href="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.css"> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/filepond/filepond.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css">
 </head>
 
 <body>
-
+    @include('sweetalert::alert')
     <!-- Start Switcher -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header border-bottom">
@@ -74,15 +84,17 @@
         <div class="offcanvas-body">
             <nav class="border-bottom border-block-end-dashed">
                 <div class="nav nav-tabs nav-justified" id="switcher-main-tab" role="tablist">
-                    <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab" data-bs-target="#switcher-home"
-                        type="button" role="tab" aria-controls="switcher-home" aria-selected="true">Theme Styles</button>
-                    <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab" data-bs-target="#switcher-profile"
-                        type="button" role="tab" aria-controls="switcher-profile" aria-selected="false">Theme Colors</button>
+                    <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab"
+                        data-bs-target="#switcher-home" type="button" role="tab" aria-controls="switcher-home"
+                        aria-selected="true">Theme Styles</button>
+                    <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#switcher-profile" type="button" role="tab"
+                        aria-controls="switcher-profile" aria-selected="false">Theme Colors</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel" aria-labelledby="switcher-home-tab"
-                    tabindex="0">
+                <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel"
+                    aria-labelledby="switcher-home-tab" tabindex="0">
                     <div class="">
                         <p class="switcher-style-head">Theme Color Mode:</p>
                         <div class="row switcher-style gx-0">
@@ -91,8 +103,8 @@
                                     <label class="form-check-label" for="switcher-light-theme">
                                         Light
                                     </label>
-                                    <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="theme-style"
+                                        id="switcher-light-theme" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -100,7 +112,8 @@
                                     <label class="form-check-label" for="switcher-dark-theme">
                                         Dark
                                     </label>
-                                    <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                                    <input class="form-check-input" type="radio" name="theme-style"
+                                        id="switcher-dark-theme">
                                 </div>
                             </div>
                         </div>
@@ -113,7 +126,8 @@
                                     <label class="form-check-label" for="switcher-ltr">
                                         LTR
                                     </label>
-                                    <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                                    <input class="form-check-input" type="radio" name="direction"
+                                        id="switcher-ltr" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -121,7 +135,8 @@
                                     <label class="form-check-label" for="switcher-rtl">
                                         RTL
                                     </label>
-                                    <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                                    <input class="form-check-input" type="radio" name="direction"
+                                        id="switcher-rtl">
                                 </div>
                             </div>
                         </div>
@@ -134,8 +149,8 @@
                                     <label class="form-check-label" for="switcher-vertical">
                                         Vertical
                                     </label>
-                                    <input class="form-check-input" type="radio" name="navigation-style" id="switcher-vertical"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="navigation-style"
+                                        id="switcher-vertical" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -257,8 +272,8 @@
                                     <label class="form-check-label" for="switcher-regular">
                                         Regular
                                     </label>
-                                    <input class="form-check-input" type="radio" name="page-styles" id="switcher-regular"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="page-styles"
+                                        id="switcher-regular" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -266,7 +281,8 @@
                                     <label class="form-check-label" for="switcher-classic">
                                         Classic
                                     </label>
-                                    <input class="form-check-input" type="radio" name="page-styles" id="switcher-classic">
+                                    <input class="form-check-input" type="radio" name="page-styles"
+                                        id="switcher-classic">
                                 </div>
                             </div>
                         </div>
@@ -279,8 +295,8 @@
                                     <label class="form-check-label" for="switcher-full-width">
                                         Full Width
                                     </label>
-                                    <input class="form-check-input" type="radio" name="layout-width" id="switcher-full-width"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="layout-width"
+                                        id="switcher-full-width" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -288,7 +304,8 @@
                                     <label class="form-check-label" for="switcher-boxed">
                                         Boxed
                                     </label>
-                                    <input class="form-check-input" type="radio" name="layout-width" id="switcher-boxed">
+                                    <input class="form-check-input" type="radio" name="layout-width"
+                                        id="switcher-boxed">
                                 </div>
                             </div>
                         </div>
@@ -301,8 +318,8 @@
                                     <label class="form-check-label" for="switcher-menu-fixed">
                                         Fixed
                                     </label>
-                                    <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-fixed"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="menu-positions"
+                                        id="switcher-menu-fixed" checked>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -310,7 +327,8 @@
                                     <label class="form-check-label" for="switcher-menu-scroll">
                                         Scrollable
                                     </label>
-                                    <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-scroll">
+                                    <input class="form-check-input" type="radio" name="menu-positions"
+                                        id="switcher-menu-scroll">
                                 </div>
                             </div>
                         </div>
@@ -362,7 +380,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0">
+                <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel"
+                    aria-labelledby="switcher-profile-tab" tabindex="0">
                     <div>
                         <div class="theme-colors">
                             <p class="switcher-style-head">Menu Colors:</p>
@@ -383,9 +402,9 @@
                                         id="switcher-menu-primary">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Gradient Menu" type="radio" name="menu-colors"
-                                        id="switcher-menu-gradient">
+                                    <input class="form-check-input color-input color-gradient"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Gradient Menu"
+                                        type="radio" name="menu-colors" id="switcher-menu-gradient">
                                 </div>
                                 <div class="form-check switch-select me-3">
                                     <input class="form-check-input color-input color-transparent"
@@ -393,38 +412,40 @@
                                         type="radio" name="menu-colors" id="switcher-menu-transparent">
                                 </div>
                             </div>
-                            <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Menu dynamically change from below Theme Primary color picker</div>
+                            <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Menu dynamically
+                                change from below Theme Primary color picker</div>
                         </div>
                         <div class="theme-colors">
                             <p class="switcher-style-head">Header Colors:</p>
                             <div class="d-flex switcher-style pb-2">
                                 <div class="form-check switch-select me-3">
                                     <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Light Header" type="radio" name="header-colors"
-                                        id="switcher-header-light" checked>
+                                        data-bs-placement="top" title="Light Header" type="radio"
+                                        name="header-colors" id="switcher-header-light" checked>
                                 </div>
                                 <div class="form-check switch-select me-3">
                                     <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Dark Header" type="radio" name="header-colors"
-                                        id="switcher-header-dark">
+                                        data-bs-placement="top" title="Dark Header" type="radio"
+                                        name="header-colors" id="switcher-header-dark">
                                 </div>
                                 <div class="form-check switch-select me-3">
                                     <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Color Header" type="radio" name="header-colors"
-                                        id="switcher-header-primary">
+                                        data-bs-placement="top" title="Color Header" type="radio"
+                                        name="header-colors" id="switcher-header-primary">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Gradient Header" type="radio" name="header-colors"
-                                        id="switcher-header-gradient">
+                                    <input class="form-check-input color-input color-gradient"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Gradient Header"
+                                        type="radio" name="header-colors" id="switcher-header-gradient">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-transparent" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Transparent Header" type="radio" name="header-colors"
-                                        id="switcher-header-transparent">
+                                    <input class="form-check-input color-input color-transparent"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Header"
+                                        type="radio" name="header-colors" id="switcher-header-transparent">
                                 </div>
                             </div>
-                            <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Header dynamically change from below Theme Primary color picker</div>
+                            <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Header dynamically
+                                change from below Theme Primary color picker</div>
                         </div>
                         <div class="theme-colors">
                             <p class="switcher-style-head">Theme Primary:</p>
@@ -438,16 +459,16 @@
                                         name="theme-primary" id="switcher-primary1">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
-                                        id="switcher-primary2">
+                                    <input class="form-check-input color-input color-primary-3" type="radio"
+                                        name="theme-primary" id="switcher-primary2">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
-                                        id="switcher-primary3">
+                                    <input class="form-check-input color-input color-primary-4" type="radio"
+                                        name="theme-primary" id="switcher-primary3">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
-                                        id="switcher-primary4">
+                                    <input class="form-check-input color-input color-primary-5" type="radio"
+                                        name="theme-primary" id="switcher-primary4">
                                 </div>
                                 <div class="form-check switch-select ps-0 mt-1 color-primary-light">
                                     <div class="theme-container-primary"></div>
@@ -467,8 +488,8 @@
                                         name="theme-background" id="switcher-background1">
                                 </div>
                                 <div class="form-check switch-select me-3">
-                                    <input class="form-check-input color-input color-bg-3" type="radio" name="theme-background"
-                                        id="switcher-background2">
+                                    <input class="form-check-input color-input color-bg-3" type="radio"
+                                        name="theme-background" id="switcher-background2">
                                 </div>
                                 <div class="form-check switch-select me-3">
                                     <input class="form-check-input color-input color-bg-4" type="radio"
@@ -478,7 +499,8 @@
                                     <input class="form-check-input color-input color-bg-5" type="radio"
                                         name="theme-background" id="switcher-background4">
                                 </div>
-                                <div class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
+                                <div
+                                    class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
                                     <div class="theme-container-background"></div>
                                     <div class="pickr-container-background"></div>
                                 </div>
@@ -496,8 +518,8 @@
                                         name="theme-background" id="switcher-bg-img1">
                                 </div>
                                 <div class="form-check switch-select m-2">
-                                    <input class="form-check-input bgimage-input bg-img3" type="radio" name="theme-background"
-                                        id="switcher-bg-img2">
+                                    <input class="form-check-input bgimage-input bg-img3" type="radio"
+                                        name="theme-background" id="switcher-bg-img2">
                                 </div>
                                 <div class="form-check switch-select m-2">
                                     <input class="form-check-input bgimage-input bg-img4" type="radio"
@@ -521,13 +543,13 @@
 
 
     <!-- Loader -->
-    <div id="loader" >
-        <img src="{{asset('backend')}}/dist/assets/images/media/loader.svg" alt="">
+    <div id="loader">
+        <img src="{{ asset('backend') }}/dist/assets/images/media/loader.svg" alt="">
     </div>
     <!-- Loader -->
 
     <div class="page">
-         <!-- app-header -->
+        <!-- app-header -->
         @include('admin.layouts.header')
         <!-- /app-header -->
 
@@ -541,61 +563,76 @@
 
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <div class="input-group">
-                    <a href="javascript:void(0);" class="input-group-text" id="Search-Grid"><i class="fe fe-search header-link-icon fs-18"></i></a>
-                    <input type="search" class="form-control border-0 px-2" placeholder="Search" aria-label="Username">
-                    <a href="javascript:void(0);" class="input-group-text" id="voice-search"><i class="fe fe-mic header-link-icon"></i></a>
-                    <a href="javascript:void(0);" class="btn btn-light btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fe fe-more-vertical"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <p class="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
-                    <span class="search-tags"><i class="fe fe-user me-2"></i>People<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
-                    <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
-                    <span class="search-tags"><i class="fe fe-align-left me-2"></i>Articles<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
-                    <span class="search-tags"><i class="fe fe-server me-2"></i>Tags<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
-                  </div>
-                  <div class="my-4">
-                    <p class="font-weight-semibold text-muted mb-2">Recent Search :</p>
-                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
-                      <a href="notifications.html"><span>Notifications</span></a>
-                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <a href="javascript:void(0);" class="input-group-text" id="Search-Grid"><i
+                                    class="fe fe-search header-link-icon fs-18"></i></a>
+                            <input type="search" class="form-control border-0 px-2" placeholder="Search"
+                                aria-label="Username">
+                            <a href="javascript:void(0);" class="input-group-text" id="voice-search"><i
+                                    class="fe fe-mic header-link-icon"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-light btn-icon" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
+                            <span class="search-tags"><i class="fe fe-user me-2"></i>People<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                            <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                            <span class="search-tags"><i class="fe fe-align-left me-2"></i>Articles<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                            <span class="search-tags"><i class="fe fe-server me-2"></i>Tags<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                        </div>
+                        <div class="my-4">
+                            <p class="font-weight-semibold text-muted mb-2">Recent Search :</p>
+                            <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                                <a href="notifications.html"><span>Notifications</span></a>
+                                <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert"
+                                    aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                            </div>
+                            <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                                <a href="alerts.html"><span>Alerts</span></a>
+                                <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert"
+                                    aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                            </div>
+                            <div class="p-2 border br-5 d-flex align-items-center text-muted mb-0 alert">
+                                <a href="mail.html"><span>Mail</span></a>
+                                <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert"
+                                    aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
-                      <a href="alerts.html"><span>Alerts</span></a>
-                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                    <div class="modal-footer">
+                        <div class="btn-group ms-auto">
+                            <button class="btn btn-sm btn-primary-light">Search</button>
+                            <button class="btn btn-sm btn-primary">Clear Recents</button>
+                        </div>
                     </div>
-                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-0 alert">
-                      <a href="mail.html"><span>Mail</span></a>
-                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
-                    </div>
-                  </div>
                 </div>
-                <div class="modal-footer">
-                  <div class="btn-group ms-auto">
-                    <button class="btn btn-sm btn-primary-light">Search</button>
-                    <button class="btn btn-sm btn-primary">Clear Recents</button>
-                  </div>
-                </div>
-              </div>
             </div>
         </div>
         <!-- Start Switcher -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar-right" aria-labelledby="offcanvasRightLabel2">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar-right"
+            aria-labelledby="offcanvasRightLabel2">
             <div class="offcanvas-header border-bottom bg-primary text-fixed-white">
                 <h6 class="offcanvas-title d-inline-flex text-fixed-white" id="offcanvasRightLabel2">
                     <span class=" me-2 d-inline-flex">
-                        <i class="fe fe-bell my-auto"></i> <span class=" pulse w-9 h-9 bg-success rounded-circle"></span>
+                        <i class="fe fe-bell my-auto"></i> <span
+                            class=" pulse w-9 h-9 bg-success rounded-circle"></span>
                     </span>
                     Notifications
                 </h6>
@@ -603,97 +640,122 @@
             </div>
             <div class="offcanvas-body p-0">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
-                    <button class="nav-link active" id="sidebar-side1" data-bs-toggle="tab" data-bs-target="#sidebar-slidepane-1"
-                        type="button" role="tab" aria-controls="sidebar-slidepane-1" aria-selected="true"><i class="d-inline-flex fe fe-settings me-1"></i> Feeds</button>
-                    <button class="nav-link" id="sidebar-side2" data-bs-toggle="tab" data-bs-target="#sidebar-slidepane-2"
-                        type="button" role="tab" aria-controls="sidebar-slidepane-2" aria-selected="false"><i class="d-inline-flex fe fe-message-circle me-1"></i>Chat</button>
-                    <button class="nav-link" id="sidebar-side3" data-bs-toggle="tab" data-bs-target="#sidebar-slidepane-3"
-                        type="button" role="tab" aria-controls="sidebar-slidepane-3" aria-selected="false"><i class="d-inline-flex fe fe-anchor me-1"></i>Timeline</button>
+                    <button class="nav-link active" id="sidebar-side1" data-bs-toggle="tab"
+                        data-bs-target="#sidebar-slidepane-1" type="button" role="tab"
+                        aria-controls="sidebar-slidepane-1" aria-selected="true"><i
+                            class="d-inline-flex fe fe-settings me-1"></i> Feeds</button>
+                    <button class="nav-link" id="sidebar-side2" data-bs-toggle="tab"
+                        data-bs-target="#sidebar-slidepane-2" type="button" role="tab"
+                        aria-controls="sidebar-slidepane-2" aria-selected="false"><i
+                            class="d-inline-flex fe fe-message-circle me-1"></i>Chat</button>
+                    <button class="nav-link" id="sidebar-side3" data-bs-toggle="tab"
+                        data-bs-target="#sidebar-slidepane-3" type="button" role="tab"
+                        aria-controls="sidebar-slidepane-3" aria-selected="false"><i
+                            class="d-inline-flex fe fe-anchor me-1"></i>Timeline</button>
                 </nav>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active border-0 p-0" id="sidebar-slidepane-1" role="tabpanel" aria-labelledby="sidebar-side1" tabindex="0">
+                    <div class="tab-pane fade show active border-0 p-0" id="sidebar-slidepane-1" role="tabpanel"
+                        aria-labelledby="sidebar-side1" tabindex="0">
                         <div class="p-3 fw-semibold">Feeds</div>
                         <div class="py-3 px-4 pt-0">
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-primary-transparent"><i class="fe fe-user text-primary"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-primary-transparent"><i
+                                            class="fe fe-user text-primary"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">New user registered</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-secondary-transparent"><i class="fe fe-shopping-cart text-secondary"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-secondary-transparent"><i
+                                            class="fe fe-shopping-cart text-secondary"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">New order delivered</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-danger-transparent"><i class="fe fe-bell text-danger"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-danger-transparent"><i
+                                            class="fe fe-bell text-danger"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">You have pending tasks</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-warning-transparent"><i class="fe fe-gitlab text-warning"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-warning-transparent"><i
+                                            class="fe fe-gitlab text-warning"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">New version arrived</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-pink-transparent"><i class="fe fe-database text-pink"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-pink-transparent"><i
+                                            class="fe fe-database text-pink"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">Server #1 overloaded</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-info-transparent"><i class="fe fe-check-circle text-info"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-info-transparent"><i
+                                            class="fe fe-check-circle text-info"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">New project launched</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings me-1"></i></a>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-x"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings me-1"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-x"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -703,87 +765,100 @@
                         <div class="py-3 px-4 pt-0">
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-primary-transparent"><i class="fe fe-settings text-primary"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-primary-transparent"><i
+                                            class="fe fe-settings text-primary"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">General Settings</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-secondary-transparent"><i class="fe fe-map-pin text-secondary"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-secondary-transparent"><i
+                                            class="fe fe-map-pin text-secondary"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">Map Settings</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-danger-transparent"><i class="fe fe-headphones text-danger"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-danger-transparent"><i
+                                            class="fe fe-headphones text-danger"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">Support Settings</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-warning-transparent"><i class="fe fe-credit-card text-warning"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-warning-transparent"><i
+                                            class="fe fe-credit-card text-warning"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
-                                        <h6 class="mb-0 fw-normal fs-14">Payment  Settings</h6>
+                                        <h6 class="mb-0 fw-normal fs-14">Payment Settings</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2 mb-sm-0 mb-3">
-                                    <span class="feeds avatar avatar-sm avatar-rounded bg-pink-transparent"><i class="fe fe-bell text-pink"></i></span>
+                                    <span class="feeds avatar avatar-sm avatar-rounded bg-pink-transparent"><i
+                                            class="fe fe-bell text-pink"></i></span>
                                 </div>
                                 <div class="col-sm-10 ps-sm-0 my-auto">
                                     <div class="d-flex align-items-end justify-content-between ms-2">
                                         <h6 class="mb-0 fw-normal fs-14">Notification Settings</h6>
                                         <div>
-                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i class="fe fe-settings"></i></a>
+                                            <a aria-label="anchor" href="javascript:void(0)" class="text-primary"><i
+                                                    class="fe fe-settings"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade border-0 p-0" id="sidebar-slidepane-2" role="tabpanel" aria-labelledby="sidebar-side2" tabindex="0">
+                    <div class="tab-pane fade border-0 p-0" id="sidebar-slidepane-2" role="tabpanel"
+                        aria-labelledby="sidebar-side2" tabindex="0">
                         <div class="p-3 fw-semibold">Today</div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/2.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/2.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
-                                    <div class="fw-semibold text-dark" >Addie Minstra</div>
+                                    <div class="fw-semibold text-dark">Addie Minstra</div>
                                     <p class="mb-0 fs-12 text-muted"> Hey! there I' am available.... </p>
                                 </a>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md online avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/11.jpg"></span>
+                                <span class="avatar avatar-md online avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/11.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -794,7 +869,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/10.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/10.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -805,7 +881,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/13.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/13.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -816,7 +893,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md online avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/12.jpg"></span>
+                                <span class="avatar avatar-md online avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/12.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -827,18 +905,20 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/15.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/15.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
                                     <div class="fw-semibold text-dark">Manny Jah</div>
-                                    <p class="mb-0 fs-12 text-muted">  Hi we can explain our new project......</p>
+                                    <p class="mb-0 fs-12 text-muted"> Hi we can explain our new project......</p>
                                 </a>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-0 px-3">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/4.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/4.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -850,7 +930,8 @@
                         <div class="p-3 fw-semibold">Yesterday</div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md online avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/7.jpg"></span>
+                                <span class="avatar avatar-md online avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/7.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -861,7 +942,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/9.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/9.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -872,7 +954,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md online avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/2.jpg"></span>
+                                <span class="avatar avatar-md online avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/2.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -883,7 +966,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/9.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/9.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -894,7 +978,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/14.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/14.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -905,7 +990,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/11.jpg"></span>
+                                <span class="avatar avatar-md avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/11.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -916,7 +1002,8 @@
                         </div>
                         <div class="d-flex align-items-center py-3 px-3 pt-0">
                             <div class="me-2">
-                                <span class="avatar avatar-md online avatar-rounded cover-image"  data-bs-image-src="{{asset('backend')}}/dist/assets/images/faces/11.jpg"></span>
+                                <span class="avatar avatar-md online avatar-rounded cover-image"
+                                    data-bs-image-src="{{ asset('backend') }}/dist/assets/images/faces/11.jpg"></span>
                             </div>
                             <div class="">
                                 <a href="chat.html">
@@ -926,18 +1013,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade border-0 p-3" id="sidebar-slidepane-3" role="tabpanel" aria-labelledby="sidebar-side3" tabindex="0">
+                    <div class="tab-pane fade border-0 p-3" id="sidebar-slidepane-3" role="tabpanel"
+                        aria-labelledby="sidebar-side3" tabindex="0">
                         <ul class="task-list timeline-task">
                             <li class="d-sm-flex">
                                 <div>
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">Task Finished<span
                                             class="text-muted fs-11 mx-2 fw-normal">09 July 2021</span></h6>
-                                    <p class="text-muted fs-12 mb-0">Adam Berry finished task on<a href="javascript:void(0)" class="fw-semibold text-primary"> Project Management</a></p>
+                                    <p class="text-muted fs-12 mb-0">Adam Berry finished task on<a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> Project
+                                            Management</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                             <li class="d-sm-flex">
@@ -945,12 +1037,15 @@
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">New Comment<span
                                             class="text-muted fs-11 mx-2 fw-normal">05 July 2021</span></h6>
-                                    <p class="text-muted fs-12 mb-0">Victoria commented on Project <a href="javascript:void(0)"
-                                            class="fw-semibold text-primary"> AngularJS Template</a></p>
+                                    <p class="text-muted fs-12 mb-0">Victoria commented on Project <a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> AngularJS
+                                            Template</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                             <li class="d-sm-flex">
@@ -958,12 +1053,15 @@
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">New Comment<span
                                             class="text-muted fs-11 mx-2 fw-normal">25 June 2021</span></h6>
-                                    <p class="text-muted fs-12 mb-0">Victoria commented on Project <a href="javascript:void(0)"
-                                            class="fw-semibold text-primary"> AngularJS Template</a></p>
+                                    <p class="text-muted fs-12 mb-0">Victoria commented on Project <a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> AngularJS
+                                            Template</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                             <li class="d-sm-flex">
@@ -971,12 +1069,15 @@
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">Task Overdue<span
                                             class="text-muted fs-11 mx-2 fw-normal">14 June 2021</span></h6>
-                                    <p class="text-muted mb-0 fs-12">Petey Cruiser finished task <a href="javascript:void(0)"
-                                            class="fw-semibold text-primary"> Integrated management</a></p>
+                                    <p class="text-muted mb-0 fs-12">Petey Cruiser finished task <a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> Integrated
+                                            management</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                             <li class="d-sm-flex">
@@ -984,12 +1085,15 @@
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">Task Overdue<span
                                             class="text-muted fs-11 mx-2 fw-normal">29 June 2021</span></h6>
-                                    <p class="text-muted mb-0 fs-12">Petey Cruiser finished task <a href="javascript:void(0)"
-                                            class="fw-semibold text-primary"> Integrated management</a></p>
+                                    <p class="text-muted mb-0 fs-12">Petey Cruiser finished task <a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> Integrated
+                                            management</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                             <li class="d-sm-flex">
@@ -997,12 +1101,15 @@
                                     <i class="task-icon1"></i>
                                     <h6 class="fw-semibold fs-14">Task Finished<span
                                             class="text-muted fs-11 mx-2 fw-normal">09 July 2021</span></h6>
-                                    <p class="text-muted fs-12 mb-0">Adam Berry finished task on<a href="javascript:void(0)"
-                                            class="fw-semibold text-primary"> Project Management</a></p>
+                                    <p class="text-muted fs-12 mb-0">Adam Berry finished task on<a
+                                            href="javascript:void(0)" class="fw-semibold text-primary"> Project
+                                            Management</a></p>
                                 </div>
                                 <div class="ms-auto d-md-flex task-icon-link">
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i class="fe fe-edit"></i></a>
-                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i class="fe fe-trash-2 fs-12"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted me-2"><i
+                                            class="fe fe-edit"></i></a>
+                                    <a aria-label="anchor" href="javascript:void(0)" class="text-muted"><i
+                                            class="fe fe-trash-2 fs-12"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -1028,53 +1135,52 @@
     <!-- Scroll To Top -->
 
     <!-- Popper JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/@popperjs/core/umd/popper.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/@popperjs/core/umd/popper.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Defaultmenu JS -->
-    <script src="{{asset('backend')}}/dist/assets/js/defaultmenu.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/defaultmenu.min.js"></script>
 
     <!-- Node Waves JS-->
-    <script src="{{asset('backend')}}/dist/assets/libs/node-waves/waves.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/node-waves/waves.min.js"></script>
 
     <!-- Sticky JS -->
-    <script src="{{asset('backend')}}/dist/assets/js/sticky.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/sticky.js"></script>
 
     <!-- Simplebar JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="{{asset('backend')}}/dist/assets/js/simplebar.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/simplebar.js"></script>
 
     <!-- Color Picker JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
-
-
+    <script src="{{ asset('backend') }}/dist/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
 
     <!-- JSVector Maps JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
 
     <!-- JSVector Maps MapsJS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/jsvectormap/maps/world-merc.js"></script>
 
     <!-- Apex Charts JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/apexcharts/apexcharts.min.js"></script>
 
     <!-- Chartjs Chart JS -->
-    <script src="{{asset('backend')}}/dist/assets/libs/chart.js/chart.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/chart.js/chart.min.js"></script>
 
     <!-- index -->
-    <script src="{{asset('backend')}}/dist/assets/js/index.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/index.js"></script>
 
 
     <!-- Custom-Switcher JS -->
-    <script src="{{asset('backend')}}/dist/assets/js/custom-switcher.min.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/custom-switcher.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="{{asset('backend')}}/dist/assets/js/custom.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/custom.js"></script>
 
     <!-- Jquery Cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
     <!-- Datatables Cdn -->
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -1088,11 +1194,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <!-- Internal Datatables JS -->
-    <script src="{{asset('backend')}}/dist/assets/js/datatables.js"></script>
+    <script src="{{ asset('backend') }}/dist/assets/js/datatables.js"></script>
 
     <!-- Sweetalerts JS -->
+
+    {{-- <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script> --}}
+
+    <!-- Filepond JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond/filepond.min.js"></script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js">
+    </script>
+    <script src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js">
+    </script>
+    <script
+        src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js">
+    </script>
+
     <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
+
+    {{-- Plus and Minus Guest Book Form --}}
+    <script>
+        $(function() {
+            $('.table-data').on('click', '.btn-add', function() {
+                var $tr = $(this).closest('.tr-clone');
+                var $clone = $tr.clone();
+                $clone.find(':text').val('');
+                $tr.after($clone);
+            });
+            $('.table-data').on('click', '.btn-remove', function() {
+                var $tr = $(this).closest('.tr-clone');
+                var $clone = $tr.clone();
+                $clone.find(':text').val('');
+                $tr.remove();
+            });
+        })
+    </script>
+
+    {{-- Copy URL --}}
+    <script>
+        $(document).ready(function() {
+            $('.contact-hover-dropdown1').click(function() {
+                var url = $(this).data('url');
+
+                navigator.clipboard.writeText(url).then(function() {
+                    console.log('URL berhasil disalin:', url);
+
+                    $('#copySuccessMessage').fadeIn().delay(2000).fadeOut();
+                }, function(err) {
+                    console.error('Gagal menyalin URL: ', err);
+                });
+            });
+        });
+    </script>
+
+    {{-- Search Guest --}}
+    <script>
+        $(document).ready(function() {
+            $('#searchGuest').on('keyup', function() {
+                var value = $(this).val().toLowerCase();
+                $('.col-xxl-3').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
