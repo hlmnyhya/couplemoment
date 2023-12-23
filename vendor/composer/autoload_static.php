@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
+class ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -376,8 +376,8 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -3825,6 +3825,7 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
         'Mockery\\Matcher\\IsEqual' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/IsEqual.php',
         'Mockery\\Matcher\\IsSame' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/IsSame.php',
         'Mockery\\Matcher\\MatcherAbstract' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
+        'Mockery\\Matcher\\MatcherInterface' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MatcherInterface.php',
         'Mockery\\Matcher\\MultiArgumentClosure' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MultiArgumentClosure.php',
         'Mockery\\Matcher\\MustBe' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/MustBe.php',
         'Mockery\\Matcher\\NoArgs' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Matcher/NoArgs.php',
@@ -7602,6 +7603,9 @@ class ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5b9b9491cb9ea2680c36d79a7ab063c6::$classMap;
             $loader->prefixLengthsPsr4 = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8fd61d5694d4380a5f370afd6f313ed9::$prefixesPsr0;

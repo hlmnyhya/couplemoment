@@ -25,6 +25,8 @@ return new class extends Migration
             $table->time('time_invitation');
             $table->string('timezone')->nullable();
             $table->string('address_invitation')->nullable();
+            $table->string('address_url')->nullable();
+            $table->string('address_maps')->nullable();
             $table->timestamps();
         });
     }
