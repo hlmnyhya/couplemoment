@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AffiliateController;
+use App\Http\Controllers\CMS\GuestBookController;
 use App\Http\Controllers\HistoryBonusController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProfileController;
@@ -47,5 +48,14 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
+Route::controller(GuestBookController::class)->group(function() {
+    Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
+    Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
+    Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
+    Route::get('/cms/guestbook/edit/{id}', [GuestBookController::class, 'edit'])->name('guestbook.edit');
+    Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
+    Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
+    Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
+});
 
 require __DIR__.'/auth.php';
