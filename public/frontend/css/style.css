@@ -1416,6 +1416,15 @@ line-height: normal;
   bottom: 15px;
   right: 15px;
 }
+  .portfolio-item {
+    margin-bottom: 0px;
+  }
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details
