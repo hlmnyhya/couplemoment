@@ -105,7 +105,7 @@
                         <a href="javascript:void(0)">Sound Bank</a>
                     </li>
                     <li class="slide">
-                        <a href="full-calendar.html" class="side-menu__item">All Sound Bank</a>
+                        <a href="{{ route('soundbank.index') }}" class="side-menu__item">All Sound Bank</a>
                     </li>
                 </ul>
             </li>

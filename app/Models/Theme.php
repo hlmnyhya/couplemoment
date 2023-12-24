@@ -15,4 +15,9 @@ class Theme extends Model
     {
         return $value == 0 ? 'Free' : 'Membership';
     }
+
+    public function invitations()
+    {
+        return $this->hasMany(Invitation::class, 'theme_id');
+    }
 }

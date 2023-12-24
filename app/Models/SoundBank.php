@@ -9,5 +9,10 @@ class SoundBank extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['title', 'singer', 'duration', 'file_mp3'];
+
+    public function invitations()
+    {
+        return $this->hasMany(Invitation::class, 'soundbank_id');
+    }
 }

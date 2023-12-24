@@ -1230,8 +1230,8 @@
         src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js">
     </script>
 
-    <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
-    <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
+    <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script>
 
     {{-- Plus and Minus Guest Book Form --}}
     <script>

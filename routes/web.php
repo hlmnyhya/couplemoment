@@ -8,6 +8,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CMS\SoundBankController;
+use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
 use App\Http\Controllers\CMS\ThemeController;
 
@@ -51,6 +53,15 @@ Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('hi
 
 // CMS Route
 Route::prefix('cms')->group(function () {
+    Route::resource('soundbank', SoundBankController::class)->names([
+        'index' => 'soundbank.index',
+        'create' => 'soundbank.create',
+        'store' => 'soundbank.store',
+        'edit' => 'soundbank.edit',
+        'update' => 'soundbank.update',
+        'destroy' => 'soundbank.destroy',
+    ]);
+
     Route::resource('theme', ThemeController::class)->names([
         'index' => 'theme.index',
         'create' => 'theme.create',
@@ -68,7 +79,24 @@ Route::prefix('cms')->group(function () {
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
     ]);
-Route::controller(GuestBookController::class)->group(function() {
+});
+
+// CMS Route
+Route::prefix('cms')->group(function () {
+    Route::resource('invitation', InvitationController::class)->names([
+        'index' => 'invitation.index',
+        'store' => 'invitation.store',
+        'edit' => 'invitation.edit',
+        'update' => 'invitation.update',
+        'delete' => 'invitation.delete',
+    ]);
+});
+Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme']);
+Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank']);
+
+
+
+Route::controller(GuestBookController::class)->group(function () {
     Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
     Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
     Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
