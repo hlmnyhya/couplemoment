@@ -313,7 +313,7 @@
                             <li data-filter="*" class="filter-active">All</li>
                             <li data-filter=".filter-app">Modern</li>
                             <li data-filter=".filter-card">Classic</li>
-                            <li data-filter=".filter-web">Minimalist</li>
+                            {{-- <li data-filter=".filter-web">Minimalist</li> --}}
                         </ul>
                     </div>
                 </div>
@@ -322,13 +322,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-1.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -339,13 +339,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-2.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template2.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Web 3</h4>
                                 <p>Web</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template2.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -356,13 +356,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-3.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -373,13 +373,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-4.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template2.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Card 2</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template2.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -390,13 +390,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-5.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Web 2</h4>
                                 <p>Web</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -407,13 +407,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend/img/portfolio/portfolio-6.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/portfolio/template2.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                                    <a href="frontend/img/portfolio/template2.jpg" data-gallery="portfolioGallery"
                                         class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i
                                             class="bi bi-link"></i></a>
@@ -443,26 +443,35 @@
                             <h3 style="color: #65c600;">Paket Basic</h3>
                             <div class="price"><sup>Rp.</sup>0</div>
                             <div class="price2"><span> / per Bulan</span></div>
-                            <img src="{{ asset('frontend/img/pricing-starter.png') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/1.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Undangan <strong>( Template
-                                        Terbatas )</strong></li>
-                                <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Minggu Expired Undangan
+                                        style="color: #65c600;margin-right: 10px;"></span>3 Hari Masa berlaku Undangan
                                 </li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Lagu <strong>( Pilihan Lagu
+                                        style="color: #65c600;margin-right: 10px;"></span>10 Wedding Invitation</li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Template Undangan <strong>(
+                                        Terbatas ) </strong></li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>(
                                         Terbatas )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Album <strong>( Maks. 5
+                                        style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>( Maks. 5
                                         Foto )</strong></li>
-                                <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>50 Guest Book</li>
-                                <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>Watermark</li>
+                                <li class="na"><span class="bi bi-x-circle mr-5 mt-1"
+                                        style="color: #c60000;margin-right: 10px;"></span>Hitung Mundur Hari Pernikahan
+                                </li>
+                                <li class="na"><span class="bi bi-x-circle mr-5 mt-1"
+                                        style="color: #c60000;margin-right: 10px;"></span>Lokasi Undangan (Maps)</li>
+                                <li class="na"><span class="bi bi-x-circle mr-5 mt-1"
+                                        style="color: #c60000;margin-right: 10px;"></span>No Watermark</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Konfirmasi Kehadiran</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                             </ul>
                             <a href="#" class="btn-buy">Buy Now</a>
                         </div>
@@ -472,28 +481,37 @@
                         <div class="box">
                             <span class="featured">Featured</span>
                             <h3 style="color: #1c42ff;">Paket Premium</h3>
-                            <div class="price"><sup>Rp.</sup>150.000</div>
+                            <div class="price"><sup>Rp.</sup>75.000</div>
                             <div class="price2"><span> / per Bulan</span></div>
-                            <img src="{{ asset('frontend/img/pricing-business.png') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/2.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>5 Undangan <strong>( Template
+                                        style="color: #65c600;margin-right: 10px;"></span>1 Minggu Masa Berlaku
+                                    Undangan</li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>50 Wedding Invitation</li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Template Undangan <strong>(
                                         Terbatas )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>2 Minggu Expired Undangan
-                                </li>
+                                        style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>( All
+                                        Sound )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Lagu <strong>( Pilihan Lagu
-                                        bebas )</strong></li>
-                                <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Album <strong>( Maks. 10
+                                        style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>( Maks. 10
                                         Foto )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>100 Guest Book</li>
+                                        style="color: #65c600;margin-right: 10px;"></span>Hitung Mundur Hari Pernikahan
+                                </li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Lokasi Undangan (Maps)</li>
                                 <li class="na"><span class="bi bi-x-circle mr-5 mt-1"
-                                        style="color: #c60000;margin-right: 10px;"></span>Watermark</li>
+                                        style="color: #c60000;margin-right: 10px;"></span>No Watermark</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Konfirmasi Kehadiran</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                             </ul>
                             <a href="#" class="btn-buy">Buy Now</a>
                         </div>
@@ -504,26 +522,33 @@
                             <h3 style="color: #ff0071;">Paket Exclusive</h3>
                             <div class="price"><sup>Rp.</sup>300.000</div>
                             <div class="price2"><span> / per Bulan</span></div>
-                            <img src="{{ asset('frontend/img/pricing-ultimate.png') }}" class="img-fluid"
+                            <img src="{{ asset('frontend/img/3.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>999+ Undangan <strong>( All
-                                        Template )</strong></li>
+                                        style="color: #65c600;margin-right: 10px;"></span>2 Minggu Masa Berlaku Undangan</li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Bulan Expired Undangan
-                                </li>
+                                        style="color: #65c600;margin-right: 10px;"></span>100 Wedding Invitation</li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Lagu <strong>( Pilihan Lagu
+                                        style="color: #65c600;margin-right: 10px;"></span>Template Undangan <strong>(
                                         Bebas )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>1 Album <strong>( Maks. 20
+                                        style="color: #65c600;margin-right: 10px;"></span>Pilihan All Sound <strong>( Bisa Request )</strong></li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>( Maks. 20
                                         Foto )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>200 Guest Book</li>
-                                <li class="na"><span class="bi bi-x-circle mr-5 mt-1"
-                                        style="color: #c60000;margin-right: 10px;"></span>Watermark</li>
+                                        style="color: #65c600;margin-right: 10px;"></span>Hitung Mundur Hari Pernikahan
+                                </li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>Lokasi Undangan (Maps)</li>
+                                <li><span class="bi bi-check-circle mr-5 mt-1"
+                                        style="color: #65c600;margin-right: 10px;"></span>No Watermark</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Konfirmasi Kehadiran</li>
+                                <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
+                                        style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                             </ul>
                             <a href="#" class="btn-buy">Buy Now</a>
                         </div>
@@ -705,7 +730,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <form action="forms/contact.php" method="post" class="php-email-form">
+                            <form action="frontend/contact.php" method="post" class="php-email-form">
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
@@ -874,13 +899,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-        <script>
+    <script>
         // Fungsi untuk menampilkan modal saat halaman dimuat
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('#exampleModalCenter').modal('show');
 
             // Fungsi untuk menutup modal setelah 7 detik
-            setTimeout(function(){
+            setTimeout(function() {
                 $('#exampleModalCenter').modal('hide');
             }, 7000);
         });
