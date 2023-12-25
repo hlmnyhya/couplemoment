@@ -319,12 +319,14 @@
                 </div>
 
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+                        {{-- Buat logika nya untuk menampilkan 6 template aja --}}
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
+                            {{-- disini untuk menampilkan gambar template --}}
                             <img src="{{ asset('frontend/img/portfolio/template.jpg') }}" class="img-fluid"
                                 alt="">
                             <div class="portfolio-info">
+                                {{-- disini untuk memuat isi dari template tersebut --}}
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
@@ -579,6 +581,7 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
+                                {{-- buatkan perulangan nya disini, dari data testimonial dan ambil data yang terbaru --}}
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                         class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
