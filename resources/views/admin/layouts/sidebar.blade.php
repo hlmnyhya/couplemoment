@@ -71,7 +71,7 @@
                         <a href="javascript:void(0)">Galery</a>
                     </li>
                     <li class="slide">
-                        <a href="full-calendar.html" class="side-menu__item">All Galery</a>
+                        <a href="{{route('gallery.index')}}" class="side-menu__item">All Galery</a>
                     </li>
                 </ul>
             </li>

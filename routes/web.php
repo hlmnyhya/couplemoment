@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CMS\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,21 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
+Route::controller(GalleryController::class)->group(function () {
+    Route::get('/cms/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    Route::get('/cms/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
+    Route::post('/cms/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::get('/cms/gallery/show/{id}', [GalleryController::class, 'show'])->name('gallery.show');
+
+    // delete gallery
+    Route::get('/gallery/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('gallery.delete');
+
+    // delete photo
+    Route::get('/photo/delete/{id}', [GalleryController::class, 'deletePhoto'])->name('photo.delete');
+
+    // delete all gallery
+    Route::get('/gallery/delete-all', [GalleryController::class, 'deleteAllGallery'])->name('gallery.delete-all');
+
+});
 
 require __DIR__.'/auth.php';
