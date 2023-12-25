@@ -441,8 +441,8 @@
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                         <div class="box">
                             <h3 style="color: #65c600;">Paket Basic</h3>
-                            <div class="price"><sup>Rp.</sup>0</div>
-                            <div class="price2"><span> / per Bulan</span></div>
+                            <div class="price2"><sup>Rp.</sup>75.000</div>
+                            <div class="price"><sup>Rp.</sup>0 <span> / Bln</span></div>
                             <img src="{{ asset('frontend/img/1.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>
@@ -481,8 +481,8 @@
                         <div class="box">
                             <span class="featured">Featured</span>
                             <h3 style="color: #1c42ff;">Paket Premium</h3>
-                            <div class="price"><sup>Rp.</sup>75.000</div>
-                            <div class="price2"><span> / per Bulan</span></div>
+                            <div class="price2"><sup>Rp.</sup>150.000</div>
+                            <div class="price"><sup>Rp.</sup>75.000<span> / Bln</span></div>
                             <img src="{{ asset('frontend/img/2.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>
@@ -520,8 +520,8 @@
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="box">
                             <h3 style="color: #ff0071;">Paket Exclusive</h3>
-                            <div class="price"><sup>Rp.</sup>300.000</div>
-                            <div class="price2"><span> / per Bulan</span></div>
+                            <div class="price2"><sup>Rp.</sup>300.000</div>
+                            <div class="price"><sup>Rp.</sup>150.000<span> / Bln</span></div>
                             <img src="{{ asset('frontend/img/3.png') }}" class="img-fluid"
                                 alt="">
                             <hr style='border: 1px solid #000;'>

@@ -1120,6 +1120,7 @@ line-height: normal;
   color: #444444;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
+  text-decoration: line-through #ff0000;
 }
 
 .pricing .price sup {
