@@ -62,6 +62,19 @@
                 <!-- End::header-link|layout-setting -->
             </div>
 
+            {{-- Button Buat Undangan --}}
+<div class="header-element notifications-dropdown">
+    <!-- Start::header-link|dropdown-toggle -->
+    <a aria-label="anchor" href="{{ route('invitation.index') }}" class="header-link dropdown-toggle" aria-expanded="false">
+        <button class="btn btn-primary label-btn"><i class="ti ti-square-plus label-btn-icon me-2"></i> Buat Undangan</button>
+    </a>
+    <!-- End::header-link|dropdown-toggle -->
+</div>
+<!-- End::header-element -->
+
+
+            {{-- End Button Buat Undangan --}}
+
             <!-- Start::header-element -->
             <div class="header-element main-profile-user">
                 <!-- Start::header-link|dropdown-toggle -->

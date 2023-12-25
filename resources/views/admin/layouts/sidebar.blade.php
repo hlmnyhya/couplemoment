@@ -26,7 +26,7 @@
             <!-- Start::slide__category -->
             <li class="slide__category"><span class="category-name">User</span></li>
             <!-- End::slide__category -->
-                
+
             <!-- Start::slide -->
               <li class="slide">
                 <a href="{{ route('admin-dashboard') }}" class="side-menu__item">
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <!-- End::slide -->
-    
+
 
              <!-- Start::slide__category -->
              <li class="slide__category"><span class="category-name">CMS</span></li>
@@ -105,7 +105,7 @@
                         <a href="javascript:void(0)">Sound Bank</a>
                     </li>
                     <li class="slide">
-                        <a href="full-calendar.html" class="side-menu__item">All Sound Bank</a>
+                        <a href="{{ route('soundbank.index') }}" class="side-menu__item">All Sound Bank</a>
                     </li>
                 </ul>
             </li>
@@ -122,7 +122,7 @@
                         <a href="javascript:void(0)">Guestbook</a>
                     </li>
                     <li class="slide">
-                        <a href="full-calendar.html" class="side-menu__item">All Guestbook</a>
+                        <a href="{{ route('guestbook.index') }}" class="side-menu__item">All Guestbook</a>
                     </li>
                 </ul>
             </li>
