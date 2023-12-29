@@ -595,18 +595,16 @@
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                         class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                                        class="bi bi-star"></i>
                                 </div>
                                 <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
+                                    Undangan digital mereka sangat elegan dan praktis! Pengalaman undangan pernikahan kami menjadi lebih modern dan tak terlupakan.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-1.jpg') }}"
+                                    <img src="{{ asset('frontend/img/testimonials/testi-1.jpeg') }}"
                                         class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
+                                    <h3>Anggie Yulistiawan</h3>
+                                    <h4>Memuaskan</h4>
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
@@ -619,15 +617,13 @@
                                         class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
+                                    Undangan digital mereka tidak hanya hemat kertas, tetapi juga memberikan sentuhan personal dengan fitur-fitur interaktif yang keren.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-2.jpg') }}"
+                                    <img src="{{ asset('frontend/img/testimonials/testi-2.jpeg') }}"
                                         class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
+                                    <h3>Rinta Ariani</h3>
+                                    <h4>Sangat Memuaskan</h4>
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
@@ -640,15 +636,13 @@
                                         class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
+                                    Desain yang indah dan pilihan fitur yang luas. Kami sangat senang dengan pilihan undangan digital kami.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-3.jpg') }}"
+                                    <img src="{{ asset('frontend/img/testimonials/testi-3.jpg') }}"
                                         class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
+                                    <h3>Hilmanadi Yahya</h3>
+                                    <h4>Sangat Memuaskan</h4>
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
@@ -661,15 +655,13 @@
                                         class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
+                                    Terima kasih atas undangan digital yang kreatif! Semua orang sangat terkesan dengan konsep yang unik.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-4.jpg') }}"
+                                    <img src="{{ asset('frontend/img/testimonials/testi-4.jpeg') }}"
                                         class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
+                                    <h3>Lois Ariani</h3>
+                                    <h4>Sangat Memuaskan</h4>
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
@@ -682,15 +674,13 @@
                                         class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
+                                    Sangat merekomendasikan undangan digital ini. Sangat memudahkan dan memberikan nuansa modern pada acara pernikahan kami.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-5.jpg') }}"
+                                    <img src="{{ asset('frontend/img/testimonials/testi-5.jpeg') }}"
                                         class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
+                                    <h3>Ariadi Setiawan</h3>
+                                    <h4>Sangat Memuaskan</h4>
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
