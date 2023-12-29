@@ -70,7 +70,7 @@
                     <li><a class="nav-link scrollto"
                             href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?">Menjadi
                             Reseller</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Daftar / Masuk</a></li>
+                    <li><a class="getstarted scrollto" href="#about" data-toggle="modal" data-target="#exampleModalCenter">Daftar / Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -119,7 +119,7 @@
 
                         <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
                             <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4" alt=""
-                                style="max-width: 85%;margin-bottom: 20px;">>
+                                style="max-width: 85%;margin-bottom: 20px;">
                         </div>
 
                         <div class="col-xl-8 d-flex content">
@@ -319,7 +319,7 @@
                 </div>
 
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                        {{-- Buat logika nya untuk menampilkan 6 template aja --}}
+                    {{-- Buat logika nya untuk menampilkan 6 template aja --}}
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
                             {{-- disini untuk menampilkan gambar template --}}
@@ -445,8 +445,7 @@
                             <h3 style="color: #65c600;">Paket Basic</h3>
                             <div class="price2"><sup>Rp.</sup>75.000</div>
                             <div class="price"><sup>Rp.</sup>0 <span> / Bln</span></div>
-                            <img src="{{ asset('frontend/img/1.png') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('frontend/img/1.png') }}" class="img-fluid" alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
@@ -485,8 +484,7 @@
                             <h3 style="color: #1c42ff;">Paket Premium</h3>
                             <div class="price2"><sup>Rp.</sup>150.000</div>
                             <div class="price"><sup>Rp.</sup>75.000<span> / Bln</span></div>
-                            <img src="{{ asset('frontend/img/2.png') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('frontend/img/2.png') }}" class="img-fluid" alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
@@ -524,19 +522,20 @@
                             <h3 style="color: #ff0071;">Paket Exclusive</h3>
                             <div class="price2"><sup>Rp.</sup>300.000</div>
                             <div class="price"><sup>Rp.</sup>150.000<span> / Bln</span></div>
-                            <img src="{{ asset('frontend/img/3.png') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('frontend/img/3.png') }}" class="img-fluid" alt="">
                             <hr style='border: 1px solid #000;'>
                             <ul>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>2 Minggu Masa Berlaku Undangan</li>
+                                        style="color: #65c600;margin-right: 10px;"></span>2 Minggu Masa Berlaku
+                                    Undangan</li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
                                         style="color: #65c600;margin-right: 10px;"></span>100 Wedding Invitation</li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
                                         style="color: #65c600;margin-right: 10px;"></span>Template Undangan <strong>(
                                         Bebas )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
-                                        style="color: #65c600;margin-right: 10px;"></span>Pilihan All Sound <strong>( Bisa Request )</strong></li>
+                                        style="color: #65c600;margin-right: 10px;"></span>Pilihan All Sound <strong>(
+                                        Bisa Request )</strong></li>
                                 <li><span class="bi bi-check-circle mr-5 mt-1"
                                         style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>( Maks. 20
                                         Foto )</strong></li>
@@ -900,8 +899,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"
         integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
     <script>
         // Fungsi untuk menampilkan modal saat halaman dimuat
         $(document).ready(function() {
@@ -911,6 +908,16 @@
             setTimeout(function() {
                 $('#exampleModalCenter').modal('hide');
             }, 7000);
+        });
+    </script>
+
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Skrip untuk membuka modal saat dokumen dimuat -->
+    <script>
+        $(document).ready(function(){
+            $('#exampleModalCenter').modal('show');
         });
     </script>
 

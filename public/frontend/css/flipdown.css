@@ -8,29 +8,29 @@
 }
 /* Rotor group headings */
 .flipdown.flipdown__theme-dark .rotor-group-heading:before {
-  color: #000;
+  color: #fff;
 }
 /* Delimeters */
 .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before,
 .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
-  background-color: #000;
+  background-color: #fff;
 }
 /* Rotor tops */
 .flipdown.flipdown__theme-dark .rotor,
 .flipdown.flipdown__theme-dark .rotor-top,
 .flipdown.flipdown__theme-dark .rotor-leaf-front {
-  color: #000;
+  color: #EFEFEF;
   background-color: #ff477e;
 }
 /* Rotor bottoms */
 .flipdown.flipdown__theme-dark .rotor-bottom,
 .flipdown.flipdown__theme-dark .rotor-leaf-rear {
-  color: #000;
+  color: #fff;
   background-color: #ff477e;
 }
 /* Hinge */
 .flipdown.flipdown__theme-dark .rotor:after {
-  border-top: solid 1px #000;
+  border-top: solid 1px #fff;
 }
 
 /********** Theme: pink **********/
