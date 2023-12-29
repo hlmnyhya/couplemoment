@@ -112,7 +112,6 @@ Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme']);
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank']);
 
 
-
 Route::controller(GuestBookController::class)->group(function () {
     Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
     Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
