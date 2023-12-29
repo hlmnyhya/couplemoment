@@ -2849,3 +2849,25 @@ body.loaded .content {
 .close:hover {
     color: #e90a0a; /* Warna teks tombol close saat dihover */
 }
+
+       #floatingButton {
+            position: fixed;
+            bottom: 20px;
+            right: 12px;
+            background-color: #ffaef2;
+            color: #fff;
+            padding: 10px 13px;
+            border: none;
+            z-index: 99999;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #floatingButton:hover {
+            background-color: #ff477e;
+        }
+
+        #audioPlayer {
+            display: none; /* Menyembunyikan tampilan audio */
+        }

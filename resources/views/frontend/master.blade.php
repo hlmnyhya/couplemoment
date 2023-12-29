@@ -70,7 +70,8 @@
                     <li><a class="nav-link scrollto"
                             href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?">Menjadi
                             Reseller</a></li>
-                    <li><a class="getstarted scrollto" href="#about" data-toggle="modal" data-target="#exampleModalCenter">Daftar / Masuk</a></li>
+                    <li><a class="getstarted scrollto" href="#login" data-toggle="modal"
+                            data-target="#exampleModalCenter">Daftar / Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -107,6 +108,16 @@
     </section><!-- End Hero -->
 
     <main id="main">
+
+        <!-- Audio Player -->
+        <audio id="audioPlayer" controls autoplay>
+            <source src="{{ asset('frontend/lagu.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Tombol Floating di Pojok Kanan Bawah -->
+        <button id="floatingButton" onclick="toggleAudio()"><i class="bi bi-music-note-list"></i></button>
+
         <!-- ======= Features Section ======= -->
         <section class="features">
 
@@ -118,8 +129,8 @@
                     <div class="row">
 
                         <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                            <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4" alt=""
-                                style="max-width: 85%;margin-bottom: 20px;">
+                            <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4"
+                                alt="" style="max-width: 85%;margin-bottom: 20px;">
                         </div>
 
                         <div class="col-xl-8 d-flex content">
@@ -899,6 +910,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"
         integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Fungsi untuk menampilkan modal saat halaman dimuat
         $(document).ready(function() {
@@ -907,20 +920,45 @@
             // Fungsi untuk menutup modal setelah 7 detik
             setTimeout(function() {
                 $('#exampleModalCenter').modal('hide');
-            }, 7000);
+            }, 5000);
         });
     </script>
 
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <!-- Skrip untuk membuka modal saat dokumen dimuat -->
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('#exampleModalCenter').modal('show');
         });
     </script>
 
+    <!-- Skrip JavaScript -->
+    <script>
+        var audioPlayer = document.getElementById('audioPlayer');
+        var floatingButton = document.getElementById('floatingButton');
+
+        // Function untuk memulai atau menghentikan audio
+        function toggleAudio() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                floatingButton.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
+            } else {
+                audioPlayer.pause();
+                audioPlayer.currentTime = 0;
+                floatingButton.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
+            }
+        }
+
+        // Event listener untuk mengubah teks tombol saat audio selesai
+        audioPlayer.addEventListener('ended', function() {
+            floatingButton.innerHTML = 'Putar Lagu';
+        });
+
+        // Floating Button Follow Scroll
+        window.onscroll = function() {
+            floatingButton.style.bottom = '70px';
+            floatingButton.style.right = '14px';
+        };
+    </script>
 </body>
 
 </html>

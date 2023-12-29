@@ -308,7 +308,7 @@
 // var targetDate = new Date("December 22, 2023 10:20:00").getTime();
 
 // Set the target date to January 1, 2024
-var targetDate = new Date("January 1, 2024 00:00:00").getTime();
+var targetDate = new Date("January 2, 2024 00:00:00").getTime();
 
 // Set up FlipDown with the target date
 var flipdown = new FlipDown(targetDate / 1000) // Convert milliseconds to seconds
