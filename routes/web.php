@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CMS\GalleryController;
 use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
@@ -52,6 +53,22 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
+Route::controller(GalleryController::class)->group(function () {
+    Route::get('/cms/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    Route::get('/cms/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
+    Route::post('/cms/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::get('/cms/gallery/show/{id}', [GalleryController::class, 'show'])->name('gallery.show');
+
+    // delete gallery
+    Route::get('/gallery/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('gallery.delete');
+
+    // delete photo
+    Route::get('/photo/delete/{id}', [GalleryController::class, 'deletePhoto'])->name('photo.delete');
+
+    // delete all gallery
+    Route::get('/gallery/delete-all', [GalleryController::class, 'deleteAllGallery'])->name('gallery.delete-all');
+
+});
 Route::prefix('cms')->group(function () {
     Route::resource('soundbank', SoundBankController::class)->names([
         'index' => 'soundbank.index',
@@ -61,14 +78,6 @@ Route::prefix('cms')->group(function () {
         'update' => 'soundbank.update',
         'destroy' => 'soundbank.destroy',
     ]);
-});
-
-// CMS Route
-Route::prefix('cms')->group(function () {
-     Route::resource('invitation', InvitationController::class)->names([
-        'index' => 'invitation.index',
-    ]);
-});
 
     Route::resource('theme', ThemeController::class)->names([
         'index' => 'theme.index',
@@ -87,7 +96,23 @@ Route::prefix('cms')->group(function () {
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
     ]);
-Route::controller(GuestBookController::class)->group(function() {
+});
+
+// CMS Route
+Route::prefix('cms')->group(function () {
+    Route::resource('invitation', InvitationController::class)->names([
+        'index' => 'invitation.index',
+        'store' => 'invitation.store',
+        'edit' => 'invitation.edit',
+        'update' => 'invitation.update',
+        'delete' => 'invitation.delete',
+    ]);
+});
+Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme']);
+Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank']);
+
+
+Route::controller(GuestBookController::class)->group(function () {
     Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
     Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
     Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');

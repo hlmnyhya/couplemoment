@@ -6,28 +6,29 @@
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title my-auto">Invitation </h1>
+                <h1 class="page-title my-auto">Edit Invitation </h1>
                 <div>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
-                            <a href="javascript:void(0)">Invitation </a>
+                            <a href="{{ route('invitation.index') }}">Invitation </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Invitation </li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Invitation </li>
                     </ol>
                 </div>
             </div>
             <!-- PAGE-HEADER END -->
 
             {{-- START INPUT --}}
-            <form action="{{ route('invitation.store') }}" method="POST">
+            <form action="{{ route('invitation.update', $invitation->id) }}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="col-xl-12">
                     <div class="card custom-card">
                         <div class="card-header justify-content-between">
                             <div class="card-title">
-                                Data Invitation
+                                Edit Invitation
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </div>
 
                         <div class="card-body">
@@ -48,18 +49,21 @@
                                     <select class="form-select" id="theme_id" name="theme_id" required>
                                         <option value="">Select Theme</option>
                                         @foreach ($themes as $theme)
-                                            <option value="{{ $theme->id }}">{{ $theme->name }}</option>
+                                            <option value="{{ $theme->id }}"
+                                                {{ $invitation->theme_id == $theme->id ? 'selected' : '' }}>
+                                                {{ $theme->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="code" class="form-label">Code</label>
-                                    <input type="text" class="form-control" id="code" name="code" disabled>
+                                    <input type="text" class="form-control" id="code" name="code"
+                                        value="{{ $invitation->code }}" disabled>
                                 </div>
                             </div>
 
                             <div class="mb-3 mt-3">
-                                <img id="image_preview" src="{{ asset('theme') }}/media-49.jpg" class="img-fluid rounded"
+                                <img id="image_preview" src="{{ $invitation->image_url }}" class="img-fluid rounded"
                                     alt="Preview" style="max-width: 250px; max-height: 200px;">
                             </div>
 
@@ -69,13 +73,15 @@
                                     <select class="form-select" id="soundbank_id" name="soundbank_id" required>
                                         <option value="">Select Sound</option>
                                         @foreach ($soundbanks as $soundbank)
-                                            <option value="{{ $soundbank->id }}">{{ $soundbank->title }}</option>
+                                            <option value="{{ $soundbank->id }}"
+                                                {{ $invitation->soundbank_id == $soundbank->id ? 'selected' : '' }}>
+                                                {{ $soundbank->title }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
                                     <audio controls>
-                                        <source src="" type="audio/mp3">
+                                        <source src="{{ $invitation->audio_url }}" type="audio/mp3">
                                         Your browser does not support the audio element.
                                     </audio>
                                 </div>
@@ -84,128 +90,116 @@
                             <div class="mb-3">
                                 <label for="title_invitation" class="form-label">Title Invitation</label>
                                 <input type="text" class="form-control" id="title_invitation" name="title_invitation"
-                                    required placeholder="Enter Title Invitation">
+                                    value="{{ $invitation->title_invitation }}" required
+                                    placeholder="Enter Title Invitation">
                             </div>
 
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required
-                                    placeholder="Enter Name">
+                                <input type="text" class="form-control" id="name" name="name"
+                                    value="{{ $invitation->name }}" required placeholder="Enter Name">
                             </div>
 
                             <div class="mb-3">
                                 <label for="url" class="form-label">Url</label>
-                                <input type="text" class="form-control" id="url" name="url" required
-                                    placeholder="Enter URL">
+                                <input type="text" class="form-control" id="url" name="url"
+                                    value="{{ $invitation->url }}" required placeholder="Enter URL">
                             </div>
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Description</label>
                                 <textarea type="text" class="form-control" id="description" name="description" required
-                                    placeholder="Enter Description"></textarea>
+                                    placeholder="Enter Description">{{ $invitation->description }}</textarea>
                             </div>
 
                             <div class="row g-3">
                                 <div class="col-sm-4">
                                     <label for="date_invitation" class="form-label">Date</label>
                                     <input type="date" class="form-control" id="date_invitation" name="date_invitation"
-                                        required placeholder="Select Date">
+                                        value="{{ $invitation->date_invitation }}" required placeholder="Select Date">
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="time_invitation" class="form-label">Time</label>
                                     <input type="time" class="form-control" id="time_invitation"
-                                        name="time_invitation" required placeholder="Select Time">
+                                        name="time_invitation" value="{{ $invitation->time_invitation }}" required
+                                        placeholder="Select Time">
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="timezone" class="form-label">Timezone</label>
-                                    <input type="text" class="form-control" id="timezone" name="timezone" required
-                                        placeholder="Enter Timezone">
+                                    <input type="text" class="form-control" id="timezone" name="timezone"
+                                        value="{{ $invitation->timezone }}" required placeholder="Enter Timezone">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="address_invitation" class="form-label">Address</label>
                                 <textarea type="text" class="form-control mb-3" id="address_invitation" name="address_invitation" required
-                                    placeholder="Enter Address"></textarea>
+                                    placeholder="Enter Address">{{ $invitation->address_invitation }}</textarea>
                                 <input type="text" class="form-control mb-3" id="address_url" name="address_url"
-                                    required placeholder="Enter Address URL">
+                                    value="{{ $invitation->address_url }}" required placeholder="Enter Address URL">
                                 <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
-                                    placeholder="Enter Address on Maps"></textarea>
+                                    placeholder="Enter Address on Maps">{{ $invitation->address_maps }}</textarea>
                             </div>
 
+                        </div>
+                    </div>
+                </div>
             </form>
+            {{-- End INPUT --}}
         </div>
-    </div>
-    </div>
-    {{-- End INPUT --}}
-    </div>
     </div>
     <!-- End::app-content -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Ambil elemen dropdown tema
             const themeSelect = document.getElementById('theme_id');
-            // Ambil elemen input kode
             const codeInput = document.getElementById('code');
-            // Ambil elemen pratinjau gambar
             const imagePreview = document.getElementById('image_preview');
+            const soundbankSelect = document.getElementById('soundbank_id');
+            const audioPreview = document.querySelector('audio');
 
-            // Tambahkan event listener untuk perubahan pada dropdown tema
-            themeSelect.addEventListener('change', function() {
-                // Ambil nilai tema yang dipilih
+            // Function to update theme data
+            function updateThemeData() {
                 const selectedThemeId = themeSelect.value;
 
-                // Kirim permintaan AJAX ke endpoint untuk mendapatkan data tema yang dipilih
                 fetch(`/get-theme/${selectedThemeId}`)
                     .then(response => response.json())
                     .then(data => {
-                        // console.log(data);
-                        // Perbarui nilai input kode dengan kode tema yang dipilih
                         codeInput.value = data.code;
-
-                        // Periksa apakah respons memiliki data backround_img
                         if (data.background_img) {
-                            // Perbarui src gambar pratinjau dengan gambar tema yang dipilih
                             imagePreview.src = `${data.background_img}`;
                         } else {
-                            // Jika tidak ada gambar yang ditemukan, tampilkan pesan atau tetap gunakan gambar default
                             console.log('No image found in response.');
-                            // imagePreview.src = ''; // Set default image URL or show an error message
                         }
                     })
                     .catch(error => console.error('Error:', error));
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Ambil elemen dropdown soundbank
-            const soundbankSelect = document.getElementById('soundbank_id');
-            // Ambil elemen audio
-            const audioPreview = document.querySelector('audio');
+            }
 
-            // Tambahkan event listener untuk perubahan pada dropdown soundbank
-            soundbankSelect.addEventListener('change', function() {
-                // Ambil nilai soundbank yang dipilih
+            // Function to update soundbank data
+            function updateSoundbankData() {
                 const selectedSoundbankId = soundbankSelect.value;
 
-                // Kirim permintaan AJAX ke endpoint untuk mendapatkan data soundbank yang dipilih
                 fetch(`/get-soundbank/${selectedSoundbankId}`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data);
-                        // Perbarui nilai src audio dengan audio soundbank yang dipilih
                         if (data.audio_src) {
                             audioPreview.src = `/${data.audio_src}`;
                         } else {
-                            // Jika tidak ada audio yang ditemukan, tampilkan pesan atau reset audio
                             console.log('No audio found in response.');
-                            audioPreview.src = ''; // Set default audio URL or show an error message
+                            audioPreview.src = '';
                         }
                     })
                     .catch(error => console.error('Error:', error));
-            });
+            }
+
+            // Initial update of theme and soundbank data
+            updateThemeData();
+            updateSoundbankData();
+
+            // Event listeners for theme and soundbank changes
+            themeSelect.addEventListener('change', updateThemeData);
+            soundbankSelect.addEventListener('change', updateSoundbankData);
         });
     </script>
+
 @endsection

@@ -1908,6 +1908,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   display: block;
   color: #fff; }
 
+  
+
 .control--checkbox .control__indicator:after {
   top: 50%;
   left: 50%;
@@ -2095,3 +2097,29 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       content: "";
       height: 1px;
       background: #ebedee; }
+
+    .image-container {
+      display: inline-block !important;
+      position: relative !important;
+      margin-right: 10px !important;
+      width: 100px !important; /* Ganti dengan lebar yang diinginkan */
+      height: 100px !important; /* Ganti dengan tinggi yang diinginkan */
+      overflow: hidden !important;
+  }
+  
+  .image-container img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important; /* Untuk menjaga aspek ratio dan memotong gambar ke dalam kotak */
+  }
+  
+  .remove-image {
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+      background-color: #fff !important;
+      color: #ff0000 !important;
+      cursor: pointer !important;
+      padding: 2px 5px !important;
+  }
+  
