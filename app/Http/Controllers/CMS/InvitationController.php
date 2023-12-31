@@ -153,4 +153,9 @@ class InvitationController extends Controller
 
         return redirect()->route('my-undangan')->with('success', 'Invitation deleted successfully');
     }
+
+    public function test()
+    {
+        return view('admin.invitation-pages.test');
+    }
 }
