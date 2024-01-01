@@ -19,11 +19,12 @@ body {
     display: flex; /* Menggunakan flexbox untuk tata letak kolom */
     flex-direction: column; /* Tampilkan elemen dalam kolom */
     align-items: center; /* Pusatkan elemen secara horizontal */
+    background-color: black;
 }
 
 img {
-    width: auto; /* Sesuaikan lebar gambar agar tetap proporsional */
-    height: auto; /* Sesuaikan tinggi gambar agar tetap proporsional */
+    width: 100vh; /* Sesuaikan lebar gambar agar tetap proporsional */
+    height: 100vh; /* Sesuaikan tinggi gambar agar tetap proporsional */
     max-width: 100%; /* Batasi lebar maksimum */
     max-height: 100%; /* Batasi tinggi maksimum */
     margin: 0px 0; /* Jarak antar gambar */
@@ -164,4 +165,15 @@ img {
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 767px) {
+
+img {
+    width: auto; /* Sesuaikan lebar gambar agar tetap proporsional */
+    height: auto; /* Sesuaikan tinggi gambar agar tetap proporsional */
+    max-width: 100%; /* Batasi lebar maksimum */
+    max-height: 100%; /* Batasi tinggi maksimum */
+    margin: 0px 0; /* Jarak antar gambar */
+}
 }

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Forum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
     display: flex;
@@ -9,13 +8,13 @@ body {
     margin: 0;
 }
 
-.image-container-b {
+.image-container-c {
     text-align: center;
     width: 100%;
     height: 100%;
 }
 
-.image-column-b {
+.image-column-c {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,9 +22,566 @@ body {
 }
 
 img {
+    width: 100vh;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.text1-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text2-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 38%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text3-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 38%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text4-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 54px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text5-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text6-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text7-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text8-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text9-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 81%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+.hari {
+    font-family: 'DM Serif Display', serif;
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.hari:hover {
+	background-color:#f2ab1e;
+}
+.hari:active {
+	position:relative;
+	top:1px;
+}
+
+.text10-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 81%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+.jam {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.jam:hover {
+	background-color:#f2ab1e;
+}
+.jam:active {
+	position:relative;
+	top:1px;
+}
+
+.text11-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 81%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+.menit {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.menit:hover {
+	background-color:#f2ab1e;
+}
+.menit:active {
+	position:relative;
+	top:1px;
+}
+
+.text12-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 81%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+.detik {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.detik:hover {
+	background-color:#f2ab1e;
+}
+.detik:active {
+	position:relative;
+	top:1px;
+}
+
+.ring {
+    position: absolute;
+    top: 180px;
+    left: 590px;
+    z-index: 1;
+    width: 100px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
+
+@media only screen and (max-width: 767px) {
+img {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
+}
+
+.text1-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text2-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 28%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text3-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 28%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text4-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 54px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text5-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text6-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text7-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text8-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text9-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 71%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.hari {
+    font-family: 'DM Serif Display', serif;
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.hari:hover {
+	background-color:#f2ab1e;
+}
+.hari:active {
+	position:relative;
+	top:1px;
+}
+
+.text10-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 71%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.jam {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.jam:hover {
+	background-color:#f2ab1e;
+}
+.jam:active {
+	position:relative;
+	top:1px;
+}
+
+.text11-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 71%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.menit {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.menit:hover {
+	background-color:#f2ab1e;
+}
+.menit:active {
+	position:relative;
+	top:1px;
+}
+
+.text12-d {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 71%;
+    left: 83.5%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.detik {
+	background-color:#cba35c;
+	border-radius:28px;
+	border:1px solid #cba35c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.detik:hover {
+	background-color:#f2ab1e;
+}
+.detik:active {
+	position:relative;
+	top:1px;
+}
+
+.ring {
+    position: absolute;
+    top: 189px;
+    left: 170px;
+    z-index: 1;
+    width: 100px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
+
 }

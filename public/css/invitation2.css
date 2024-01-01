@@ -23,29 +23,29 @@ body {
 }
 
 img {
-    width: auto;
-    height: auto;
+    width: 100vh;
+    height: 100vh;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
 }
 
-.sample-photo {
+.sample-photoo {
     position: absolute;
     top: 105px;
-    left: 40px;
+    left: 470px;
     z-index: 1;
-    width: 170px; /* Atur lebar gambar */
+    width: 150px; /* Atur lebar gambar */
     height: auto;
     /* Sesuaikan properti lain jika diperlukan */
 }
 
-.sample-photo-2 {
+.sample-photoo-2 {
     position: absolute;
-    top: 235px;
-    left: 230px;
+    top: 150px;
+    left: 640px;
     z-index: 1;
-    width: 170px; /* Atur lebar gambar */
+    width: 150px; /* Atur lebar gambar */
     height: auto;
     /* Sesuaikan properti lain jika diperlukan */
 }
@@ -75,4 +75,34 @@ img {
     font-size: 10px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 767px) {
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.sample-photoo {
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    z-index: 1;
+    width: 170px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
+
+.sample-photoo-2 {
+    position: absolute;
+    top: 235px;
+    left: 230px;
+    z-index: 1;
+    width: 170px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
 }

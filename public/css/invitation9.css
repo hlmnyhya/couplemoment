@@ -9,13 +9,13 @@ body {
     margin: 0;
 }
 
-.image-container-b {
+.image-container-h {
     text-align: center;
     width: 100%;
     height: 100%;
 }
 
-.image-column-b {
+.image-column-h {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,9 +23,84 @@ body {
 }
 
 img {
+    width: 100vh;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.text1-i {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text2-i {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text3-i {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.ring-b {
+    position: absolute;
+    top: 80px;
+    left: 588px;
+    z-index: 1;
+    width: 100px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
+
+@media only screen and (max-width: 767px) {
+img {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
+}
+
+.ring-b {
+    position: absolute;
+    top: 120px;
+    left: 170px;
+    z-index: 1;
+    width: 100px; /* Atur lebar gambar */
+    height: auto;
+    /* Sesuaikan properti lain jika diperlukan */
+}
 }

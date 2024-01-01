@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="image-container-b">
-        <div class="image-column-b">
-            {{-- Section 3 --}}
+    <div class="image-container-f">
+        <div class="image-column-f">
+            {{-- Section 2 --}}
             <div class="animate__animated">
                 <img src="{{ asset('theme/4.webp') }}" alt="">
+                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-2 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-3 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-4 animate__animated animate__fadeInUp">
             </div>
-            {{-- End of Section 3 --}}
+            <div class="text1-g">
+                <div class="animate__animated animate__fadeInUp">Gallery</div>
+            </div>
+            {{-- End of Section 2 --}}
         </div>
     </div>
 </body>
