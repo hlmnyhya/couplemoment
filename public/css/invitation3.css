@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.image-container-b {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-column-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Tambahkan posisi relatif */
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.text1-c {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text2-c {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text3-c {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text4-c {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text5-c {
+    font-family: 'Carattere', cursive;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 65px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text6-c {
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cba35c;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.text7-c {
+    font-family: 'Forum', serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+}

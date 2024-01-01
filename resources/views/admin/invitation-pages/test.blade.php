@@ -11,7 +11,6 @@
 <body>
     <div class="image-container">
         <div class="image-column">
-
             {{-- Section 1 --}}
             <div class="animate__animated">
                 <img src="{{ asset('theme/4.webp') }}" alt="">
@@ -41,19 +40,14 @@
                 <a href="#" class="bukaUndangan animate__animated animate__fadeInUp">BUKA UNDANGAN</a>
             </div>
             {{-- End of Section 1 --}}
-
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-        </div>
-        <div class="image-column">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-        </div>
-        <div class="image-column">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
-            <img src="{{ asset('theme/4.webp') }}" alt="">
+            @include('admin.invitation-pages.test2')
+            @include('admin.invitation-pages.test3')
+            @include('admin.invitation-pages.test4')
+            @include('admin.invitation-pages.test5')
+            @include('admin.invitation-pages.test6')
+            @include('admin.invitation-pages.test7')
+            @include('admin.invitation-pages.test8')
+            @include('admin.invitation-pages.test9')
         </div>
     </div>
 </body>

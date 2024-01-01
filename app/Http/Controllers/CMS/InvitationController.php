@@ -158,4 +158,9 @@ class InvitationController extends Controller
     {
         return view('admin.invitation-pages.test');
     }
+
+    public function test2()
+    {
+        return view('admin.invitation-pages.test2');
+    }
 }

@@ -123,5 +123,6 @@ Route::controller(GuestBookController::class)->group(function () {
 });
 
 Route::get('/cms/test-page', [InvitationController::class, 'test'])->name('test-page');
+Route::get('/cms/test-page-2', [InvitationController::class, 'test2'])->name('test-page-2');
 
 require __DIR__ . '/auth.php';

@@ -1,136 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Pusatkan secara vertikal */
+    justify-content: center; /* Pusatkan secara horizontal */
+    height: 100vh; /* 100% tinggi viewport */
+    margin: 0px; /* Hapus margin default */
 }
 
 .image-container {
-    text-align: center;
+    text-align: center; /* Pusatkan teks di dalam container */
     width: 100%; /* Lebar maksimum */
     height: 100%; /* Tinggi maksimum */
 }
 
 .image-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Menggunakan flexbox untuk tata letak kolom */
+    flex-direction: column; /* Tampilkan elemen dalam kolom */
+    align-items: center; /* Pusatkan elemen secara horizontal */
 }
 
 img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: auto; /* Sesuaikan lebar gambar agar tetap proporsional */
+    height: auto; /* Sesuaikan tinggi gambar agar tetap proporsional */
+    max-width: 100%; /* Batasi lebar maksimum */
+    max-height: 100%; /* Batasi tinggi maksimum */
     margin: 0px 0; /* Jarak antar gambar */
 }
 
 .text1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 55px;
+    font-family: 'Cinzel', serif;
+    position: absolute; /* Gunakan posisi absolut */
+    top: 20%; /* Atur posisi vertikal */
+    left: 50%; /* Atur posisi horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan elemen */
+    color: white; /* Warna teks putih */
+    font-size: 20px; /* Ukuran font */
     /* font-weight: bold; */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Pusatkan teks secara horizontal */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
 }
 
 .text2 {
+    font-family: 'Carattere', cursive;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 55px;
+    font-size: 50px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text3 {
+    font-family: 'Carattere', cursive;
     position: absolute;
-    top: 35%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 55px;
+    font-size: 30px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text4 {
+    font-family: 'Carattere', cursive;
     position: absolute;
-    top: 40%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 55px;
+    font-size: 50px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text5 {
+    font-family: 'Cinzel', serif;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 55px;
+    font-size: 17px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text6 {
+    font-family: 'Cinzel', serif;
     position: absolute;
-    top: 60%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
+    font-size: 12px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text7 {
+    font-family: 'Cinzel', serif;
     position: absolute;
-    top: 68%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
-    /* font-weight: bold; */
+    font-size: 12px;
+    font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text8 {
+    font-family: 'Cinzel', serif;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 55px;
+    font-size: 12px;
     /* font-weight: bold; */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .bukaUndangan {
-	background-color:#f0cb11;
+	background-color:#cba35c;
 	border-radius:28px;
-	border:1px solid #f0cb11;
+	border:1px solid #cba35c;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:17px;
+	font-size:12px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
@@ -141,4 +152,16 @@ img {
 .bukaUndangan:active {
 	position:relative;
 	top:1px;
+}
+
+.text9 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 55px;
+    /* font-weight: bold; */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
