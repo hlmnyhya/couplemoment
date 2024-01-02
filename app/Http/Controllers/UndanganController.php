@@ -9,7 +9,7 @@ class UndanganController extends Controller
 {
     public function index()
     {
-        $invitations = Invitation::all(); // Mengambil semua invitation dari database
+        $invitations = Invitation::with('theme')->get();
         return view('admin.my-undangan.index', [
             'invitations' => $invitations,
         ]);
