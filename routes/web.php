@@ -28,6 +28,10 @@ Route::get('/', function () {
     return view('frontend.master');
 });
 
+Route::get('/sign-in', function () {
+    return view('frontend.signin');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
