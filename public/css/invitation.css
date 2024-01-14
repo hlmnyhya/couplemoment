@@ -167,6 +167,28 @@ img {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+       #floatingButton {
+            position: fixed;
+            bottom: 20px;
+            right: 12px;
+            background-color: #ffffff;
+            color: #000;
+            padding: 10px 13px;
+            border: none;
+            z-index: 99999;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #floatingButton:hover {
+            background-color: #cba35c;
+        }
+
+        #audioPlayer {
+            display: none; /* Menyembunyikan tampilan audio */
+        }
+
 @media only screen and (max-width: 767px) {
 
 img {

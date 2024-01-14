@@ -14,8 +14,8 @@
             {{-- Section 2 --}}
             <div class="animate__animated">
                 <img src="{{ asset('theme/4.webp') }}" alt="">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photoo animate__animated animate__fadeInUp">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photoo-2 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/1.jpeg') }}" alt="" class="sample-photoo animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/2.jpeg') }}" alt="" class="sample-photoo-2 animate__animated animate__fadeInUp">
             </div>
             <div class="text1-a">
                 <div class="animate__animated animate__fadeInUp">Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia <br> menciptakan pasangan-pasangan untukmu dari jenismu <br> sendiri, agar kamu cenderung merasa tentram kepadanya, <br> dan Dia menjadikan diantaramu rasa kasih dan sayang.</div>

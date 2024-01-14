@@ -14,8 +14,8 @@
             {{-- Section 3 --}}
             <div class="animate__animated">
                 <img src="{{ asset('theme/4.webp') }}" alt="">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-h animate__animated animate__fadeInUp">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-h-2 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/7.jpeg') }}" alt="" class="sample-photo-h animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/8.jpeg') }}" alt="" class="sample-photo-h-2 animate__animated animate__fadeInUp">
             </div>
             <div class="text1-h">
                 <div class="animate__animated animate__fadeInUp">Angpau</div>

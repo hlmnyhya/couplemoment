@@ -14,10 +14,10 @@
             {{-- Section 2 --}}
             <div class="animate__animated">
                 <img src="{{ asset('theme/4.webp') }}" alt="">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo animate__animated animate__fadeInUp">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-2 animate__animated animate__fadeInUp">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-3 animate__animated animate__fadeInUp">
-                <img src="{{ asset('theme/sample-photo.jpg') }}" alt="" class="sample-photo-4 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/3.jpeg') }}" alt="" class="sample-photo animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/4.jpeg') }}" alt="" class="sample-photo-2 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/5.jpeg') }}" alt="" class="sample-photo-3 animate__animated animate__fadeInUp">
+                <img src="{{ asset('theme/6.jpeg') }}" alt="" class="sample-photo-4 animate__animated animate__fadeInUp">
             </div>
             <div class="text1-g">
                 <div class="animate__animated animate__fadeInUp">Gallery</div>

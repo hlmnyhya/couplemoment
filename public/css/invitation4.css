@@ -584,4 +584,10 @@ img {
     /* Sesuaikan properti lain jika diperlukan */
 }
 
+.countdown-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'DM Serif Display', serif;
+        }
 }
