@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('guest_books', function (Blueprint $table) {
             $table->id();
-            $table->integer('invitation_id')->unsigned();
+            $table->integer('invitation_id')->nullable();
             $table->string('guest_name')->nullable();
             $table->string('phone')->nullable();
             $table->string('url')->nullable();
