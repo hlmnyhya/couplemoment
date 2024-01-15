@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Register page
+Route::get('/register-page', [AdminController::class, 'registerPage'])->name('register-page');
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
 // Dashboard admin

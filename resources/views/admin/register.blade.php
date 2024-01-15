@@ -14,19 +14,19 @@
 	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('backend')}}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('backend') }}dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
 
     <!-- Main Theme Js -->
-    <script src="{{asset('backend') }}dist/assets/js/authentication-main.js"></script>
+    <script src="{{ asset('backend') }}dist/assets/js/authentication-main.js"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href="{{asset('backend')}}/dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link id="style" href="{{ asset('backend') }}dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Style Css -->
-    <link href="{{asset('backend')}}/dist/assets/css/styles.min.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}dist/assets/css/styles.min.css" rel="stylesheet" >
 
     <!-- Icons Css -->
-    <link href="{{asset('backend')}}/dist/assets/css/icons.css" rel="stylesheet" >
+    <link href="{{ asset('backend') }}dist/assets/css/icons.min.css" rel="stylesheet" >
 
 
 </head>
@@ -488,46 +488,61 @@
     <!-- End Switcher -->
 
 
+    <!-- Loader -->
+    <div id="loader" >
+        <img src="{{ asset('backend') }}dist/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
     <div class="autentication-bg">
 
         <div class="container-lg">
             <div class="row justify-content-center authentication authentication-basic align-items-center h-100">
-                <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
                     <div class="my-4 d-flex justify-content-center">
                         <a href="index.html">
-                            <img src="{{asset('backend')}}/dist/assets/images/brand-logos/desktop-white.png" alt="logo">
+                            <img src="{{ asset('backend') }}dist/assets/images/brand-logos/desktop-white.png" alt="logo">
                         </a>
                     </div>
                     <div class="card custom-card">
                         <div class="card-body p-5">
-                            <p class="h5 fw-semibold mb-2 text-center">Sign In</p>
-                            <p class="mb-4 text-muted op-7 fw-normal text-center">Welcome back Jhon !</p>
+                            <p class="h5 fw-semibold mb-2 text-center">Sign Up</p>
+                            <p class="mb-4 text-muted op-7 fw-normal text-center">Welcome &amp; Join us by creating a free account !</p>
                             <div class="row gy-3">
                                 <div class="col-xl-12">
-                                    <label for="signin-username" class="form-label text-default">User Name</label>
-                                    <input type="text" class="form-control form-control-lg" id="signin-username" placeholder="user name">
+                                    <label for="signup-firstname" class="form-label text-default">First Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="signup-firstname" placeholder="first name">
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="signup-lastname" class="form-label text-default">Last Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="signup-lastname" placeholder="last name">
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="signup-password" class="form-label text-default">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control form-control-lg" id="signup-password" placeholder="password">
+                                        <button aria-label="button" class="btn btn-light" onclick="createpassword('signup-password',this)" type="button" id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
+                                    </div>
                                 </div>
                                 <div class="col-xl-12 mb-2">
-                                    <label for="signin-password" class="form-label text-default d-block">Password<a href="reset-password.html" class="float-end text-danger">Forget password ?</a></label>
+                                    <label for="signup-confirmpassword" class="form-label text-default">Confirm Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control form-control-lg" id="signin-password" placeholder="password">
-                                        <button class="btn btn-light" type="button" onclick="createpassword('signin-password',this)" id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
+                                        <input type="password" class="form-control form-control-lg" id="signup-confirmpassword" placeholder="confirm password">
+                                        <button aria-label="button" class="btn btn-light" onclick="createpassword('signup-confirmpassword',this)" type="button" id="button-addon21"><i class="ri-eye-off-line align-middle"></i></button>
                                     </div>
-                                    <div class="mt-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
-                                                Remember password ?
-                                            </label>
-                                        </div>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
+                                            By creating a account you agree to our <a href="terms_conditions.html" class="text-success"><u>Terms &amp; Conditions</u></a> and <a class="text-success"><u>Privacy Policy</u></a>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-xl-12 d-grid mt-2">
-                                    <a href="{{ route('admin-dashboard') }}" class="btn btn-lg btn-primary">Sign In</a>
+                                    <button type="button" class="btn btn-lg btn-primary">Create Account</button>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <p class="text-muted mt-3">Dont have an account? <a href="sign-up.html" class="text-primary">Sign Up</a></p>
+                                <p class="text-muted mt-3">Already have an account? <a href="sign-in.html" class="text-primary">Sign In</a></p>
                             </div>
                             <div class="text-center my-3 authentication-barrier">
                                 <span>OR</span>
