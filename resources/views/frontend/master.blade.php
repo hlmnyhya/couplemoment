@@ -452,7 +452,7 @@
                 <header class="section-header">
                     <h1>Harga</h1>
                     <h2>Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
-                    <p>"Segera manfaatkan <span class="save-percent">Discount 50%</span> penawaran terbatas!"</p>
+                    <p>"Segera manfaatkan <span class="save-percent">Discount 50% Personal & 30% Vendor</span> , buruan penawaran terbatas!"</p>
                 </header>
 
                 <div class="switch-container">
@@ -606,11 +606,14 @@
                         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                             <div class="box">
                                 <h3 style="color: #65c600;">Paket Basic</h3>
-                                <div class="price2"><sup>Rp.</sup>1 Jt</div>
-                                <div class="price"><sup>Rp.</sup>2 Jt <span> / Bln</span></div>
+                                <div class="price2"><sup>Rp.</sup>750.000</div>
+                                <div class="price"><sup>Rp.</sup>525 rb <span> / Bln</span></div>
                                 <img src="{{ asset('frontend/img/1.png') }}" class="img-fluid" alt="">
                                 <hr style='border: 1px solid #000;'>
                                 <ul>
+                                    <li><span class="bi bi-check-circle mr-5 mt-1"
+                                            style="color: #65c600;margin-right: 10px;"></span>Membuat Maks. 10 Undangan
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>3 Hari Masa berlaku
                                         Undangan
@@ -651,11 +654,14 @@
                             <div class="box">
                                 <span class="featured">Featured</span>
                                 <h3 style="color: #1c42ff;">Paket Premium</h3>
-                                <div class="price2"><sup>Rp.</sup>150.000</div>
-                                <div class="price"><sup>Rp.</sup>75.000<span> / Bln</span></div>
+                                <div class="price2"><sup>Rp.</sup>1.5 Jt</div>
+                                <div class="price"><sup>Rp.</sup>1.1 Jt<span> / Bln</span></div>
                                 <img src="{{ asset('frontend/img/2.png') }}" class="img-fluid" alt="">
                                 <hr style='border: 1px solid #000;'>
                                 <ul>
+                                    <li><span class="bi bi-check-circle mr-5 mt-1"
+                                            style="color: #65c600;margin-right: 10px;"></span>Membuat Maks. 10 Undangan
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>1 Minggu Masa Berlaku
                                         Undangan</li>
@@ -695,11 +701,14 @@
                         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                             <div class="box">
                                 <h3 style="color: #ff0071;">Paket Exclusive</h3>
-                                <div class="price2"><sup>Rp.</sup>300.000</div>
-                                <div class="price"><sup>Rp.</sup>150.000<span> / Bln</span></div>
+                                <div class="price2"><sup>Rp.</sup>3 Jt</div>
+                                <div class="price"><sup>Rp.</sup>2.1 Jt<span> / Bln</span></div>
                                 <img src="{{ asset('frontend/img/3.png') }}" class="img-fluid" alt="">
                                 <hr style='border: 1px solid #000;'>
                                 <ul>
+                                    <li><span class="bi bi-check-circle mr-5 mt-1"
+                                            style="color: #65c600;margin-right: 10px;"></span>Membuat Maks. 10 Undangan
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>2 Minggu Masa Berlaku
                                         Undangan</li>
