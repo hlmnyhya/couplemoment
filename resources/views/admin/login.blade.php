@@ -47,9 +47,10 @@
                     </div>
                     <div class="card custom-card">
                         <div class="card-body p-5">
-                            <p class="h5 fw-semibold mb-2 text-center"
-                                style="color: #ff477e; font-size: x-large;">LOGIN</p>
-                            <p class="mb-4 text-muted op-7 fw-normal text-center">Hai, selamat datang di Couple Moment.</p>
+                            <p class="h5 fw-semibold mb-2 text-center" style="color: #ff477e; font-size: x-large;">Sign
+                                In</p>
+                            <p class="mb-4 text-muted op-7 fw-normal text-center">Hai, selamat datang di Couple Moment.
+                            </p>
                             <div class="row gy-3">
                                 <div class="col-xl-12">
                                     <label for="signin-username" class="form-label text-default">Email</label>
@@ -63,15 +64,16 @@
                                     <div class="input-group">
                                         <input type="password" class="form-control form-control-lg" id="signin-password"
                                             placeholder="password">
-                                        <button class="btn btn-light" type="button"
-                                            onclick="createpassword('signin-password',this)" id="button-addon2"><i
-                                                class="ri-eye-off-line align-middle"></i></button>
+                                        <button aria-label="button" class="btn btn-light"
+                                            onclick="createpassword('signin-password',this)" type="button"
+                                            id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
                                     </div>
                                     <div class="mt-2">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value=""
                                                 id="defaultCheck1">
-                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1" style="font-size: smaller">
+                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1"
+                                                style="font-size: smaller">
                                                 Ingat Password ?
                                             </label>
                                         </div>
@@ -82,7 +84,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <p class="text-muted mt-3">Belum Punya Akun? <a href="sign-up.html"
+                                <p class="text-muted mt-3">Belum Punya Akun? <a href="{{ route('register-page') }}"
                                         class="text-primary">Daftar Disini</a></p>
                             </div>
                             {{-- <div class="text-center my-3 authentication-barrier">
