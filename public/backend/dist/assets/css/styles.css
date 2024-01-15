@@ -2613,25 +2613,25 @@ typography
 /* Start::button colors */
 /* btn-primary starts */
 .btn-primary {
-  background-color: rgb(var(--primary-rgb)) !important;
-  border-color: rgb(var(--primary-rgb)) !important;
+  background-color: #ff477e;
+  border-color: #ff477e;
   color: #fff !important;
 }
 .btn-primary:hover {
-  background-color: rgba(var(--primary-rgb), 0.9) !important;
-  border-color: rgb(var(--primary-rgb)) !important;
+  background-color: #dfaee4;
+  border-color: #dfaee4;
   color: #fff;
 }
 .btn-primary:focus {
-  background-color: rgb(var(--primary-rgb));
-  border-color: rgb(var(--primary-rgb));
+  background-color: #ff477e;
+  border-color: #ff477e;
   color: #fff;
 }
 
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  background-color: rgb(var(--primary-rgb));
-  border-color: rgb(var(--primary-rgb));
+  background-color: #ff477e;
+  border-color: #ff477e;
   outline: 0;
   box-shadow: none;
 }
@@ -2649,8 +2649,8 @@ typography
 .btn-primary.active,
 .btn-primary.show,
 .btn-primary:active {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-border) !important;
+  background-color: #ff477e;
+  border-color: #ff477e;
 }
 
 /* btn-primary ends */
@@ -5224,11 +5224,11 @@ typography
   width: 0.9rem;
   height: 0.9rem;
   background-color: var(--custom-white);
-  border: 1px solid var(--input-border);
+  border: 1px solid #000;
 }
 .form-check-input:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: #ff477e;
+  border-color: #000;
 }
 .form-check-input.form-checked-outline:checked {
   background-color: transparent;
@@ -9104,12 +9104,13 @@ caption {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url(../images/landing/backgrounds/2.jpg);
+  background-image: url(../images/landing/backgrounds/7.jpg);
   z-index: 1;
 }
 .autentication-bg::before {
   content: "";
-  background: linear-gradient(to right, var(--primary06) 0%, rgba(5, 195, 251, 0.568627451) 100%);
+  background-image: url(../images/landing/backgrounds/7.jpg);
+  /* background: linear-gradient(to right, var(--primary06) 0%, rgba(5, 195, 251, 0.568627451) 100%); */
   height: 100%;
   width: 100%;
   position: absolute;

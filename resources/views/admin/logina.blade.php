@@ -14,19 +14,19 @@
 	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('backend')}}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
 
     <!-- Main Theme Js -->
-    <script src="../assets/js/authentication-main.js"></script>
+    <script src="{{asset('backend') }}dist/assets/js/authentication-main.js"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link id="style" href="{{asset('backend')}}/dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Style Css -->
-    <link href="../assets/css/styles.min.css" rel="stylesheet" >
+    <link href="{{asset('backend')}}/dist/assets/css/styles.min.css" rel="stylesheet" >
 
     <!-- Icons Css -->
-    <link href="../assets/css/icons.min.css" rel="stylesheet" >
+    <link href="{{asset('backend')}}/dist/assets/css/icons.css" rel="stylesheet" >
 
 
 </head>
@@ -488,12 +488,6 @@
     <!-- End Switcher -->
 
 
-    <!-- Loader -->
-    <div id="loader" >
-        <img src="../assets/images/media/loader.svg" alt="">
-    </div>
-    <!-- Loader -->
-
     <div class="autentication-bg">
 
         <div class="container-lg">
@@ -501,7 +495,7 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
                     <div class="my-4 d-flex justify-content-center">
                         <a href="index.html">
-                            <img src="../assets/images/brand-logos/desktop-white.png" alt="logo">
+                            <img src="{{asset('backend')}}/dist/assets/images/brand-logos/desktop-white.png" alt="logo">
                         </a>
                     </div>
                     <div class="card custom-card">
@@ -529,7 +523,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-12 d-grid mt-2">
-                                    <a href="index.html" class="btn btn-lg btn-primary">Sign In</a>
+                                    <a href="{{ route('admin-dashboard') }}" class="btn btn-lg btn-primary">Sign In</a>
                                 </div>
                             </div>
                             <div class="text-center">
@@ -558,13 +552,13 @@
 
 
     <!-- Custom-Switcher JS -->
-    <script src="../assets/js/custom-switcher.min.js"></script>
+    <script src="{{ asset('backend') }}dist/assets/js/custom-switcher.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('backend') }}dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Show Password JS -->
-    <script src="../assets/js/show-password.js"></script>
+    <script src="{{ asset('backend') }}dist/assets/js/show-password.js"></script>
 
 </body>
 
