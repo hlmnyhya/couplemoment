@@ -40,19 +40,29 @@
                             <form action="{{ route('assets.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="theme_id" class="form-label">Select Theme</label>
-                                        <select class="form-control" id="theme_id" name="theme_id" required>
-                                            <option value="" selected disabled>Select Theme</option>
+                                <div class="row g-2">
+                                    <div class="col-sm-6">
+                                        <label for="theme_id" class="form-label">Theme</label>
+                                        <select class="form-select" id="theme_id" name="theme_id" required>
+                                            <option value="">Select Theme</option>
                                             @foreach ($themes as $theme)
                                                 <option value="{{ $theme->id }}">{{ $theme->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    <div class="col-sm-6">
+                                        <label for="code" class="form-label">Code</label>
+                                        <input type="text" class="form-control" id="code" name="code" disabled>
+                                    </div>
                                 </div>
 
-                                <div class="row g-2">
+                                <div class="mb-3 mt-3">
+                                    <img id="image_preview" src="{{ asset('theme') }}/media-49.jpg"
+                                        class="img-fluid rounded" alt="Preview"
+                                        style="max-width: 250px; max-height: 200px;">
+                                </div>
+
+                                <div class="row g-2 mb-3">
                                     <div class="col-sm-6">
                                         <label for="assets_img" class="form-label">Assets Image</label>
                                         <input type="file" id="assets_img" name="assets_img[]" class="form-control"
@@ -90,4 +100,40 @@
     </script> --}}
     {{-- Preview Image JS END --}}
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ambil elemen dropdown tema
+            const themeSelect = document.getElementById('theme_id');
+            // Ambil elemen input kode
+            const codeInput = document.getElementById('code');
+            // Ambil elemen pratinjau gambar
+            const imagePreview = document.getElementById('image_preview');
+
+            // Tambahkan event listener untuk perubahan pada dropdown tema
+            themeSelect.addEventListener('change', function() {
+                // Ambil nilai tema yang dipilih
+                const selectedThemeId = themeSelect.value;
+
+                // Kirim permintaan AJAX ke endpoint untuk mendapatkan data tema yang dipilih
+                fetch(`/get-theme/${selectedThemeId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // console.log(data);
+                        // Perbarui nilai input kode dengan kode tema yang dipilih
+                        codeInput.value = data.code;
+
+                        // Periksa apakah respons memiliki data backround_img
+                        if (data.background_img) {
+                            // Perbarui src gambar pratinjau dengan gambar tema yang dipilih
+                            imagePreview.src = `${data.background_img}`;
+                        } else {
+                            // Jika tidak ada gambar yang ditemukan, tampilkan pesan atau tetap gunakan gambar default
+                            console.log('No image found in response.');
+                            // imagePreview.src = ''; // Set default image URL or show an error message
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
 @endsection
