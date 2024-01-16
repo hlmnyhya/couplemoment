@@ -9,7 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Daftar Personal</title>
+    <title> Daftar Vendor</title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Spruko Technologies Private Limited">
     <meta name="keywords"
@@ -53,19 +53,29 @@
                     </div>
                     <div class="card custom-card">
                         <div class="card-body p-5">
-                            <p class="h5 fw-semibold mb-2 text-center">Sign Up Personal</p>
+                            <p class="h5 fw-semibold mb-2 text-center">Sign Up Vendor</p>
                             <p class="mb-4 text-muted op-7 fw-normal text-center"> Hai, daftar sekarang dan mulai
                                 petualangan cintamu !</p>
                             <div class="row gy-3">
-                                <div class="col-xl-12">
-                                    <label for="signup-namalengkap" class="form-label text-default">Nama Lengkap</label>
+                                <div class="col-xl-6">
+                                    <label for="signup-namavendor" class="form-label text-default">Nama Vendor</label>
+                                    <input type="text" class="form-control form-control-lg" id="signup-namavendor"
+                                        placeholder="masukan nama vendor anda">
+                                </div>
+                                <div class="col-xl-6">
+                                    <label for="signup-namalengkap" class="form-label text-default">Penanggung Jawab</label>
                                     <input type="text" class="form-control form-control-lg" id="signup-namalengkap"
                                         placeholder="masukan nama anda">
                                 </div>
-                                <div class="col-xl-12">
+                                <div class="col-xl-6">
                                     <label for="signup-email" class="form-label text-default">Email</label>
                                     <input type="text" class="form-control form-control-lg" id="signup-email"
                                         placeholder="email">
+                                </div>
+                                <div class="col-xl-6">
+                                    <label for="signup-telp" class="form-label text-default">No Telp</label>
+                                    <input type="text" class="form-control form-control-lg" id="signup-telp"
+                                        placeholder="No Telepon">
                                 </div>
                                 <div class="col-xl-12">
                                     <label for="signup-password" class="form-label text-default">Password</label>

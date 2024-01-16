@@ -39,7 +39,8 @@ Route::middleware('auth')->group(function () {
 });
 
 // Register page
-Route::get('/register-page', [AdminController::class, 'registerPage'])->name('register-page');
+Route::get('/register-personal', [AdminController::class, 'registerPersonal'])->name('register-personal');
+Route::get('/register-vendor', [AdminController::class, 'registerVendor'])->name('register-vendor');
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
 // Dashboard admin

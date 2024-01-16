@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function registerPage()
+    public function registerPersonal()
     {
         return view('admin.register');
+    }
+
+    public function registerVendor()
+    {
+        return view('admin.register_vendor');
     }
 
     public function loginPage()
