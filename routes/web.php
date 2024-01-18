@@ -36,17 +36,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+})->middleware(['auth', 'verified']);
 
 // Register page
-Route::get('/register-personal', [AdminController::class, 'registerPersonal'])->name('register-personal');
-Route::get('/register-vendor', [AdminController::class, 'registerVendor'])->name('register-vendor');
+// Route::get('/register-personal', [AdminController::class, 'registerPersonal'])->name('register-personal');
+// Route::get('/register-vendor', [AdminController::class, 'registerVendor'])->name('register-vendor');
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
 // Dashboard admin
-Route::get('/admin-dashboard', [AdminController::class, 'AdminDashboard'])->name('admin-dashboard');
+Route::get('/admin-dashboard', [AdminController::class, 'AdminDashboard'])->middleware(['auth', 'verified'])->name('admin-dashboard');
 // My undangan
-Route::get('/my-undangan', [UndanganController::class, 'index'])->name('my-undangan');
+Route::get('/my-undangan', [UndanganController::class, 'index'])->middleware(['auth', 'verified'])->name('my-undangan');
 // Invoice
 Route::get('/invoice', [InvoiceController::class, 'index'])->name('invoice');
 // Affiliate
@@ -63,8 +63,7 @@ Route::prefix('cms')->group(function () {
         'edit' => 'soundbank.edit',
         'update' => 'soundbank.update',
         'destroy' => 'soundbank.destroy',
-    ]);
-
+    ])->middleware(['auth', 'verified']);
     Route::resource('theme', ThemeController::class)->names([
         'index' => 'theme.index',
         'create' => 'theme.create',
@@ -72,8 +71,8 @@ Route::prefix('cms')->group(function () {
         'edit' => 'theme.edit',
         'update' => 'theme.update',
         'destroy' => 'theme.destroy',
-    ]);
-    Route::get('/assets/search', [AssetsController::class, 'search'])->name('assets.search');
+    ])->middleware(['auth', 'verified']);
+    Route::get('/assets/search', [AssetsController::class, 'search'])->middleware(['auth', 'verified'])->name('assets.search');
     Route::resource('assets', AssetsController::class)->names([
         'index' => 'assets.index',
         'create' => 'assets.create',
@@ -81,11 +80,7 @@ Route::prefix('cms')->group(function () {
         'edit' => 'assets.edit',
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
-    ]);
-});
-
-// CMS Route
-Route::prefix('cms')->group(function () {
+    ])->middleware(['auth', 'verified']);
     Route::resource('invitation', InvitationController::class)->names([
         'index' => 'invitation.index',
         'store' => 'invitation.store',
@@ -93,11 +88,10 @@ Route::prefix('cms')->group(function () {
         'update' => 'invitation.update',
         'delete' => 'invitation.delete',
     ]);
-});
-Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme']);
-Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank']);
+})->middleware(['auth', 'verified']);
 
-
+Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middleware(['auth', 'verified']);
+Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);
 
 Route::controller(GuestBookController::class)->group(function () {
     Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
@@ -107,6 +101,6 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
     Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
     Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
-});
+})->middleware(['auth', 'verified']);
 
 require __DIR__ . '/auth.php';

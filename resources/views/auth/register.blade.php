@@ -1,52 +1,155 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="light" data-toggled="close">
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Daftar Personal</title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}">
+
+    <!-- Main Theme Js -->
+    <script src="{{ asset('backend') }}/dist/assets/js/authentication-main.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="{{ asset('backend') }}/dist/assets/libs/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Style Css -->
+    <link href="{{ asset('backend') }}/dist/assets/css/styles.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="{{ asset('backend') }}/dist/assets/css/icons.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <img src="{{ asset('backend') }}/dist/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="autentication-bg">
+
+        <div class="container-lg">
+            <div class="row justify-content-center authentication authentication-basic align-items-center h-100">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href="index.html">
+                            <img src="{{ asset('backend/dist/assets/images/landing/Logo.png') }}" alt="logo">
+                        </a>
+                    </div>
+                    <div class="card custom-card">
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
+                            <div class="card-body p-5">
+                                <p class="h5 fw-semibold mb-2 text-center">Sign Up Personal</p>
+                                <p class="mb-4 text-muted op-7 fw-normal text-center"> Hai, daftar sekarang dan mulai
+                                    petualangan cintamu !</p>
+                                <div class="row gy-3">
+                                    <div class="col-xl-12">
+                                        <label for="name" class="form-label text-default">Nama Lengkap</label>
+                                        <input type="text" class="form-control form-control-lg" id="name"
+                                            name="name" :value="old('name')" required autofocus autocomplete="name"
+                                            placeholder="Nama Lengkap">
+                                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <label for="signup-email" class="form-label text-default">Email</label>
+                                        <input type="text" class="form-control form-control-lg" id="email"
+                                            name="email" :value="old('email')" required autocomplete="username"
+                                            placeholder="Email">
+                                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <label for="signup-password" class="form-label text-default">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control form-control-lg" id="password"
+                                                name="password" required autocomplete="new-password"
+                                                placeholder="Minimal 8 karakter">
+                                            {{-- <button aria-label="button" class="btn btn-light"
+                                                onclick="createpassword('signup-password',this)" type="button"
+                                                id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button> --}}
+                                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 mb-2">
+                                        <label for="signup-confirmpassword" class="form-label text-default">Confirm
+                                            Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control form-control-lg"
+                                                id="password_confirmation" name="password_confirmation" required
+                                                autocomplete="new-password" placeholder="ulangi password">
+                                            {{-- <button aria-label="button" class="btn btn-light"
+                                                onclick="createpassword('signup-confirmpassword',this)" type="button"
+                                                id="button-addon21"><i
+                                                    class="ri-eye-off-line align-middle"></i></button> --}}
+                                            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                                        </div>
+                                        <div class="form-check mt-3">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
+                                                Saya menyetujui <a href="terms_conditions.html"
+                                                    class="text-danger"><u>syarat penggunaan</u></a></a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 d-grid mt-2">
+                                        <button type="submit" class="btn btn-lg btn-primary">Daftar Akun</button>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-muted mt-3">Sudah Punya Akun ? <a href="{{ route('login') }}"
+                                            class="text-primary">Masuk disini</a></p>
+                                </div>
+                                {{-- <div class="text-center my-3 authentication-barrier">
+                                <span>OR</span>
+                            </div>
+                                <div class="btn-list text-center">
+                                    <button type="button" aria-label="button"
+                                        class="btn btn-icon btn-primary-transparent">
+                                        <i class="ri-facebook-fill"></i>
+                                    </button>
+                                    <button type="button" aria-label="button"
+                                        class="btn btn-icon btn-primary-transparent">
+                                        <i class="ri-google-fill"></i>
+                                    </button>
+                                    <button type="button" aria-label="button"
+                                        class="btn btn-icon btn-primary-transparent">
+                                        <i class="ri-twitter-fill"></i>
+                                    </button>
+                                </div> --}}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+    <!-- Custom-Switcher JS -->
+    <script src="{{ asset('backend') }}/dist/assets/js/custom-switcher.min.js"></script>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+    <!-- Show Password JS -->
+    <script src="{{ asset('backend') }}/dist/assets/js/show-password.js"></script>
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+</body>
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>

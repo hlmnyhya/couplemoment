@@ -51,40 +51,50 @@
                                 In</p>
                             <p class="mb-4 text-muted op-7 fw-normal text-center">Hai, selamat datang di Couple Moment.
                             </p>
-                            <div class="row gy-3">
-                                <div class="col-xl-12">
-                                    <label for="signin-username" class="form-label text-default">Email</label>
-                                    <input type="email" class="form-control form-control-lg" id="signin-email"
-                                        placeholder="email">
-                                </div>
-                                <div class="col-xl-12 mb-2">
-                                    <label for="signin-password" class="form-label text-default d-block">Password<a
-                                            href="reset-password.html" class="float-end text-danger">Lupa Password
-                                            ?</a></label>
-                                    <div class="input-group">
-                                        <input type="password" class="form-control form-control-lg" id="signin-password"
-                                            placeholder="password">
-                                        <button aria-label="button" class="btn btn-light"
-                                            onclick="createpassword('signin-password',this)" type="button"
-                                            id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
+                            <x-auth-session-status class="mb-4" :status="session('status')" />
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="row gy-3">
+                                    <div class="col-xl-12">
+                                        <label for="signin-username" class="form-label text-default">Email</label>
+                                        <input type="email" class="form-control form-control-lg" id="email"
+                                            name="email" :value="old('email')" required autofocus
+                                            autocomplete="username" placeholder="Email">
+                                        <x-input-error style="color:red" :messages="$errors->get('email')" class="mt-2" />
                                     </div>
-                                    <div class="mt-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="defaultCheck1">
-                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1"
-                                                style="font-size: smaller">
-                                                Ingat Password ?
-                                            </label>
+                                    <div class="col-xl-12 mb-2">
+                                        <label for="signin-password" class="form-label text-default d-block">Password
+                                            {{-- <a href="{{ route('password.request') }}" class="float-end text-danger">Lupa
+                                                Password
+                                                ?</a> --}}
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control form-control-lg" id="password"
+                                                name="password" required autocomplete="current-password"
+                                                placeholder="Password">
+                                            {{-- <button aria-label="button" class="btn btn-light"
+                                                onclick="createpassword('signin-password',this)" type="button"
+                                                id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button> --}}
+                                        </div>
+                                        <x-input-error style="color:red" :messages="$errors->get('password')" class="mt-2" />
+                                        <div class="mt-2">
+                                            {{-- <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="defaultCheck1">
+                                                <label class="form-check-label text-muted fw-normal" for="defaultCheck1"
+                                                    style="font-size: smaller">
+                                                    Ingat Password ?
+                                                </label>
+                                            </div> --}}
                                         </div>
                                     </div>
+                                    <div class="col-xl-12 d-grid mt-2">
+                                        <button type="submit" class="btn btn-lg btn-primary">Masuk</button>
+                                    </div>
                                 </div>
-                                <div class="col-xl-12 d-grid mt-2">
-                                    <a href="{{ route('admin-dashboard') }}" class="btn btn-lg btn-primary">Masuk</a>
-                                </div>
-                            </div>
+                            </form>
                             <div class="text-center">
-                                <p class="text-muted mt-3">Belum Punya Akun? <a href="{{ route('register-page') }}"
+                                <p class="text-muted mt-3">Belum Punya Akun? <a href="{{ route('register') }}"
                                         class="text-primary">Daftar Disini</a></p>
                             </div>
                             {{-- <div class="text-center my-3 authentication-barrier">
