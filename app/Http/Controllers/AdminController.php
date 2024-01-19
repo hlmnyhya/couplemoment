@@ -24,7 +24,7 @@ class AdminController extends Controller
     public function AdminDashboard()
     {
         $user = auth()->user();
-        dd($user);
+        // dd($user);
         return view('admin.index');
     }
 }
