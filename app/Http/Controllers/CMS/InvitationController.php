@@ -7,6 +7,7 @@ use App\Models\Invitation;
 use App\Models\SoundBank;
 use App\Models\Theme;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class InvitationController extends Controller
 {
@@ -157,5 +158,26 @@ class InvitationController extends Controller
     public function test()
     {
         return view('frontend.invitation-pages.invitation');
+    }
+
+    public function simpanUcapan(Request $request)
+    {
+        // Validasi data form di sini jika diperlukan
+
+        $data = [
+            'nama' => $request->input('formnama'),
+            'kehadiran' => $request->input('hadiran'),
+            'pesan' => $request->input('formpesan'),
+            // tambahkan data lainnya sesuai kebutuhan
+        ];
+
+        $existingData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
+        $existingData[] = $data;
+
+        Storage::put('public/ucapan.json', json_encode($existingData));
+
+        // Tambahkan logika lainnya jika diperlukan
+
+        return redirect()->back();
     }
 }

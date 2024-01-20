@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muhammad Aldiyanoor & Rinta Ariani</title>
     <meta name="title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg') }}">
     {{-- <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> --}}
     <meta name="theme-color" content="#212529">
     <meta name="color-scheme" content="dark">
@@ -28,7 +28,8 @@
         integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         integrity="sha256-fx038NkLY4U1TCrBDiu5FWPEa9eiZu01EiLryshJbCo=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
         integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
         integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous">
@@ -120,7 +121,8 @@
                 <div class="overflow-x-hidden">
                     <div data-aos="fade-right" data-aos-duration="2000">
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg" onclick="modalFoto(this)">
+                            <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg"
+                                onclick="modalFoto(this)">
                         </div>
                         <h1 class="font-estetik1" style="font-size: 2.3rem;">Muhammad Aldiyanoor</h1>
                         <h5 class="mt-3 mb-0">Putra</h5>
@@ -131,7 +133,8 @@
 
                     <div data-aos="fade-left" data-aos-duration="2000">
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg" onclick="modalFoto(this)">
+                            <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg"
+                                onclick="modalFoto(this)">
                         </div>
                         <h1 class="font-estetik1" style="font-size: 2.3rem;">Rinta Ariani</h1>
                         <h5 class="mt-3 mb-0">Putri</h5>
@@ -213,7 +216,8 @@
                             <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
                         </a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
-                            Jl. Telok Selong, RT.05 / RW.03, Desa Tambang Ulang, Kecamatan Tambang Ulang, Kabupaten Tanah Laut
+                            Jl. Telok Selong, RT.05 / RW.03, Desa Tambang Ulang, Kecamatan Tambang Ulang, Kabupaten
+                            Tanah Laut
                         </p>
                     </div>
                 </div>
@@ -359,100 +363,105 @@
 
         <section class="m-0 p-0" id="ucapan">
             <div class="container">
-                <div class="card-body border rounded-4 shadow p-3">
-                    <h1 class="font-estetik text-center mb-3" style="font-size: 3rem;">Ucapan & Doa</h1>
-                    <input type="hidden" id="idbalasan">
-                    <div class="mb-1" id="balasan"></div>
-                    <div class="mb-3">
-                        <label for="formnama" class="form-label">Nama</label>
-                        <input type="text" class="form-control shadow-sm" id="formnama"
-                            placeholder="Isikan Nama Anda">
-                    </div>
-                    <div class="mb-3">
-                        <label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
-                        <select class="form-select shadow-sm" aria-label="selectkehadiran" id="hadiran">
-                            <option value="0" selected>Konfirmasi Kehadiran</option>
-                            <option value="1">Hadir</option>
-                            <option value="2">Berhalangan</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formpesan" class="form-label">Ucapan & Doa</label>
-                        <textarea class="form-control shadow-sm" id="formpesan" rows="4" placeholder="Tulis Ucapan & Doa"></textarea>
-                    </div>
-                    <div class="d-flex">
-                        <button class="flex-fill btn btn-danger btn-sm rounded-4 shadow m-1" style="display: none;"
-                            onclick="resetForm()" id="batal">
-                            Batal<i class="fa-solid fa-xmark ms-1"></i>
-                        </button>
-                        <button class="flex-fill btn btn-primary btn-sm rounded-4 shadow m-1" style="display: none;"
-                            onclick="kirimBalasan()" id="kirimbalasan">
-                            Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
-                        </button>
-                    </div>
-                    <div class="d-grid mb-2">
-                        <button class="btn btn-primary btn-sm rounded-4 shadow" onclick="kirim()" id="kirim">
-                            Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="rounded-4 mt-4 mb-2">
-                    <div id="daftarucapan"></div>
-                </div>
-
-                <nav class="d-flex justify-content-center">
-                    <ul class="pagination mb-0">
-                        <li class="page-item disabled" id="previous">
-                            <button class="page-link" onclick="pagination.previous(this)" aria-label="Previous">
-                                <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
-                            </button>
-                        </li>
-                        <li class="page-item" id="next">
-                            <button class="page-link" onclick="pagination.next(this)" aria-label="Next">
-                                Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#111111" fill-opacity="1"
-                d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-            </path>
-        </svg>
-
-        <div style="background-color: #111111 !important; margin-top: -5px; padding-bottom: 4rem;">
-            <div class="container">
-                <div class="text-center">
-                    <p style="font-size: 0.9rem;" class="pt-2 pb-1 px-2" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
-                        berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
-                    </p>
-                    <h1 class="font-estetik" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum
-                        Warahmatullahi Wabarakatuh</h1>
-                    <hr class="mt-3 mb-2">
-                    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                        <div class="col-auto">
-                            <small class="text-light">
-                                <a href="https://couplemoment.com/" target="_blank">
-                                    By Couple Moment.
-                                </a>
-                            </small>
+                <form method="post" action="{{ route('simpan_ucapan') }}">
+                    @csrf
+                    <div class="card-body border rounded-4 shadow p-3">
+                        <h1 class="font-estetik text-center mb-3" style="font-size: 3rem;">Ucapan & Doa</h1>
+                        <input type="hidden" id="idbalasan">
+                        <div class="mb-1" id="balasan"></div>
+                        <div class="mb-3">
+                            <label for="formnama" class="form-label">Nama</label>
+                            <input type="text" class="form-control shadow-sm" id="formnama" name="formnama" placeholder="Isikan Nama Anda">
                         </div>
-                        {{-- <div class="col-auto">
+                        <div class="mb-3">
+                            <label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
+                            <select class="form-select shadow-sm" aria-label="selectkehadiran" id="hadiran" name="hadiran">
+                                <option value="0" selected>Konfirmasi Kehadiran</option>
+                                <option value="1">Hadir</option>
+                                <option value="2">Berhalangan</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formpesan" class="form-label">Ucapan & Doa</label>
+                            <textarea class="form-control shadow-sm" id="formpesan" name="formpesan" rows="4" placeholder="Tulis Ucapan & Doa"></textarea>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-primary btn-sm rounded-4 shadow" type="submit">
+                                Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+        
+                 {{-- Tampilkan Data dari JSON --}}
+        <div class="rounded-4 mt-4 mb-2">
+            @if (Storage::exists('public/ucapan.json'))
+            @foreach (json_decode(Storage::get('public/ucapan.json'), true) ?? [] as $ucapan)
+                    <p>Nama: {{ $ucapan['nama'] }}</p>
+                    <p>Kehadiran: {{ $ucapan['kehadiran'] == 1 ? 'Hadir' : 'Berhalangan' }}</p>
+                    <p>Ucapan & Doa: {{ $ucapan['pesan'] }}</p>
+                    <hr> @endforeach
+@else
+<div class="alert
+        alert-info" role="alert">
+    Data ucapan belum tersedia.
+    </div>
+    @endif
+    </div>
+
+    {{-- <nav class="d-flex
+        justify-content-center">
+        <ul class="pagination mb-0">
+            <li class="page-item disabled" id="previous">
+                <button class="page-link" onclick="pagination.previous(this)" aria-label="Previous">
+                    <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
+                </button>
+            </li>
+            <li class="page-item" id="next">
+                <button class="page-link" onclick="pagination.next(this)" aria-label="Next">
+                    Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
+                </button>
+            </li>
+        </ul>
+    </nav> --}}
+    </div>
+    </section>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+    </svg>
+
+    <div style="background-color: #111111 !important; margin-top: -5px; padding-bottom: 4rem;">
+        <div class="container">
+            <div class="text-center">
+                <p style="font-size: 0.9rem;" class="pt-2 pb-1 px-2" data-aos="fade-up" data-aos-duration="1500">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
+                    berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
+                </p>
+                <h1 class="font-estetik" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum
+                    Warahmatullahi Wabarakatuh</h1>
+                <hr class="mt-3 mb-2">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <small class="text-light">
+                            <a href="https://couplemoment.com/" target="_blank">
+                                By Couple Moment.
+                            </a>
+                        </small>
+                    </div>
+                    {{-- <div class="col-auto">
                             <small>
                                 <i class="fa-brands fa-github me-1"></i><a target="_blank"
                                     href="https://github.com/endahabdullah/undangan">endahabdullah</a>
                             </small>
                         </div> --}}
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </main>
 
     <button type="button" id="tombol-musik" style="display: none;"
@@ -469,7 +478,7 @@
         </div>
     </div>
 
-      <!-- Preloader Section -->
+    <!-- Preloader Section -->
     <div class="preloader">
         <img src="{{ asset('invitation/assets/images/icon-park_oval-love-two.svg') }}" alt="Couple Moment">
         <p class="couple-moment-text">Couple Moment</p>
@@ -518,7 +527,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
         integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
     <script src="{{ asset('invitation/js/app.js') }}"></script>
-</body>
+    </body>
 
 </html>
 
@@ -527,7 +536,7 @@
     var countDownDate = new Date("Jan 28, 2024 00:00:00").getTime();
 
     // Update the countdown every 1 second
-    var x = setInterval(function () {
+    var x = setInterval(function() {
 
         // Get the current date and time
         var now = new Date().getTime();
@@ -554,4 +563,3 @@
         }
     }, 1000);
 </script>
-
