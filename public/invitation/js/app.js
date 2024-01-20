@@ -643,3 +643,13 @@ window.addEventListener('load', () => {
     modal.show();
     opacity();
 }, false);
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Simulasikan waktu pemuatan
+    setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.querySelector('.preloader').style.opacity = '0';
+        document.querySelector('.preloader').style.visibility = 'hidden';
+    }, 2000); // Sesuaikan waktu pemuatan sesuai kebutuhan
+});
+

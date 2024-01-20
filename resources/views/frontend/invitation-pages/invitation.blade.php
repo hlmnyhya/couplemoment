@@ -85,7 +85,9 @@
                             onclick="modalFoto(this)">
                     </div>
                 </div>
-                <h1 class="font-estetik my-4" style="font-size: 3rem;">Muhammad Aldiyanoor & Rinta Ariani</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Rinta Ariani</h1>
                 <h4>Minggu, 28 Januari 2024</h4>
                 <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
                     href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
@@ -120,7 +122,7 @@
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg" onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Muhammad Aldiyanoor, A.Md.Kom</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Muhammad Aldiyanoor</h1>
                         <h5 class="mt-3 mb-0">Putra</h5>
                         <p class="mb-0">Bapak H. Mahyuni & Ibu Hj. Asma Septi Mursidah S.Pd</p>
                     </div>
@@ -131,7 +133,7 @@
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg" onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Rinta Ariani, A.Md.Kom</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Rinta Ariani</h1>
                         <h5 class="mt-3 mb-0">Putri</h5>
                         <p class="mb-0">Bapak H. Juliansyah & Ibu Hj. Raitasiah (Alm)</p>
                     </div>
@@ -459,12 +461,18 @@
         <i class="fa-solid fa-circle-pause"></i>
     </button>
 
-    <div class="loading" id="loading" style="opacity: 1;">
+    <div class="loading hidden" id="loading" style="opacity: 1;">
         <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
             <div class="progress w-75" role="progressbar">
                 <div class="progress-bar" id="bar" style="width: 0%">0%</div>
             </div>
         </div>
+    </div>
+
+      <!-- Preloader Section -->
+    <div class="preloader">
+        <img src="{{ asset('invitation/assets/images/icon-park_oval-love-two.svg') }}" alt="Couple Moment">
+        <p class="couple-moment-text">Couple Moment</p>
     </div>
 
     <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="modalFotoLabel" aria-hidden="true">
@@ -491,7 +499,9 @@
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor & Rinta Ariani</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Rinta Ariani</h1>
                         <div id="namatamu"></div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" onclick="buka()">

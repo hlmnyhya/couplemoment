@@ -80,6 +80,57 @@ body::-webkit-scrollbar {
     animation-iteration-count: infinite;
 }
 
+/* CSS untuk Preloader */
+.preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #212529;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.preloader img {
+    width: 100px;
+    height: auto;
+    opacity: 1;
+    animation: fadeInImg 2s forwards; /* Tambahkan animasi fadeInImg */
+}
+
+.couple-moment-text {
+    margin-top: 10px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInText 2s forwards; /* Tambahkan animasi fadeInText */
+}
+
+@keyframes fadeInImg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 @keyframes scroll {
     0% {
         opacity: 0;
