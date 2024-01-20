@@ -79,7 +79,7 @@
 
         <section class="container" id="home">
             <div class="text-center pt-4">
-                <h1 class="font-estetik my-4" style="font-size: 2.2rem;">Undangan Pernikahan</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.2rem; color:#FFD700">Undangan Pernikahan</h1>
                 <div class="py-4">
                     <div class="cropper border border-3 border-light shadow mx-auto">
                         <img src="{{ asset('invitation/assets/images/sampul2.jpeg') }}" alt="bg"
@@ -89,7 +89,7 @@
                 <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor</h1>
                 <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
                 <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Rinta Ariani</h1>
-                <h4>Minggu, 28 Januari 2024</h4>
+                <h4 style="color:#FFD700">Minggu, 28 Januari 2024</h4>
                 <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
                     href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
                     <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
@@ -99,7 +99,7 @@
                         <div class="scroller"></div>
                     </div>
                 </div>
-                <p class="m-0">Scroll Down</p>
+                <p class="m-0" style="color:#FFD700">Scroll Down</p>
             </div>
         </section>
 
@@ -111,7 +111,7 @@
 
         <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="mempelai">
             <div class="text-center">
-                <h1 class="font-estetik py-4 px-2">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+                <h1 class="font-estetik py-4 px-2" style="color:#FFD700">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
 
                 <p class="pb-3 px-3">
                     Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat
@@ -124,19 +124,19 @@
                             <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg"
                                 onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Muhammad Aldiyanoor</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">Muhammad Aldiyanoor</h1>
                         <h5 class="mt-3 mb-0">Putra</h5>
                         <p class="mb-0">Bapak H. Mahyuni & Ibu Hj. Asma Septi Mursidah S.Pd</p>
                     </div>
 
-                    <h1 class="font-estetik my-4" style="font-size: 4rem;">&</h1>
+                    <h1 class="font-estetik my-4" style="font-size: 4rem; color:#FFD700">&</h1>
 
                     <div data-aos="fade-left" data-aos-duration="2000">
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg"
                                 onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Rinta Ariani</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">Rinta Ariani</h1>
                         <h5 class="mt-3 mb-0">Putri</h5>
                         <p class="mb-0">Bapak H. Juliansyah & Ibu Hj. Raitasiah (Alm)</p>
                     </div>
@@ -158,7 +158,7 @@
                     rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
                     (kebesaran Allah) bagi kaum yang berpikir.
                 </p>
-                <span class="mb-0" data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
+                <span class="mb-0" style="color:#FFD700" data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
             </div>
         </div>
 
@@ -171,7 +171,7 @@
         <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="tanggal">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="font-estetik py-3" style="font-size: 2rem;">Waktu Menuju Acara</h1>
+                    <h1 class="font-estetik py-3" style="font-size: 2rem; color:#FFD700">Waktu Menuju Acara</h1>
                     <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
                         <div class="row justify-content-center" data-waktu="2024-01-28 00:00:00" id="tampilan-waktu">
                             <div class="col-3 p-1">
@@ -205,15 +205,15 @@
                         </div> --}}
 
                         <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
-                            <h1 class="font-estetik" style="font-size: 2rem;">Resepsi</h1>
+                            <h1 class="font-estetik" style="font-size: 2rem; color:#FFD700">Resepsi</h1>
                             <p>Pukul 08.00 - 14.00 WITA</p>
                         </div>
                     </div>
 
                     <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
                         <a href="https://maps.app.goo.gl/13jYX3E4sjtnFuTf8" target="_blank"
-                            class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3">
-                            <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
+                            class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3" style="color:#FFD700; border-color:#FFD700">
+                            <i class="fa-solid fa-map-location-dot me-2" style="color:#FFD700"></i>Lihat Google Maps
                         </a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
                             Jl. Telok Selong, RT.05 / RW.03, Desa Tambang Ulang, Kecamatan Tambang Ulang, Kabupaten
@@ -228,7 +228,7 @@
             <div class="container pb-2 pt-4">
                 <div class="card-body border rounded-4 shadow p-3">
                     <h1 class="font-estetik text-center py-3" data-aos="fade-down" data-aos-duration="1500"
-                        style="font-size: 2rem;">Galeri</h1>
+                        style="font-size: 2rem; color:#FFD700">Galeri</h1>
 
                     <div id="carouselExampleIndicators" data-aos="fade-up" data-aos-duration="1500"
                         class="carousel slide" data-bs-ride="carousel">
@@ -320,7 +320,7 @@
         <div class="container">
             <div class="py-4">
                 <div class="text-center">
-                    <h1 class="font-estetik mt-0 mb-3" style="font-size: 3rem;">Love Gift</h1>
+                    <h1 class="font-estetik mt-0 mb-3" style="font-size: 3rem; color:#FFD700">Love Gift</h1>
                     <p class="mb-1" style="font-size: 0.9rem;">
                         Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,
                         dapat melalui :
@@ -342,18 +342,17 @@
                                     onclick="salin(this)" autofocus>Salin No. Rekening</button>
                             </div> --}}
 
-                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
+                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem; background-color:#fff"
                                 data-aos="fade-down" data-aos-duration="1500">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/2560px-BANK_BRI_logo.svg.png"
                                     class="img-fluid rounded" width="150" alt="bri">
-                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;">
+                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;color: #000;font-weight: bold;">
                                     No. Rekening 023901016984532
                                 </p>
-                                <p class="card-text" style="font-size: 0.9rem;">
+                                <p class="card-text" style="font-size: 0.9rem;color: #000;font-weight: bold;">
                                     a.n Muhammad Aldiyanoor
                                 </p>
-                                <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532"
-                                    onclick="salin(this)" autofocus>Salin No. Rekening</button>
+                                <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532" onclick="salin(this)" autofocus="" style="background-color: #00519d; color: #FFF;">Salin No. Rekening</button>
                             </div>
                         </div>
                     </div>
@@ -366,7 +365,7 @@
                 <form method="post" action="{{ route('simpan_ucapan') }}">
                     @csrf
                     <div class="card-body border rounded-4 shadow p-3">
-                        <h1 class="font-estetik text-center mb-3" style="font-size: 3rem;">Ucapan & Doa</h1>
+                        <h1 class="font-estetik text-center mb-3" style="font-size: 3rem; color:#FFD700">Ucapan & Doa</h1>
                         <input type="hidden" id="idbalasan">
                         <div class="mb-1" id="balasan"></div>
                         <div class="mb-3">
@@ -386,7 +385,7 @@
                             <textarea class="form-control shadow-sm" id="formpesan" name="formpesan" rows="4" placeholder="Tulis Ucapan & Doa"></textarea>
                         </div>
                         <div class="d-grid mb-2">
-                            <button class="btn btn-primary btn-sm rounded-4 shadow" type="submit">
+                            <button class="btn btn-primary btn-sm rounded-4 shadow" style="background-color: #FFD700; border-color:#FFD700" type="submit">
                                 Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
                             </button>
                         </div>
@@ -395,21 +394,20 @@
         
                  {{-- Tampilkan Data dari JSON --}}
         <div class="rounded-4 mt-4 mb-2">
-            @if (Storage::exists('public/ucapan.json'))
-            @foreach (json_decode(Storage::get('public/ucapan.json'), true) ?? [] as $ucapan)
-                    <p>Nama: {{ $ucapan['nama'] }}</p>
-                    <p>Kehadiran: {{ $ucapan['kehadiran'] == 1 ? 'Hadir' : 'Berhalangan' }}</p>
-                    <p>Ucapan & Doa: {{ $ucapan['pesan'] }}</p>
-                    <hr> @endforeach
-@else
-<div class="alert
-        alert-info" role="alert">
-    Data ucapan belum tersedia.
-    </div>
-    @endif
-    </div>
+            {{-- <div id="daftarucapan"> --}}
+                @if (Storage::exists('public/ucapan.json'))
+                @foreach (json_decode(Storage::get('public/ucapan.json'), true) ?? [] as $ucapan)
+                <p>Nama: {{ $ucapan['nama'] }}</p>
+                <p>Kehadiran: {{ $ucapan['kehadiran'] == 1 ? 'Hadir' : 'Berhalangan' }}</p>
+                <p>Ucapan & Doa: {{ $ucapan['pesan'] }}</p>
+                <hr> @endforeach
+                @else
+                <div class="alert alert-info" role="alert">Data ucapan belum tersedia.</div>
+                @endif
+            {{-- </div> --}}
+        </div>
 
-    {{-- <nav class="d-flex
+    <nav class="d-flex
         justify-content-center">
         <ul class="pagination mb-0">
             <li class="page-item disabled" id="previous">
@@ -418,12 +416,12 @@
                 </button>
             </li>
             <li class="page-item" id="next">
-                <button class="page-link" onclick="pagination.next(this)" aria-label="Next">
+                <button class="page-link" onclick="pagination.next(this)" aria-label="Next" style="color: #FFD700">
                     Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
                 </button>
             </li>
         </ul>
-    </nav> --}}
+    </nav>
     </div>
     </section>
 
@@ -441,15 +439,17 @@
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
                     berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
                 </p>
-                <h1 class="font-estetik" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum
+                <h1 class="font-estetik" style="color: #FFD700" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum
                     Warahmatullahi Wabarakatuh</h1>
                 <hr class="mt-3 mb-2">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto">
                         <small class="text-light">
-                            <a href="https://couplemoment.com/" target="_blank">
+                            <center>
+                            <a href="https://couplemoment.com/" target="_blank" style="color: #fff">
                                 By Couple Moment.
                             </a>
+                        </center>
                         </small>
                     </div>
                     {{-- <div class="col-auto">
@@ -504,15 +504,16 @@
             <div class="modal-content m-0 p-0">
                 <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
                     <div class="text-center">
-                        <h1 class="font-estetik mb-4" style="font-size: 2.2rem;">The Wedding Of</h1>
+                        <h1 class="font-estetik mb-4" style="font-size: 2.2rem; color:#FFD700;">The Wedding Of</h1>
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor</h1>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Rinta Ariani</h1>
+                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">Muhammad Aldiyanoor</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">&</h1>
+                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">Rinta Ariani</h1>
                         <div id="namatamu"></div>
-                        <button type="button" class="btn btn-light shadow rounded-4 mt-4" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-light shadow rounded-4 mt-4"
+                            style="background-color: #fff; color:#212529" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" onclick="buka()">
                             <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
                         </button>
@@ -533,7 +534,7 @@
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Jan 28, 2024 00:00:00").getTime();
+    var countDownDate = new Date("Jan 28, 2024 08:00:00").getTime();
 
     // Update the countdown every 1 second
     var x = setInterval(function() {
@@ -559,7 +560,7 @@
         // If the countdown is over, display a message
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("tampilan-waktu").innerHTML = "<h2>Waktu Acara Telah Berakhir</h2>";
+            document.getElementById("tampilan-waktu").innerHTML = "<h2>Waktu Acara Telah Dimulai</h2>";
         }
     }, 1000);
 </script>
