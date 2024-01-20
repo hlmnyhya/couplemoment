@@ -362,6 +362,7 @@
             </div>
         </div>
 
+
         <section class="m-0 p-0" id="ucapan">
             <div class="container">
                 <form method="post" action="{{ route('simpan_ucapan') }}">
@@ -394,56 +395,65 @@
                     </div>
                 </form>
         
-                 {{-- Tampilkan Data dari JSON --}}
-        @if (Storage::exists('public/ucapan.json'))
-            @foreach ($existingData as $ucapan)
-                <div class="rounded-4 mt-4 mb-2">
-                    <div class="card-body bg-light shadow p-3 m-0 rounded-4">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                            <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
-                                <strong class="me-1"> {{ $ucapan['nama'] }}</strong>
-                @if($ucapan['kehadiran'] == 1)
-                    <i class="fa-solid fa-circle-check text-success"></i>
-                @else
-                    <i class="fa-solid fa-circle-xmark text-danger"></i>
-                @endif
-            </p>
-            <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($ucapan['waktu'])->diffForHumans() }}</small>
-
-        </div>
-        <hr class="text-dark my-1">
-        <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $ucapan['pesan'] }}</p>
-        {{-- <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
-        ${innerCard(data.comment)} --}}
-    </div>
-    
-</div>
-<hr> @endforeach
-
-{{ $existingData->links() }}
-
+                {{-- Tampilkan Data dari JSON --}}
+                @if (Storage::exists('public/ucapan.json'))
+                    @php
+                        $ucapanData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
+                        $totalItems = count($ucapanData);
+                        $currentPage = request('page', 1);
+                        $itemsPerPage = 5;
+                        $startIndex = ($currentPage - 1) * $itemsPerPage;
+                        $endIndex = min($startIndex + $itemsPerPage, $totalItems);
+                        $slicedData = array_slice($ucapanData, $startIndex, $itemsPerPage);
+                    @endphp
+        
+                    @foreach ($slicedData as $ucapan)
+                        <div class="rounded-4 mt-4 mb-2">
+                            <div class="card-body bg-light shadow p-3 m-0 rounded-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                    <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
+                                        <strong class="me-1">{{ $ucapan['nama'] }}</strong>
+                                        @if ($ucapan['kehadiran'] == 1)
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                        @else
+                                            <i class="fa-solid fa-circle-xmark text-danger"></i>
+                                        @endif
+                                    </p>
+                                    <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($ucapan['waktu'])->diffForHumans() }}</small>
+                                </div>
+                                <hr class="text-dark my-1">
+                                <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $ucapan['pesan'] }}</p>
+                                {{-- <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="{{ $ucapan['uuid'] }}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
+                                {{ $innerCard($ucapan['comment']) }} --}}
+                            </div>
+                        </div>
+                        <hr> @endforeach
+        
+                    @if ($totalItems > $itemsPerPage) <nav class="d-flex justify-content-center">
+                            <ul class="pagination mb-0">
+                                @if ($currentPage > 1)
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ route('Aldi-&-Rinta', ['page' => $currentPage - 1]) }}" aria-label="Previous"  style="color: #FFD700">
+                                            <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
+                                        </a>
+                                    </li> @endif
+        
+                                @if ($endIndex < $totalItems) <li class="page-item">
+                                        <a class="page-link" href="{{ route('Aldi-&-Rinta', ['page' => $currentPage + 1]) }}" aria-label="Next" style="color: #FFD700">
+                                            Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
+                                        </a>
+                                    </li> @endif
+                            </ul>
+                        </nav>
+                    @endif
 @else
 <div class="alert
-alert-info" role="alert">Data ucapan belum tersedia.</div>
-@endif
-
-    <nav class="d-flex
-        justify-content-center">
-        <ul class="pagination mb-0">
-            <li class="page-item disabled" id="previous">
-                <button class="page-link" onclick="pagination.previous(this)" aria-label="Previous">
-                    <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
-                </button>
-            </li>
-            <li class="page-item" id="next">
-                <button class="page-link" onclick="pagination.next(this)" aria-label="Next" style="color: #FFD700">
-                    Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
-                </button>
-            </li>
-        </ul>
-    </nav>
+        alert-info" role="alert">Data ucapan belum tersedia.</div>
+    @endif
     </div>
     </section>
+
+
 
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
