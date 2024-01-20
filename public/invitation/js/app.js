@@ -464,11 +464,11 @@ const login = async () => {
                 return;
             }
         })
-        .catch(() => {
-            alert('Terdapat kesalahan, otomatis reload halaman');
-            window.location.reload();
-            return;
-        });
+        // .catch(() => {
+        //     alert('Terdapat kesalahan, otomatis reload halaman');
+        //     window.location.reload();
+        //     return;
+        // });
 };
 
 const kirim = async () => {

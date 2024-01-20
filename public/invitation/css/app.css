@@ -19,6 +19,11 @@ body::-webkit-scrollbar {
     color: #ffffff !important;
 }
 
+.font-estetik1 {
+    font-family: 'emoji' !important;
+    color: #ffffff !important;
+}
+
 .cropper {
     width: 14rem;
     height: 14rem;

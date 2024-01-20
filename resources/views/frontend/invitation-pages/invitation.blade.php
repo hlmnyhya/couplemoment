@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Undangan Pernikahan Endah Lestari & Abdullah Shafi'i</title>
-    <meta name="title" content="Undangan Pernikahan Endah Lestari & Abdullah Shafi'i">
-    <meta name="description" content="Website Undangan Pernikahan Endah Lestari & Abdullah Shafi'i Secara Online">
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/icon-192x192.png">
+    <title>Muhammad Aldiyanoor & Rinta Ariani</title>
+    <meta name="title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg')}}">
+    {{-- <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> --}}
     <meta name="theme-color" content="#212529">
     <meta name="color-scheme" content="dark">
-    <meta property="og:title" content="Undangan Pernikahan Endah Lestari & Abdullah Shafi'i">
+    <meta property="og:title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
     <meta property="og:description"
-        content="Website Undangan Pernikahan Endah Lestari & Abdullah Shafi'i Secara Online">
+        content="Website Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani Secara Online">
     <meta property="og:image" content="https://endahabdullah.github.io/undangan/assets/images/bg.jpeg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="https://endahabdullah.github.io/undangan/">
@@ -81,14 +81,14 @@
                 <h1 class="font-estetik my-4" style="font-size: 2.2rem;">Undangan Pernikahan</h1>
                 <div class="py-4">
                     <div class="cropper border border-3 border-light shadow mx-auto">
-                        <img src="{{ asset('invitation/assets/images/bg.jpeg') }}" alt="bg"
+                        <img src="{{ asset('invitation/assets/images/sampul2.jpeg') }}" alt="bg"
                             onclick="modalFoto(this)">
                     </div>
                 </div>
-                <h1 class="font-estetik my-4" style="font-size: 3rem;">Endah Lestari & Abdullah Shafi'i</h1>
-                <h4>Rabu, 15 Maret 2023</h4>
+                <h1 class="font-estetik my-4" style="font-size: 3rem;">Muhammad Aldiyanoor & Rinta Ariani</h1>
+                <h4>Minggu, 28 Januari 2024</h4>
                 <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
-                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Endah Lestari%20and%20Abdullah Shafi'i&details=The%20Wedding%20of%20Endah Lestari%20and%20Abdullah Shafi'i%20%7C%2015%20Maret%202023%20%7C%20RT%2010%20RW%2002,%20Desa%20Pajerukan,%20Kec.%20Kalibagor,%20Kab.%20Banyumas,%20Jawa%20Tengah%2053191%20%7C%2010.00%20-%2011.00%20WIB&dates=20230315T100000/20230315T110000&location=https://goo.gl/maps/ALZR6FJZU3kxVwN86">
+                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
                     <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
                 </a>
                 <div class="d-flex justify-content-center align-items-center mt-4 mb-2">
@@ -118,22 +118,22 @@
                 <div class="overflow-x-hidden">
                     <div data-aos="fade-right" data-aos-duration="2000">
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="assets/images/cowo.png" alt="bg" onclick="modalFoto(this)">
+                            <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg" onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik" style="font-size: 3rem;">Endah Lestari Siapa</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Muhammad Aldiyanoor, A.Md.Kom</h1>
                         <h5 class="mt-3 mb-0">Putra</h5>
-                        <p class="mb-0">Bapak ... & Ibu ...</p>
+                        <p class="mb-0">Bapak H. Mahyuni & Ibu Hj. Asma Septi Mursidah S.Pd</p>
                     </div>
 
                     <h1 class="font-estetik my-4" style="font-size: 4rem;">&</h1>
 
                     <div data-aos="fade-left" data-aos-duration="2000">
                         <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="assets/images/cewe.png" alt="bg" onclick="modalFoto(this)">
+                            <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg" onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik" style="font-size: 3rem;">Abdullah Shafi'i Siapa</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem;">Rinta Ariani, A.Md.Kom</h1>
                         <h5 class="mt-3 mb-0">Putri</h5>
-                        <p class="mb-0">Bapak ... & Ibu ...</p>
+                        <p class="mb-0">Bapak H. Juliansyah & Ibu Hj. Raitasiah (Alm)</p>
                     </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                 <div class="text-center">
                     <h1 class="font-estetik py-3" style="font-size: 2rem;">Waktu Menuju Acara</h1>
                     <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
-                        <div class="row justify-content-center" data-waktu="2024-01-01 00:00:00" id="tampilan-waktu">
+                        <div class="row justify-content-center" data-waktu="2024-01-28 00:00:00" id="tampilan-waktu">
                             <div class="col-3 p-1">
                                 <h2 class="d-inline m-0 p-0" id="hari">0</h2><small
                                     class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
@@ -194,24 +194,24 @@
                     </p>
 
                     <div class="overflow-x-hidden">
-                        <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
+                        {{-- <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
                             <h1 class="font-estetik" style="font-size: 2rem;">Akad</h1>
                             <p>Pukul 10.00 WIB - Selesai</p>
-                        </div>
+                        </div> --}}
 
                         <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
                             <h1 class="font-estetik" style="font-size: 2rem;">Resepsi</h1>
-                            <p>Pukul 13.00 WIB - Selesai</p>
+                            <p>Pukul 08.00 - 14.00 WITA</p>
                         </div>
                     </div>
 
                     <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="https://goo.gl/maps/ALZR6FJZU3kxVwN86" target="_blank"
+                        <a href="https://maps.app.goo.gl/13jYX3E4sjtnFuTf8" target="_blank"
                             class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3">
                             <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
                         </a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
-                            RT 10 RW 02, Desa Pajerukan, Kec. Kalibagor, Kab. Banyumas, Jawa Tengah 53191
+                            Jl. Telok Selong, RT.05 / RW.03, Desa Tambang Ulang, Kecamatan Tambang Ulang, Kabupaten Tanah Laut
                         </p>
                     </div>
                 </div>
@@ -237,15 +237,15 @@
 
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/1280/720?random=1" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/1.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/1280/720?random=2" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/2.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/1280/720?random=3" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/3.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                         </div>
@@ -276,15 +276,15 @@
 
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/1280/720?random=4" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/4.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/1280/720?random=5" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/5.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/1280/720?random=6" class="d-block w-100"
+                                <img src="{{ asset('invitation/assets/images/6.jpeg') }}" class="d-block w-100"
                                     onclick="modalFoto(this)">
                             </div>
                         </div>
@@ -322,7 +322,7 @@
 
                     <div class="overflow-x-hidden">
                         <div class="row justify-content-center">
-                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
+                            {{-- <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
                                 data-aos="fade-down" data-aos-duration="1500">
                                 <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1200px-BNI_logo.svg.png"
                                     class="img-fluid rounded" width="150" alt="bni">
@@ -334,19 +334,19 @@
                                 </p>
                                 <button class="btn btn-light btn-sm rounded-4" data-nomer="123456789"
                                     onclick="salin(this)" autofocus>Salin No. Rekening</button>
-                            </div>
+                            </div> --}}
 
                             <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
                                 data-aos="fade-down" data-aos-duration="1500">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/2560px-BANK_BRI_logo.svg.png"
                                     class="img-fluid rounded" width="150" alt="bri">
                                 <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;">
-                                    No. Rekening 123456789
+                                    No. Rekening 023901016984532
                                 </p>
                                 <p class="card-text" style="font-size: 0.9rem;">
-                                    a.n Lorem ipsum dolor
+                                    a.n Muhammad Aldiyanoor
                                 </p>
-                                <button class="btn btn-light btn-sm rounded-4" data-nomer="123456789"
+                                <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532"
                                     onclick="salin(this)" autofocus>Salin No. Rekening</button>
                             </div>
                         </div>
@@ -436,15 +436,17 @@
                     <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                         <div class="col-auto">
                             <small class="text-light">
-                                Build with<i class="fa-solid fa-heart mx-1"></i>endahabdullah
+                                <a href="https://couplemoment.com/" target="_blank">
+                                    By Couple Moment.
+                                </a>
                             </small>
                         </div>
-                        <div class="col-auto">
+                        {{-- <div class="col-auto">
                             <small>
                                 <i class="fa-brands fa-github me-1"></i><a target="_blank"
                                     href="https://github.com/endahabdullah/undangan">endahabdullah</a>
                             </small>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -453,7 +455,7 @@
 
     <button type="button" id="tombol-musik" style="display: none;"
         class="btn btn-light btn-sm rounded-circle btn-music" onclick="play(this)" data-status="true"
-        data-url="assets/music/sound.mp3">
+        data-url="{{ asset('invitation/assets/music/sound2.mp3') }}">
         <i class="fa-solid fa-circle-pause"></i>
     </button>
 
@@ -487,9 +489,9 @@
                     <div class="text-center">
                         <h1 class="font-estetik mb-4" style="font-size: 2.2rem;">The Wedding Of</h1>
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/bg.jpeg') }}" alt="bg">
+                            <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Endah Lestari & Abdullah Shafi'i</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor & Rinta Ariani</h1>
                         <div id="namatamu"></div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" onclick="buka()">
@@ -509,3 +511,37 @@
 </body>
 
 </html>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 28, 2024 00:00:00").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function () {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Calculate the remaining time
+        var distance = countDownDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown in the HTML elements
+        document.getElementById("hari").innerHTML = days;
+        document.getElementById("jam").innerHTML = hours;
+        document.getElementById("menit").innerHTML = minutes;
+        document.getElementById("detik").innerHTML = seconds;
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("tampilan-waktu").innerHTML = "<h2>Waktu Acara Telah Berakhir</h2>";
+        }
+    }, 1000);
+</script>
+

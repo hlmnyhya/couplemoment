@@ -103,6 +103,6 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
-Route::get('/test-page', [InvitationController::class, 'test'])->name('test-page');
+Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
 
 require __DIR__ . '/auth.php';
