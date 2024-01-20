@@ -8,7 +8,7 @@ use App\Models\SoundBank;
 use App\Models\Theme;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use Carbon\Carbon;
 class InvitationController extends Controller
 {
     public function index()
@@ -160,24 +160,38 @@ class InvitationController extends Controller
         return view('frontend.invitation-pages.invitation');
     }
 
-    public function simpanUcapan(Request $request)
-    {
-        // Validasi data form di sini jika diperlukan
+public function simpanUcapan(Request $request)
+{
+    // Validasi data form di sini jika diperlukan
 
-        $data = [
-            'nama' => $request->input('formnama'),
-            'kehadiran' => $request->input('hadiran'),
-            'pesan' => $request->input('formpesan'),
-            // tambahkan data lainnya sesuai kebutuhan
-        ];
+    $data = [
+        'nama' => $request->input('formnama'),
+        'kehadiran' => $request->input('hadiran'),
+        'pesan' => $request->input('formpesan'),
+        'waktu' => Carbon::now()->toDateTimeString(), // Add current timestamp
+        // tambahkan data lainnya sesuai kebutuhan
+    ];
 
-        $existingData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
-        $existingData[] = $data;
+    $existingData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
+    $existingData[] = $data;
 
-        Storage::put('public/ucapan.json', json_encode($existingData));
+    Storage::put('public/ucapan.json', json_encode($existingData));
 
-        // Tambahkan logika lainnya jika diperlukan
+    // Tambahkan logika lainnya jika diperlukan
 
-        return redirect()->back();
-    }
+    return redirect()->back();
+}
+
+public function showUcapan()
+{
+    $dataPerPage = 5;
+    $existingData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
+
+    $paginatedData = array_reverse(array_slice($existingData, 0, $dataPerPage));
+
+    return view('frontend.invitation-pages.invitation', ['existingData' => $paginatedData]);
+
+}
+
+
 }

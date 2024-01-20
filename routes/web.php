@@ -105,5 +105,6 @@ Route::controller(GuestBookController::class)->group(function () {
 
 Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
 Route::post('/simpan_ucapan', [InvitationController::class, 'simpanUcapan'])->name('simpan_ucapan');
+Route::get('/show-ucapan', [InvitationController::class, 'showUcapan'])->name('show_ucapan');
 
 require __DIR__ . '/auth.php';

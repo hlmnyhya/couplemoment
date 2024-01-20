@@ -111,6 +111,7 @@
 
         <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="mempelai">
             <div class="text-center">
+                <h1 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
                 <h1 class="font-estetik py-4 px-2" style="color:#FFD700">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
 
                 <p class="pb-3 px-3">
@@ -152,6 +153,7 @@
 
         <div class="container">
             <div class="text-center">
+                <h1 class="font-estetik mt-0 mb-3" style="font-size: 2rem; color:#FFD700">Allah Subhanahu Wa Ta'ala berfirman</h1>
                 <p style="font-size: 0.9rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
                     Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
                     jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
@@ -393,19 +395,37 @@
                 </form>
         
                  {{-- Tampilkan Data dari JSON --}}
-        <div class="rounded-4 mt-4 mb-2">
-            {{-- <div id="daftarucapan"> --}}
-                @if (Storage::exists('public/ucapan.json'))
-                @foreach (json_decode(Storage::get('public/ucapan.json'), true) ?? [] as $ucapan)
-                <p>Nama: {{ $ucapan['nama'] }}</p>
-                <p>Kehadiran: {{ $ucapan['kehadiran'] == 1 ? 'Hadir' : 'Berhalangan' }}</p>
-                <p>Ucapan & Doa: {{ $ucapan['pesan'] }}</p>
-                <hr> @endforeach
+        @if (Storage::exists('public/ucapan.json'))
+            @foreach ($existingData as $ucapan)
+                <div class="rounded-4 mt-4 mb-2">
+                    <div class="card-body bg-light shadow p-3 m-0 rounded-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
+                                <strong class="me-1"> {{ $ucapan['nama'] }}</strong>
+                @if($ucapan['kehadiran'] == 1)
+                    <i class="fa-solid fa-circle-check text-success"></i>
                 @else
-                <div class="alert alert-info" role="alert">Data ucapan belum tersedia.</div>
+                    <i class="fa-solid fa-circle-xmark text-danger"></i>
                 @endif
-            {{-- </div> --}}
+            </p>
+            <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($ucapan['waktu'])->diffForHumans() }}</small>
+
         </div>
+        <hr class="text-dark my-1">
+        <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $ucapan['pesan'] }}</p>
+        {{-- <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
+        ${innerCard(data.comment)} --}}
+    </div>
+    
+</div>
+<hr> @endforeach
+
+{{ $existingData->links() }}
+
+@else
+<div class="alert
+alert-info" role="alert">Data ucapan belum tersedia.</div>
+@endif
 
     <nav class="d-flex
         justify-content-center">
@@ -439,17 +459,18 @@
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
                     berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
                 </p>
-                <h1 class="font-estetik" style="color: #FFD700" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum
+                <h1 class="font-estetik" style="color: #FFD700" data-aos="fade-up" data-aos-duration="2000">
+                    Wassalamualaikum
                     Warahmatullahi Wabarakatuh</h1>
                 <hr class="mt-3 mb-2">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto">
                         <small class="text-light">
                             <center>
-                            <a href="https://couplemoment.com/" target="_blank" style="color: #fff">
-                                By Couple Moment.
-                            </a>
-                        </center>
+                                <a href="https://couplemoment.com/" target="_blank" style="color: #fff">
+                                    By Couple Moment.
+                                </a>
+                            </center>
                         </small>
                     </div>
                     {{-- <div class="col-auto">
