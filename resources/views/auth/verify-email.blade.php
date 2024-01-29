@@ -47,31 +47,37 @@
                     </div>
                     <div class="card custom-card">
                         <div class="card-body p-5">
-                            <p class="h5 fw-semibold mb-2 text-center" style="color: #ff477e; font-size: x-large;">Verifikasi E-mail</p>
-                            <p class="mb-4 text-muted op-7 fw-normal text-center">Silahkan memverifikasi email anda terlebih dahulu.</p>
-                            
+                            <p class="h5 fw-semibold mb-2 text-center" style="color: #ff477e; font-size: x-large;">
+                                Verifikasi E-mail</p>
+                            <p class="mb-4 text-muted op-7 fw-normal text-center">Silahkan memverifikasi email anda
+                                terlebih dahulu.</p>
+
                             <div class="mb-4 text-sm text-gray-600" style="text-align: justify">
                                 {{ __('Terima kasih telah mendaftar! Sebelum memulai, bisakah Anda memverifikasi alamat email Anda dengan mengeklik tautan yang baru saja kami kirimkan melalui email kepada Anda? Jika Anda tidak menerima email tersebut, kami dengan senang hati akan mengirimkan email lainnya kepada Anda.') }}
                             </div>
-                            
+
                             @if (session('status') == 'verification-link-sent')
-                            <div class="mb-4 font-medium text-sm text-green-600">
-                                {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-                            </div>
+                                <div class="mb-4 font-medium text-sm text-green-600">
+                                    {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+                                </div>
                             @endif
-                            
+
                             <div class="mt-4 flex items-center justify-between">
                                 <div class=" btn-group">
                                     <form method="POST" action="{{ route('verification.send') }}">
                                         @csrf
-                                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150" style="border-radius: 7px;">
+                                        <button type="submit"
+                                            class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                                            style="border-radius: 7px;">
                                             Mengirim ulang email verifikasi
                                         </button>
                                     </form>
-                                    
-                                    <form method="POST" action="{{ route('logout') }}">
+
+                                    <form action="{{ route('logout') }}">
                                         @csrf
-                                        <button type="submit" class="underline text-sm text-danger-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" style="color: red;border: none;background-color: #ffffff;text-decoration: underline;margin-left: 59px;">
+                                        <button type="submit"
+                                            class="underline text-sm text-danger-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                            style="color: red;border: none;background-color: #ffffff;text-decoration: underline;margin-left: 59px;">
                                             Keluar
                                         </button>
                                     </form>
@@ -97,4 +103,3 @@
 </body>
 
 </html>
-
