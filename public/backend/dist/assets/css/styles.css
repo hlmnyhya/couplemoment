@@ -5983,7 +5983,7 @@ input[type=range]::-webkit-slider-runnable-track {
   color: var(--default-text-color);
   background-color: var(--custom-white);
   border: 1px solid var(--default-border);
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.2rem;
 }
 
 .list-group-item.active {

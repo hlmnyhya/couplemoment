@@ -74,11 +74,8 @@
                                         </p>
                                     </div>
                                 </div>
-                                
-                                {{-- <button class="btn btn-success" style="height: fit-content"><i
+                                <button class="btn btn-success" style="height: fit-content"><i
                                         class="bi bi-pencil-square"></i> Edit Profile</button>
-                                <button class="btn btn" style="height: fit-content"><i
-                                        class="bi bi-pencil-square"></i> Edit Profile</button> --}}
                             </div>
                         </div>
                         <div class="card-body p-0 main-profile-info">
