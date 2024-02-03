@@ -100,7 +100,7 @@ typography
   --menu-prime-color:	#212529;
   --menu-border-color:	#e9edf4;
   --header-bg: #fff;
-  --header-prime-color:	rgb(var(--primary-rgb));
+  --header-prime-color:	rgb(var(--c));
   --header-border-color:	#e9edf4;
   --custom-white:	#fff;
   --custom-black:	#000;
