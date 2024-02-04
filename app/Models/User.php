@@ -40,4 +40,14 @@ class User extends Authenticatable  implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function regency()
+    {
+        return $this->belongsTo(Regency::class, 'regency');
+    }
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class, 'province');
+    }
 }
