@@ -31,12 +31,17 @@
                         </div>
                         <div class="card-body">
                             <div class="row gy-4">
-                                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12">
+                                <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
                                     <label for="input-label" class="form-label">Nama Lengkap :</label>
                                     <input type="text" class="form-control" id="input">
                                 </div>
 
                                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                    <label for="input-foto" class="form-label">Foto Profile</label>
+                                    <input type="File" class="form-control" id="input-foto">
+                                </div>
+
+                                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <label for="input-date" class="form-label">Tanggal Lahir</label>
                                     <input type="date" class="form-control" id="input-date">
                                 </div>
