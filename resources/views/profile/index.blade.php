@@ -58,18 +58,17 @@
                         <div class="card-body border-bottom">
                             <div class="d-sm-flex  main-profile-cover">
                                 <span class="avatar avatar-xxl online me-3">
-                                    <img src="{{ asset('backend') }}/dist/assets/images/faces/5.jpg" alt=""
-                                        class="avatar avatar-xxl">
+                                    <img src="{{ asset('' . $user->photo) }}" alt="" class="avatar avatar-xxl">
                                 </span>
                                 <div class="flex-fill main-profile-info my-auto">
-                                    <h5 class="fw-semibold mb-1 ">Json Taylor</h5>
+                                    <h5 class="fw-semibold mb-1 ">{{ ucwords(strtolower($user->name)) }}</h5>
                                     <div>
-                                        <p class="mb-1 text-muted">Chief Executive Officer (C.E.O)</p>
+                                        <p class="mb-1 text-muted">{{ ucwords(strtolower($user->role)) }}</p>
                                         <p class="fs-12 op-7 mb-0">
                                             <span class="me-3 d-inline-flex align-items-center"><i
-                                                    class="ri-building-line me-1 align-middle"></i>Tanah Laut</span>
+                                                    class="ri-building-line me-1 align-middle"></i>{{ ucwords(strtolower($user->regency)) }}</span>
                                             <span class="d-inline-flex align-items-center"><i
-                                                    class="ri-map-pin-line me-1 align-middle"></i>Kalimatan Selatan</span>
+                                                    class="ri-map-pin-line me-1 align-middle"></i>{{ ucwords(strtolower($user->province)) }}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -80,7 +79,8 @@
                                         Aksi
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:void(0);">Edit Profile</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Edit Profile</a>
+                                        </li>
                                         {{-- <li>
                                             <hr class="dropdown-divider">
                                         </li> --}}
@@ -111,11 +111,12 @@
                         <div class="card custom-card">
                             <div class="p-4 border-bottom border-block-end-dashed">
                                 <p class="fs-15 mb-2 fw-semibold">Progres Profile :</p>
-                                <p class="fw-semibold mb-2">Profile 60% completed - <a href="javscript:void(0);"
-                                        class="text-primary fs-12">Selesaikan Sekarang</a></p>
+                                <p class="fw-semibold mb-2">Profile {{ $completionPercentage }}% completed - <a
+                                        href="javscript:void(0);" class="text-primary fs-12">Selesaikan Sekarang</a></p>
                                 <div class="progress progress-sm progress-animate ">
                                     <div class="progress-bar bg-primary  ronded-1" role="progressbar" aria-valuenow="60"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                                        aria-valuemin="0" aria-valuemax="100" style="width: {{ $completionPercentage }}%">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,20 +126,20 @@
                         <div class="p-4  border-bottom border-block-end-dashed">
                             <p class="fs-15 mb-2 me-4 fw-semibold">Biodata Pengguna :</p>
                             <ul class="list-group">
-                                <li class="list-group-item border-0">
+                                {{-- <li class="list-group-item border-0">
                                     <div class="d-flex flex-wrap align-items-center">
                                         <div class="me-2 fw-semibold">
                                             Nama Lengkap :
                                         </div>
                                         <span class="fs-12 text-muted">Sonya Taylor</span>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li class="list-group-item border-0">
                                     <div class="d-flex flex-wrap align-items-center">
                                         <div class="me-2 fw-semibold">
                                             Umur :
                                         </div>
-                                        <span class="fs-12 text-muted">18 Tahun</span>
+                                        <span class="fs-12 text-muted">{{ $age }} Tahun</span>
                                     </div>
                                 </li>
                                 <li class="list-group-item border-0">
@@ -154,7 +155,7 @@
                                         <div class="me-2 fw-semibold">
                                             Membuat akun :
                                         </div>
-                                        <span class="fs-12 text-muted"> Selasa, 16 januari 2023</span>
+                                        <span class="fs-12 text-muted"> {{ $createdDate }}</span>
                                     </div>
                                 </li>
                             </ul>
@@ -166,13 +167,13 @@
                                     <span class="avatar avatar-sm avatar-rounded me-2 bg-info-transparent">
                                         <i class="ri-mail-line align-middle fs-14"></i>
                                     </span>
-                                    sonyataylor2531@gmail.com
+                                    {{ $user->email }}
                                 </p>
                                 <p class="mb-3">
                                     <span class="avatar avatar-sm avatar-rounded me-2 bg-warning-transparent">
                                         <i class="ri-phone-line align-middle fs-14"></i>
                                     </span>
-                                    +(555) 555-1234
+                                    {{ $user->phone }}
                                 </p>
                                 <div class="d-flex">
                                     <p class="mb-0">
@@ -181,7 +182,8 @@
                                         </span>
                                     </p>
                                     <p class="mb-0">
-                                        MIG-1-11, Monroe Street, Georgetown, Washington D.C, USA,20071 </p>
+                                        {{ $user->address }}, {{ ucwords(strtolower($user->regency)) }},
+                                        {{ ucwords(strtolower($user->province)) }} </p>
 
                                 </div>
                             </div>

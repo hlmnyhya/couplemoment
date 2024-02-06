@@ -711,7 +711,7 @@
                             <small class="text-muted">{{ ucfirst(auth()->user()->role) }}</small>
                         </div>
                     </li>
-                    <li class="dropdown-item"><a class="d-flex w-100" href="profile.html"><i
+                    <li class="dropdown-item"><a class="d-flex w-100" href="{{ route('profile.index') }}"><i
                                 class="fe fe-user fs-18 me-2 text-primary"></i>Profile</a></li>
                     <li class="dropdown-item"><a class="d-flex w-100" href="mail.html"><i
                                 class="fe fe-mail fs-18 me-2 text-primary"></i>Inbox <span
