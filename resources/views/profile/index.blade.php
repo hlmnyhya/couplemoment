@@ -84,7 +84,9 @@
                                         {{-- <li>
                                             <hr class="dropdown-divider">
                                         </li> --}}
-                                        <li><a class="dropdown-item" href="javascript:void(0);">Ganti Password</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('profile.change-password') }}">Ganti
+                                                Password</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

@@ -127,4 +127,14 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function change_password()
+    {
+        // Fetch provinces and regencies as needed
+
+        // Get the authenticated user
+        $user = auth()->user();
+
+        return view('profile.change-password', compact('user'));
+    }
 }

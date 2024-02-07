@@ -36,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+    Route::get('/profile/change-password', [ProfileController::class, 'change_password'])->name('profile.change-password');
+    Route::put('/profile/update-password', [ProfileController::class, 'update_password'])->name('profile.update-password');
 })->middleware(['auth', 'verified']);
 
 // Register page
