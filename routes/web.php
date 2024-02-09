@@ -12,6 +12,7 @@ use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
 use App\Http\Controllers\CMS\ThemeController;
+use App\Http\Controllers\UserThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,8 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
-    Route::get('/profile/change-password', [ProfileController::class, 'change_password'])->name('profile.change-password');
-    Route::put('/profile/update-password', [ProfileController::class, 'update_password'])->name('profile.update-password');
+    Route::get('/profile/change-password', [ProfileController::class, 'showChangePasswordForm'])->name('profile.change-password');
+    Route::post('/profile/update-password', [ProfileController::class, 'changePassword'])->name('profile.update-password');
 })->middleware(['auth', 'verified']);
 
 // Register page
@@ -91,6 +92,11 @@ Route::prefix('cms')->group(function () {
         'delete' => 'invitation.delete',
     ]);
 })->middleware(['auth', 'verified']);
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::resource('user_theme', UserThemeController::class);
+});
+
 
 Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middleware(['auth', 'verified']);
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);

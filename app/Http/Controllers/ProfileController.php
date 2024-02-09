@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -128,13 +129,37 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 
-    public function change_password()
+    public function showChangePasswordForm()
     {
         // Fetch provinces and regencies as needed
 
         // Get the authenticated user
         $user = auth()->user();
 
-        return view('profile.change-password', compact('user'));
+        return view('profile.change_password', compact('user'));
+    }
+
+    public function changePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|confirmed|min:8',
+        ], [
+            'current_password.required' => 'Please enter your current password.',
+            'password.required' => 'Please enter a new password.',
+            'password.confirmed' => 'The new password confirmation does not match.',
+            'password.min' => 'The new password must be at least 8 characters long.',
+        ]);
+
+        $user = $request->user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return redirect()->back()->with('error', 'The current password is incorrect.');
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->route('profile.index')->with('success', 'Password changed successfully.');
     }
 }
