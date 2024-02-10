@@ -11,7 +11,7 @@ class UserThemeController extends Controller
      */
     public function index()
     {
-        return view('profile.index');
+        return view('admin.themeuser.index');
     }
 
     /**

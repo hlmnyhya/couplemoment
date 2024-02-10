@@ -98,6 +98,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
+Route::get('/theme/user', [UserThemeController::class, 'index'])->name('theme_user.index');
 Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middleware(['auth', 'verified']);
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);
 

@@ -493,7 +493,7 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="index.html" class="side-menu__item">
+                        <a href="{{ route('theme_user.index') }}" class="side-menu__item">
                             <i class="fe fe-file side-menu__icon"></i>
                             <span class="side-menu__label">Tema</span>
                         </a>

@@ -50,7 +50,7 @@
                                 @csrf
                                 @method('put')
                                 <div class="row gy-4">
-                                    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                         <label for="name" class="form-label">Nama Lengkap :</label>
                                         <input type="text" class="form-control" id="name" name="name"
                                             value="{{ $user->name }}">
@@ -62,33 +62,31 @@
                                             onchange="previewImage(event)" value="{{ $user->photo }}">
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                         @if ($user->photo)
                                             <img id="image_preview" src="{{ asset($user->photo) }}"
-                                                class="img-fluid rounded mt-2" alt="Current Image"
-                                                style="max-width: 250px; max-height: 200px;">
+                                                class="img-fluid rounded mt-2" style="max-width: 250px; max-height: 200px;">
                                         @else
                                             <img id="image_preview"
                                                 src="{{ asset('backend') }}/dist/assets/images/media/media-49.jpg"
-                                                class="img-fluid rounded mt-2" alt="Preview"
-                                                style="max-width: 250px; max-height: 200px;">
+                                                class="img-fluid rounded mt-2" style="max-width: 250px; max-height: 200px;">
                                         @endif
                                     </div>
 
 
-                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                         <label for="birth" class="form-label">Tanggal Lahir</label>
                                         <input type="date" class="form-control" id="birth" name="birth"
                                             value="{{ $user->birth }}">
                                     </div>
 
-                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                         <label for="phone" class="form-label">Nomor Telepon</label>
                                         <input type="tel" class="form-control" id="phone" name="phone"
                                             placeholder="+1100-2031-1233" value="{{ $user->phone }}">
                                     </div>
 
-                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                         <label for="input-email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="input-email"
                                             placeholder="Email@xyz.com" disabled value="{{ $user->email }}">
@@ -108,9 +106,10 @@
 
 
 
-                                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                         <label for="address" class="form-label">Alamat :</label>
-                                        <textarea class="form-control" id="address" name="address">{{ $user->address }}</textarea>
+                                        <input type="text" class="form-control" id="address" name="address" value="{{ $user->address }}">
+                                        {{-- <textarea class="form-control" id="address" name="address">{{ $user->address }}</textarea> --}}
                                     </div>
 
 
