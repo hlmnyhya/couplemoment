@@ -97,8 +97,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('user_theme', UserThemeController::class);
 });
 
-
+// Tema User
 Route::get('/theme/user', [UserThemeController::class, 'index'])->name('theme_user.index');
+Route::get('/theme/detail/user', [UserThemeController::class, 'detail'])->name('theme_user.detail');
+
 Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middleware(['auth', 'verified']);
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);
 

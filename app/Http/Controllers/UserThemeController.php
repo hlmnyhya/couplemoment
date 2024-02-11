@@ -14,6 +14,11 @@ class UserThemeController extends Controller
         return view('admin.themeuser.index');
     }
 
+    public function detail()
+    {
+        return view('admin.themeuser.detail');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
