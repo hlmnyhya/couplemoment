@@ -33,6 +33,9 @@ class InvitationController extends Controller
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
             'name' => 'required',
+            'name2' => 'required',
+            'wali_name' => 'required',
+            'wali_name2' => 'required',
             'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
@@ -41,6 +44,8 @@ class InvitationController extends Controller
             'address_invitation' => 'required',
             'address_url' => 'required',
             'address_maps' => 'required',
+            'no_rekening' => 'required',
+            'name_rekening' => 'required',
         ]);
 
         // Buat objek Invitation baru
@@ -49,6 +54,9 @@ class InvitationController extends Controller
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
         $invitation->name = $validatedData['name'];
+        $invitation->name2 = $validatedData['name2'];
+        $invitation->wali_name = $validatedData['wali_name'];
+        $invitation->wali_name2 = $validatedData['wali_name2'];
         $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
@@ -57,6 +65,8 @@ class InvitationController extends Controller
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
         $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->no_rekening = $validatedData['no_rekening'];
+        $invitation->name_rekening = $validatedData['name_rekening'];
 
         // Simpan data ke dalam database
         $invitation->save();
@@ -121,6 +131,9 @@ class InvitationController extends Controller
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
             'name' => 'required',
+            'name2' => 'required',
+            'wali_name' => 'required',
+            'wali_name2' => 'required',
             'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
@@ -129,12 +142,17 @@ class InvitationController extends Controller
             'address_invitation' => 'required',
             'address_url' => 'required',
             'address_maps' => 'required',
+            'no_rekening' => 'required',
+            'name_rekening' => 'required',
         ]);
 
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
         $invitation->name = $validatedData['name'];
+        $invitation->name2 = $validatedData['name2'];
+        $invitation->wali_name = $validatedData['wali_name'];
+        $invitation->wali_name2 = $validatedData['wali_name2'];
         $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
@@ -143,6 +161,8 @@ class InvitationController extends Controller
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
         $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->no_rekening = $validatedData['no_rekening'];
+        $invitation->name_rekening = $validatedData['name_rekening'];
 
         $invitation->save();
         return redirect()->route('my-undangan')->with('success', 'Invitation updated successfully');
@@ -156,10 +176,10 @@ class InvitationController extends Controller
         return redirect()->route('my-undangan')->with('success', 'Invitation deleted successfully');
     }
 
-    public function test()
-    {
-        return view('frontend.invitation-pages.invitation');
-    }
+    // public function test()
+    // {
+    //     return view('frontend.invitation-pages.invitation');
+    // }
 
     public function simpanUcapan(Request $request)
     {

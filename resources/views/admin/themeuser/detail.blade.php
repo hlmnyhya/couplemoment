@@ -34,11 +34,9 @@
                                                 <div class="swiper swiper-preview-details bd-gray-100 product-details-page">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide" id="img-container">
-                                                            <img class="img-fluid"
-                                                                src="{{ asset('backend') }}/dist/assets/images/ecommerce/6.png"
-                                                                alt="img">
+                                                            <img class="img-fluid" src="{{ $theme->cover }}" alt="img">
                                                         </div>
-                                                        <div class="swiper-slide image-container">
+                                                        {{-- <div class="swiper-slide image-container">
                                                             <img class="img-fluid"
                                                                 src="{{ asset('backend') }}/dist/assets/images/ecommerce/7.png"
                                                                 alt="img">
@@ -52,10 +50,10 @@
                                                             <img class="img-fluid"
                                                                 src="{{ asset('backend') }}/dist/assets/images/ecommerce/9.png"
                                                                 alt="img">
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
-                                                    <div class="swiper-button-next"></div>
-                                                    <div class="swiper-button-prev"></div>
+                                                    {{-- <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div> --}}
                                                 </div>
                                                 {{-- <div class="swiper swiper-view-details mt-2">
                                                     <div class="swiper-wrapper">
@@ -86,21 +84,22 @@
                                         <div class="col-xxl-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-md-5 mb-3">
                                             <div class="card custom-card bg-transparent shadow-none border rounded">
                                                 <div class="card-header flex-between justify-content-between">
-                                                    <div class="card-title">Judul Tema</div>
+                                                    <div class="card-title">{{ $theme->name }}</div>
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-evenly mt-4">
                                                         <div class="">
                                                             <div class="text-center">
                                                                 <div class="avatar avatar-xxl bg-light p-1">
-                                                                    <img src="{{ asset('backend') }}/dist/assets/images/ecommerce/6.png"
-                                                                        alt="">
+                                                                    <img src="{{ $theme->background_img }}" alt="">
                                                                 </div>
-                                                                <h5 class="mb-1 fs-12 fw-semibold   mt-1">Kode Tema</h5>
-                                                                <p class="mb-0 text-muted fs-12 px-3">Deskripsi atau
-                                                                    Kategori tema</p>
-                                                                <p class="mb-0 text-muted fs-12 px-3">jenis paket berserta
-                                                                    warna nya</p>
+                                                                <h5 class="mb-1 fs-12 fw-semibold   mt-1">
+                                                                    {{ $theme->code }}</h5>
+                                                                <p class="mb-0 text-muted fs-12 px-3">
+                                                                    @foreach ($categories as $category)
+                                                                        {{ $category->name }},
+                                                                    @endforeach
+                                                                </p>
                                                                 <div class="flex-fill mb-1">
                                                                     <span class="badge bg-success rounded-1">4.4<i
                                                                             class="ri-star-s-fill ms-1"></i></span>
@@ -164,7 +163,9 @@
                                     <div class="row product-scroll  rounded-3 border p-3">
                                         <div class="col-xl-8 mt-xxl-0 mt-3">
                                             <div>
-                                                <p class="fs-18 fw-semibold mb-0">Judul Tema (Kode Tema).</p>
+                                                <p class="fs-18 fw-semibold mb-0">{{ $theme->name }}
+                                                    ({{ $theme->code }}).
+                                                </p>
                                                 <p class="fs-18 mb-4">
                                                     <i class="ri-star-s-fill text-warning align-middle"></i>
                                                     <i class="ri-star-s-fill text-warning align-middle"></i>
@@ -235,12 +236,12 @@
                                                     </div>
                                                 </div> --}}
                                                 <div class="mb-4">
-                                                    <a href="cart.html" class="btn btn-warning me-2 mb-2">Masukan
-                                                        Keranjang</a>
+                                                    {{-- <a href="cart.html" class="btn btn-warning me-2 mb-2">Masukan
+                                                        Keranjang</a> --}}
                                                     <a href="checkout.html" class="btn btn-success me-2 mb-2">Demo
                                                         Undangan</a>
                                                 </div>
-                                                <div class="mb-4">
+                                                {{-- <div class="mb-4">
                                                     <p class="fs-15 fw-semibold mb-1"><i
                                                             class="ti ti-discount-2 fs-17 me-1 text-success"></i>Fitur apa
                                                         saja yang dimuat:
@@ -295,19 +296,16 @@
                                                     <a class="text-success fs-12 ps-2" data-bs-toggle="collapse"
                                                         href="#more-offers" aria-expanded="false"><u>View More</u></a>
 
-                                                </div>
+                                                </div> --}}
                                                 <div class="mb-4">
                                                     <p class="fs-15 fw-semibold mb-1">Deskripsi Undangan :</p>
                                                     <p class="text-muted mb-0">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                                        accusamus, quaerat nam quo optio reiciendis harum reprehenderit
-                                                        omnis tempora adipisci in iste aperiam unde, repellendus possimus
-                                                        explicabo veritatis? Dignissimos,
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                                        accusamus, quaerat nam quo optio reiciendis.
+                                                        {{ $theme->description }}
                                                     </p>
                                                 </div>
-                                                <div class="border p-3 rounded-3 mb-0">
+
+                                                {{-- START REVIEW SECTION --}}
+                                                {{-- <div class="border p-3 rounded-3 mb-0">
                                                     <p class="fs-15 fw-semibold mb-3">Reviews &amp; Ratings :</p>
                                                     <div class="row">
                                                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -325,10 +323,9 @@
                                                                 <div class="fs-12 me-2 fw-semibold">5 <i
                                                                         class="ri-star-fill fs-10"></i></div>
                                                                 <div class="progress progress-xs flex-fill">
-                                                                    <div class="progress-bar bg-success"
-                                                                        role="progressbar" style="width: 55%"
-                                                                        aria-valuenow="55" aria-valuemin="0"
-                                                                        aria-valuemax="100">
+                                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                                        style="width: 55%" aria-valuenow="55"
+                                                                        aria-valuemin="0" aria-valuemax="100">
                                                                     </div>
                                                                 </div>
                                                                 <div class="text-muted ms-2 fs-12">(10,893)</div>
@@ -381,7 +378,7 @@
                                                                 <div class="text-muted ms-2 fs-12">(1,453)</div>
                                                             </div>
                                                         </div>
-                                                        {{-- <div class="border-top my-3"></div>
+                                                        <div class="border-top my-3"></div>
                                                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                                             <div class="">
                                                                 <div class="d-sm-flex d-block align-items-top">
@@ -481,9 +478,11 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div> --}}
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
+                                                {{-- END REVIEW SECTION --}}
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 mt-xxl-0 mt-3">
@@ -535,7 +534,7 @@
                                                     <div class="col-xl-12">
                                                         <div class="row">
                                                             <div class="col-xl-5">
-                                                                <span class="fs-14 fw-semibold">Nama Tema</span>
+                                                                <span class="fs-14 fw-semibold">{{ $theme->name }}</span>
                                                             </div>
                                                             <div class="col-xl-7">
                                                                 <p class="text-muted fs-14">Orange.Inc</p>
@@ -546,7 +545,7 @@
                                                                 <span class="fs-14 fw-semibold">Kode Tema</span>
                                                             </div>
                                                             <div class="col-xl-7">
-                                                                <p class="text-muted fs-14"> Spk25652652</p>
+                                                                <p class="text-muted fs-14"> {{ $theme->code }}</p>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -562,7 +561,9 @@
                                                                 <span class="fs-14 fw-semibold">Kategori</span>
                                                             </div>
                                                             <div class="col-xl-7">
-                                                                <p class="text-muted fs-14">Regular</p>
+                                                                @foreach ($categories as $category)
+                                                                    {{ $category->name }},
+                                                                @endforeach
                                                             </div>
                                                         </div>
                                                         {{-- <div class="row">
@@ -576,7 +577,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="border rounded-3 p-3 mb-3">
+                                            {{-- <div class="border rounded-3 p-3 mb-3">
                                                 <div class="d-flex align-items-center mb-3">
                                                     <div class="avatar avatar-lg bg-light p-2">
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="svg-primary"
@@ -675,14 +676,14 @@
                                                         <span class="fs-14 fw-semibold mb-0">Cash on Delivery</span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="border rounded-3 p-3">
                                                 <p class="fs-15 fw-semibold mb-2">Chat Admin Mengenai Template:</p>
-                                                <p class="fs-12 text-muted">Min 7 days return and exchange policy. Return
+                                                {{-- <p class="fs-12 text-muted">Min 7 days return and exchange policy. Return
                                                     Policies may vary based on products and promotions.
                                                     For full details on our Returns Policies, please
-                                                    <a href="javascript:void(0);" class="text-primary">click here</a>․
-                                                </p>
+                                                </p> --}}
+                                                <a href="javascript:void(0);" class="text-primary">click here</a>․
                                             </div>
                                         </div>
                                     </div>
@@ -691,7 +692,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-12">
+
+                {{-- START RECOMENDATION SECTION --}}
+                {{-- <div class="col-xl-12">
                     <div class="card custom-card">
                         <div class="card-header">
                             <div class="card-title">Rekomendasi Tema</div>
@@ -842,7 +845,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+                {{-- END RECOMENDATION SECTION --}}
+
             </div>
             <!--End::row-1 -->
 

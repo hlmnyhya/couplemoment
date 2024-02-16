@@ -94,12 +94,10 @@ Route::prefix('cms')->group(function () {
 })->middleware(['auth', 'verified']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::resource('user_theme', UserThemeController::class);
+    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
+    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
 });
 
-// Tema User
-Route::get('/theme/user', [UserThemeController::class, 'index'])->name('theme_user.index');
-Route::get('/theme/detail/user', [UserThemeController::class, 'detail'])->name('theme_user.detail');
 
 Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middleware(['auth', 'verified']);
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);
@@ -114,7 +112,8 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
-Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
+Route::get('/undangan/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
+// Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
 Route::post('/simpan_ucapan', [InvitationController::class, 'simpanUcapan'])->name('simpan_ucapan');
 
 require __DIR__ . '/auth.php';

@@ -94,11 +94,33 @@
                                     placeholder="Enter Title Invitation">
                             </div>
 
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    value="{{ $invitation->name }}" required placeholder="Enter Name">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="name" class="form-label">Name of the Groom</label>
+                                    <input type="text" class="form-control" id="name" name="name" required
+                                        placeholder="Enter Name of the Groom" value="{{ $invitation->name }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="name2" class="form-label">Name of the Bride</label>
+                                    <input type="text" class="form-control" id="name2" name="name2" required
+                                        placeholder="Enter Name of the Bride" value="{{ $invitation->name2 }}">
+                                </div>
                             </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="wali_name" class="form-label">Bride's guardian</label>
+                                    <input type="text" class="form-control" id="wali_name" name="wali_name" required
+                                        placeholder="Enter Bride's Guardian" value="{{ $invitation->wali_name }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="wali_name2" class="form-label">Groom's guardian</label>
+                                    <input type="text" class="form-control" id="wali_name2" name="wali_name2"
+                                        required placeholder="Enter Groom's Guardian"
+                                        value="{{ $invitation->wali_name2 }}">
+                                </div>
+                            </div>
+
 
                             <div class="mb-3">
                                 <label for="url" class="form-label">Url</label>
@@ -115,8 +137,9 @@
                             <div class="row g-3">
                                 <div class="col-sm-4">
                                     <label for="date_invitation" class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="date_invitation" name="date_invitation"
-                                        value="{{ $invitation->date_invitation }}" required placeholder="Select Date">
+                                    <input type="date" class="form-control" id="date_invitation"
+                                        name="date_invitation" value="{{ $invitation->date_invitation }}" required
+                                        placeholder="Select Date">
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="time_invitation" class="form-label">Time</label>
@@ -128,6 +151,19 @@
                                     <label for="timezone" class="form-label">Timezone</label>
                                     <input type="text" class="form-control" id="timezone" name="timezone"
                                         value="{{ $invitation->timezone }}" required placeholder="Enter Timezone">
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="no_rekening" class="form-label">No Rekening</label>
+                                    <input type="text" class="form-control" id="no_rekening" name="no_rekening"
+                                        required placeholder="000xxx" value="{{ $invitation->no_rekening }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="name_rekening" class="form-label">Name Rekening</label>
+                                    <input type="text" class="form-control" id="name_rekening" name="name_rekening"
+                                        required placeholder="Ex. An....." value="{{ $invitation->name_rekening }}">
                                 </div>
                             </div>
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
+use App\Models\Theme;
 use Illuminate\Http\Request;
 
 class UserThemeController extends Controller
@@ -11,12 +13,21 @@ class UserThemeController extends Controller
      */
     public function index()
     {
-        return view('admin.themeuser.index');
+        $themes = Theme::get();
+        $categoriesWithCount = Categories::select('categories.*')
+            ->selectRaw('COUNT(theme_category.theme_id) as themes_count')
+            ->leftJoin('theme_category', 'categories.id', '=', 'theme_category.category_id')
+            ->groupBy('categories.id')
+            ->get();
+        return view('admin.themeuser.index', compact('themes', 'categoriesWithCount'));
     }
 
-    public function detail()
+
+    public function detail(string $id)
     {
-        return view('admin.themeuser.detail');
+        $theme = Theme::findOrFail($id);
+        $categories = $theme->categories; // Mendapatkan kategori-kategori dari tema
+        return view('admin.themeuser.detail', compact('theme', 'categories'));
     }
 
     /**

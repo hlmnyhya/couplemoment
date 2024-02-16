@@ -1172,8 +1172,14 @@
     <script src="{{ asset('backend') }}/dist/assets/js/index.js"></script>
 
 
+    <!-- Internal Choices JS -->
+    <script src="{{ asset('backend') }}/src/assets/js/choices.js"></script>
+
     <!-- Custom-Switcher JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/swiper/swiper-bundle.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom.js"></script>

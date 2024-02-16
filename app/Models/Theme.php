@@ -20,4 +20,9 @@ class Theme extends Model
     {
         return $this->hasMany(Invitation::class, 'theme_id');
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Categories::class, 'theme_category', 'theme_id', 'category_id');
+    }
 }

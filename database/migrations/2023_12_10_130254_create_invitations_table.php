@@ -14,8 +14,12 @@ return new class extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->id();
             $table->integer('theme_id')->unsigned();
+            $table->integer('soundbank_id')->unsigned();
             $table->string('title_invitation')->nullable();
             $table->string('name')->nullable();
+            $table->string('name2')->nullable();
+            $table->string('wali_name')->nullable();
+            $table->string('wali_name2')->nullable();
             $table->string('code')->nullable();
             $table->string('thumbnail_img')->nullable();
             $table->string('language')->nullable();
@@ -27,6 +31,8 @@ return new class extends Migration
             $table->string('address_invitation')->nullable();
             $table->string('address_url')->nullable();
             $table->string('address_maps')->nullable();
+            $table->string('no_rekening')->nullable();
+            $table->string('name_rekening')->nullable();
             $table->timestamps();
         });
     }

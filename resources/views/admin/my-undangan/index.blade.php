@@ -79,11 +79,26 @@
                                     </div>
                                     <div
                                         class="d-flex align-items-center justify-content-center gap-2 contact-hover-buttons">
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-sm btn-light contact-hover-btn dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Lihat Undangan
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                @foreach ($guestbooks as $guestbook)
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('show_invitation', $guestbook->slug) }}"
+                                                            target="_blank">{{ $guestbook->guest_name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
                                         <a href="{{ route('invitation.edit', $invitation->id) }}"
-                                            class="btn btn-sm btn-light contact-hover-btn">Lihat Undangan</a>
+                                            class="btn btn-sm btn-light contact-hover-btn">Edit Undangan</a>
                                         <div class="dropdown contact-hover-dropdown">
-                                            <form action="{{ route('invitation.destroy', $invitation->id) }}" method="POST"
-                                                id="delete-form-{{ $invitation->id }}">
+                                            <form action="{{ route('invitation.destroy', $invitation->id) }}"
+                                                method="POST" id="delete-form-{{ $invitation->id }}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" class="btn btn-sm btn-danger"
@@ -138,8 +153,8 @@
                             <p class="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
                             <span class="search-tags"><i class="fe fe-user me-2"></i>People<a href="javascript:void(0)"
                                     class="tag-addon"><i class="fe fe-x"></i></a></span>
-                            <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a href="javascript:void(0)"
-                                    class="tag-addon"><i class="fe fe-x"></i></a></span>
+                            <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
                             <span class="search-tags"><i class="fe fe-align-left me-2"></i>Articles<a
                                     href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
                             <span class="search-tags"><i class="fe fe-server me-2"></i>Tags<a href="javascript:void(0)"

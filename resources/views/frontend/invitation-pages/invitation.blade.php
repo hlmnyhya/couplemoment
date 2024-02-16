@@ -86,10 +86,10 @@
                             onclick="modalFoto(this)">
                     </div>
                 </div>
-                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Muhammad Aldiyanoor</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name }}</h1>
                 <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
-                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">Rinta Ariani</h1>
-                <h4 style="color:#FFD700">Minggu, 28 Januari 2024</h4>
+                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name2 }}</h1>
+                <h4 style="color:#FFD700">{{ $formattedDate }}</h4>
                 <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
                     href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
                     <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
@@ -125,9 +125,9 @@
                             <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg"
                                 onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">Muhammad Aldiyanoor</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name }}</h1>
                         <h5 class="mt-3 mb-0">Putra</h5>
-                        <p class="mb-0">Bapak H. Mahyuni & Ibu Hj. Asma Septi Mursidah S.Pd</p>
+                        <p class="mb-0">{{ $invitation->wali_name }}</p>
                     </div>
 
                     <h1 class="font-estetik my-4" style="font-size: 4rem; color:#FFD700">&</h1>
@@ -137,9 +137,9 @@
                             <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg"
                                 onclick="modalFoto(this)">
                         </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">Rinta Ariani</h1>
+                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name2 }}</h1>
                         <h5 class="mt-3 mb-0">Putri</h5>
-                        <p class="mb-0">Bapak H. Juliansyah & Ibu Hj. Raitasiah (Alm)</p>
+                        <p class="mb-0">{{ $invitation->wali_name2 }}</p>
                     </div>
                 </div>
             </div>
@@ -208,18 +208,17 @@
 
                         <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
                             <h1 class="font-estetik" style="font-size: 2rem; color:#FFD700">Resepsi</h1>
-                            <p>Pukul 08.00 - 14.00 WITA</p>
+                            <p>Pukul {{ $formattedTime }} {{ $invitation->timezone }}</p>
                         </div>
                     </div>
 
                     <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="https://maps.app.goo.gl/13jYX3E4sjtnFuTf8" target="_blank"
+                        <a href="{{ $invitation->address_url }}" target="_blank"
                             class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3" style="color:#FFD700; border-color:#FFD700">
                             <i class="fa-solid fa-map-location-dot me-2" style="color:#FFD700"></i>Lihat Google Maps
                         </a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
-                            Jl. Telok Selong, RT.05 / RW.03, Desa Tambang Ulang, Kecamatan Tambang Ulang, Kabupaten
-                            Tanah Laut
+                            {{ $invitation->address_invitation }}
                         </p>
                     </div>
                 </div>
@@ -349,10 +348,10 @@
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/2560px-BANK_BRI_logo.svg.png"
                                     class="img-fluid rounded" width="150" alt="bri">
                                 <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;color: #000;font-weight: bold;">
-                                    No. Rekening 023901016984532
+                                    No. Rekening {{ $invitation->no_rekening }}
                                 </p>
                                 <p class="card-text" style="font-size: 0.9rem;color: #000;font-weight: bold;">
-                                    a.n Muhammad Aldiyanoor
+                                    a.n {{ $invitation->name_rekening }}
                                 </p>
                                 <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532" onclick="salin(this)" autofocus="" style="background-color: #00519d; color: #FFF;">Salin No. Rekening</button>
                             </div>
@@ -429,17 +428,17 @@
                         </div>
                         <hr> @endforeach
         
-                    @if ($totalItems > $itemsPerPage) <nav class="d-flex justify-content-center">
+                        @if ($totalItems > $itemsPerPage) <nav class="d-flex justify-content-center">
                             <ul class="pagination mb-0">
                                 @if ($currentPage > 1)
                                     <li class="page-item">
-                                        <a class="page-link" href="{{ route('Aldi-&-Rinta', ['page' => $currentPage - 1]) }}" aria-label="Previous"  style="color: #FFD700">
+                                        <a class="page-link" href="{{ url(request()->path(), ['page' => $currentPage - 1]) }}" aria-label="Previous" style="color: #FFD700">
                                             <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
                                         </a>
                                     </li> @endif
-        
+                            
                                 @if ($endIndex < $totalItems) <li class="page-item">
-                                        <a class="page-link" href="{{ route('Aldi-&-Rinta', ['page' => $currentPage + 1]) }}" aria-label="Next" style="color: #FFD700">
+                                        <a class="page-link" href="{{ url(request()->path(), ['page' => $currentPage + 1]) }}" aria-label="Next" style="color: #FFD700">
                                             Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
                                         </a>
                                     </li> @endif
@@ -539,9 +538,11 @@
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">Muhammad Aldiyanoor</h1>
+                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
+                        </h1>
                         <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">&</h1>
-                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">Rinta Ariani</h1>
+                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">
+                            {{ $invitation->name2 }}</h1>
                         <div id="namatamu"></div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4"
                             style="background-color: #fff; color:#212529" data-bs-toggle="modal"
