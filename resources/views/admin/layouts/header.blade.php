@@ -114,7 +114,7 @@
             </div>
             <!-- End::header-element -->
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element country-selector">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
@@ -179,9 +179,9 @@
                     </li>
                 </ul>
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element header-theme-mode">
                 <!-- Start::header-link|layout-setting -->
                 <a aria-label="anchor" href="javascript:void(0);" class="header-link layout-setting">
@@ -198,9 +198,9 @@
                 </a>
                 <!-- End::header-link|layout-setting -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element cart-dropdown">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
@@ -337,9 +337,9 @@
                 </div>
                 <!-- End::main-header-dropdown -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element notifications-dropdown">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a aria-label="anchor" href="javascript:void(0);" class="header-link dropdown-toggle"
@@ -459,10 +459,10 @@
                 </div>
                 <!-- End::main-header-dropdown -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
             <!-- Start::header-element -->
-            <div class="header-element message-dropdown">
+            {{-- <div class="header-element message-dropdown">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a aria-label="anchor" href="javascript:void(0);" class="header-link dropdown-toggle"
                     data-bs-toggle="dropdown" data-bs-auto-close="outside" id="messageDropdown2"
@@ -647,9 +647,9 @@
                 </div>
                 <!-- End::main-header-dropdown -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element header-fullscreen">
                 <!-- Start::header-link -->
                 <a aria-label="anchor" onclick="openFullscreen();" href="#" class="header-link">
@@ -658,9 +658,9 @@
                 </a>
                 <!-- End::header-link -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
-            <!-- Start::header-element -->
+            {{-- <!-- Start::header-element -->
             <div class="header-element">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a aria-label="anchor" href="javascript:void(0);" class="header-link dropdown-toggle"
@@ -668,7 +668,7 @@
                     <i class="fe fe-align-right header-link-icon"></i>
                 </a>
                 <!-- End::header-link|dropdown-toggle -->
-            </div>
+            </div> --}}
             <!-- End::header-element -->
 
             {{-- Button Buat Undangan --}}
@@ -729,6 +729,25 @@
             <!-- End::header-element -->
 
             <!-- Start::header-element -->
+            <div class="header-element header-theme-mode">
+                <!-- Start::header-link|layout-setting -->
+                <a aria-label="anchor" href="javascript:void(0);" class="header-link layout-setting">
+                    <span class="light-layout">
+                        <!-- Start::header-link-icon -->
+                        <i class="fe fe-moon header-link-icon"></i>
+                        <!-- End::header-link-icon -->
+                    </span>
+                    <span class="dark-layout">
+                        <!-- Start::header-link-icon -->
+                        <i class="fe fe-sun header-link-icon"></i>
+                        <!-- End::header-link-icon -->
+                    </span>
+                </a>
+                <!-- End::header-link|layout-setting -->
+            </div>
+            <!-- End::header-element -->
+
+            {{-- <!-- Start::header-element -->
             <div class="header-element">
                 <!-- Start::header-link|switcher-icon -->
                 <a aria-label="anchor" href="#" class="header-link switcher-icon" data-bs-toggle="offcanvas"
@@ -737,7 +756,7 @@
                 </a>
                 <!-- End::header-link|switcher-icon -->
             </div>
-            <!-- End::header-element -->
+            <!-- End::header-element --> --}}
 
         </div>
         <!-- End::header-content-right -->

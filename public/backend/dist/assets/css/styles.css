@@ -11447,15 +11447,15 @@ h6 {
   padding: 1rem 0.65rem;
 }
 .main-header-container .header-link:hover .header-link-icon, .main-header-container .header-link.show .header-link-icon {
-  fill: var(--header-prime-color);
-  color: var(--header-prime-color);
+  fill: #ff0071;
+  color: #ff0071;
 }
 .main-header-container .header-link-icon {
   width: 1.75rem;
   height: 1.75rem;
   font-size: 1.25rem;
-  color: var(--header-prime-color);
-  fill: var(--header-prime-color);
+  color: #F9F07A;
+  fill: #F9F07A;
   transition: all ease 0.05s;
   position: relative;
   padding: 0.25rem;
@@ -11702,7 +11702,7 @@ h6 {
   cursor: pointer;
   height: 0.125rem;
   width: 0.75rem;
-  background: var(--header-prime-color);
+  background: #ff0071;
   position: absolute;
   display: block;
   content: "";
@@ -11729,7 +11729,7 @@ h6 {
   cursor: pointer;
   height: 0.125rem;
   width: 1.0625rem;
-  background: var(--header-prime-color);
+  background: #ff0071;
   position: absolute;
   display: block;
   content: "";
@@ -17121,8 +17121,8 @@ code[class*=language-] {
   margin-inline-end: 8px;
   font-size: 1.15rem;
   text-align: center;
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: #ff0071;
+  fill: #ff0071;
   border-radius: 7px;
   line-height: 30px;
 }

@@ -52,13 +52,33 @@
                 @foreach ($themes as $theme)
                     <div class="col-xxl-9 col-xl-8 col-lg-8 col-md-12">
                         <div class="row">
-
-                            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="card custom-card product-card">
                                     <div class="card-body">
-                                        <a href="product-details.html" class="product-image">
-                                            <img src="{{ asset('' . $theme->cover) }}" class="card-img mb-3" alt="...">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <img src="{{ asset('' . $theme->cover) }}" class="card-img mb-3" alt="..."
+                                                style="max-width: 50%; height: auto; margin-left:60px;">
                                         </a>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="imageModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Gambar Produk</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-center">
+                                                        <img src="{{ asset('' . $theme->cover) }}" class="img-fluid"
+                                                            alt="..."
+                                                            style="width: 50%; height: auto; margin: 0 auto;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="product-icons">
                                             <a href="wishlist.html" class="wishlist"><i class="ri-heart-line"></i></a>
                                             <a href="cart.html" class="cart"><i class="ri-shopping-cart-line"></i></a>
@@ -87,28 +107,28 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                 @endforeach
 
             </div>
+            <!--End::row-1 -->
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+            <!-- Pagination -->
+
         </div>
-    </div>
-    <!--End::row-1 -->
-
-    <!-- Pagination -->
-    <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-            <a class="page-link">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-        </li>
-    </ul>
-    <!-- Pagination -->
-
-    </div>
     </div>
     <!-- End::app-content -->
 @endsection

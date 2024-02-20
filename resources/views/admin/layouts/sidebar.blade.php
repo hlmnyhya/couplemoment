@@ -499,15 +499,23 @@
                         </a>
                     </li>
                     <!-- End::slide -->
-
                     <!-- Start::slide -->
+                    <li class="slide">
+                        <a href="{{ route('guestbook.index') }}" class="side-menu__item">
+                            <i class="fe fe-file side-menu__icon"></i>
+                            <span class="side-menu__label">Guestbook</span>
+                        </a>
+                    </li>
+                    <!-- End::slide -->
+
+                    {{-- <!-- Start::slide -->
                     <li class="slide">
                         <a href="index.html" class="side-menu__item">
                             <i class="fe fe-log-out side-menu__icon"></i>
                             <span class="side-menu__label">Logout</span>
                         </a>
                     </li>
-                    <!-- End::slide -->
+                    <!-- End::slide --> --}}
 
                 </ul>
                 <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
