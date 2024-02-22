@@ -80,25 +80,15 @@
                                     <div
                                         class="d-flex align-items-center justify-content-center gap-2 contact-hover-buttons">
                                         <div class="btn-group">
-                                            <button type="button"
-                                                class="btn btn-sm btn-light contact-hover-btn dropdown-toggle"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Lihat Undangan
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                @foreach ($guestbooks as $guestbook)
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('show_invitation', $guestbook->slug) }}"
-                                                            target="_blank">{{ $guestbook->guest_name }}</a>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
+                                            <a href="{{ route('show_invitation_by_url', $invitation->url) }}"
+                                                class="btn btn-sm btn-light contact-hover-btn" target="_blank">Lihat
+                                                Undangan</a>
                                         </div>
                                         <a href="{{ route('invitation.edit', $invitation->id) }}"
                                             class="btn btn-sm btn-light contact-hover-btn">Edit Undangan</a>
                                         <div class="dropdown contact-hover-dropdown">
-                                            <form action="{{ route('invitation.destroy', $invitation->id) }}"
-                                                method="POST" id="delete-form-{{ $invitation->id }}">
+                                            <form action="{{ route('invitation.destroy', $invitation->id) }}" method="POST"
+                                                id="delete-form-{{ $invitation->id }}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" class="btn btn-sm btn-danger"

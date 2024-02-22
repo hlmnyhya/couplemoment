@@ -47,7 +47,7 @@ class InvitationController extends Controller
             'no_rekening' => 'required',
             'name_rekening' => 'required',
         ]);
-
+        $user = auth()->user();
         // Buat objek Invitation baru
         $invitation = new Invitation();
         $invitation->theme_id = $validatedData['theme_id'];
@@ -68,6 +68,9 @@ class InvitationController extends Controller
         $invitation->no_rekening = $validatedData['no_rekening'];
         $invitation->name_rekening = $validatedData['name_rekening'];
 
+
+        // Assign user_id berdasarkan user yang sedang login
+        $invitation->user_id = $user->id;
         // Simpan data ke dalam database
         $invitation->save();
 

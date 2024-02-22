@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('invitations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->integer('theme_id')->unsigned();
             $table->integer('soundbank_id')->unsigned();
             $table->string('title_invitation')->nullable();

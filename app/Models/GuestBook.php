@@ -35,6 +35,6 @@ class GuestBook extends Model
 
     public function invitation()
     {
-        return $this->belongsTo(Invitation::class);
+        return $this->belongsTo(Invitation::class, 'invitation_id');
     }
 }

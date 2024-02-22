@@ -160,6 +160,6 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('profile.index')->with('success', 'Password changed successfully.');
+        return redirect()->route('profile.change-password')->with('success', 'Password changed successfully.');
     }
 }

@@ -112,7 +112,9 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
-Route::get('/undangan/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
+Route::get('/my-undangan/{url}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
+
+Route::get('/{url}/guestbook/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
 // Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
 Route::post('/simpan_ucapan', [InvitationController::class, 'simpanUcapan'])->name('simpan_ucapan');
 
