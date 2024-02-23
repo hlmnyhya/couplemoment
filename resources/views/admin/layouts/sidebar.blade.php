@@ -64,7 +64,7 @@
                                 <a href="javascript:void(0)">Theme</a>
                             </li>
                             <li class="slide">
-                                <a href="full-calendar.html" class="side-menu__item">All Theme</a>
+                                <a href="{{ route('theme.index') }}" class="side-menu__item">All Theme</a>
                             </li>
                         </ul>
                     </li>
@@ -81,7 +81,7 @@
                                 <a href="javascript:void(0)">Galery</a>
                             </li>
                             <li class="slide">
-                                <a href="full-calendar.html" class="side-menu__item">All Galery</a>
+                                <a href="" class="side-menu__item">All Galery</a>
                             </li>
                         </ul>
                     </li>
@@ -98,7 +98,7 @@
                                 <a href="javascript:void(0)">Assets</a>
                             </li>
                             <li class="slide">
-                                <a href="full-calendar.html" class="side-menu__item">All Assets</a>
+                                <a href="{{ route('assets.index') }}" class="side-menu__item">All Assets</a>
                             </li>
                         </ul>
                     </li>
@@ -120,6 +120,12 @@
                         </ul>
                     </li>
                     <!-- End::slide -->
+                    {{-- End Menu CMS --}}
+
+                    <!-- Start::slide__category -->
+                    <li class="slide__category"><span class="category-name">User</span></li>
+                    <!-- End::slide__category -->
+
                     <!-- Start::slide -->
                     <li class="slide has-sub">
                         <a href="javascript:void(0);" class="side-menu__item">
@@ -137,13 +143,6 @@
                         </ul>
                     </li>
                     <!-- End::slide -->
-                    {{-- End Menu CMS --}}
-
-                    <!-- Start::slide__category -->
-                    <li class="slide__category"><span class="category-name">User</span></li>
-                    <!-- End::slide__category -->
-
-
                     <!-- Start::slide -->
                     <li class="slide">
                         <a href="{{ route('my-undangan') }}" class="side-menu__item">

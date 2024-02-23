@@ -28,11 +28,14 @@ class GuestBookController extends Controller
 
     public function create()
     {
-        $userId = Auth::id();
-        $invitations = Invitation::where('user_id', $userId)->get(); // Mendapatkan undangan berdasarkan user_id
+        $user = Auth::user();
+        if ($user->isAdmin()) {
+            $invitations = Invitation::all();
+        } else {
+            $invitations = Invitation::where('user_id', $user->id)->get();
+        }
         return view('admin.guest-books-pages.store', ['invitations' => $invitations]);
     }
-
 
 
     public function store(Request $request)

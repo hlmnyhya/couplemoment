@@ -58,7 +58,7 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
-Route::prefix('cms')->group(function () {
+Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::resource('soundbank', SoundBankController::class)->names([
         'index' => 'soundbank.index',
         'create' => 'soundbank.create',
@@ -66,7 +66,7 @@ Route::prefix('cms')->group(function () {
         'edit' => 'soundbank.edit',
         'update' => 'soundbank.update',
         'destroy' => 'soundbank.destroy',
-    ])->middleware(['auth', 'verified']);
+    ]);
     Route::resource('theme', ThemeController::class)->names([
         'index' => 'theme.index',
         'create' => 'theme.create',
@@ -74,8 +74,8 @@ Route::prefix('cms')->group(function () {
         'edit' => 'theme.edit',
         'update' => 'theme.update',
         'destroy' => 'theme.destroy',
-    ])->middleware(['auth', 'verified']);
-    Route::get('/assets/search', [AssetsController::class, 'search'])->middleware(['auth', 'verified'])->name('assets.search');
+    ]);
+    Route::get('/assets/search', [AssetsController::class, 'search'])->name('assets.search');
     Route::resource('assets', AssetsController::class)->names([
         'index' => 'assets.index',
         'create' => 'assets.create',
@@ -83,7 +83,7 @@ Route::prefix('cms')->group(function () {
         'edit' => 'assets.edit',
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
-    ])->middleware(['auth', 'verified']);
+    ]);
     Route::resource('invitation', InvitationController::class)->names([
         'index' => 'invitation.index',
         'store' => 'invitation.store',
@@ -91,9 +91,10 @@ Route::prefix('cms')->group(function () {
         'update' => 'invitation.update',
         'delete' => 'invitation.delete',
     ]);
-})->middleware(['auth', 'verified']);
+});
 
-Route::middleware(['auth', 'verified'])->group(function () {
+
+Route::middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
     Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
 });
@@ -103,13 +104,13 @@ Route::get('/get-theme/{id}', [InvitationController::class, 'getTheme'])->middle
 Route::get('/get-soundbank/{id}', [InvitationController::class, 'getSoundbank'])->middleware(['auth', 'verified']);
 
 Route::controller(GuestBookController::class)->group(function () {
-    Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
-    Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
-    Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
-    Route::get('/cms/guestbook/edit/{id}', [GuestBookController::class, 'edit'])->name('guestbook.edit');
-    Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
-    Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
-    Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
+    Route::get('/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
+    Route::get('/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
+    Route::post('/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
+    Route::get('/guestbook/edit/{id}', [GuestBookController::class, 'edit'])->name('guestbook.edit');
+    Route::patch('/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
+    Route::delete('/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
+    Route::post('/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
 Route::get('/my-undangan/{url}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
