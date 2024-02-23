@@ -451,7 +451,8 @@
                 <header class="section-header">
                     <h1>Harga</h1>
                     <h2>Pilih Paket dengan Harga Terbaik untuk Kamu</h2>
-                    <p>"Segera manfaatkan <span class="save-percent">Discount 50% Personal & 30% Vendor</span> , buruan penawaran terbatas!"</p>
+                    <p>"Segera manfaatkan <span class="save-percent">Discount 50% Personal & 30% Vendor</span> , buruan
+                        penawaran terbatas!"</p>
                 </header>
 
                 <div class="switch-container">
@@ -483,7 +484,8 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Terbatas ) </strong></li>
+                                            Terbatas ) </strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>(
                                             Terbatas )</strong></li>
@@ -527,7 +529,8 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Terbatas )</strong></li>
+                                            Terbatas )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>(
                                             All
@@ -571,11 +574,13 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Bebas )</strong></li>
+                                            Bebas )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan All Sound
                                         <strong>(
-                                            Bisa Request )</strong></li>
+                                            Bisa Request )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>(
                                             Maks. 20
@@ -623,7 +628,8 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Terbatas ) </strong></li>
+                                            Terbatas ) </strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>(
                                             Terbatas )</strong></li>
@@ -670,7 +676,8 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Terbatas )</strong></li>
+                                            Terbatas )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan Sound <strong>(
                                             All
@@ -706,7 +713,8 @@
                                 <hr style='border: 1px solid #000;'>
                                 <ul>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
-                                            style="color: #65c600;margin-right: 10px;"></span>Unlimited Membuat Undangan
+                                            style="color: #65c600;margin-right: 10px;"></span>Unlimited Membuat
+                                        Undangan
                                     </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>2 Minggu Masa Berlaku
@@ -717,11 +725,13 @@
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Template Undangan
                                         <strong>(
-                                            Bebas )</strong></li>
+                                            Bebas )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Pilihan All Sound
                                         <strong>(
-                                            Bisa Request )</strong></li>
+                                            Bisa Request )</strong>
+                                    </li>
                                     <li><span class="bi bi-check-circle mr-5 mt-1"
                                             style="color: #65c600;margin-right: 10px;"></span>Album Foto <strong>(
                                             Maks. 20
@@ -915,7 +925,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <form action="frontend/contact.php" method="post" class="php-email-form">
+                            {{-- <form action="" method="post" class="php-email-form">
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
@@ -947,8 +957,34 @@
                                     </div>
 
                                 </div>
+                            </form> --}}
+                            <form action="" method="post" class="php-email-form"
+                                onsubmit="sendMessage(event)">
+                                <div class="row gy-4">
+                                    <div class="col-md-6">
+                                        <input type="text" name="name" class="form-control"
+                                            placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Your Email" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="subject"
+                                            placeholder="Subject" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Maksimal 100 Karakter" maxlength="100"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <div class="loading">Loading</div>
+                                        {{-- <div class="error-message"></div> --}}
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                        <button type="submit">Send Message</button>
+                                    </div>
+                                </div>
                             </form>
-
                         </div>
 
                     </div>
@@ -1136,6 +1172,32 @@
             floatingButton.style.right = '12px';
         };
     </script>
+
+    {{-- contact section --}}
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            // Simulasi pengiriman pesan (gunakan AJAX atau cara pengiriman pesan yang sesuai)
+            // Di sini, kita hanya menampilkan pesan berhasil
+            const sentMessage = document.querySelector('.sent-message');
+            sentMessage.style.display = 'block';
+
+            // Sembunyikan loading message
+            const loadingMessage = document.querySelector('.loading');
+            loadingMessage.style.display = 'none';
+
+            // Reset form
+            document.querySelector('.php-email-form').reset();
+
+            // Optional: Tambahkan delay sebelum menyembunyikan pesan
+            setTimeout(() => {
+                sentMessage.style.display = 'none';
+            }, 3000); // Tampilkan pesan selama 3 detik (3000 milidetik)
+        }
+    </script>
+
 </body>
 
 </html>
