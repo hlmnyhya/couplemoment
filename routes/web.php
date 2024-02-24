@@ -84,6 +84,13 @@ Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function 
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
     ]);
+});
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
+    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
+
     Route::resource('invitation', InvitationController::class)->names([
         'index' => 'invitation.index',
         'store' => 'invitation.store',
@@ -91,12 +98,6 @@ Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function 
         'update' => 'invitation.update',
         'delete' => 'invitation.delete',
     ]);
-});
-
-
-Route::middleware(['auth', 'verified', 'admin'])->group(function () {
-    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
-    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
 });
 
 
