@@ -36,14 +36,14 @@ class InvitationController extends Controller
             'name2' => 'required',
             'wali_name' => 'required',
             'wali_name2' => 'required',
-            'url' => 'required',
+            // 'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
             'time_invitation' => 'required',
             'timezone' => 'required',
             'address_invitation' => 'required',
             'address_url' => 'required',
-            'address_maps' => 'required',
+            // 'address_maps' => 'required',
             'no_rekening' => 'required',
             'name_rekening' => 'required',
         ]);
@@ -57,14 +57,14 @@ class InvitationController extends Controller
         $invitation->name2 = $validatedData['name2'];
         $invitation->wali_name = $validatedData['wali_name'];
         $invitation->wali_name2 = $validatedData['wali_name2'];
-        $invitation->url = $validatedData['url'];
+        // $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
         $invitation->time_invitation = $validatedData['time_invitation'];
         $invitation->timezone = $validatedData['timezone'];
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
-        $invitation->address_maps = $validatedData['address_maps'];
+        // $invitation->address_maps = $validatedData['address_maps'];
         $invitation->no_rekening = $validatedData['no_rekening'];
         $invitation->name_rekening = $validatedData['name_rekening'];
 
@@ -137,14 +137,14 @@ class InvitationController extends Controller
             'name2' => 'required',
             'wali_name' => 'required',
             'wali_name2' => 'required',
-            'url' => 'required',
+            // 'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
             'time_invitation' => 'required',
             'timezone' => 'required',
             'address_invitation' => 'required',
             'address_url' => 'required',
-            'address_maps' => 'required',
+            // 'address_maps' => 'required',
             'no_rekening' => 'required',
             'name_rekening' => 'required',
         ]);
@@ -156,14 +156,14 @@ class InvitationController extends Controller
         $invitation->name2 = $validatedData['name2'];
         $invitation->wali_name = $validatedData['wali_name'];
         $invitation->wali_name2 = $validatedData['wali_name2'];
-        $invitation->url = $validatedData['url'];
+        // $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
         $invitation->time_invitation = $validatedData['time_invitation'];
         $invitation->timezone = $validatedData['timezone'];
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
-        $invitation->address_maps = $validatedData['address_maps'];
+        // $invitation->address_maps = $validatedData['address_maps'];
         $invitation->no_rekening = $validatedData['no_rekening'];
         $invitation->name_rekening = $validatedData['name_rekening'];
 
