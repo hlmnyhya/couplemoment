@@ -474,6 +474,15 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
+                        <a href="{{ route('gallery.index') }}" class="side-menu__item">
+                            <i class="fe fe-folder side-menu__icon"></i>
+                            <span class="side-menu__label">Gallery</span>
+                        </a>
+                    </li>
+                    <!-- End::slide -->
+
+                    <!-- Start::slide -->
+                    <li class="slide">
                         <a href="{{ route('guestbook.index') }}" class="side-menu__item">
                             <i class="fe fe-link side-menu__icon"></i>
                             <span class="side-menu__label">Guestbook</span>

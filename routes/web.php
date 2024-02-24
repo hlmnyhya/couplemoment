@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
+use App\Http\Controllers\CMS\GalleryController;
 use App\Http\Controllers\CMS\ThemeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserThemeController;
@@ -43,11 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::get('/profile/change-password', [ProfileController::class, 'showChangePasswordForm'])->name('profile.change-password');
     Route::post('/profile/update-password', [ProfileController::class, 'changePassword'])->name('profile.update-password');
-})->middleware(['auth', 'verified']);
-
-// Register page
-// Route::get('/register-personal', [AdminController::class, 'registerPersonal'])->name('register-personal');
-// Route::get('/register-vendor', [AdminController::class, 'registerVendor'])->name('register-vendor');
+})->middleware(['auth', 'verified']);;
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
 // Dashboard admin
@@ -88,6 +85,22 @@ Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function 
         'update' => 'assets.update',
         'destroy' => 'assets.destroy',
     ]);
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    Route::get('/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
+    Route::post('/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::get('/gallery/show/{id}', [GalleryController::class, 'show'])->name('gallery.show');
+
+    // delete gallery
+    Route::get('/gallery/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('gallery.delete');
+
+    // delete photo
+    Route::get('/photo/delete/{id}', [GalleryController::class, 'deletePhoto'])->name('photo.delete');
+
+    // delete all gallery
+    Route::get('/gallery/delete-all', [GalleryController::class, 'deleteAllGallery'])->name('gallery.delete-all');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
