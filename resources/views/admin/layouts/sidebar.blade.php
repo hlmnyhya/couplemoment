@@ -474,18 +474,9 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="{{ route('invoice') }}" class="side-menu__item">
-                            <i class="fe fe-inbox side-menu__icon"></i>
-                            <span class="side-menu__label">Invoice</span>
-                        </a>
-                    </li>
-                    <!-- End::slide -->
-
-                    <!-- Start::slide -->
-                    <li class="slide">
-                        <a href="index.html" class="side-menu__item">
-                            <i class="fe fe-video side-menu__icon"></i>
-                            <span class="side-menu__label">Tutorial</span>
+                        <a href="{{ route('guestbook.index') }}" class="side-menu__item">
+                            <i class="fe fe-link side-menu__icon"></i>
+                            <span class="side-menu__label">Guestbook</span>
                         </a>
                     </li>
                     <!-- End::slide -->
@@ -498,11 +489,21 @@
                         </a>
                     </li>
                     <!-- End::slide -->
+
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="{{ route('guestbook.index') }}" class="side-menu__item">
-                            <i class="fe fe-file side-menu__icon"></i>
-                            <span class="side-menu__label">Guestbook</span>
+                        <a href="{{ route('invoice') }}" class="side-menu__item">
+                            <i class="fe fe-inbox side-menu__icon"></i>
+                            <span class="side-menu__label">Invoice</span>
+                        </a>
+                    </li>
+                    <!-- End::slide -->
+
+                    <!-- Start::slide -->
+                    <li class="slide">
+                        <a href="index.html" class="side-menu__item">
+                            <i class="fe fe-video side-menu__icon"></i>
+                            <span class="side-menu__label">Tutorial</span>
                         </a>
                     </li>
                     <!-- End::slide -->

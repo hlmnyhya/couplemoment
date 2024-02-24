@@ -80,7 +80,7 @@
                                     <div
                                         class="d-flex align-items-center justify-content-center gap-2 contact-hover-buttons">
                                         <div class="btn-group">
-                                            <a href="{{ route('show_invitation_by_url', $invitation->url) }}"
+                                            <a href="{{ route('show_invitation_by_url', $invitation->title_invitation) }}"
                                                 class="btn btn-sm btn-light contact-hover-btn" target="_blank">Lihat
                                                 Undangan</a>
                                         </div>

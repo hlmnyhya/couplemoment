@@ -97,7 +97,8 @@
 
                                         <button aria-label="button"
                                             class="btn btn-sm btn-icon btn-light contact-hover-dropdown1" id="liveToastBtn"
-                                            type="button" data-url="/{{ $guest->invitation->url }}{{ $guest->url }}">
+                                            type="button"
+                                            data-url="couplemoment.com/invitation/{{ $guest->invitation->title_invitation }}{{ $guest->url }}">
                                             <i class="ri-link"></i>
                                         </button>
                                     </div>

@@ -20,7 +20,7 @@ class UndanganController extends Controller
         ]);
     }
 
-    public function show($url, $slug)
+    public function show($title_invitation, $slug)
     {
         $guestbook = GuestBook::where('slug', $slug)->firstOrFail();
         $invitation = $guestbook->invitation;
@@ -31,9 +31,9 @@ class UndanganController extends Controller
         return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime'));
     }
 
-    public function show_by_url($url)
+    public function show_by_url($title_invitation)
     {
-        $invitation = Invitation::where('url', $url)->firstOrFail();
+        $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
 
         $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
         $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');

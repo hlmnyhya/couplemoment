@@ -13,6 +13,7 @@ use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
 use App\Http\Controllers\CMS\ThemeController;
 use App\Http\Controllers\UserThemeController;
+use App\Models\Theme;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,9 @@ use App\Http\Controllers\UserThemeController;
 */
 
 Route::get('/', function () {
-    return view('frontend.master');
+    $themes = Theme::all(); // Mengambil semua data dari tabel tema
+
+    return view('frontend.master', ['themes' => $themes]);
 });
 
 Route::get('/dashboard', function () {
@@ -86,18 +89,21 @@ Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function 
     ]);
 });
 
-
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
-    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
-
-    Route::resource('invitation', InvitationController::class)->names([
+    Route::resource('invitations', InvitationController::class)->names([
         'index' => 'invitation.index',
         'store' => 'invitation.store',
         'edit' => 'invitation.edit',
         'update' => 'invitation.update',
-        'delete' => 'invitation.delete',
+        'destroy' => 'invitation.destroy',
     ]);
+});
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
+    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
 });
 
 
@@ -114,9 +120,9 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::post('/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
-Route::get('/my-undangan/{url}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
+Route::get('/my-undangan/{title_invitation}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
 
-Route::get('/{url}/guestbook/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
+Route::get('/invitation/{title_invitation}/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
 // Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
 Route::post('/simpan_ucapan', [InvitationController::class, 'simpanUcapan'])->name('simpan_ucapan');
 

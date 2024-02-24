@@ -327,35 +327,42 @@
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">Modern</li>
-                            <li data-filter=".filter-card">Classic</li>
-                            {{-- <li data-filter=".filter-web">Minimalist</li> --}}
+                            @foreach ($themes as $theme)
+                                @foreach ($theme->categories as $category)
+                                    <li data-filter=".filter-{{ $category->name }}">{{ $category->name }}</li>
+                                @endforeach
+                            @endforeach
                         </ul>
                     </div>
                 </div>
 
+                <!-- Input hidden untuk menyimpan nilai kategori yang dipilih -->
+                <input type="hidden" id="selectedCategory" name="selectedCategory" value="">
+
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    {{-- Buat logika nya untuk menampilkan 6 template aja --}}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            {{-- disini untuk menampilkan gambar template --}}
-                            <img src="{{ asset('frontend/img/portfolio/template.jpg') }}" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                {{-- disini untuk memuat isi dari template tersebut --}}
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="frontend/img/portfolio/template.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bi bi-link"></i></a>
+                    @foreach ($themes as $theme)
+                        @foreach ($theme->categories as $category)
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $category->name }}">
+                                <div class="portfolio-wrap">
+                                    <img src="{{ asset($theme->cover) }}" class="img-fluid"
+                                        alt="{{ $theme->name }}">
+                                    <div class="portfolio-info">
+                                        <h4>{{ $theme->name }}</h4>
+                                        <p>{{ $theme->description }}</p>
+                                        <div class="portfolio-links">
+                                            <a href="{{ asset($theme->cover) }}" data-gallery="portfolioGallery"
+                                                class="portfokio-lightbox" title="{{ $theme->name }}"><i
+                                                    class="bi bi-plus"></i></a>
+                                            <a href="/" title="More Details"><i class="bi bi-link"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endforeach
+                </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
                             <img src="{{ asset('frontend/img/portfolio/template2.jpg') }}" class="img-fluid"
                                 alt="">
@@ -438,8 +445,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> --}}
+            </div>
             </div>
         </section><!-- End Portfolio Section -->
 
@@ -1196,6 +1203,24 @@
                 sentMessage.style.display = 'none';
             }, 3000); // Tampilkan pesan selama 3 detik (3000 milidetik)
         }
+    </script>
+
+    <script>
+        let filterItems = document.querySelectorAll('#portfolio-flters li');
+
+        filterItems.forEach(item => {
+            item.addEventListener('click', function() {
+                filterItems.forEach(item => {
+                    item.classList.remove('filter-active');
+                });
+                this.classList.add('filter-active');
+
+                let selectedCategory = this.getAttribute('data-filter').replace('.',
+                    ''); // Mengambil nama kategori dari data-filter
+                document.getElementById('selectedCategory').value =
+                    selectedCategory; // Mengatur nilai selectedCategory
+            });
+        });
     </script>
 
 </body>

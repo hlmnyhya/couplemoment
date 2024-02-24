@@ -56,7 +56,7 @@ class GuestBookController extends Controller
                     'guest_name' => $name,
                     'phone' => $phoneNumber,
                     'slug' => $uniqueSlug,
-                    'url' => '/guestbook/' . $uniqueSlug,
+                    'url' => '/' . $uniqueSlug,
                     'invitation_id' => $invitationId
                 ]);
             } else {
@@ -66,7 +66,7 @@ class GuestBookController extends Controller
                     'guest_name' => $name,
                     'phone' => $phoneNumber,
                     'slug' => $uniqueSlug,
-                    'url' => '/guestbook/' . $uniqueSlug,
+                    'url' => '/' . $uniqueSlug,
                     'invitation_id' => $invitationId
                 ]);
             }
@@ -95,7 +95,7 @@ class GuestBookController extends Controller
 
         if ($guest->isDirty('guest_name')) {
             $guest->slug = SlugService::createSlug(GuestBook::class, 'slug', $guest->guest_name);
-            $guest->url = '/guestbook/' . $guest->slug;
+            $guest->url = '/' . $guest->slug;
         }
 
         $guest->save();

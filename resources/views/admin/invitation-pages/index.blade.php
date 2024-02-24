@@ -44,9 +44,9 @@
 
                             <div class="row g-2">
                                 <div class="col-sm-6">
-                                    <label for="theme_id" class="form-label">Theme</label>
+                                    <label for="theme_id" class="form-label">Tema</label>
                                     <select class="form-select" id="theme_id" name="theme_id" required>
-                                        <option value="">Select Theme</option>
+                                        <option value="">Pilih Tema</option>
                                         @foreach ($themes as $theme)
                                             <option value="{{ $theme->id }}">{{ $theme->name }}</option>
                                         @endforeach
@@ -64,16 +64,16 @@
                             </div>
 
                             <div class="row g-2">
-                                <div class="col-sm-6">
-                                    <label for="soundbank_id" class="form-label">Soundbank</label>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="soundbank_id" class="form-label">Musik / Backsound</label>
                                     <select class="form-select" id="soundbank_id" name="soundbank_id" required>
-                                        <option value="">Select Sound</option>
+                                        <option value="">Pilih Musik</option>
                                         @foreach ($soundbanks as $soundbank)
                                             <option value="{{ $soundbank->id }}">{{ $soundbank->title }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 mt-4">
                                     <audio controls>
                                         <source src="" type="audio/mp3">
                                         Your browser does not support the audio element.
@@ -82,88 +82,93 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="title_invitation" class="form-label">Title Invitation</label>
+                                <label for="title_invitation" class="form-label">Judul Undangan</label>
                                 <input type="text" class="form-control" id="title_invitation" name="title_invitation"
-                                    required placeholder="Enter Title Invitation">
+                                    required placeholder="Masukan Nama Undangan">
                             </div>
 
                             <div class="row g-3">
-                                <div class="col-sm-6">
-                                    <label for="name" class="form-label">Name of the Groom</label>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="name" class="form-label">Nama Mempelai Pria</label>
                                     <input type="text" class="form-control" id="name" name="name" required
-                                        placeholder="Enter Name of the Groom">
+                                        placeholder="Masukan Nama Mempelai Pria">
                                 </div>
-                                <div class="col-sm-6">
-                                    <label for="name2" class="form-label">Name of the Bride</label>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="name2" class="form-label">Nama Mempelai Perempuan</label>
                                     <input type="text" class="form-control" id="name2" name="name2" required
-                                        placeholder="Enter Name of the Bride">
+                                        placeholder="Masukan Nama Mempelai Perempuan">
                                 </div>
                             </div>
 
                             <div class="row g-3">
-                                <div class="col-sm-6">
-                                    <label for="wali_name" class="form-label">Bride's guardian</label>
-                                    <input type="text" class="form-control" id="wali_name" name="wali_name" required
-                                        placeholder="Enter Bride's Guardian">
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="wali_name2" class="form-label">Groom's guardian</label>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="wali_name2" class="form-label">Wali Mempelai Pria</label>
                                     <input type="text" class="form-control" id="wali_name2" name="wali_name2" required
-                                        placeholder="Enter Groom's Guardian">
+                                        placeholder="Masukan Nama Wali Mempelai Pria">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="wali_name" class="form-label">Wali Mempelai Wanita</label>
+                                    <input type="text" class="form-control" id="wali_name" name="wali_name" required
+                                        placeholder="Masukan Nama Wali Mempelai Wanita">
                                 </div>
                             </div>
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label for="url" class="form-label">Url</label>
                                 <input type="text" class="form-control" id="url" name="url" required
                                     placeholder="Enter URL">
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
+                                <label for="description" class="form-label">Deskripsi</label>
                                 <textarea type="text" class="form-control" id="description" name="description" required
-                                    placeholder="Enter Description"></textarea>
+                                    placeholder="Masukan Deskripsi"></textarea>
                             </div>
 
                             <div class="row g-3">
-                                <div class="col-sm-4">
-                                    <label for="date_invitation" class="form-label">Date</label>
+                                <div class="col-sm-4 mb-3">
+                                    <label for="date_invitation" class="form-label">Tanggal Pernikahan</label>
                                     <input type="date" class="form-control" id="date_invitation"
-                                        name="date_invitation" required placeholder="Select Date">
+                                        name="date_invitation" required placeholder="">
                                 </div>
-                                <div class="col-sm-4">
-                                    <label for="time_invitation" class="form-label">Time</label>
+                                <div class="col-sm-4 mb-3">
+                                    <label for="time_invitation" class="form-label">Jam</label>
                                     <input type="time" class="form-control" id="time_invitation"
                                         name="time_invitation" required placeholder="Select Time">
                                 </div>
-                                <div class="col-sm-4">
-                                    <label for="timezone" class="form-label">Timezone</label>
-                                    <input type="text" class="form-control" id="timezone" name="timezone" required
-                                        placeholder="Enter Timezone">
+                                <div class="col-sm-4 mb-3">
+                                    <label for="timezone" class="form-label">Zona Waktu</label>
+                                    <select class="form-control" id="timezone" name="timezone" required>
+                                        <option>Pilih Zona Waktu</option>
+                                        <option value="WIT">WIT (Waktu Indonesia Timur)</option>
+                                        <option value="WITA">WITA (Waktu Indonesia Tengah)</option>
+                                        <option value="WIB">WIB (Waktu Indonesia Barat)</option>
+                                    </select>
                                 </div>
+
                             </div>
 
                             <div class="row g-3">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 mb-3">
                                     <label for="no_rekening" class="form-label">No Rekening</label>
                                     <input type="text" class="form-control" id="no_rekening" name="no_rekening"
-                                        required placeholder="000xxx">
+                                        required placeholder="08xxx">
                                 </div>
-                                <div class="col-sm-6">
-                                    <label for="name_rekening" class="form-label">Name Rekening</label>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="name_rekening" class="form-label">Nama Rekening</label>
                                     <input type="text" class="form-control" id="name_rekening" name="name_rekening"
-                                        required placeholder="Ex. An.....">
+                                        required placeholder="A. N ....">
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="address_invitation" class="form-label">Address</label>
+                                <label for="address_invitation" class="form-label">Alamat</label>
                                 <textarea type="text" class="form-control mb-3" id="address_invitation" name="address_invitation" required
-                                    placeholder="Enter Address"></textarea>
+                                    placeholder="Masukan Alamat Lengkap"></textarea>
                                 <input type="text" class="form-control mb-3" id="address_url" name="address_url"
-                                    required placeholder="Enter Address URL">
-                                <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
-                                    placeholder="Enter Address on Maps"></textarea>
+                                    required placeholder="Masukan URL Alamat">
+                                {{-- <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
+                                    placeholder="Enter Address on Maps"></textarea> --}}
                             </div>
 
             </form>
