@@ -28,7 +28,7 @@
                             <div class="d-flex">
                                 <div class="mt-2">
                                     <h6 class="fw-normal">Total Undangan</h6>
-                                    <h2 class="mb-0 text-dark fw-semibold">0</h2>
+                                    <h2 class="mb-0 text-dark fw-semibold">{{ $invitationCount }}</h2>
                                 </div>
                                 <div class="ms-auto">
                                     <div class="chart-wrapper mt-1">
@@ -48,7 +48,7 @@
                             <div class="d-flex">
                                 <div class="mt-2">
                                     <h6 class="fw-normal">Jenis Akun</h6>
-                                    <h2 class="mb-0 text-dark fw-semibold">Exclusive</h2>
+                                    <h2 class="mb-0 text-dark fw-semibold">{{ $status }}</h2>
                                 </div>
                                 <div class="ms-auto">
                                     <div class="chart-wrapper mt-1">

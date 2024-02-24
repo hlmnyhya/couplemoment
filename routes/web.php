@@ -12,6 +12,7 @@ use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
 use App\Http\Controllers\CMS\ThemeController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserThemeController;
 use App\Models\Theme;
 
@@ -32,9 +33,9 @@ Route::get('/', function () {
     return view('frontend.master', ['themes' => $themes]);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
@@ -50,7 +51,7 @@ Route::middleware('auth')->group(function () {
 // Login page
 Route::get('/login-page', [AdminController::class, 'loginPage'])->name('login-page');
 // Dashboard admin
-Route::get('/admin-dashboard', [AdminController::class, 'AdminDashboard'])->middleware(['auth', 'verified'])->name('admin-dashboard');
+Route::get('/admin-dashboard', [AdminController::class, 'AdminDashboard'])->middleware(['auth', 'verified'])->name('');
 // My undangan
 Route::get('/my-undangan', [UndanganController::class, 'index'])->middleware(['auth', 'verified'])->name('my-undangan');
 // Invoice

@@ -39,7 +39,7 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="{{ route('admin-dashboard') }}" class="side-menu__item">
+                        <a href="{{ route('dashboard') }}" class="side-menu__item">
                             <i class="fe fe-home side-menu__icon"></i>
                             <span class="side-menu__label">Dashboard</span>
                         </a>
@@ -247,7 +247,7 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="{{ route('admin-dashboard') }}" class="side-menu__item">
+                        <a href="{{ route('dashboard') }}" class="side-menu__item">
                             <i class="fe fe-home side-menu__icon"></i>
                             <span class="side-menu__label">Dashboard</span>
                         </a>
@@ -455,7 +455,7 @@
 
                     <!-- Start::slide -->
                     <li class="slide">
-                        <a href="{{ route('admin-dashboard') }}" class="side-menu__item">
+                        <a href="{{ route('dashboard') }}" class="side-menu__item">
                             <i class="fe fe-home side-menu__icon"></i>
                             <span class="side-menu__label">Dashboard</span>
                         </a>
