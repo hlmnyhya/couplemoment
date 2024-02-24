@@ -89,14 +89,27 @@
 
                             <div class="row g-3">
                                 <div class="col-sm-6 mb-3">
-                                    <label for="name" class="form-label">Nama Mempelai Pria</label>
+                                    <label for="name" class="form-label">Nama Panggilan Mempelai Pria</label>
                                     <input type="text" class="form-control" id="name" name="name" required
-                                        placeholder="Masukan Nama Mempelai Pria">
+                                        placeholder="Masukan Nama Panggilan Mempelai Pria">
                                 </div>
                                 <div class="col-sm-6 mb-3">
-                                    <label for="name2" class="form-label">Nama Mempelai Perempuan</label>
+                                    <label for="name2" class="form-label">Nama Panggilan Mempelai Perempuan</label>
                                     <input type="text" class="form-control" id="name2" name="name2" required
-                                        placeholder="Masukan Nama Mempelai Perempuan">
+                                        placeholder="Masukan Nama Panggilan Mempelai Perempuan">
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label for="name" class="form-label">Nama Lengkap Mempelai Pria</label>
+                                    <input type="text" class="form-control" id="name" name="name" required
+                                        placeholder="Masukan Nama Lengkap Mempelai Pria">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="name2" class="form-label">Nama Lengkap Mempelai Perempuan</label>
+                                    <input type="text" class="form-control" id="name2" name="name2" required
+                                        placeholder="Masukan Nama Lengkap Mempelai Perempuan">
                                 </div>
                             </div>
 

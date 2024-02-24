@@ -327,9 +327,17 @@
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">All</li>
+                            @php
+                                $uniqueCategories = collect();
+                            @endphp
                             @foreach ($themes as $theme)
                                 @foreach ($theme->categories as $category)
-                                    <li data-filter=".filter-{{ $category->name }}">{{ $category->name }}</li>
+                                    @if (!$uniqueCategories->contains('id', $category->id))
+                                        @php
+                                            $uniqueCategories->push($category);
+                                        @endphp
+                                        <li data-filter=".filter-{{ $category->name }}">{{ $category->name }}</li>
+                                    @endif
                                 @endforeach
                             @endforeach
                         </ul>
@@ -341,7 +349,10 @@
 
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($themes as $theme)
-                        @foreach ($theme->categories as $category)
+                        @php
+                            $uniqueCategories = $theme->categories->unique('theme_id');
+                        @endphp
+                        @foreach ($uniqueCategories as $category)
                             <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $category->name }}">
                                 <div class="portfolio-wrap">
                                     <img src="{{ asset($theme->cover) }}" class="img-fluid"

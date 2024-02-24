@@ -13,9 +13,6 @@
     <meta property="og:title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
     <meta property="og:description"
         content="Website Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani Secara Online">
-    <meta property="og:image" content="https://endahabdullah.github.io/undangan/assets/images/bg.jpeg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="https://endahabdullah.github.io/undangan/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Undangan">
@@ -36,6 +33,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
     <link rel="stylesheet" href="{{ asset('invitation/css/app.css') }}">
+
+    <style>
+        body {
+            background-image: url("{{ asset('invitation/assets/images/bg.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: "Josefin Sans", sans-serif;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
 <body data-email="user@example.com" data-password="12345678" data-url="https://undangan-api-gules.vercel.app">
@@ -538,12 +550,18 @@
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
+                            & {{ $invitation->name2 }}</h1>
+                        {{-- <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
                         </h1>
                         <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">&</h1>
                         <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">
-                            {{ $invitation->name2 }}</h1>
+                            {{ $invitation->name2 }}</h1> --}}
                         <div id="namatamu"></div>
+                        <div>
+                            <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
+                            <h2 class="text-light">Zaen</h2>
+                        </div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4"
                             style="background-color: #fff; color:#212529" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" onclick="buka()">
