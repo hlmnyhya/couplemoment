@@ -50,9 +50,7 @@
                 {{-- END CATEGORIES --}}
 
                 @foreach ($themes as $theme)
-                    <div class="col-xxl-9 col-xl-8 col-lg-8 col-md-12">
-                        <div class="row">
-                            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-12">
                                 <div class="card custom-card product-card">
                                     <div class="card-body">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
@@ -105,8 +103,6 @@
                                             <i class="ti ti-discount-2 fs-16 me-1"></i>{{ $theme->status }}
                                         </p>
                                     </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 @endforeach
