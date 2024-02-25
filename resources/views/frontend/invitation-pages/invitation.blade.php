@@ -36,10 +36,11 @@
 
     <style>
         body {
-            background-image: url("{{ asset('invitation/assets/images/bg.png') }}");
+            background-image: url("{{ asset('invitation/assets/images/bg3.jpg') }}");
             background-size: cover;
-            background-position: center;
+            /* background-position: center; */
             background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             font-family: "Josefin Sans", sans-serif;
@@ -47,10 +48,18 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        @media (max-width: 768px) {
+            body {
+                background-size: contain;
+                width: 100vh; /* Height becomes width after rotation */
+                height: 100vw; /* Width becomes height after rotation */
+            }
+        }
     </style>
 </head>
 
-<body data-email="user@example.com" data-password="12345678" data-url="https://undangan-api-gules.vercel.app">
+{{-- <body data-email="user@example.com" data-password="12345678" data-url="https://undangan-api-gules.vercel.app"> --}}
+<body>
     <nav class="navbar navbar-dark bg-dark navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-example2">
         <ul class="navbar-nav nav-justified w-100 align-items-center">
             <li class="nav-item">
@@ -527,7 +536,7 @@
                         <div id="namatamu"></div>
                         <div>
                             <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
-                            <h2 class="text-light">{{ $guestbook->guest_name }} sekeluarga</h2>
+                            <h2 class="text-light">{{ $guestbook->guest_name }}</h2>
                         </div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4"
                             style="background-color: #fff; color:#212529" data-bs-toggle="modal"
