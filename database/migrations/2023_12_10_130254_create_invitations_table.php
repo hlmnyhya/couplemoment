@@ -17,6 +17,8 @@ return new class extends Migration
             $table->integer('theme_id')->unsigned();
             $table->integer('soundbank_id')->unsigned();
             $table->string('title_invitation')->nullable();
+            $table->string('panggilan_pria')->nullable();
+            $table->string('panggilan_perempuan')->nullable();
             $table->string('name')->nullable();
             $table->string('name2')->nullable();
             $table->string('wali_name')->nullable();

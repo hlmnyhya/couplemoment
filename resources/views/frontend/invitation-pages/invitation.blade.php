@@ -376,7 +376,7 @@
 
         <section class="m-0 p-0" id="ucapan">
             <div class="container">
-                <form method="post" action="{{ route('simpan_ucapan') }}">
+                <form id="form-ucapan" method="post" action="{{ route('simpan_ucapan') }}">
                     @csrf
                     <div class="card-body border rounded-4 shadow p-3">
                         <h1 class="font-estetik text-center mb-3" style="font-size: 3rem; color:#FFD700">Ucapan & Doa</h1>
@@ -406,71 +406,37 @@
                     </div>
                 </form>
         
-                {{-- Tampilkan Data dari JSON --}}
-                @if (Storage::exists('public/ucapan.json'))
-                    @php
-                        $ucapanData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
-                        $totalItems = count($ucapanData);
-                        $currentPage = request('page', 1);
-                        $itemsPerPage = 5;
-                        $startIndex = ($currentPage - 1) * $itemsPerPage;
-                        $endIndex = min($startIndex + $itemsPerPage, $totalItems);
-                        $slicedData = array_slice($ucapanData, $startIndex, $itemsPerPage);
-                    @endphp
-        
-                    @foreach ($slicedData as $ucapan)
-                        <div class="rounded-4 mt-4 mb-2">
-                            <div class="card-body bg-light shadow p-3 m-0 rounded-4">
-                                <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                    <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
-                                        <strong class="me-1">{{ $ucapan['nama'] }}</strong>
-                                        @if ($ucapan['kehadiran'] == 1)
-                                            <i class="fa-solid fa-circle-check text-success"></i>
-                                        @else
-                                            <i class="fa-solid fa-circle-xmark text-danger"></i>
-                                        @endif
-                                    </p>
-                                    <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($ucapan['waktu'])->diffForHumans() }}</small>
-                                </div>
-                                <hr class="text-dark my-1">
-                                <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $ucapan['pesan'] }}</p>
-                                {{-- <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="{{ $ucapan['uuid'] }}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
-                                {{ $innerCard($ucapan['comment']) }} --}}
-                            </div>
+                {{-- Tampilkan Data dari ucapan --}}
+                @foreach ($invitationGreetings as $invitationGreeting)
+                <div class="rounded-4 mt-4 mb-2">
+                    <div class="card-body bg-light shadow p-3 m-0 rounded-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
+                                <strong class="me-1">{{ $invitationGreeting->greeting->nama }}</strong>
+                                @if ($invitationGreeting->greeting->kehadiran == 'hadir')
+                                <i class="fa-solid fa-circle-check text-success"></i>
+                            @elseif ($invitationGreeting->greeting->kehadiran == 'berhalangan')
+                                <i class="fa-solid fa-circle-xmark text-danger"></i>
+                            @endif
+                            </p>
+                            <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($invitationGreeting->greeting->created_at)->diffForHumans() }}</small>
                         </div>
-                        <hr> @endforeach
-        
-                        @if ($totalItems > $itemsPerPage) <nav class="d-flex justify-content-center">
-                            <ul class="pagination mb-0">
-                                @if ($currentPage > 1)
-                                    <li class="page-item">
-                                        <a class="page-link" href="{{ url(request()->path(), ['page' => $currentPage - 1]) }}" aria-label="Previous" style="color: #FFD700">
-                                            <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
-                                        </a>
-                                    </li> @endif
-                            
-                                @if ($endIndex < $totalItems) <li class="page-item">
-                                        <a class="page-link" href="{{ url(request()->path(), ['page' => $currentPage + 1]) }}" aria-label="Next" style="color: #FFD700">
-                                            Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
-                                        </a>
-                                    </li> @endif
-                            </ul>
-                        </nav>
-                    @endif
-@else
-<div class="alert
-        alert-info" role="alert">Data ucapan belum tersedia.</div>
-    @endif
+                        <hr class="text-dark my-1">
+                        <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $invitationGreeting->greeting->ucapan_doa }}</p>
+                    </div>
+                </div>
+                <hr> @endforeach
+            
+            
+
     </div>
     </section>
 
-
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-        </path>
+    <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320">
+    <path fill="#111111" fill-opacity="1"
+        d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+    </path>
     </svg>
 
     <div style="background-color: #111111 !important; margin-top: -5px; padding-bottom: 4rem;">
@@ -550,8 +516,9 @@
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
                             <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
                         </div>
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
-                            & {{ $invitation->name2 }}</h1>
+                        <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">
+                            {{ $invitation->panggilan_pria }}
+                            & {{ $invitation->panggilan_perempuan }}</h1>
                         {{-- <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
                         </h1>
                         <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">&</h1>
@@ -560,7 +527,7 @@
                         <div id="namatamu"></div>
                         <div>
                             <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
-                            <h2 class="text-light">Zaen</h2>
+                            <h2 class="text-light">{{ $guestbook->guest_name }} sekeluarga</h2>
                         </div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4"
                             style="background-color: #fff; color:#212529" data-bs-toggle="modal"
@@ -573,11 +540,61 @@
         </div>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipcountdown/3.0.5/jquery.flipcountdown.min.js"
+        integrity="sha512-F0FIfRwSAll6Re1pINfu3ROOuk5q3WoRXsN4Ex6t42AV1hllPS2cFwHyNxra/pbMQb2lK9ip/ZEEvkDmEbPBsQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha256-qlPVgvl+tZTCpcxYJFdHB/m6mDe84wRr+l81VoYPTgQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
         integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
     <script src="{{ asset('invitation/js/app.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#form-ucapan').submit(function(e) {
+                e.preventDefault(); // Mencegah form melakukan submit biasa
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        console.log(response);
+                        alert('Ucapan berhasil disimpan.');
+                        $('#formnama').val('');
+                        $('#hadiran').val('');
+                        $('#formpesan').val('');
+                        $('#ucapan').append(`
+    <div class="rounded-4 mt-4 mb-2">
+        <div class="card-body bg-light shadow p-3 m-0 rounded-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
+                    <strong class="me-1">${response.greeting.nama}</strong>
+                    ${response.greeting.kehadiran == 1 ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-solid fa-circle-xmark text-danger"></i>'}
+                </p>
+                <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">Baru saja</small>
+            </div>
+            <hr class="text-dark my-1">
+            <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">${response.greeting.ucapan_doa}</p>
+        </div>
+    </div>
+    <hr>
+`);
+
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Terjadi kesalahan. Silakan coba lagi.');
+                    }
+                });
+
+
+            });
+        });
+    </script>
+
     </body>
 
 </html>

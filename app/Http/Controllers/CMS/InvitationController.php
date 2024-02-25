@@ -32,6 +32,8 @@ class InvitationController extends Controller
             'theme_id' => 'required',
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
+            'panggilan_pria' => 'required',
+            'panggilan_perempuan' => 'required',
             'name' => 'required',
             'name2' => 'required',
             'wali_name' => 'required',
@@ -53,6 +55,8 @@ class InvitationController extends Controller
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
+        $invitation->panggilan_pria = $validatedData['panggilan_pria'];
+        $invitation->panggilan_perempuan = $validatedData['panggilan_perempuan'];
         $invitation->name = $validatedData['name'];
         $invitation->name2 = $validatedData['name2'];
         $invitation->wali_name = $validatedData['wali_name'];
@@ -133,6 +137,8 @@ class InvitationController extends Controller
             'theme_id' => 'required',
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
+            'panggilan_pria' => 'required',
+            'panggilan_perempuan' => 'required',
             'name' => 'required',
             'name2' => 'required',
             'wali_name' => 'required',
@@ -152,6 +158,8 @@ class InvitationController extends Controller
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
+        $invitation->panggilan_pria = $validatedData['panggilan_pria'];
+        $invitation->panggilan_perempuan = $validatedData['panggilan_perempuan'];
         $invitation->name = $validatedData['name'];
         $invitation->name2 = $validatedData['name2'];
         $invitation->wali_name = $validatedData['wali_name'];

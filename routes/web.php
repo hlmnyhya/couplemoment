@@ -135,9 +135,7 @@ Route::controller(GuestBookController::class)->group(function () {
 })->middleware(['auth', 'verified']);
 
 Route::get('/my-undangan/{title_invitation}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
-
 Route::get('/invitation/{title_invitation}/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
-// Route::get('/Aldi-&-Rinta', [InvitationController::class, 'test'])->name('Aldi-&-Rinta');
-Route::post('/simpan_ucapan', [InvitationController::class, 'simpanUcapan'])->name('simpan_ucapan');
+Route::post('/simpan_ucapan', [UndanganController::class, 'simpanUcapan'])->name('simpan_ucapan');
 
 require __DIR__ . '/auth.php';

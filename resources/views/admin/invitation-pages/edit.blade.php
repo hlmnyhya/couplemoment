@@ -96,6 +96,21 @@
 
                             <div class="row g-3">
                                 <div class="col-sm-6">
+                                    <label for="panggilan_pria" class="form-label">Nama Panggilan Pria</label>
+                                    <input type="text" class="form-control" id="panggilan_pria" name="panggilan_pria"
+                                        required placeholder="Nama Panggilan Perempuan"
+                                        value="{{ $invitation->panggilan_pria }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="panggilan_perempuan" class="form-label">Nama Panggilan Perempuan</label>
+                                    <input type="text" class="form-control" id="panggilan_perempuan"
+                                        name="panggilan_perempuan" required placeholder="Nama Panggilan Perempuan"
+                                        value="{{ $invitation->panggilan_perempuan }}">
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
                                     <label for="name" class="form-label">Name of the Groom</label>
                                     <input type="text" class="form-control" id="name" name="name" required
                                         placeholder="Enter Name of the Groom" value="{{ $invitation->name }}">
@@ -122,11 +137,11 @@
                             </div>
 
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label for="url" class="form-label">Url</label>
                                 <input type="text" class="form-control" id="url" name="url"
                                     value="{{ $invitation->url }}" required placeholder="Enter URL">
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Description</label>
@@ -173,8 +188,8 @@
                                     placeholder="Enter Address">{{ $invitation->address_invitation }}</textarea>
                                 <input type="text" class="form-control mb-3" id="address_url" name="address_url"
                                     value="{{ $invitation->address_url }}" required placeholder="Enter Address URL">
-                                <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
-                                    placeholder="Enter Address on Maps">{{ $invitation->address_maps }}</textarea>
+                                {{-- <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
+                                    placeholder="Enter Address on Maps">{{ $invitation->address_maps }}</textarea> --}}
                             </div>
 
                         </div>

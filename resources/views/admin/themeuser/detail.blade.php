@@ -149,9 +149,11 @@
                                                         </div> --}}
                                                         <div class="ms-auto">
                                                             <div class="">
-                                                                <button type="button" class="btn btn-primary">Buat Undangan
-                                                                </button>
+                                                                <a href="{{ route('invitation.index', ['theme_id' => $theme->id]) }}"
+                                                                    target="_blank" class="btn btn-primary">Buat
+                                                                    Undangan</a>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
