@@ -141,4 +141,26 @@ class GalleryController extends Controller
 
         return redirect()->route('gallery.index')->with('success', 'All galleries and photos deleted successfully.');
     }
+
+    public function updatePhotoStatus(Request $request, $id)
+    {
+        $photo = Photo::findOrFail($id);
+
+        // Reset status foto yang lain menjadi false
+        if ($request->has('is_title_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_title_photo' => false]);
+            $photo->update(['is_title_photo' => true]);
+        } elseif ($request->has('is_primary_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_primary_photo' => false]);
+            $photo->update(['is_primary_photo' => true]);
+        } elseif ($request->has('is_groom_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_groom_photo' => false]);
+            $photo->update(['is_groom_photo' => true]);
+        } elseif ($request->has('is_bride_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_bride_photo' => false]);
+            $photo->update(['is_bride_photo' => true]);
+        }
+
+        return redirect()->back()->with('success', 'Photo status updated successfully.');
+    }
 }

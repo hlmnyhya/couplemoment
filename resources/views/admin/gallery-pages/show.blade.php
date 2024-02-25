@@ -27,6 +27,13 @@
                                 Detail {{ $gallery->gallery_name }}
                             </div>
                         </div>
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="table" class="table table-bordered text-nowrap w-100">
@@ -58,6 +65,34 @@
                                                     {{-- hapus --}}
                                                     <a id="delete" href="{{ route('photo.delete', $photo->id) }}"
                                                         class="btn btn-danger btn-sm justify-center">Delete</a>
+
+                                                    <form action="{{ route('photo.update-status', $photo->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('PUT')
+
+                                                        <button type="submit" name="is_title_photo"
+                                                            class="btn btn-primary btn-sm mt-2 {{ $photo->is_title_photo ? 'btn-danger' : '' }}">
+                                                            Title Photo
+                                                        </button>
+
+                                                        <button type="submit" name="is_primary_photo"
+                                                            class="btn btn-primary btn-sm mt-2 {{ $photo->is_primary_photo ? 'btn-danger' : '' }}">
+                                                            Primary Photo
+                                                        </button>
+
+                                                        <button type="submit" name="is_groom_photo"
+                                                            class="btn btn-primary btn-sm mt-2 {{ $photo->is_groom_photo ? 'btn-danger' : '' }}">
+                                                            Groom Photo
+                                                        </button>
+
+                                                        <button type="submit" name="is_bride_photo"
+                                                            class="btn btn-primary btn-sm mt-2 {{ $photo->is_bride_photo ? 'btn-danger' : '' }}">
+                                                            Bride Photo
+                                                        </button>
+                                                    </form>
+
+
 
                                                 </td>
                                             </tr>

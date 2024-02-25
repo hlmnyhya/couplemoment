@@ -101,6 +101,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // delete all gallery
     Route::get('/gallery/delete-all', [GalleryController::class, 'deleteAllGallery'])->name('gallery.delete-all');
+
+    Route::put('/photos/{id}/update-status', [GalleryController::class, 'updatePhotoStatus'])->name('photo.update-status');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -25,4 +25,9 @@ class Invitation extends Model
     {
         return $this->hasMany(InvitationGreeting::class, 'invitation_id');
     }
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'invitation_id');
+    }
 }

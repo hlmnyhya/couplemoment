@@ -24,15 +24,24 @@ class UndanganController extends Controller
 
     // public function show($title_invitation, $slug)
     // {
-    //     $guestbook = GuestBook::where('slug', $slug)->firstOrFail();
-    //     $invitation = $guestbook->invitation;
-    //     $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
-    //     $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
-    //     dd($invitation);
+    //     $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
+    //     $guestbook = GuestBook::where('slug', $slug)->where('invitation_id', $invitation->id)->firstOrFail();
+
+    //     // Mengambil data tema (theme) terkait
+    //     $theme = $invitation->theme;
+
+    //     // Set locale ke Bahasa Indonesia
+    //     \Carbon\Carbon::setLocale('id');
+
     //     // Mengambil data relasi InvitationGreeting berdasarkan invitation_id
     //     $invitationGreetings = $invitation->invitationGreetings()->with('greeting')->get();
+    //     // dd($invitation->theme->background_img);
+    //     $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
+    //     $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
 
-    //     return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'invitationGreetings'));
+    //     $formattedDateTime = \Carbon\Carbon::parse($invitation->date_invitation . ' ' . $invitation->time_invitation)->format('M d, Y H:i:s');
+
+    //     return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'formattedDateTime', 'invitationGreetings', 'guestbook'));
     // }
 
     public function show($title_invitation, $slug)
@@ -43,6 +52,34 @@ class UndanganController extends Controller
         // Mengambil data tema (theme) terkait
         $theme = $invitation->theme;
 
+        // Mengambil data galeri terkait
+        $galleries = $invitation->galleries;
+
+        // Mengambil data foto terkait dari setiap galeri (maksimal 3 foto per galeri)
+        $ascendingPhotos = [];
+        $descendingPhotos = [];
+        foreach ($galleries as $gallery) {
+            $ascendingSortedPhotos = $gallery->photos->sortBy('file_path')->take(3);
+            $descendingSortedPhotos = $gallery->photos->sortByDesc('file_path')->take(3);
+            foreach ($ascendingSortedPhotos as $photo) {
+                $ascendingPhotos[] = $photo;
+            }
+            foreach ($descendingSortedPhotos as $photo) {
+                $descendingPhotos[] = $photo;
+            }
+        }
+
+
+        // Mengambil data foto terkait dari setiap galeri yang memiliki is_title_photo bernilai true
+        $filteredPhotos = [];
+        foreach ($galleries as $gallery) {
+            $galleryPhotos = $gallery->photos;
+            foreach ($galleryPhotos as $photo) {
+                if ($photo->is_title_photo || $photo->is_primary_photo || $photo->is_groom_photo || $photo->is_bride_photo) {
+                    $filteredPhotos[] = $photo;
+                }
+            }
+        }
         // Set locale ke Bahasa Indonesia
         \Carbon\Carbon::setLocale('id');
 
@@ -52,7 +89,9 @@ class UndanganController extends Controller
         $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
         $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
 
-        return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'invitationGreetings', 'guestbook'));
+        $formattedDateTime = \Carbon\Carbon::parse($invitation->date_invitation . ' ' . $invitation->time_invitation)->format('M d, Y H:i:s');
+
+        return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'formattedDateTime', 'invitationGreetings', 'guestbook', 'ascendingPhotos', 'descendingPhotos', 'filteredPhotos'));
     }
 
 
@@ -60,8 +99,33 @@ class UndanganController extends Controller
     {
         $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
 
-        $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
-        $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
+        // Mengambil data galeri terkait
+        $galleries = $invitation->galleries;
+
+        // Mengambil data foto terkait dari setiap galeri (maksimal 3 foto per galeri)
+        $ascendingPhotos = [];
+        $descendingPhotos = [];
+        foreach ($galleries as $gallery) {
+            $ascendingSortedPhotos = $gallery->photos->sortBy('file_path')->take(3);
+            $descendingSortedPhotos = $gallery->photos->sortByDesc('file_path')->take(3);
+            foreach ($ascendingSortedPhotos as $photo) {
+                $ascendingPhotos[] = $photo;
+            }
+            foreach ($descendingSortedPhotos as $photo) {
+                $descendingPhotos[] = $photo;
+            }
+        }
+
+        // Mengambil data foto terkait dari setiap galeri yang memiliki is_title_photo bernilai true
+        $filteredPhotos = [];
+        foreach ($galleries as $gallery) {
+            $galleryPhotos = $gallery->photos;
+            foreach ($galleryPhotos as $photo) {
+                if ($photo->is_title_photo || $photo->is_primary_photo || $photo->is_groom_photo || $photo->is_bride_photo) {
+                    $filteredPhotos[] = $photo;
+                }
+            }
+        }
 
         // Set locale ke Bahasa Indonesia
         \Carbon\Carbon::setLocale('id');
@@ -69,7 +133,12 @@ class UndanganController extends Controller
         // Mengambil data relasi InvitationGreeting berdasarkan invitation_id
         $invitationGreetings = $invitation->invitationGreetings()->with('greeting')->get();
         // dd($invitation);
-        return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'invitationGreetings'));
+
+        $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
+        $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
+        $formattedDateTime = \Carbon\Carbon::parse($invitation->date_invitation . ' ' . $invitation->time_invitation)->format('M d, Y H:i:s');
+
+        return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'invitationGreetings', 'formattedDateTime', 'galleries', 'ascendingPhotos', 'descendingPhotos', 'filteredPhotos'));
     }
 
     public function simpanUcapan(Request $request)

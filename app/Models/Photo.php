@@ -9,7 +9,7 @@ class Photo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['gallery_id', 'file_name', 'file_path'];
+    protected $fillable = ['gallery_id', 'file_name', 'file_path', 'is_title_photo', 'is_primary_photo', 'is_groom_photo', 'is_bride_photo'];
 
     public function gallery()
     {

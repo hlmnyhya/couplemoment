@@ -37,7 +37,7 @@
     <style>
         body {
             background-image: url("{{ $invitation->theme->background_img }}");
-            background-size: contain;
+            background-size: cover;
             /* background-position: center; */
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -103,254 +103,255 @@
                 <h1 class="font-estetik my-4" style="font-size: 2.2rem; color:#FFD700">Undangan Pernikahan</h1>
                 <div class="py-4">
                     <div class="cropper border border-3 border-light shadow mx-auto">
-                        <img src="{{ asset('invitation/assets/images/sampul2.jpeg') }}" alt="bg"
-                            onclick="modalFoto(this)">
+                        @foreach ($filteredPhotos as $photo)
+                            @if ($photo->is_primary_photo)
+                                <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}" onclick="modalFoto(this)">
+                            @endif @endforeach
                     </div>
                 </div>
-                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name }}</h1>
-                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
-                <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name2 }}</h1>
-                <h4 style="color:#FFD700">{{ $formattedDate }}</h4>
-                <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
-                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
-                    <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
-                </a>
-                <div class="d-flex justify-content-center align-items-center mt-4 mb-2">
-                    <div class="mousey">
-                        <div class="scroller"></div>
+                <h1 class="font-estetik
+        my-4" style="font-size: 2.5rem;">{{ $invitation->name }}</h1>
+    <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
+    <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name2 }}</h1>
+    <h4 style="color:#FFD700">{{ $formattedDate }}</h4>
+    <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
+        <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
+    </a>
+    <div class="d-flex justify-content-center align-items-center mt-4 mb-2">
+        <div class="mousey">
+            <div class="scroller"></div>
+        </div>
+    </div>
+    <p class="m-0" style="color:#FFD700">Scroll Down</p>
+    </div>
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="mempelai">
+        <div class="text-center">
+            <h1 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+            <h1 class="font-estetik py-4 px-2" style="color:#FFD700">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+
+            <p class="pb-3 px-3">
+                Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat
+                sekalian untuk menghadiri acara pernikahan kami:
+            </p>
+
+            <div class="overflow-x-hidden">
+                <div data-aos="fade-right" data-aos-duration="2000">
+                    <div class="cropper border border-3 border-light shadow my-4 mx-auto">
+                        @foreach ($filteredPhotos as $photo)
+                            @if ($photo->is_groom_photo)
+                                <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
+                                    onclick="modalFoto(this)">
+                            @endif
+                        @endforeach
                     </div>
+                    <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name }}</h1>
+                    <h5 class="mt-3 mb-0">Putra</h5>
+                    <p class="mb-0">{{ $invitation->wali_name }}</p>
                 </div>
-                <p class="m-0" style="color:#FFD700">Scroll Down</p>
+
+                <h1 class="font-estetik my-4" style="font-size: 4rem; color:#FFD700">&</h1>
+
+                <div data-aos="fade-left" data-aos-duration="2000">
+                    <div class="cropper border border-3 border-light shadow my-4 mx-auto">
+                        @foreach ($filteredPhotos as $photo)
+                            @if ($photo->is_bride_photo)
+                                <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
+                                    onclick="modalFoto(this)">
+                            @endif
+                        @endforeach
+                    </div>
+                    <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name2 }}</h1>
+                    <h5 class="mt-3 mb-0">Putri</h5>
+                    <p class="mb-0">{{ $invitation->wali_name2 }}</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#111111" fill-opacity="1"
-                d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+        </path>
+    </svg>
 
-        <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="mempelai">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-estetik mt-0 mb-3" style="font-size: 2rem; color:#FFD700">Allah Subhanahu Wa Ta'ala
+                berfirman</h1>
+            <p style="font-size: 0.9rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
+                Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+                rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+                (kebesaran Allah) bagi kaum yang berpikir.
+            </p>
+            <span class="mb-0" style="color:#FFD700" data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+        </path>
+    </svg>
+
+    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="tanggal">
+        <div class="container">
             <div class="text-center">
-                <h1 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
-                <h1 class="font-estetik py-4 px-2" style="color:#FFD700">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+                <h1 class="font-estetik py-3" style="font-size: 2rem; color:#FFD700">Waktu Menuju Acara</h1>
+                <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
+                    <div class="row justify-content-center" data-waktu="2024-01-28 00:00:00" id="tampilan-waktu">
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="hari">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="jam">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="menit">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="detik">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
+                        </div>
+                    </div>
+                </div>
 
-                <p class="pb-3 px-3">
-                    Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat
-                    sekalian untuk menghadiri acara pernikahan kami:
+                <p style="font-size: 0.9rem;" class="mt-4 py-2">
+                    Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan
+                    acara :
                 </p>
 
                 <div class="overflow-x-hidden">
-                    <div data-aos="fade-right" data-aos-duration="2000">
-                        <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/pria.jpeg') }}" alt="bg"
-                                onclick="modalFoto(this)">
-                        </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name }}</h1>
-                        <h5 class="mt-3 mb-0">Putra</h5>
-                        <p class="mb-0">{{ $invitation->wali_name }}</p>
-                    </div>
-
-                    <h1 class="font-estetik my-4" style="font-size: 4rem; color:#FFD700">&</h1>
-
-                    <div data-aos="fade-left" data-aos-duration="2000">
-                        <div class="cropper border border-3 border-light shadow my-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/wanita.jpeg') }}" alt="bg"
-                                onclick="modalFoto(this)">
-                        </div>
-                        <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name2 }}</h1>
-                        <h5 class="mt-3 mb-0">Putri</h5>
-                        <p class="mb-0">{{ $invitation->wali_name2 }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#111111" fill-opacity="1"
-                d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
-            </path>
-        </svg>
-
-        <div class="container">
-            <div class="text-center">
-                <h1 class="font-estetik mt-0 mb-3" style="font-size: 2rem; color:#FFD700">Allah Subhanahu Wa Ta'ala berfirman</h1>
-                <p style="font-size: 0.9rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
-                    Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
-                    jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
-                    rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
-                    (kebesaran Allah) bagi kaum yang berpikir.
-                </p>
-                <span class="mb-0" style="color:#FFD700" data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
-            </div>
-        </div>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#111111" fill-opacity="1"
-                d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
-            </path>
-        </svg>
-
-        <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="tanggal">
-            <div class="container">
-                <div class="text-center">
-                    <h1 class="font-estetik py-3" style="font-size: 2rem; color:#FFD700">Waktu Menuju Acara</h1>
-                    <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
-                        <div class="row justify-content-center" data-waktu="2024-01-28 00:00:00" id="tampilan-waktu">
-                            <div class="col-3 p-1">
-                                <h2 class="d-inline m-0 p-0" id="hari">0</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
-                            </div>
-                            <div class="col-3 p-1">
-                                <h2 class="d-inline m-0 p-0" id="jam">0</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
-                            </div>
-                            <div class="col-3 p-1">
-                                <h2 class="d-inline m-0 p-0" id="menit">0</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
-                            </div>
-                            <div class="col-3 p-1">
-                                <h2 class="d-inline m-0 p-0" id="detik">0</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p style="font-size: 0.9rem;" class="mt-4 py-2">
-                        Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan
-                        acara :
-                    </p>
-
-                    <div class="overflow-x-hidden">
-                        {{-- <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
+                    {{-- <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
                             <h1 class="font-estetik" style="font-size: 2rem;">Akad</h1>
                             <p>Pukul 10.00 WIB - Selesai</p>
                         </div> --}}
 
-                        <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
-                            <h1 class="font-estetik" style="font-size: 2rem; color:#FFD700">Resepsi</h1>
-                            <p>Pukul {{ $formattedTime }} {{ $invitation->timezone }}</p>
-                        </div>
-                    </div>
-
-                    <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="{{ $invitation->address_url }}" target="_blank"
-                            class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3" style="color:#FFD700; border-color:#FFD700">
-                            <i class="fa-solid fa-map-location-dot me-2" style="color:#FFD700"></i>Lihat Google Maps
-                        </a>
-                        <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
-                            {{ $invitation->address_invitation }}
-                        </p>
+                    <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
+                        <h1 class="font-estetik" style="font-size: 2rem; color:#FFD700">Resepsi</h1>
+                        <p>Pukul {{ $formattedTime }} {{ $invitation->timezone }}</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="galeri">
-            <div class="container pb-2 pt-4">
-                <div class="card-body border rounded-4 shadow p-3">
-                    <h1 class="font-estetik text-center py-3" data-aos="fade-down" data-aos-duration="1500"
-                        style="font-size: 2rem; color:#FFD700">Galeri</h1>
-
-                    <div id="carouselExampleIndicators" data-aos="fade-up" data-aos-duration="1500"
-                        class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-
-                        <div class="carousel-inner rounded-4">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('invitation/assets/images/1.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('invitation/assets/images/2.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('invitation/assets/images/3.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                        </div>
-
-                        <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-
-                    </div>
-
-                    <div id="carousel2" data-aos="fade-up" data-aos-duration="1500" class="carousel slide mt-4"
-                        data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-
-                        <div class="carousel-inner rounded-4">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('invitation/assets/images/4.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('invitation/assets/images/5.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('invitation/assets/images/6.jpeg') }}" class="d-block w-100"
-                                    onclick="modalFoto(this)">
-                            </div>
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#111111" fill-opacity="1"
-                d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
-            </path>
-        </svg>
-
-        <div class="container">
-            <div class="py-4">
-                <div class="text-center">
-                    <h1 class="font-estetik mt-0 mb-3" style="font-size: 3rem; color:#FFD700">Love Gift</h1>
-                    <p class="mb-1" style="font-size: 0.9rem;">
-                        Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,
-                        dapat melalui :
+                <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
+                    <a href="{{ $invitation->address_url }}" target="_blank"
+                        class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3"
+                        style="color:#FFD700; border-color:#FFD700">
+                        <i class="fa-solid fa-map-location-dot me-2" style="color:#FFD700"></i>Lihat Google Maps
+                    </a>
+                    <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
+                        {{ $invitation->address_invitation }}
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="overflow-x-hidden">
-                        <div class="row justify-content-center">
-                            {{-- <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
+    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="galeri">
+        <div class="container pb-2 pt-4">
+            <div class="card-body border rounded-4 shadow p-3">
+                <h1 class="font-estetik text-center py-3" data-aos="fade-down" data-aos-duration="1500"
+                    style="font-size: 2rem; color:#FFD700">Galeri</h1>
+
+                <div id="carouselExampleIndicators" data-aos="fade-up" data-aos-duration="1500"
+                    class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-4">
+                        @foreach ($ascendingPhotos as $key => $photo)
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                <img src="{{ asset($photo->file_path) }}" class="d-block w-100"
+                                    onclick="modalFoto(this)">
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+
+                <div id="carousel2" data-aos="fade-up" data-aos-duration="1500" class="carousel slide mt-4"
+                    data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-4">
+                        @foreach ($descendingPhotos as $key => $photo)
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                <img src="{{ asset($photo->file_path) }}" class="d-block w-100"
+                                    onclick="modalFoto(this)">
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+        </path>
+    </svg>
+
+    <div class="container">
+        <div class="py-4">
+            <div class="text-center">
+                <h1 class="font-estetik mt-0 mb-3" style="font-size: 3rem; color:#FFD700">Love Gift</h1>
+                <p class="mb-1" style="font-size: 0.9rem;">
+                    Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,
+                    dapat melalui :
+                </p>
+
+                <div class="overflow-x-hidden">
+                    <div class="row justify-content-center">
+                        {{-- <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;"
                                 data-aos="fade-down" data-aos-duration="1500">
                                 <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1200px-BNI_logo.svg.png"
                                     class="img-fluid rounded" width="150" alt="bni">
@@ -364,88 +365,97 @@
                                     onclick="salin(this)" autofocus>Salin No. Rekening</button>
                             </div> --}}
 
-                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem; background-color:#fff"
-                                data-aos="fade-down" data-aos-duration="1500">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/2560px-BANK_BRI_logo.svg.png"
-                                    class="img-fluid rounded" width="150" alt="bri">
-                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;color: #000;font-weight: bold;">
-                                    No. Rekening {{ $invitation->no_rekening }}
-                                </p>
-                                <p class="card-text" style="font-size: 0.9rem;color: #000;font-weight: bold;">
-                                    a.n {{ $invitation->name_rekening }}
-                                </p>
-                                <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532" onclick="salin(this)" autofocus="" style="background-color: #00519d; color: #FFF;">Salin No. Rekening</button>
-                            </div>
+                        <div class="col-12 card-body border rounded-4 shadow p-3 m-3"
+                            style="max-width: 25rem; background-color:#fff" data-aos="fade-down"
+                            data-aos-duration="1500">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/2560px-BANK_BRI_logo.svg.png"
+                                class="img-fluid rounded" width="150" alt="bri">
+                            <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;color: #000;font-weight: bold;">
+                                No. Rekening {{ $invitation->no_rekening }}
+                            </p>
+                            <p class="card-text" style="font-size: 0.9rem;color: #000;font-weight: bold;">
+                                a.n {{ $invitation->name_rekening }}
+                            </p>
+                            <button class="btn btn-light btn-sm rounded-4" data-nomer="023901016984532"
+                                onclick="salin(this)" autofocus=""
+                                style="background-color: #00519d; color: #FFF;">Salin No. Rekening</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <section class="m-0 p-0" id="ucapan">
-            <div class="container">
-                <form id="form-ucapan" method="post" action="{{ route('simpan_ucapan') }}">
-                    @csrf
-                    <div class="card-body border rounded-4 shadow p-3">
-                        <h1 class="font-estetik text-center mb-3" style="font-size: 3rem; color:#FFD700">Ucapan & Doa</h1>
-                        <input type="hidden" id="idbalasan">
-                        <div class="mb-1" id="balasan"></div>
-                        <div class="mb-3">
-                            <label for="formnama" class="form-label">Nama</label>
-                            <input type="text" class="form-control shadow-sm" id="formnama" name="formnama" placeholder="Isikan Nama Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
-                            <select class="form-select shadow-sm" aria-label="selectkehadiran" id="hadiran" name="hadiran">
-                                <option value="0" selected>Konfirmasi Kehadiran</option>
-                                <option value="1">Hadir</option>
-                                <option value="2">Berhalangan</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="formpesan" class="form-label">Ucapan & Doa</label>
-                            <textarea class="form-control shadow-sm" id="formpesan" name="formpesan" rows="4" placeholder="Tulis Ucapan & Doa"></textarea>
-                        </div>
-                        <div class="d-grid mb-2">
-                            <button class="btn btn-primary btn-sm rounded-4 shadow" style="background-color: #FFD700; border-color:#FFD700" type="submit">
-                                Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
-                            </button>
-                        </div>
+    <section class="m-0 p-0" id="ucapan">
+        <div class="container">
+            <form id="form-ucapan" method="post" action="{{ route('simpan_ucapan') }}">
+                @csrf
+                <div class="card-body border rounded-4 shadow p-3">
+                    <h1 class="font-estetik text-center mb-3" style="font-size: 3rem; color:#FFD700">Ucapan & Doa</h1>
+                    <input type="hidden" id="idbalasan">
+                    <div class="mb-1" id="balasan"></div>
+                    <div class="mb-3">
+                        <label for="formnama" class="form-label">Nama</label>
+                        <input type="text" class="form-control shadow-sm" id="formnama" name="formnama"
+                            placeholder="Isikan Nama Anda">
                     </div>
-                </form>
-        
-                {{-- Tampilkan Data dari ucapan --}}
-                @foreach ($invitationGreetings as $invitationGreeting)
+                    <div class="mb-3">
+                        <label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
+                        <select class="form-select shadow-sm" aria-label="selectkehadiran" id="hadiran"
+                            name="hadiran">
+                            <option value="0" selected>Konfirmasi Kehadiran</option>
+                            <option value="1">Hadir</option>
+                            <option value="2">Berhalangan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formpesan" class="form-label">Ucapan & Doa</label>
+                        <textarea class="form-control shadow-sm" id="formpesan" name="formpesan" rows="4"
+                            placeholder="Tulis Ucapan & Doa"></textarea>
+                    </div>
+                    <div class="d-grid mb-2">
+                        <button class="btn btn-primary btn-sm rounded-4 shadow"
+                            style="background-color: #FFD700; border-color:#FFD700" type="submit">
+                            Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            {{-- Tampilkan Data dari ucapan --}}
+            @foreach ($invitationGreetings as $invitationGreeting)
                 <div class="rounded-4 mt-4 mb-2">
                     <div class="card-body bg-light shadow p-3 m-0 rounded-4">
                         <div class="d-flex flex-wrap justify-content-between align-items-center">
                             <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
                                 <strong class="me-1">{{ $invitationGreeting->greeting->nama }}</strong>
                                 @if ($invitationGreeting->greeting->kehadiran == 'hadir')
-                                <i class="fa-solid fa-circle-check text-success"></i>
-                            @elseif ($invitationGreeting->greeting->kehadiran == 'berhalangan')
-                                <i class="fa-solid fa-circle-xmark text-danger"></i>
-                            @endif
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                @elseif ($invitationGreeting->greeting->kehadiran == 'berhalangan')
+                                    <i class="fa-solid fa-circle-xmark text-danger"></i>
+                                @endif
                             </p>
-                            <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($invitationGreeting->greeting->created_at)->diffForHumans() }}</small>
+                            <small class="text-dark m-0 p-0"
+                                style="font-size: 0.75rem;">{{ \Carbon\Carbon::parse($invitationGreeting->greeting->created_at)->diffForHumans() }}</small>
                         </div>
                         <hr class="text-dark my-1">
-                        <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">{{ $invitationGreeting->greeting->ucapan_doa }}</p>
+                        <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">
+                            {{ $invitationGreeting->greeting->ucapan_doa }}</p>
                     </div>
                 </div>
-                <hr> @endforeach
-            
-            
+                <hr>
+            @endforeach
 
-    </div>
+
+
+        </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320">
-    <path fill="#111111" fill-opacity="1"
-        d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-    </path>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#111111" fill-opacity="1"
+            d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
     </svg>
 
     <div style="background-color: #111111 !important; margin-top: -5px; padding-bottom: 4rem;">
@@ -523,10 +533,16 @@
                 <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
                     <div class="text-center">
                         <h1 class="font-estetik mb-4" style="font-size: 2.2rem; color:#FFD700;">The Wedding Of</h1>
+
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg"
-                                style="width: 100%; height: auto;">
+                            @foreach ($filteredPhotos as $photo)
+                                @if ($photo->is_title_photo)
+                                    <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
+                                        style="width: 100%; height: auto;">
+                                @endif
+                            @endforeach
                         </div>
+
                         <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">
                             {{ $invitation->panggilan_pria }}
                             & {{ $invitation->panggilan_perempuan }}</h1>
@@ -538,7 +554,11 @@
                         <div id="namatamu"></div>
                         <div>
                             <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
-                            <h2 class="text-light">{{ $guestbook->guest_name }}</h2>
+                            @if (Route::currentRouteName() === 'show_invitation')
+                                <h2 class="text-light">{{ $guestbook->guest_name }}</h2>
+                            @else
+                                <br>
+                            @endif
                         </div>
                         <button type="button" class="btn btn-light shadow rounded-4 mt-4"
                             style="background-color: #fff; color:#212529" data-bs-toggle="modal"
@@ -613,7 +633,7 @@
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Jan 28, 2024 08:00:00").getTime();
+    var countDownDate = new Date("{{ $formattedDateTime }}").getTime();
 
     // Update the countdown every 1 second
     var x = setInterval(function() {

@@ -16,6 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('gallery_id');
             $table->string('file_name');
             $table->string('file_path');
+            $table->boolean('is_title_photo')->default(false);
+            $table->boolean('is_primary_photo')->default(false);
+            $table->boolean('is_groom_photo')->default(false);
+            $table->boolean('is_bride_photo')->default(false);
             $table->timestamps();
 
             // Tambahkan kunci asing
