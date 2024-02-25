@@ -36,7 +36,7 @@
 
     <style>
         body {
-            background-image: url("{{ asset('invitation/assets/images/bg3.jpg') }}");
+            background-image: url("{{ $invitation->theme->background_img }}");
             background-size: cover;
             /* background-position: center; */
             background-repeat: no-repeat;

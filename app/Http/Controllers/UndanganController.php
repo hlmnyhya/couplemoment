@@ -40,12 +40,15 @@ class UndanganController extends Controller
         $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
         $guestbook = GuestBook::where('slug', $slug)->where('invitation_id', $invitation->id)->firstOrFail();
 
+        // Mengambil data tema (theme) terkait
+        $theme = $invitation->theme;
+
         // Set locale ke Bahasa Indonesia
         \Carbon\Carbon::setLocale('id');
 
         // Mengambil data relasi InvitationGreeting berdasarkan invitation_id
         $invitationGreetings = $invitation->invitationGreetings()->with('greeting')->get();
-        // dd($invitation);
+        // dd($invitation->theme->background_img);
         $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
         $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
 
