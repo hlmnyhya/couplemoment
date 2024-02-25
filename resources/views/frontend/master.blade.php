@@ -353,9 +353,9 @@
                             $uniqueCategories = $theme->categories->unique('theme_id');
                         @endphp
                         @foreach ($uniqueCategories as $category)
-                            <div class="col-lg-3 col-md-4 portfolio-item filter-{{ $category->name }}">
-                                <div class="portfolio-wrap d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset($theme->cover) }}" class="img-fluid h-50 w-50"
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $category->name }}">
+                                <div class="portfolio-wrap">
+                                    <img src="{{ asset($theme->cover) }}" class="img-fluid"
                                         alt="{{ $theme->name }}">
                                     <div class="portfolio-info">
                                         <h4>{{ $theme->name }}</h4>
@@ -1194,6 +1194,7 @@
 
     {{-- contact section --}}
 
+    {{-- SEND CONTACT --}}
     <script>
         function sendMessage(event) {
             event.preventDefault();
