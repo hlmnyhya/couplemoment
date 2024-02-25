@@ -37,7 +37,7 @@
     <style>
         body {
             background-image: url("{{ $invitation->theme->background_img }}");
-            background-size: cover;
+            background-size: contain;
             /* background-position: center; */
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -518,12 +518,14 @@
 
     <div class="modal" id="exampleModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
-            <div class="modal-content m-0 p-0">
+            <div class="modal-content m-0 p-0"
+                style="background-image: url({{ $invitation->theme->background_img }}); background-size: cover; background-repeat: no-repeat;">
                 <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
                     <div class="text-center">
                         <h1 class="font-estetik mb-4" style="font-size: 2.2rem; color:#FFD700;">The Wedding Of</h1>
                         <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
-                            <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg">
+                            <img src="{{ asset('invitation/assets/images/sampul1.jpeg') }}" alt="bg"
+                                style="width: 100%; height: auto;">
                         </div>
                         <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">
                             {{ $invitation->panggilan_pria }}
@@ -548,6 +550,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipcountdown/3.0.5/jquery.flipcountdown.min.js"
