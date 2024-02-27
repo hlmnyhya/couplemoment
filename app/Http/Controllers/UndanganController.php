@@ -99,6 +99,9 @@ class UndanganController extends Controller
     {
         $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
 
+        // Mendapatkan data soundbank terkait
+        $soundbank = $invitation->soundbank;
+
         // Mengambil data galeri terkait
         $galleries = $invitation->galleries;
 
@@ -137,7 +140,7 @@ class UndanganController extends Controller
         $formattedDate = \Carbon\Carbon::parse($invitation->date_invitation)->isoFormat('dddd, D MMMM YYYY');
         $formattedTime = \Carbon\Carbon::parse($invitation->time_invitation)->format('H.i');
         $formattedDateTime = \Carbon\Carbon::parse($invitation->date_invitation . ' ' . $invitation->time_invitation)->format('M d, Y H:i:s');
-
+        // dd($soundbank->file_mp3);
         return view('frontend.invitation-pages.invitation', compact('invitation', 'formattedDate', 'formattedTime', 'invitationGreetings', 'formattedDateTime', 'galleries', 'ascendingPhotos', 'descendingPhotos', 'filteredPhotos'));
     }
 

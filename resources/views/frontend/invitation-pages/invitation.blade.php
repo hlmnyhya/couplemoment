@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Muhammad Aldiyanoor & Rinta Ariani</title>
+    <title>{{ $invitation->name }} & {{ $invitation->name2 }}</title>
     <meta name="title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg') }}">
     {{-- <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> --}}
@@ -493,7 +493,11 @@
 
     <button type="button" id="tombol-musik" style="display: none;"
         class="btn btn-light btn-sm rounded-circle btn-music" onclick="play(this)" data-status="true"
-        data-url="{{ asset('invitation/assets/music/sound2.mp3') }}">
+        data-url="{{ asset('') . $invitation->soundbank->file_mp3 }}">
+
+        {{-- <button type="button" id="tombol-musik" style="display: none;"
+        class="btn btn-light btn-sm rounded-circle btn-music" onclick="play(this)" data-status="true"
+        data-url="{{ asset('invitation/assets/music/sound2.mp3') }}"> --}}
         <i class="fa-solid fa-circle-pause"></i>
     </button>
 
