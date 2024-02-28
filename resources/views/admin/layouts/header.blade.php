@@ -10,17 +10,17 @@
             <div class="header-element">
                 <div class="horizontal-logo">
                     <a href="index.html" class="header-logo">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-logo.png" alt="logo"
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-logo.svg" alt="logo"
                             class="desktop-logo">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-logo.png" alt="logo"
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-logo.svg" alt="logo"
                             class="toggle-logo">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-dark.png" alt="logo"
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-dark.svg" alt="logo"
                             class="desktop-dark">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-dark.png" alt="logo"
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-dark.svg" alt="logo"
                             class="toggle-dark">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-white.png"
-                            alt="logo" class="desktop-white">
-                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-white.png" alt="logo"
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/desktop-logo.svg" alt="logo"
+                            class="desktop-white">
+                        <img src="{{ asset('backend') }}/dist/assets/images/brand-logos/toggle-logo.svg" alt="logo"
                             class="toggle-white">
                     </a>
                 </div>

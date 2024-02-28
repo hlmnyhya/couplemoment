@@ -256,33 +256,30 @@
                             <div class="row col-12" style="justify-content: center">
                                 <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
-                                        <i class="bi bi-calendar3" style="color: #cad018;"></i>
+                                        <i class="bi bi-calendar3"></i>
                                         <div>
                                             <span data-purecounter-start="0" data-purecounter-end="999"
-                                                data-purecounter-duration="1" class="purecounter"
-                                                style="color: #cad018;"></span>
+                                                data-purecounter-duration="1" class="purecounter"></span>
                                             <p>Undangan dalam proses peluncuran</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
-                                        <i class="bi bi-envelope-paper-heart" style="color: #15be56;"></i>
+                                        <i class="bi bi-envelope-paper-heart"></i>
                                         <div>
                                             <span data-purecounter-start="0" data-purecounter-end="999"
-                                                data-purecounter-duration="2" class="purecounter"
-                                                style="color: #15be56;"></span>
+                                                data-purecounter-duration="2" class="purecounter"></span>
                                             <p>Undangan yang sedang berjalan</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-3">
                                     <div class="count-box">
-                                        <i class="bi bi-rocket-takeoff" style="color: #153cbe;"></i>
+                                        <i class="bi bi-rocket-takeoff"></i>
                                         <div>
                                             <span data-purecounter-start="0" data-purecounter-end="999"
-                                                data-purecounter-duration="3" class="purecounter"
-                                                style="color: #153cbe;"></span>
+                                                data-purecounter-duration="3" class="purecounter"></span>
                                             <p>Undangan yang sudah diluncurkan</p>
                                         </div>
                                     </div>
@@ -526,7 +523,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
 
@@ -572,7 +569,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
 
@@ -618,7 +615,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
                     </div>
@@ -670,7 +667,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
 
@@ -719,7 +716,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
 
@@ -769,7 +766,7 @@
                                     <li class="na"><span class="bi bi-c-circle mr-5 mt-1"
                                             style="color: #1400c6;margin-right: 10px;"></span>Uang Tunai Online</li>
                                 </ul>
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Beli Sekarang</a>
                             </div>
                         </div>
                     </div>
@@ -916,26 +913,26 @@
                             <div class="row gy-4">
                                 <div class="col-md-6">
                                     <div class="info-box">
-                                        <h3><i class="bi bi-telephone"></i>Call Us</h3>
+                                        <h3><i class="bi bi-telephone"></i>Hubungi Kami</h3>
                                         <p>+62 815-2846-4820</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="info-box">
-                                        <h3><i class="bi bi-envelope"></i>Email Us</h3>
+                                        <h3><i class="bi bi-envelope"></i>Email</h3>
                                         <p>cs@couplemoment.com</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="info-box">
-                                        <h3><i class="bi bi-geo-alt"></i>Address</h3>
+                                        <h3><i class="bi bi-geo-alt"></i>Alamat</h3>
                                         <p>Jl. A.Yani Km. 63, RT.18 / RW.3, Desa Panggung, Kecamatan Pelaihari,
                                             Kabupaten Tanah Laut, Provinsi Kalimantan Selatan, 70815</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="info-box">
-                                        <h3><i class="bi bi-clock"></i>Open Hours</h3>
+                                        <h3><i class="bi bi-clock"></i>Jam Pelayanan</h3>
                                         <p>Senin - Minggu<br>9:00 AM - 05:00 PM</p>
                                     </div>
                                 </div>
@@ -982,11 +979,11 @@
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <input type="text" name="name" class="form-control"
-                                            placeholder="Your Name" required>
+                                            placeholder="Masukan Nama" required>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="email" class="form-control" name="email"
-                                            placeholder="Your Email" required>
+                                            placeholder="MAsukan Email" required>
                                     </div>
                                     <div class="col-md-12">
                                         <input type="text" class="form-control" name="subject"
@@ -1000,7 +997,7 @@
                                         <div class="loading">Loading</div>
                                         {{-- <div class="error-message"></div> --}}
                                         <div class="sent-message">Your message has been sent. Thank you!</div>
-                                        <button type="submit">Send Message</button>
+                                        <button type="submit">Kirim Pesan</button>
                                     </div>
                                 </div>
                             </form>
