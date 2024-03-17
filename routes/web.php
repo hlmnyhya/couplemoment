@@ -120,6 +120,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
     Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
+    Route::get('demo/theme/{id}', [UserThemeController::class, 'demo'])->name('demo.theme');
 });
 
 
@@ -136,8 +137,12 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::post('/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
 })->middleware(['auth', 'verified']);
 
+
+
 Route::get('/my-undangan/{title_invitation}', [UndanganController::class, 'show_by_url'])->name('show_invitation_by_url');
 Route::get('/invitation/{title_invitation}/{slug}', [UndanganController::class, 'show'])->name('show_invitation');
 Route::post('/simpan_ucapan', [UndanganController::class, 'simpanUcapan'])->name('simpan_ucapan');
+
+
 
 require __DIR__ . '/auth.php';

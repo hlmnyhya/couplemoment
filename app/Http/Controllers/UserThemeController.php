@@ -30,6 +30,16 @@ class UserThemeController extends Controller
         return view('admin.themeuser.detail', compact('theme', 'categories'));
     }
 
+
+    public function demo($id)
+    {
+        $theme = Theme::find($id); // Tema dengan ID yang diberikan
+        $categories = $theme->categories; // Mendapatkan kategori-kategori dari tema
+        // dd($categories);
+        return view('frontend.invitation-pages.demo', compact('theme', 'categories'));
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */

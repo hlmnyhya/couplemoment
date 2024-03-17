@@ -9,12 +9,23 @@ use App\Models\Theme;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class InvitationController extends Controller
 {
     public function index()
     {
-        $themes = Theme::all(); // Mengambil semua tema dari database
+        // $themes = Theme::all(); // Mengambil semua tema dari database
+
+        $userStatus = Auth::user()->status; // Mengambil status pengguna yang sedang login
+
+        // Mengambil semua tema dari database yang statusnya adalah premium (1)
+        $themes = Theme::where('status', 1)->get();
+
+        // Jika status pengguna adalah "Free" (0), maka tema premium tidak ditampilkan
+        if ($userStatus == 0) {
+            $themes = collect(); // Membuat collection kosong jika pengguna adalah "Free"
+        }
 
         $soundbanks = SoundBank::all(); // Mengambil semua bank suara dari database
 

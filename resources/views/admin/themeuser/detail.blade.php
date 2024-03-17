@@ -147,14 +147,25 @@
                                                             <h6>Total Price</h6>
                                                             <h5 class="mb-0 fw-semibold">$4,099 </h5>
                                                         </div> --}}
+                                                        {{-- {{ $theme->status }} --}}
                                                         <div class="ms-auto">
                                                             <div class="">
-                                                                <a href="{{ route('invitation.index', ['theme_id' => $theme->id]) }}"
-                                                                    target="_blank" class="btn btn-primary">Buat
-                                                                    Undangan</a>
+                                                                @if (Auth::user()->status == 1)
+                                                                    <a href="{{ route('invitation.index', ['theme_id' => $theme->id]) }}"
+                                                                        target="_blank" class="btn btn-primary">Buat
+                                                                        Undangan</a>
+                                                                @elseif (Auth::user()->status == 0 && $theme->status == 'Free')
+                                                                    <a href="{{ route('invitation.index', ['theme_id' => $theme->id]) }}"
+                                                                        target="_blank" class="btn btn-primary">Buat
+                                                                        Undangan</a>
+                                                                @else
+                                                                    Anda dapat berlangganan lebih dahulu!
+                                                                @endif
                                                             </div>
-
                                                         </div>
+
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -240,8 +251,9 @@
                                                 <div class="mb-4">
                                                     {{-- <a href="cart.html" class="btn btn-warning me-2 mb-2">Masukan
                                                         Keranjang</a> --}}
-                                                    <a href="checkout.html" class="btn btn-success me-2 mb-2">Demo
-                                                        Undangan</a>
+                                                    <a href="{{ route('demo.theme', ['id' => $theme->id]) }}"
+                                                        class="btn btn-success me-2 mb-2" target="_blank">Demo Undangan</a>
+
                                                 </div>
                                                 {{-- <div class="mb-4">
                                                     <p class="fs-15 fw-semibold mb-1"><i
