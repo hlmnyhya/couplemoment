@@ -15,17 +15,11 @@ class InvitationController extends Controller
 {
     public function index()
     {
-        // $themes = Theme::all(); // Mengambil semua tema dari database
 
         $userStatus = Auth::user()->status; // Mengambil status pengguna yang sedang login
 
-        // Mengambil semua tema dari database yang statusnya adalah premium (1)
-        $themes = Theme::where('status', 1)->get();
-
-        // Jika status pengguna adalah "Free" (0), maka tema premium tidak ditampilkan
-        if ($userStatus == 0) {
-            $themes = collect(); // Membuat collection kosong jika pengguna adalah "Free"
-        }
+        // Mengambil tema-tema yang sesuai dengan status pengguna
+        $themes = Theme::where('status', $userStatus)->get();
 
         $soundbanks = SoundBank::all(); // Mengambil semua bank suara dari database
 
@@ -34,6 +28,7 @@ class InvitationController extends Controller
             'soundbanks' => $soundbanks // Mengirim data bank suara ke tampilan
         ]);
     }
+
 
 
     public function store(Request $request)
