@@ -48,13 +48,21 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        @media (max-width: 768px) {
-            body {
-                background-size: contain;
-                width: 100vh; /* Height becomes width after rotation */
-                height: 100vw; /* Width becomes height after rotation */
-            }
-        }
+      
+        @media (min-width: 320px) and (max-width: 768px) {
+            #exampleModal .modal-content {
+        background-size: cover; /* Mengatur background untuk memenuhi seluruh area elemen */
+        background-position: center; /* Mengatur posisi background agar tetap di tengah */
+    }
+    body {
+        background-image: url("{{ $invitation->theme->background_img }}");
+        background-size: cover; /* Mengatur background untuk memenuhi seluruh area elemen */
+        background-position: center; /* Mengatur posisi background agar tetap di tengah */
+        width: 100vw; /* Mengatur lebar elemen body sama dengan lebar layar */
+        height: 100vh; /* Mengatur tinggi elemen body sama dengan tinggi layar */
+    }
+}
+
     </style>
 </head>
 
