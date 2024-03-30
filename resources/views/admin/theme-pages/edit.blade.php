@@ -118,6 +118,16 @@
                                 </div>
 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-lg-12 mb-3">
+                                    <label for="color_palette" class="form-label">Color Palette</label>
+                                    <select class="form-select" id="color_palette" name="color_palette" required>
+                                        <option value="dark" {{ $theme->color_palette == 'dark' ? 'selected' : '' }}>
+                                            Dark</option>
+                                        <option value="light" {{ $theme->color_palette == 'light' ? 'selected' : '' }}>
+                                            Light</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-lg-12 mb-3">
                                     <label for="description" class="form-label">Description</label>
                                     <textarea class="form-control" id="description" name="description" placeholder="Description" required
                                         cols="30" rows="10">{{ $theme->description }}</textarea>

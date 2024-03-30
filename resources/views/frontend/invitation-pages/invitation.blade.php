@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $invitation->name }} & {{ $invitation->name2 }}</title>
-    <meta name="title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
+    <meta name="title" content="">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg') }}">
     {{-- <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> --}}
     <meta name="theme-color" content="#212529">
     <meta name="color-scheme" content="dark">
-    <meta property="og:title" content="Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani">
-    <meta property="og:description"
-        content="Website Undangan Pernikahan Muhammad Aldiyanoor & Rinta Ariani Secara Online">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="Website  Secara Online">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Undangan">
@@ -108,9 +107,11 @@
 
         <section class="container" id="home">
             <div class="text-center pt-4">
-                <h1 class="font-estetik my-4" style="font-size: 2.2rem; color:#FFD700">Undangan Pernikahan</h1>
+                <h1 class="font-estetik my-4" style="font-size: 2.2rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">Undangan Pernikahan</h1>
+
                 <div class="py-4">
-                    <div class="cropper border border-3 border-light shadow mx-auto">
+                    <div
+                    class="cropper border border-3 {{ $invitation->theme->color_palette === 'light' ? 'border-dark' : 'border-light' }} shadow my-4 mx-auto">
                         @foreach ($filteredPhotos as $photo)
                             @if ($photo->is_primary_photo)
                                 <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}" onclick="modalFoto(this)">
@@ -118,42 +119,68 @@
                     </div>
                 </div>
                 <h1 class="font-estetik
-        my-4" style="font-size: 2.5rem;">{{ $invitation->name }}</h1>
-    <h1 class="font-estetik my-4" style="font-size: 2.5rem;">&</h1>
-    <h1 class="font-estetik my-4" style="font-size: 2.5rem;">{{ $invitation->name2 }}</h1>
-    <h4 style="color:#FFD700">{{ $formattedDate }}</h4>
-    <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank"
+        my-4"
+        style="font-size: 2.5rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">
+    {{ $invitation->name }}</h1>
+    <h1 class="font-estetik my-4"
+        style="font-size: 2.5rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">&
+    </h1>
+    <h1 class="font-estetik my-4"
+        style="font-size: 2.5rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">
+        {{ $invitation->name2 }}</h1>
+    <h4 style="color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">
+        {{ $formattedDate }}</h4>
+
+    <a class="btn btn-outline-<?= $invitation->theme->color_palette === 'dark' ? 'light' : 'dark' ?> btn-sm shadow rounded-pill px-3 my-2"
+        target="_blank"
         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
         <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
     </a>
+
     <div class="d-flex justify-content-center align-items-center mt-4 mb-2">
-        <div class="mousey">
-            <div class="scroller"></div>
+        <div class="mousey"
+            style="border-color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">
+            <div class="scroller"
+                style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>;">
+            </div>
         </div>
     </div>
-    <p class="m-0" style="color:#FFD700">Scroll Down</p>
-    </div>
+
+    <p class="m-0" style="color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">Scroll
+        Down</p>
+
     </section>
+    @if ($invitation->theme->color_palette === 'dark')
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#111111" fill-opacity="1"
+                d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    @endif
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-        </path>
-    </svg>
+    <section
+        style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#111111' : '' ?> !important; margin-top: -5px; margin-bottom: -5px;"
+        id="mempelai">
 
-    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="mempelai">
         <div class="text-center">
-            <h1 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
-            <h1 class="font-estetik py-4 px-2" style="color:#FFD700">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+            <h1 class="font-arabic py-4 px-2"
+                style="font-size: 2rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+            <h1 class="font-estetik py-4 px-2"
+                style="color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                Assalamualaikum Warahmatullahi Wabarakatuh</h1>
 
-            <p class="pb-3 px-3">
+            <p class="pb-3 px-3" style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>">
                 Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat
                 sekalian untuk menghadiri acara pernikahan kami:
             </p>
 
+
             <div class="overflow-x-hidden">
                 <div data-aos="fade-right" data-aos-duration="2000">
-                    <div class="cropper border border-3 border-light shadow my-4 mx-auto">
+                    <div
+                        class="cropper border border-3 <?= $invitation->theme->color_palette === 'light' ? 'border-dark' : 'border-light' ?> shadow my-4 mx-auto">
+
                         @foreach ($filteredPhotos as $photo)
                             @if ($photo->is_groom_photo)
                                 <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
@@ -161,15 +188,24 @@
                             @endif
                         @endforeach
                     </div>
-                    <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name }}</h1>
-                    <h5 class="mt-3 mb-0">Putra</h5>
-                    <p class="mb-0">{{ $invitation->wali_name }}</p>
+                    <h1 class="font-estetik1"
+                        style="font-size: 2.3rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                        {{ $invitation->name }}</h1>
+                    <h5 class="mt-3 mb-0"
+                        style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>">Putra</h5>
+                    <p class="mb-0"
+                        style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>">
+                        {{ $invitation->wali_name }}</p>
+
                 </div>
 
-                <h1 class="font-estetik my-4" style="font-size: 4rem; color:#FFD700">&</h1>
+                <h1 class="font-estetik my-4"
+                    style="font-size: 4rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                    &</h1>
 
                 <div data-aos="fade-left" data-aos-duration="2000">
-                    <div class="cropper border border-3 border-light shadow my-4 mx-auto">
+                    <div
+                        class="cropper border border-3 <?= $invitation->theme->color_palette === 'light' ? 'border-dark' : 'border-light' ?> shadow my-4 mx-auto">
                         @foreach ($filteredPhotos as $photo)
                             @if ($photo->is_bride_photo)
                                 <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
@@ -177,69 +213,99 @@
                             @endif
                         @endforeach
                     </div>
-                    <h1 class="font-estetik1" style="font-size: 2.3rem; color:#FFD700">{{ $invitation->name2 }}</h1>
-                    <h5 class="mt-3 mb-0">Putri</h5>
-                    <p class="mb-0">{{ $invitation->wali_name2 }}</p>
+                    <h1 class="font-estetik1"
+                        style="font-size: 2.3rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                        {{ $invitation->name2 }}</h1>
+                    <h5 class="mt-3 mb-0"
+                        style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>">Putri</h5>
+                    <p class="mb-0"
+                        style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>">
+                        {{ $invitation->wali_name2 }}</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
-        </path>
-    </svg>
+    @if ($invitation->theme->color_palette === 'dark')
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#111111" fill-opacity="1"
+                d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+            </path>
+        </svg>
+    @endif
+
 
     <div class="container">
         <div class="text-center">
-            <h1 class="font-estetik mt-0 mb-3" style="font-size: 2rem; color:#FFD700">Allah Subhanahu Wa Ta'ala
-                berfirman</h1>
-            <p style="font-size: 0.9rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="font-estetik mt-0 mb-3"
+                style="font-size: 2rem; color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' ?>">
+                Allah Subhanahu Wa Ta'ala berfirman</h1>
+            <p style="font-size: 0.9rem; color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '' ?>"
+                class="px-2" data-aos="fade-up" data-aos-duration="1500">
                 Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
                 jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
                 rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
                 (kebesaran Allah) bagi kaum yang berpikir.
             </p>
-            <span class="mb-0" style="color:#FFD700" data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
+            <span class="mb-0"
+                style="color: <?= $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' ?>"
+                data-aos="fade-up"><strong>QS. Ar-Rum Ayat 21</strong></span>
         </div>
     </div>
+    @if ($invitation->theme->color_palette === 'dark')
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#111111" fill-opacity="1"
+                d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+            </path>
+        </svg>
+    @endif
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
-        </path>
-    </svg>
 
-    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="tanggal">
+    <section
+        style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#111111' : '' ?> !important; margin-top: -5px; margin-bottom: -5px;"
+        id="tanggal">
         <div class="container">
             <div class="text-center">
-                <h1 class="font-estetik py-3" style="font-size: 2rem; color:#FFD700">Waktu Menuju Acara</h1>
+                <h1 class="font-estetik py-3"
+                    style="font-size: 2rem; color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}">
+                    Waktu Menuju Acara</h1>
+
                 <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
                     <div class="row justify-content-center" data-waktu="2024-01-28 00:00:00" id="tampilan-waktu">
                         <div class="col-3 p-1">
-                            <h2 class="d-inline m-0 p-0" id="hari">0</h2><small
-                                class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
+                            <h2 class="d-inline m-0 p-0" id="hari"
+                                style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}">
+                                0</h2>
+                            <small class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
                         </div>
                         <div class="col-3 p-1">
-                            <h2 class="d-inline m-0 p-0" id="jam">0</h2><small
-                                class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
+                            <h2 class="d-inline m-0 p-0" id="jam"
+                                style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}">
+                                0</h2>
+                            <small class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
                         </div>
                         <div class="col-3 p-1">
-                            <h2 class="d-inline m-0 p-0" id="menit">0</h2><small
-                                class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
+                            <h2 class="d-inline m-0 p-0" id="menit"
+                                style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}">
+                                0</h2>
+                            <small class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
                         </div>
                         <div class="col-3 p-1">
-                            <h2 class="d-inline m-0 p-0" id="detik">0</h2><small
-                                class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
+                            <h2 class="d-inline m-0 p-0" id="detik"
+                                style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}">
+                                0</h2>
+                            <small class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
                         </div>
                     </div>
                 </div>
 
-                <p style="font-size: 0.9rem;" class="mt-4 py-2">
+                <p style="font-size: 0.9rem; color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}"
+                    class="mt-4 py-2">
                     Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan
                     acara :
                 </p>
+
+
 
                 <div class="overflow-x-hidden">
                     {{-- <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
@@ -248,30 +314,43 @@
                         </div> --}}
 
                     <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
-                        <h1 class="font-estetik" style="font-size: 2rem; color:#FFD700">Resepsi</h1>
-                        <p>Pukul {{ $formattedTime }} {{ $invitation->timezone }}</p>
+                        <h1 class="font-estetik"
+                            style="font-size: 2rem; color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#fff' }}">
+                            Resepsi</h1>
+                        <p style="color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">
+                            Pukul {{ $formattedTime }} {{ $invitation->timezone }}</p>
+
                     </div>
                 </div>
 
                 <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
                     <a href="{{ $invitation->address_url }}" target="_blank"
                         class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3"
-                        style="color:#FFD700; border-color:#FFD700">
-                        <i class="fa-solid fa-map-location-dot me-2" style="color:#FFD700"></i>Lihat Google Maps
+                        style="color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}; border-color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}">
+                        <i class="fa-solid fa-map-location-dot me-2"
+                            style="color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}"></i>Lihat
+                        Google Maps
                     </a>
-                    <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
+
+                    <<p class="mb-0 mt-1 mx-1 pb-4"
+                        style="font-size: 0.9rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">
                         {{ $invitation->address_invitation }}
-                    </p>
+                        </p>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #111111 !important; margin-top: -5px; margin-bottom: -5px;" id="galeri">
+    <section
+        style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#111111' : '' ?> !important; margin-top: -5px; margin-bottom: -5px;"
+        id="galeri">
         <div class="container pb-2 pt-4">
             <div class="card-body border rounded-4 shadow p-3">
                 <h1 class="font-estetik text-center py-3" data-aos="fade-down" data-aos-duration="1500"
-                    style="font-size: 2rem; color:#FFD700">Galeri</h1>
+                    style="font-size: 2rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}">
+                    Galeri
+                </h1>
 
                 <div id="carouselExampleIndicators" data-aos="fade-up" data-aos-duration="1500"
                     class="carousel slide" data-bs-ride="carousel">
@@ -342,20 +421,27 @@
         </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
-        </path>
-    </svg>
+    @if ($invitation->theme->color_palette === 'dark')
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#111111" fill-opacity="1"
+                d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+            </path>
+        </svg>
+    @endif
 
     <div class="container">
         <div class="py-4">
             <div class="text-center">
-                <h1 class="font-estetik mt-0 mb-3" style="font-size: 3rem; color:#FFD700">Love Gift</h1>
-                <p class="mb-1" style="font-size: 0.9rem;">
-                    Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,
-                    dapat melalui :
+                <h1 class="font-estetik mt-0 mb-3"
+                    style="font-size: 3rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}">
+                    Love Gift</h1>
+
+                <p class="mb-1"
+                    style="font-size: 0.9rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">
+                    Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui
+                    :
                 </p>
+
 
                 <div class="overflow-x-hidden">
                     <div class="row justify-content-center">
@@ -400,34 +486,53 @@
             <form id="form-ucapan" method="post" action="{{ route('simpan_ucapan') }}">
                 @csrf
                 <div class="card-body border rounded-4 shadow p-3">
-                    <h1 class="font-estetik text-center mb-3" style="font-size: 3rem; color:#FFD700">Ucapan & Doa</h1>
+                    <h1 class="font-estetik text-center mb-3"
+                        style="font-size: 3rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}">
+                        Ucapan & Doa</h1>
+
                     <input type="hidden" id="idbalasan">
                     <div class="mb-1" id="balasan"></div>
                     <div class="mb-3">
-                        <label for="formnama" class="form-label">Nama</label>
+                        <label for="formnama" class="form-label"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">Nama</label>
                         <input type="text" class="form-control shadow-sm" id="formnama" name="formnama"
-                            placeholder="Isikan Nama Anda">
+                            placeholder="Isikan Nama Anda"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">
                     </div>
                     <div class="mb-3">
-                        <label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
+                        <label for="hadiran" class="form-label" id="labelhadir"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">Kehadiran</label>
                         <select class="form-select shadow-sm" aria-label="selectkehadiran" id="hadiran"
-                            name="hadiran">
+                            name="hadiran"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#FFFFFF' : '' }}">
                             <option value="0" selected>Konfirmasi Kehadiran</option>
                             <option value="1">Hadir</option>
                             <option value="2">Berhalangan</option>
                         </select>
+
                     </div>
                     <div class="mb-3">
-                        <label for="formpesan" class="form-label">Ucapan & Doa</label>
+                        <label for="formpesan" class="form-label"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">Ucapan
+                            & Doa</label>
                         <textarea class="form-control shadow-sm" id="formpesan" name="formpesan" rows="4"
-                            placeholder="Tulis Ucapan & Doa"></textarea>
+                            placeholder="Tulis Ucapan & Doa"
+                            style="color: {{ $invitation->theme->color_palette === 'light' ? '#FFFFFF' : '#000000' }};
+                                   caret-color: {{ $invitation->theme->color_palette === 'light' ? '#FFFFFF' : '#000000' }};
+                                   ::placeholder {{ $invitation->theme->color_palette === 'light' ? '' : '{color: #000000;}' }}">
+                        </textarea>
+
+
                     </div>
+
                     <div class="d-grid mb-2">
                         <button class="btn btn-primary btn-sm rounded-4 shadow"
-                            style="background-color: #FFD700; border-color:#FFD700" type="submit">
+                            style="background-color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}; border-color: {{ $invitation->theme->color_palette === 'light' ? '#000000' : '#FFD700' }}"
+                            type="submit">
                             Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
                         </button>
                     </div>
+
                 </div>
             </form>
 
@@ -460,28 +565,38 @@
         </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#111111" fill-opacity="1"
-            d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-        </path>
-    </svg>
+    @if ($invitation->theme->color_palette === 'dark')
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#111111" fill-opacity="1"
+                d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+        </svg>
+    @endif
 
-    <div style="background-color: #111111 !important; margin-top: -5px; padding-bottom: 4rem;">
+    <div
+        style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#111111' : '' ?> !important; margin-top: -5px; padding-bottom: 4rem;">
         <div class="container">
             <div class="text-center">
-                <p style="font-size: 0.9rem;" class="pt-2 pb-1 px-2" data-aos="fade-up" data-aos-duration="1500">
+                <p style="font-size: 0.9rem; color: <?= $invitation->theme->color_palette === 'light' ? 'black' : '' ?>;"
+                    class="pt-2 pb-1 px-2" data-aos="fade-up" data-aos-duration="1500">
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
                     berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
                 </p>
-                <h1 class="font-estetik" style="color: #FFD700" data-aos="fade-up" data-aos-duration="2000">
+
+                <h1 class="font-estetik"
+                    style="color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : 'black' ?>"
+                    data-aos="fade-up" data-aos-duration="2000">
                     Wassalamualaikum
-                    Warahmatullahi Wabarakatuh</h1>
+                    Warahmatullahi Wabarakatuh
+                </h1>
+
                 <hr class="mt-3 mb-2">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto">
                         <small class="text-light">
                             <center>
-                                <a href="https://couplemoment.com/" target="_blank" style="color: #fff">
+                                <a href="https://couplemoment.com/" target="_blank"
+                                    style="color: <?= $invitation->theme->color_palette === 'dark' ? '#fff' : 'black' ?>">
                                     By Couple Moment.
                                 </a>
                             </center>
@@ -544,9 +659,13 @@
                 style="background-image: url({{ $invitation->theme->background_img }}); background-size: cover; background-repeat: no-repeat;">
                 <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
                     <div class="text-center">
-                        <h1 class="font-estetik mb-4" style="font-size: 2.2rem; color:#FFD700;">The Wedding Of</h1>
+                        <h1 class="font-estetik mb-4"
+                            style="font-size: 2.2rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#FFD700' : '#000000' ?>">
+                            The Wedding Of</h1>
 
-                        <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
+
+                        <div
+                            class="cropper border border-3 {{ $invitation->theme->color_palette === 'light' ? 'border-dark' : 'border-light' }} shadow my-4 mx-auto">
                             @foreach ($filteredPhotos as $photo)
                                 @if ($photo->is_title_photo)
                                     <img src="{{ asset($photo->file_path) }}" alt="{{ $photo->file_name }}"
@@ -555,7 +674,10 @@
                             @endforeach
                         </div>
 
-                        <h1 class="font-estetik my-4" style="font-size: 2.5rem; color:#fff;">
+                        <h1 class="font-estetik my-4"
+                            style="font-size: 2.5rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#fff' : 'black' ?>">
+                            The Wedding Of
+
                             {{ $invitation->panggilan_pria }}
                             & {{ $invitation->panggilan_perempuan }}</h1>
                         {{-- <h1 class="font-estetik1 my-4" style="font-size: 2.5rem; color:#fff;">{{ $invitation->name }}
@@ -565,18 +687,26 @@
                             {{ $invitation->name2 }}</h1> --}}
                         <div id="namatamu"></div>
                         <div>
-                            <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
+                            <p class="mt-0 mb-1 mx-0 p-0 <?= $invitation->theme->color_palette === 'dark' ? 'text-light' : '' ?>"
+                                style="<?= $invitation->theme->color_palette === 'light' ? 'color: black;' : '' ?>">
+                                Kepada Yth Bapak/Ibu/Saudara/i</p>
+
                             @if (Route::currentRouteName() === 'show_invitation')
-                                <h2 class="text-light">{{ $guestbook->guest_name }}</h2>
+                                <h2
+                                    class="<?= $invitation->theme->color_palette === 'light' ? 'text-dark' : 'text-light' ?>">
+                                    {{ $guestbook->guest_name }}
+                                </h2>
                             @else
                                 <br>
                             @endif
                         </div>
-                        <button type="button" class="btn btn-light shadow rounded-4 mt-4"
-                            style="background-color: #fff; color:#212529" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" onclick="buka()">
+                        <button type="button"
+                            class="btn <?= $invitation->theme->color_palette === 'dark' ? 'btn-light text-dark' : 'btn-dark text-light' ?> shadow rounded-4 mt-4"
+                            style="background-color: <?= $invitation->theme->color_palette === 'dark' ? '#fff' : '#212529' ?>;"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buka()">
                             <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
                         </button>
+
                     </div>
                 </div>
             </div>
@@ -671,7 +801,9 @@
         // If the countdown is over, display a message
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("tampilan-waktu").innerHTML = "<h2>Waktu Acara Telah Dimulai</h2>";
+            document.getElementById("tampilan-waktu").innerHTML =
+                "<h2 style=\"color:{{ $invitation->theme->color_pallete === 'light' ? '#FFD700' : '#000000' }}\">Waktu Acara Telah Dimulai</h2>";
+
         }
     }, 1000);
 </script>

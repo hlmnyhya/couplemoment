@@ -9,7 +9,7 @@ class Theme extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'code', 'cover', 'backround_img', 'description', 'status'];
+    protected $fillable = ['name', 'code', 'cover', 'backround_img', 'color_palette', 'description', 'status'];
 
     public function getStatusAttribute($value)
     {

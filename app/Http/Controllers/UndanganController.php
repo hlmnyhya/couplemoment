@@ -97,8 +97,8 @@ class UndanganController extends Controller
 
     public function show_by_url($title_invitation)
     {
-        $invitation = Invitation::where('title_invitation', $title_invitation)->firstOrFail();
-
+        $invitation = Invitation::where('title_invitation', $title_invitation)->with('theme')->firstOrFail();
+        // dd($invitation);
         // Mendapatkan data soundbank terkait
         $soundbank = $invitation->soundbank;
 

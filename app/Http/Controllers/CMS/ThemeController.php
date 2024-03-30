@@ -36,7 +36,8 @@ class ThemeController extends Controller
             'name' => 'required',
             'status' => 'required|in:0,1',
             'categories' => 'required|array',
-            'description' => '',
+            'description' => 'required',
+            'color_palette' => 'required|in:dark,light',
         ]);
 
         // Store Theme
@@ -45,6 +46,7 @@ class ThemeController extends Controller
         $dataTheme->code = $request->code;
         $dataTheme->status = $request->has('status') ? $request->status : 0;
         $dataTheme->description = $request->description;
+        $dataTheme->color_palette = $request->color_palette; // Menyimpan data color_palette
 
         // Store background_img to public path
         $backgroundImage = $request->file('background_img');
@@ -96,7 +98,8 @@ class ThemeController extends Controller
             'cover' => 'file|mimes:webp,jpg,jpeg,png',
             'background_img' => 'sometimes|nullable|file|mimes:webp',
             'status' => 'required|in:0,1',
-            'description' => '',
+            'description' => 'required',
+            'color_palette' => 'required|in:dark,light',
         ]);
 
         $dataTheme = Theme::findOrFail($id);
@@ -104,6 +107,7 @@ class ThemeController extends Controller
         $dataTheme->code = $request->code;
         $dataTheme->status = $request->has('status') ? $request->status : 0;
         $dataTheme->description = $request->description;
+        $dataTheme->color_palette = $request->color_palette; // Menyimpan data color_palette
 
         // Check if new background_img is provided
         if ($request->hasFile('background_img')) {
