@@ -693,12 +693,13 @@
                     data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                     <div class="d-flex align-items-center">
                         <div class="me-xxl-2 me-0">
-                            <img src="{{ asset('backend') }}/dist/assets/images/faces/9.jpg" alt="img"
-                                width="32" height="32" class="rounded-circle">
+                            <img src="{{ auth()->user()->photo }}" alt="img" width="32" height="32"
+                                class="rounded-circle">
                         </div>
                         <div class="d-xxl-block d-none my-auto">
-                            <h6 class="fw-semibold mb-0 lh-1 fs-14">Json Taylor</h6>
-                            <span class="op-7 fw-normal d-block fs-11 text-muted">Web Designer</span>
+                            <h6 class="fw-semibold mb-0 lh-1 fs-14">{{ ucfirst(auth()->user()->name) }}</h6>
+                            <span
+                                class="op-7 fw-normal d-block fs-11 text-muted">{{ ucfirst(auth()->user()->role) }}</span>
                         </div>
                     </div>
                 </a>

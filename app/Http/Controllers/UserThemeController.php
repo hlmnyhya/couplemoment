@@ -14,11 +14,7 @@ class UserThemeController extends Controller
     public function index()
     {
         $themes = Theme::get();
-        $categoriesWithCount = Categories::select('categories.*')
-            ->selectRaw('COUNT(theme_category.theme_id) as themes_count')
-            ->leftJoin('theme_category', 'categories.id', '=', 'theme_category.category_id')
-            ->groupBy('categories.id')
-            ->get();
+        $categoriesWithCount = Categories::withCount('themes')->get();
         return view('admin.themeuser.index', compact('themes', 'categoriesWithCount'));
     }
 

@@ -500,12 +500,12 @@
                     <!-- End::slide -->
 
                     <!-- Start::slide -->
-                    <li class="slide">
+                    {{-- <li class="slide">
                         <a href="{{ route('invoice') }}" class="side-menu__item">
                             <i class="fe fe-inbox side-menu__icon"></i>
                             <span class="side-menu__label">Invoice</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <!-- End::slide -->
 
                     <!-- Start::slide -->
