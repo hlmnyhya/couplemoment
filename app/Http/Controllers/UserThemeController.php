@@ -31,7 +31,8 @@ class UserThemeController extends Controller
     {
         $theme = Theme::find($id); // Tema dengan ID yang diberikan
         $categories = $theme->categories; // Mendapatkan kategori-kategori dari tema
-        // dd($categories);
+
+        // dd($theme);
         return view('frontend.invitation-pages.demo', compact('theme', 'categories'));
     }
 

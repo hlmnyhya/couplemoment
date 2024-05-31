@@ -132,9 +132,7 @@
         {{ $formattedDate }}</h4>
 
     <a class="btn btn-outline-<?= $invitation->theme->color_palette === 'dark' ? 'light' : 'dark' ?> btn-sm shadow rounded-pill px-3 my-2"
-        target="_blank"
-        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani&details=The%20Wedding%20of%20Muhammad Aldiyanoor%20dan%20Rinta Ariani%20%7C%2028%20Januari%202024%20%7C%20RT%2005%20RW%2003,%20Desa%20Tambang Ulang,%20Kec.%20Tambang Ulang,%20Kab.%20Tanah Laut,%20Kalimantan%20Selatan%20%7C%2008.00%20-%2014.00%20WITA&dates=20230315T100000/20230315T110000&location=https://maps.app.goo.gl/13jYX3E4sjtnFuTf8">
-        <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
+        target="_blank" href="#"></i>Save The Date
     </a>
 
     <div class="d-flex justify-content-center align-items-center mt-4 mb-2">
@@ -332,10 +330,10 @@
                         Google Maps
                     </a>
 
-                    <<p class="mb-0 mt-1 mx-1 pb-4"
+                    <p class="mb-0 mt-1 mx-1 pb-4"
                         style="font-size: 0.9rem; color:{{ $invitation->theme->color_palette === 'light' ? '#000000' : '' }}">
                         {{ $invitation->address_invitation }}
-                        </p>
+                    </p>
 
                 </div>
             </div>
@@ -676,7 +674,6 @@
 
                         <h1 class="font-estetik my-4"
                             style="font-size: 2.5rem; color: <?= $invitation->theme->color_palette === 'dark' ? '#fff' : 'black' ?>">
-                            The Wedding Of
 
                             {{ $invitation->panggilan_pria }}
                             & {{ $invitation->panggilan_perempuan }}</h1>
