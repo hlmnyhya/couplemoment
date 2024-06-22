@@ -460,7 +460,7 @@
                         <div class="col-12 card-body border rounded-4 shadow p-3 m-3"
                             style="max-width: 25rem; background-color:#fff" data-aos="fade-down"
                             data-aos-duration="1500">
-                            <img src="{{ asset('invitation/assets/bank/' . str_replace(' ', '_', strtolower($invitation->nama_bank)) . '.png') }}"
+                            <img src="{{ asset('invitation/assets/bank/' . $invitation->nama_bank . '.png') }}"
                                 alt="{{ $invitation->nama_bank }}" class="img-fluid rounded" width="150"
                                 alt="bank">
                             <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;color: #000;font-weight: bold;">
