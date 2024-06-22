@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     padding: 0 !important;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -15,12 +15,12 @@ body::-webkit-scrollbar {
 }
 
 .font-estetik {
-    font-family: 'Sacramento', cursive !important;
+    font-family: "Sacramento", cursive !important;
     /* color: #ffffff !important; */
 }
 
 .font-estetik1 {
-    font-family: 'emoji' !important;
+    font-family: "emoji" !important;
     /* color: #ffffff !important; */
 }
 
@@ -32,11 +32,15 @@ body::-webkit-scrollbar {
     border-radius: 50%;
 }
 
-.cropper>img {
-    display: inline;
+.cropper > img {
+    /* display: inline;
     margin: 0 auto;
     height: auto;
+    width: 100%; */
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .btn-music {
@@ -44,7 +48,7 @@ body::-webkit-scrollbar {
     bottom: 9vh;
     right: 2vh;
     z-index: 1055;
-    background-color: #FFD700;
+    background-color: #ffd700;
 }
 
 .loading {
@@ -64,7 +68,7 @@ body::-webkit-scrollbar {
 .mousey {
     padding: 0.25rem 0.625rem;
     height: 2rem;
-    border: 0.1rem solid #FFD700;
+    border: 0.1rem solid #ffd700;
     border-radius: 1.4rem;
     opacity: 0.75;
     box-sizing: content-box;
@@ -74,7 +78,7 @@ body::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.625rem;
     border-radius: 25%;
-    background-color: #FFD700;
+    background-color: #ffd700;
     animation-name: scroll;
     animation-duration: 2.5s;
     animation-timing-function: linear;
@@ -130,7 +134,6 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 }
-
 
 @keyframes scroll {
     0% {

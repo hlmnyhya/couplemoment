@@ -34,6 +34,9 @@ return new class extends Migration
             $table->string('address_invitation')->nullable();
             $table->string('address_url')->nullable();
             $table->string('address_maps')->nullable();
+            $table->enum('nama_bank', [
+                'BCA', 'Mandiri', 'BRI', 'BNI', 'Bank Syariah Indonesia', 'Bank Kalsel'
+            ])->nullable();
             $table->string('no_rekening')->nullable();
             $table->string('name_rekening')->nullable();
             $table->timestamps();

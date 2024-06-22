@@ -251,8 +251,8 @@
                                                 <div class="mb-4">
                                                     {{-- <a href="cart.html" class="btn btn-warning me-2 mb-2">Masukan
                                                         Keranjang</a> --}}
-                                                    <a href="{{ route('demo.theme', ['id' => $theme->id]) }}"
-                                                        class="btn btn-success me-2 mb-2" target="_blank">Demo Undangan</a>
+                                                    {{-- <a href="{{ route('demo.theme', ['id' => $theme->id]) }}"
+                                                        class="btn btn-success me-2 mb-2" target="_blank">Demo Undangan</a> --}}
 
                                                 </div>
                                                 {{-- <div class="mb-4">

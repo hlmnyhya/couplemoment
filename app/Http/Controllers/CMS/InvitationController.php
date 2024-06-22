@@ -52,10 +52,13 @@ class InvitationController extends Controller
             'address_invitation' => 'required',
             'address_url' => 'required',
             // 'address_maps' => 'required',
+            'nama_bank' => 'required',
             'no_rekening' => 'required',
             'name_rekening' => 'required',
         ]);
+
         $user = auth()->user();
+
         // Buat objek Invitation baru
         $invitation = new Invitation();
         $invitation->theme_id = $validatedData['theme_id'];
@@ -75,12 +78,13 @@ class InvitationController extends Controller
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
         // $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->nama_bank = $validatedData['nama_bank'];
         $invitation->no_rekening = $validatedData['no_rekening'];
         $invitation->name_rekening = $validatedData['name_rekening'];
 
-
         // Assign user_id berdasarkan user yang sedang login
         $invitation->user_id = $user->id;
+
         // Simpan data ke dalam database
         $invitation->save();
 
@@ -138,7 +142,7 @@ class InvitationController extends Controller
 
     public function update(Request $request, $id)
     {
-        $invitation = Invitation::findOrFail($id);
+        // Validasi data yang diterima dari form
         $validatedData = $request->validate([
             'theme_id' => 'required',
             'soundbank_id' => 'required',
@@ -157,10 +161,15 @@ class InvitationController extends Controller
             'address_invitation' => 'required',
             'address_url' => 'required',
             // 'address_maps' => 'required',
+            'nama_bank' => 'required',
             'no_rekening' => 'required',
             'name_rekening' => 'required',
         ]);
 
+        // Cari invitation berdasarkan ID
+        $invitation = Invitation::findOrFail($id);
+
+        // Update data invitation
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
@@ -178,12 +187,17 @@ class InvitationController extends Controller
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
         // $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->nama_bank = $validatedData['nama_bank'];
         $invitation->no_rekening = $validatedData['no_rekening'];
         $invitation->name_rekening = $validatedData['name_rekening'];
 
+        // Simpan perubahan ke dalam database
         $invitation->save();
+
+        // Redirect ke halaman atau berikan respons sesuai kebutuhan Anda
         return redirect()->route('my-undangan')->with('success', 'Invitation updated successfully');
     }
+
 
     public function destroy($id)
     {

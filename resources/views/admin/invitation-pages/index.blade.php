@@ -188,12 +188,25 @@
                             </div>
 
                             <div class="row g-3">
-                                <div class="col-sm-6 mb-3">
+                                <div class="col-sm-4 mb-3">
+                                    <label for="nama_bank" class="form-label">Nama Bank</label>
+                                    <select class="form-control" id="nama_bank" name="nama_bank" required>
+                                        <option value="" disabled selected>Pilih Bank</option>
+                                        <option value="BCA">BCA</option>
+                                        <option value="Mandiri">Mandiri</option>
+                                        <option value="BRI">BRI</option>
+                                        <option value="BNI">BNI</option>
+                                        <option value="Bank Syariah Indonesia">Bank Syariah Indonesia</option>
+                                        <option value="Bank Kalsel">Bank Kalsel</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 mb-3">
                                     <label for="no_rekening" class="form-label">No Rekening</label>
                                     <input type="text" class="form-control" id="no_rekening" name="no_rekening"
                                         required placeholder="08xxx">
                                 </div>
-                                <div class="col-sm-6 mb-3">
+                                <div class="col-sm-4 mb-3">
                                     <label for="name_rekening" class="form-label">Nama Rekening</label>
                                     <input type="text" class="form-control" id="name_rekening" name="name_rekening"
                                         required placeholder="A. N ....">
