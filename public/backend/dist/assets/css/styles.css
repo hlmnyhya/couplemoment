@@ -100,7 +100,7 @@ typography
   --menu-prime-color:	#212529;
   --menu-border-color:	#e9edf4;
   --header-bg: #fff;
-  --header-prime-color:	rgb(var(--primary-rgb));
+  --header-prime-color:	rgb(var(--c));
   --header-border-color:	#e9edf4;
   --custom-white:	#fff;
   --custom-black:	#000;
@@ -2613,25 +2613,25 @@ typography
 /* Start::button colors */
 /* btn-primary starts */
 .btn-primary {
-  background-color: rgb(var(--primary-rgb)) !important;
-  border-color: rgb(var(--primary-rgb)) !important;
+  background-color: #ff477e;
+  border-color: #ff477e;
   color: #fff !important;
 }
 .btn-primary:hover {
-  background-color: rgba(var(--primary-rgb), 0.9) !important;
-  border-color: rgb(var(--primary-rgb)) !important;
+  background-color: #dfaee4;
+  border-color: #dfaee4;
   color: #fff;
 }
 .btn-primary:focus {
-  background-color: rgb(var(--primary-rgb));
-  border-color: rgb(var(--primary-rgb));
+  background-color: #ff477e;
+  border-color: #ff477e;
   color: #fff;
 }
 
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  background-color: rgb(var(--primary-rgb));
-  border-color: rgb(var(--primary-rgb));
+  background-color: #ff477e;
+  border-color: #ff477e;
   outline: 0;
   box-shadow: none;
 }
@@ -2649,8 +2649,8 @@ typography
 .btn-primary.active,
 .btn-primary.show,
 .btn-primary:active {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-border) !important;
+  background-color: #ff477e;
+  border-color: #ff477e;
 }
 
 /* btn-primary ends */
@@ -5224,11 +5224,11 @@ typography
   width: 0.9rem;
   height: 0.9rem;
   background-color: var(--custom-white);
-  border: 1px solid var(--input-border);
+  border: 1px solid #000;
 }
 .form-check-input:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: #ff477e;
+  border-color: #000;
 }
 .form-check-input.form-checked-outline:checked {
   background-color: transparent;
@@ -5983,7 +5983,7 @@ input[type=range]::-webkit-slider-runnable-track {
   color: var(--default-text-color);
   background-color: var(--custom-white);
   border: 1px solid var(--default-border);
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.2rem;
 }
 
 .list-group-item.active {
@@ -9104,12 +9104,13 @@ caption {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url(../images/landing/backgrounds/2.jpg);
+  background-image: url(../images/landing/backgrounds/7.jpg);
   z-index: 1;
 }
 .autentication-bg::before {
   content: "";
-  background: linear-gradient(to right, var(--primary06) 0%, rgba(5, 195, 251, 0.568627451) 100%);
+  background-image: url(../images/landing/backgrounds/7.jpg);
+  /* background: linear-gradient(to right, var(--primary06) 0%, rgba(5, 195, 251, 0.568627451) 100%); */
   height: 100%;
   width: 100%;
   position: absolute;
@@ -11446,15 +11447,15 @@ h6 {
   padding: 1rem 0.65rem;
 }
 .main-header-container .header-link:hover .header-link-icon, .main-header-container .header-link.show .header-link-icon {
-  fill: var(--header-prime-color);
-  color: var(--header-prime-color);
+  fill: #ff0071;
+  color: #ff0071;
 }
 .main-header-container .header-link-icon {
   width: 1.75rem;
   height: 1.75rem;
   font-size: 1.25rem;
-  color: var(--header-prime-color);
-  fill: var(--header-prime-color);
+  color: #F9F07A;
+  fill: #F9F07A;
   transition: all ease 0.05s;
   position: relative;
   padding: 0.25rem;
@@ -11701,7 +11702,7 @@ h6 {
   cursor: pointer;
   height: 0.125rem;
   width: 0.75rem;
-  background: var(--header-prime-color);
+  background: #ff0071;
   position: absolute;
   display: block;
   content: "";
@@ -11728,7 +11729,7 @@ h6 {
   cursor: pointer;
   height: 0.125rem;
   width: 1.0625rem;
-  background: var(--header-prime-color);
+  background: #ff0071;
   position: absolute;
   display: block;
   content: "";
@@ -17120,8 +17121,8 @@ code[class*=language-] {
   margin-inline-end: 8px;
   font-size: 1.15rem;
   text-align: center;
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: #ff0071;
+  fill: #ff0071;
   border-radius: 7px;
   line-height: 30px;
 }

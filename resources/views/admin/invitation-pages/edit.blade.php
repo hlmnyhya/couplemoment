@@ -94,17 +94,54 @@
                                     placeholder="Enter Title Invitation">
                             </div>
 
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    value="{{ $invitation->name }}" required placeholder="Enter Name">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="panggilan_pria" class="form-label">Nama Panggilan Pria</label>
+                                    <input type="text" class="form-control" id="panggilan_pria" name="panggilan_pria"
+                                        required placeholder="Nama Panggilan Perempuan"
+                                        value="{{ $invitation->panggilan_pria }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="panggilan_perempuan" class="form-label">Nama Panggilan Perempuan</label>
+                                    <input type="text" class="form-control" id="panggilan_perempuan"
+                                        name="panggilan_perempuan" required placeholder="Nama Panggilan Perempuan"
+                                        value="{{ $invitation->panggilan_perempuan }}">
+                                </div>
                             </div>
 
-                            <div class="mb-3">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="name" class="form-label">Name of the Groom</label>
+                                    <input type="text" class="form-control" id="name" name="name" required
+                                        placeholder="Enter Name of the Groom" value="{{ $invitation->name }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="name2" class="form-label">Name of the Bride</label>
+                                    <input type="text" class="form-control" id="name2" name="name2" required
+                                        placeholder="Enter Name of the Bride" value="{{ $invitation->name2 }}">
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="wali_name" class="form-label">Bride's guardian</label>
+                                    <input type="text" class="form-control" id="wali_name" name="wali_name" required
+                                        placeholder="Enter Bride's Guardian" value="{{ $invitation->wali_name }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="wali_name2" class="form-label">Groom's guardian</label>
+                                    <input type="text" class="form-control" id="wali_name2" name="wali_name2"
+                                        required placeholder="Enter Groom's Guardian"
+                                        value="{{ $invitation->wali_name2 }}">
+                                </div>
+                            </div>
+
+
+                            {{-- <div class="mb-3">
                                 <label for="url" class="form-label">Url</label>
                                 <input type="text" class="form-control" id="url" name="url"
                                     value="{{ $invitation->url }}" required placeholder="Enter URL">
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Description</label>
@@ -115,8 +152,9 @@
                             <div class="row g-3">
                                 <div class="col-sm-4">
                                     <label for="date_invitation" class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="date_invitation" name="date_invitation"
-                                        value="{{ $invitation->date_invitation }}" required placeholder="Select Date">
+                                    <input type="date" class="form-control" id="date_invitation"
+                                        name="date_invitation" value="{{ $invitation->date_invitation }}" required
+                                        placeholder="Select Date">
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="time_invitation" class="form-label">Time</label>
@@ -131,14 +169,48 @@
                                 </div>
                             </div>
 
+                            <div class="row g-3">
+                                <div class="col-sm-4">
+                                    <label for="nama_bank" class="form-label">Nama Bank</label>
+                                    <select class="form-control" id="nama_bank" name="nama_bank" required>
+                                        <option value="" disabled {{ $invitation->nama_bank ? '' : 'selected' }}>
+                                            Pilih Bank</option>
+                                        <option value="BCA" {{ $invitation->nama_bank == 'BCA' ? 'selected' : '' }}>BCA
+                                        </option>
+                                        <option value="Mandiri"
+                                            {{ $invitation->nama_bank == 'Mandiri' ? 'selected' : '' }}>Mandiri</option>
+                                        <option value="BRI" {{ $invitation->nama_bank == 'BRI' ? 'selected' : '' }}>BRI
+                                        </option>
+                                        <option value="BNI" {{ $invitation->nama_bank == 'BNI' ? 'selected' : '' }}>BNI
+                                        </option>
+                                        <option value="Bank Syariah Indonesia"
+                                            {{ $invitation->nama_bank == 'Bank Syariah Indonesia' ? 'selected' : '' }}>Bank
+                                            Syariah Indonesia</option>
+                                        <option value="Bank Kalsel"
+                                            {{ $invitation->nama_bank == 'Bank Kalsel' ? 'selected' : '' }}>Bank Kalsel
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="no_rekening" class="form-label">No Rekening</label>
+                                    <input type="text" class="form-control" id="no_rekening" name="no_rekening"
+                                        required placeholder="000xxx" value="{{ $invitation->no_rekening }}">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="name_rekening" class="form-label">Name Rekening</label>
+                                    <input type="text" class="form-control" id="name_rekening" name="name_rekening"
+                                        required placeholder="Ex. An....." value="{{ $invitation->name_rekening }}">
+                                </div>
+                            </div>
+
                             <div class="mb-3">
                                 <label for="address_invitation" class="form-label">Address</label>
                                 <textarea type="text" class="form-control mb-3" id="address_invitation" name="address_invitation" required
                                     placeholder="Enter Address">{{ $invitation->address_invitation }}</textarea>
                                 <input type="text" class="form-control mb-3" id="address_url" name="address_url"
                                     value="{{ $invitation->address_url }}" required placeholder="Enter Address URL">
-                                <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
-                                    placeholder="Enter Address on Maps">{{ $invitation->address_maps }}</textarea>
+                                {{-- <textarea type="text" class="form-control mb-3" id="address_maps" name="address_maps" required
+                                    placeholder="Enter Address on Maps">{{ $invitation->address_maps }}</textarea> --}}
                             </div>
 
                         </div>

@@ -20,7 +20,11 @@ class SoundBankController extends Controller
 
     public function create()
     {
+<<<<<<< HEAD
     return view('admin.sound-bank-pages.create');
+=======
+        return view('admin.sound-bank-pages.create');
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
     }
 
     public function store(Request $request)
@@ -116,7 +120,13 @@ class SoundBankController extends Controller
 
         $soundBank->delete();
 
+<<<<<<< HEAD
         return redirect()->route('soundbank.index')->with('success', 'Sound bank deleted successfully.');    
     }
 
 }
+=======
+        return redirect()->route('soundbank.index')->with('success', 'Sound bank deleted successfully.');
+    }
+}
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9

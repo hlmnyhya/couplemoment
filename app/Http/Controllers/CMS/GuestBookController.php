@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\GuestBook;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Imports\GuestImport;
+use App\Models\Invitation;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -15,19 +17,32 @@ class GuestBookController extends Controller
 {
     public function index()
     {
-        $data = GuestBook::paginate(20);
+        $userId = Auth::id();
+        $data = GuestBook::whereHas('invitation', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->with('invitation')->paginate(20);
+
+        // dd($data);
         return view('admin.guest-books-pages.index', ['data' => $data]);
     }
 
     public function create()
     {
-        return view('admin.guest-books-pages.store');
+        $user = Auth::user();
+        if ($user->isAdmin()) {
+            $invitations = Invitation::all();
+        } else {
+            $invitations = Invitation::where('user_id', $user->id)->get();
+        }
+        return view('admin.guest-books-pages.store', ['invitations' => $invitations]);
     }
+
 
     public function store(Request $request)
     {
         $nameGuest = $request->guest_name;
         $phone = $request->phone;
+        $invitationId = $request->invitation_id;
 
         foreach ($nameGuest as $key => $name) {
             $phoneNumber = $phone[$key];
@@ -41,7 +56,8 @@ class GuestBookController extends Controller
                     'guest_name' => $name,
                     'phone' => $phoneNumber,
                     'slug' => $uniqueSlug,
-                    'url' => '/guestbook/' . $uniqueSlug
+                    'url' => '/' . $uniqueSlug,
+                    'invitation_id' => $invitationId
                 ]);
             } else {
                 $uniqueSlug = SlugService::createSlug(GuestBook::class, 'slug', $name);
@@ -50,7 +66,8 @@ class GuestBookController extends Controller
                     'guest_name' => $name,
                     'phone' => $phoneNumber,
                     'slug' => $uniqueSlug,
-                    'url' => '/guestbook/' . $uniqueSlug
+                    'url' => '/' . $uniqueSlug,
+                    'invitation_id' => $invitationId
                 ]);
             }
         }
@@ -78,7 +95,7 @@ class GuestBookController extends Controller
 
         if ($guest->isDirty('guest_name')) {
             $guest->slug = SlugService::createSlug(GuestBook::class, 'slug', $guest->guest_name);
-            $guest->url = '/guestbook/' . $guest->slug;
+            $guest->url = '/' . $guest->slug;
         }
 
         $guest->save();
@@ -94,7 +111,7 @@ class GuestBookController extends Controller
         }
 
         $guest->delete();
-        alert()->success('Hore!','Data kamu berhasil dihapus Yay!!!');
+        alert()->success('Hore!', 'Data kamu berhasil dihapus Yay!!!');
         return redirect()->route('guestbook.index')->with('success', 'Data berhasil dihapus');
     }
 
@@ -108,13 +125,13 @@ class GuestBookController extends Controller
 
         $nama_file = $file->hashName();
 
-        $path = $file->storeAs('public/excel/',$nama_file);
+        $path = $file->storeAs('public/excel/', $nama_file);
 
-        $import = Excel::import(new GuestImport(), storage_path('app/public/excel/'.$nama_file));
+        $import = Excel::import(new GuestImport(), storage_path('app/public/excel/' . $nama_file));
 
         Storage::delete($path);
 
-        if($import) {
+        if ($import) {
             Alert::success('Hore!', 'Data kamu berhasil diupdate Yay!!!');
             return redirect()->route('guestbook.index');
         } else {
@@ -122,5 +139,4 @@ class GuestBookController extends Controller
             return redirect()->route('guestbook.index');
         }
     }
-
 }

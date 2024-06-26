@@ -7,12 +7,19 @@ use App\Models\Invitation;
 use App\Models\SoundBank;
 use App\Models\Theme;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class InvitationController extends Controller
 {
     public function index()
     {
-        $themes = Theme::all(); // Mengambil semua tema dari database
+
+        $userStatus = Auth::user()->status; // Mengambil status pengguna yang sedang login
+
+        // Mengambil tema-tema yang sesuai dengan status pengguna
+        $themes = Theme::where('status', $userStatus)->get();
 
         $soundbanks = SoundBank::all(); // Mengambil semua bank suara dari database
 
@@ -23,6 +30,7 @@ class InvitationController extends Controller
     }
 
 
+
     public function store(Request $request)
     {
         // Validasi data yang diterima dari form
@@ -30,31 +38,52 @@ class InvitationController extends Controller
             'theme_id' => 'required',
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
+            'panggilan_pria' => 'required',
+            'panggilan_perempuan' => 'required',
             'name' => 'required',
-            'url' => 'required',
+            'name2' => 'required',
+            'wali_name' => 'required',
+            'wali_name2' => 'required',
+            // 'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
             'time_invitation' => 'required',
             'timezone' => 'required',
             'address_invitation' => 'required',
             'address_url' => 'required',
-            'address_maps' => 'required',
+            // 'address_maps' => 'required',
+            'nama_bank' => 'required',
+            'no_rekening' => 'required',
+            'name_rekening' => 'required',
         ]);
+
+        $user = auth()->user();
 
         // Buat objek Invitation baru
         $invitation = new Invitation();
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
+        $invitation->panggilan_pria = $validatedData['panggilan_pria'];
+        $invitation->panggilan_perempuan = $validatedData['panggilan_perempuan'];
         $invitation->name = $validatedData['name'];
-        $invitation->url = $validatedData['url'];
+        $invitation->name2 = $validatedData['name2'];
+        $invitation->wali_name = $validatedData['wali_name'];
+        $invitation->wali_name2 = $validatedData['wali_name2'];
+        // $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
         $invitation->time_invitation = $validatedData['time_invitation'];
         $invitation->timezone = $validatedData['timezone'];
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
-        $invitation->address_maps = $validatedData['address_maps'];
+        // $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->nama_bank = $validatedData['nama_bank'];
+        $invitation->no_rekening = $validatedData['no_rekening'];
+        $invitation->name_rekening = $validatedData['name_rekening'];
+
+        // Assign user_id berdasarkan user yang sedang login
+        $invitation->user_id = $user->id;
 
         // Simpan data ke dalam database
         $invitation->save();
@@ -113,38 +142,62 @@ class InvitationController extends Controller
 
     public function update(Request $request, $id)
     {
-        $invitation = Invitation::findOrFail($id);
+        // Validasi data yang diterima dari form
         $validatedData = $request->validate([
             'theme_id' => 'required',
             'soundbank_id' => 'required',
             'title_invitation' => 'required',
+            'panggilan_pria' => 'required',
+            'panggilan_perempuan' => 'required',
             'name' => 'required',
-            'url' => 'required',
+            'name2' => 'required',
+            'wali_name' => 'required',
+            'wali_name2' => 'required',
+            // 'url' => 'required',
             'description' => 'required',
             'date_invitation' => 'required|date',
             'time_invitation' => 'required',
             'timezone' => 'required',
             'address_invitation' => 'required',
             'address_url' => 'required',
-            'address_maps' => 'required',
+            // 'address_maps' => 'required',
+            'nama_bank' => 'required',
+            'no_rekening' => 'required',
+            'name_rekening' => 'required',
         ]);
 
+        // Cari invitation berdasarkan ID
+        $invitation = Invitation::findOrFail($id);
+
+        // Update data invitation
         $invitation->theme_id = $validatedData['theme_id'];
         $invitation->soundbank_id = $validatedData['soundbank_id'];
         $invitation->title_invitation = $validatedData['title_invitation'];
+        $invitation->panggilan_pria = $validatedData['panggilan_pria'];
+        $invitation->panggilan_perempuan = $validatedData['panggilan_perempuan'];
         $invitation->name = $validatedData['name'];
-        $invitation->url = $validatedData['url'];
+        $invitation->name2 = $validatedData['name2'];
+        $invitation->wali_name = $validatedData['wali_name'];
+        $invitation->wali_name2 = $validatedData['wali_name2'];
+        // $invitation->url = $validatedData['url'];
         $invitation->description = $validatedData['description'];
         $invitation->date_invitation = $validatedData['date_invitation'];
         $invitation->time_invitation = $validatedData['time_invitation'];
         $invitation->timezone = $validatedData['timezone'];
         $invitation->address_invitation = $validatedData['address_invitation'];
         $invitation->address_url = $validatedData['address_url'];
-        $invitation->address_maps = $validatedData['address_maps'];
+        // $invitation->address_maps = $validatedData['address_maps'];
+        $invitation->nama_bank = $validatedData['nama_bank'];
+        $invitation->no_rekening = $validatedData['no_rekening'];
+        $invitation->name_rekening = $validatedData['name_rekening'];
 
+        // Simpan perubahan ke dalam database
         $invitation->save();
+
+        // Redirect ke halaman atau berikan respons sesuai kebutuhan Anda
         return redirect()->route('my-undangan')->with('success', 'Invitation updated successfully');
     }
+
 
     public function destroy($id)
     {
@@ -152,5 +205,37 @@ class InvitationController extends Controller
         $invitation->delete();
 
         return redirect()->route('my-undangan')->with('success', 'Invitation deleted successfully');
+    }
+
+    // public function test()
+    // {
+    //     return view('frontend.invitation-pages.invitation');
+    // }
+
+    public function simpanUcapan(Request $request)
+    {
+        // Validasi data form di sini jika diperlukan
+
+        $data = [
+            'nama' => $request->input('formnama'),
+            'kehadiran' => $request->input('hadiran'),
+            'pesan' => $request->input('formpesan'),
+            'waktu' => Carbon::now()->toDateTimeString(),
+            // tambahkan data lainnya sesuai kebutuhan
+        ];
+
+        $existingData = json_decode(Storage::get('public/ucapan.json'), true) ?? [];
+        $existingData[] = $data;
+
+        // Sort the data by timestamp in descending order
+        usort($existingData, function ($a, $b) {
+            return strtotime($b['waktu']) - strtotime($a['waktu']);
+        });
+
+        Storage::put('public/ucapan.json', json_encode($existingData));
+
+        // Tambahkan logika lainnya jika diperlukan
+
+        return redirect()->back();
     }
 }

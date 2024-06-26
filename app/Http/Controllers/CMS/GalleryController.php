@@ -5,7 +5,13 @@ namespace App\Http\Controllers\CMS;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
+<<<<<<< HEAD
 use App\Models\Photo;
+=======
+use App\Models\Invitation;
+use App\Models\Photo;
+use Illuminate\Support\Facades\Auth;
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
 use Illuminate\Support\Facades\File;
 
 class GalleryController extends Controller
@@ -27,18 +33,38 @@ class GalleryController extends Controller
 
     public function create()
     {
+<<<<<<< HEAD
         return view('admin.gallery-pages.create');
     }
     
+=======
+        $user = Auth::user();
+        if ($user->isAdmin()) {
+            $invitations = Invitation::all();
+        } else {
+            $invitations = Invitation::where('user_id', $user->id)->get();
+        }
+        return view('admin.gallery-pages.create', ['invitations' => $invitations]);
+    }
+
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
     public function store(Request $request)
     {
 
         $request->validate([
+<<<<<<< HEAD
+=======
+            'invitation_id' => 'required',
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
             'gallery_name' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:5048',
         ]);
 
         $gallery = Gallery::create([
+<<<<<<< HEAD
+=======
+            'invitation_id' => $request->invitation_id,
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
             'gallery_name' => $request->gallery_name,
         ]);
 
@@ -46,6 +72,7 @@ class GalleryController extends Controller
             foreach ($request->file('photos') as $file) {
                 $extension = $file->getClientOriginalExtension();
                 $name = 'gallery_' . $gallery->id . '_' . uniqid() . '_' . time() . '.' . $extension;
+<<<<<<< HEAD
                 $file->move(public_path().'/uploads/gallery/', $name);
                 Photo::create([
                     'gallery_id' => $gallery->id,
@@ -55,6 +82,17 @@ class GalleryController extends Controller
             }
         }
 
+=======
+                $file->move(public_path() . '/uploads/gallery/', $name);
+                Photo::create([
+                    'gallery_id' => $gallery->id,
+                    'file_name' => $name,
+                    'file_path' => '/uploads/gallery/' . $name,
+                ]);
+            }
+        }
+        // dd($request->all());
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         return redirect()->route('gallery.index')->with('success', 'Gallery created successfully.');
     }
 
@@ -67,6 +105,7 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::with('photos')->findOrFail($id);
         // dd($gallery);
+<<<<<<< HEAD
         
         return view('admin.gallery-pages.show', compact('gallery'));
     }
@@ -75,19 +114,37 @@ class GalleryController extends Controller
     {
         return view('admin.gallery-pages.update');
     }   
+=======
+
+        return view('admin.gallery-pages.show', compact('gallery'));
+    }
+
+    public function update()
+    {
+        return view('admin.gallery-pages.update');
+    }
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
 
     public function deleteGallery($id)
     {
         // Temukan galeri berdasarkan ID
         $gallery = Gallery::findOrFail($id);
+<<<<<<< HEAD
     
         // Ambil semua foto terkait dengan galeri
         $photos = Photo::where('gallery_id', $id)->get();
     
+=======
+
+        // Ambil semua foto terkait dengan galeri
+        $photos = Photo::where('gallery_id', $id)->get();
+
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         // Hapus setiap foto dari direktori dan dari database
         foreach ($photos as $photo) {
             // Hapus dari direktori (public/uploads/gallery/)
             File::delete(public_path($photo->file_path));
+<<<<<<< HEAD
     
             // Hapus dari database
             $photo->delete();
@@ -96,6 +153,16 @@ class GalleryController extends Controller
         // Hapus galeri dari database
         $gallery->delete();
     
+=======
+
+            // Hapus dari database
+            $photo->delete();
+        }
+
+        // Hapus galeri dari database
+        $gallery->delete();
+
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         return redirect()->route('gallery.index')->with('success', 'Gallery deleted successfully.');
     }
 
@@ -103,6 +170,7 @@ class GalleryController extends Controller
     {
         // Temukan foto berdasarkan ID
         $photo = Photo::findOrFail($id);
+<<<<<<< HEAD
     
         // Hapus file foto dari direktori (public/uploads/gallery/)
         File::delete(public_path($photo->file_path));
@@ -110,6 +178,15 @@ class GalleryController extends Controller
         // Hapus foto dari database
         $photo->delete();
     
+=======
+
+        // Hapus file foto dari direktori (public/uploads/gallery/)
+        File::delete(public_path($photo->file_path));
+
+        // Hapus foto dari database
+        $photo->delete();
+
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         return redirect()->back()->with('success', 'Photo deleted successfully.');
     }
 
@@ -132,5 +209,29 @@ class GalleryController extends Controller
         return redirect()->route('gallery.index')->with('success', 'All galleries and photos deleted successfully.');
     }
 
+<<<<<<< HEAD
 
+=======
+    public function updatePhotoStatus(Request $request, $id)
+    {
+        $photo = Photo::findOrFail($id);
+
+        // Reset status foto yang lain menjadi false
+        if ($request->has('is_title_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_title_photo' => false]);
+            $photo->update(['is_title_photo' => true]);
+        } elseif ($request->has('is_primary_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_primary_photo' => false]);
+            $photo->update(['is_primary_photo' => true]);
+        } elseif ($request->has('is_groom_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_groom_photo' => false]);
+            $photo->update(['is_groom_photo' => true]);
+        } elseif ($request->has('is_bride_photo')) {
+            Photo::where('gallery_id', $photo->gallery_id)->update(['is_bride_photo' => false]);
+            $photo->update(['is_bride_photo' => true]);
+        }
+
+        return redirect()->back()->with('success', 'Photo status updated successfully.');
+    }
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
 }

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
+=======
+            $table->integer('invitation_id')->nullable()->unsigned();
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
             $table->string('gallery_name');
             $table->timestamps();
         });

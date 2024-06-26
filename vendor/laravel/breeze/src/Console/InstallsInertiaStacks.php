@@ -24,11 +24,15 @@ trait InstallsInertiaStacks
             return [
                 '@inertiajs/vue3' => '^1.0.0',
                 '@tailwindcss/forms' => '^0.5.3',
+<<<<<<< HEAD
                 '@vitejs/plugin-vue' => '^4.5.0',
+=======
+                '@vitejs/plugin-vue' => '^5.0.0',
+>>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
                 'autoprefixer' => '^10.4.12',
                 'postcss' => '^8.4.31',
                 'tailwindcss' => '^3.2.1',
-                'vue' => '^3.2.41',
+                'vue' => '^3.4.0',
             ] + $packages;
         });
 
@@ -36,7 +40,7 @@ trait InstallsInertiaStacks
             $this->updateNodePackages(function ($packages) {
                 return [
                     'typescript' => '^5.0.2',
-                    'vue-tsc' => '^1.2.0',
+                    'vue-tsc' => '^1.8.27',
                 ] + $packages;
             });
         }
@@ -153,7 +157,7 @@ trait InstallsInertiaStacks
     {
         $this->updateNodePackages(function ($packages) {
             return [
-                '@vue/server-renderer' => '^3.2.31',
+                '@vue/server-renderer' => '^3.4.0',
             ] + $packages;
         });
 
