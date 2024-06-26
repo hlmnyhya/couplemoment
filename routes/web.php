@@ -12,7 +12,6 @@ use App\Http\Controllers\CMS\GalleryController;
 use App\Http\Controllers\CMS\SoundBankController;
 use App\Http\Controllers\CMS\InvitationController;
 use App\Http\Controllers\CMS\AssetsController;
-use App\Http\Controllers\CMS\GalleryController;
 use App\Http\Controllers\CMS\ThemeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserThemeController;
