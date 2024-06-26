@@ -60,7 +60,6 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
-<<<<<<< HEAD
 Route::controller(GalleryController::class)->group(function () {
     Route::get('/cms/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::get('/cms/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
@@ -78,9 +77,6 @@ Route::controller(GalleryController::class)->group(function () {
 
 });
 Route::prefix('cms')->group(function () {
-=======
-Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function () {
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
     Route::resource('soundbank', SoundBankController::class)->names([
         'index' => 'soundbank.index',
         'create' => 'soundbank.create',
@@ -137,7 +133,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
-<<<<<<< HEAD
 Route::controller(GuestBookController::class)->group(function () {
     Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
     Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
@@ -146,13 +141,6 @@ Route::controller(GuestBookController::class)->group(function () {
     Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
     Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
     Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
-=======
-
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
-    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
-    Route::get('demo/theme/{id}', [UserThemeController::class, 'demo'])->name('demo.theme');
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
 });
 
 
