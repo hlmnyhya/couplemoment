@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $invitation->name }} & {{ $invitation->name2 }}</title>
     <meta name="title" content="">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('invitation/assets/images/title.jpeg') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('frontend/img/icon-couple.png') }}">
     {{-- <link rel="shortcut icon" href="{{ asset('frontend/images/icon-park-oval-love-two.png') }}"> --}}
     <meta name="theme-color" content="#212529">
     <meta name="color-scheme" content="dark">
