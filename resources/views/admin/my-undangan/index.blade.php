@@ -79,8 +79,13 @@
                                     </div>
                                     <div
                                         class="d-flex align-items-center justify-content-center gap-2 contact-hover-buttons">
+                                        <div class="btn-group">
+                                            <a href="{{ route('show_invitation_by_url', $invitation->title_invitation) }}"
+                                                class="btn btn-sm btn-light contact-hover-btn" target="_blank">Lihat
+                                                Undangan</a>
+                                        </div>
                                         <a href="{{ route('invitation.edit', $invitation->id) }}"
-                                            class="btn btn-sm btn-light contact-hover-btn">Lihat Undangan</a>
+                                            class="btn btn-sm btn-light contact-hover-btn">Edit Undangan</a>
                                         <div class="dropdown contact-hover-dropdown">
                                             <form action="{{ route('invitation.destroy', $invitation->id) }}" method="POST"
                                                 id="delete-form-{{ $invitation->id }}">
@@ -138,8 +143,8 @@
                             <p class="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
                             <span class="search-tags"><i class="fe fe-user me-2"></i>People<a href="javascript:void(0)"
                                     class="tag-addon"><i class="fe fe-x"></i></a></span>
-                            <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a href="javascript:void(0)"
-                                    class="tag-addon"><i class="fe fe-x"></i></a></span>
+                            <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a
+                                    href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
                             <span class="search-tags"><i class="fe fe-align-left me-2"></i>Articles<a
                                     href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
                             <span class="search-tags"><i class="fe fe-server me-2"></i>Tags<a href="javascript:void(0)"
@@ -664,23 +669,6 @@
             </div>
         </div>
         <!-- End Switcher -->
-
-
-        <!-- Footer Start -->
-        <footer class="footer mt-auto py-3 text-center">
-            <div class="container">
-                <span class=""> Copyright © <span id="year"></span> <a href="javascript:void(0);"
-                        class="text-primary">Sash</a>.
-                    Designed with <span class="bi bi-heart-fill text-danger"></span> by <a href="javascript:void(0);">
-                        <span class="text-primary">Spruko</span>
-                    </a> All
-                    rights
-                    reserved
-                </span>
-            </div>
-        </footer>
-        <!-- Footer End -->
-
     </div>
 
     <script>

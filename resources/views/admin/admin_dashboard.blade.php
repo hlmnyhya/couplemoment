@@ -15,8 +15,9 @@
     <meta name="keywords"
         content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('backend') }}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <!-- Favicons -->
+    <link href="{{ asset('frontend/img/icon-couple.png') }}" rel="icon">
+    <link href="{{ asset('frontend/img/icon-couple.png') }}" rel="apple-touch-icon">
 
     <!-- Choices JS -->
     <script src="{{ asset('backend') }}/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
@@ -29,7 +30,7 @@
         rel="stylesheet">
 
     <!-- Style Css -->
-    <link href="{{ asset('backend') }}/dist/assets/css/styles.min.css" rel="stylesheet">
+    <link href="{{ asset('backend') }}/dist/assets/css/styles.css" rel="stylesheet">
 
     <!-- Icons Css -->
     <link href="{{ asset('backend') }}/dist/assets/css/icons.css" rel="stylesheet">
@@ -535,7 +536,6 @@
         </div>
     </div>
     <!-- End Switcher -->
-
 
     <!-- Loader -->
     <div id="loader">
@@ -1167,8 +1167,14 @@
     <script src="{{ asset('backend') }}/dist/assets/js/index.js"></script>
 
 
+    <!-- Internal Choices JS -->
+    <script src="{{ asset('backend') }}/src/assets/js/choices.js"></script>
+
     <!-- Custom-Switcher JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/swiper/swiper-bundle.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom.js"></script>
