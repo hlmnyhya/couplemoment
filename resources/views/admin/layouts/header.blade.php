@@ -36,8 +36,6 @@
                 <!-- End::header-link -->
             </div>
             <!-- End::header-element -->
-<<<<<<< HEAD
-=======
 
             <!-- Start::header-element -->
             <div class="main-header-center  d-none d-lg-block header-link">
@@ -99,7 +97,6 @@
             </div>
             <!-- End::header-element -->
 
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         </div>
         <!-- End::header-content-left -->
 
@@ -117,9 +114,6 @@
             </div>
             <!-- End::header-element -->
 
-<<<<<<< HEAD
-            <!-- Start::header-element -->
-=======
             {{-- <!-- Start::header-element -->
             <div class="header-element country-selector">
                 <!-- Start::header-link|dropdown-toggle -->
@@ -188,7 +182,6 @@
             <!-- End::header-element --> --}}
 
             {{-- <!-- Start::header-element -->
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
             <div class="header-element header-theme-mode">
                 <!-- Start::header-link|layout-setting -->
                 <a aria-label="anchor" href="javascript:void(0);" class="header-link layout-setting">
@@ -205,21 +198,6 @@
                 </a>
                 <!-- End::header-link|layout-setting -->
             </div>
-<<<<<<< HEAD
-
-            {{-- Button Buat Undangan --}}
-<div class="header-element notifications-dropdown">
-    <!-- Start::header-link|dropdown-toggle -->
-    <a aria-label="anchor" href="{{ route('invitation.index') }}" class="header-link dropdown-toggle" aria-expanded="false">
-        <button class="btn btn-primary label-btn"><i class="ti ti-square-plus label-btn-icon me-2"></i> Buat Undangan</button>
-    </a>
-    <!-- End::header-link|dropdown-toggle -->
-</div>
-<!-- End::header-element -->
-
-
-            {{-- End Button Buat Undangan --}}
-=======
             <!-- End::header-element --> --}}
 
             {{-- <!-- Start::header-element -->
@@ -704,7 +682,6 @@
                 <!-- End::header-link|dropdown-toggle -->
             </div>
             <!-- End::header-element -->
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
 
 
             {{-- End Button Buat Undangan --}}
@@ -751,8 +728,6 @@
                 </ul>
             </div>
             <!-- End::header-element -->
-<<<<<<< HEAD
-=======
 
             <!-- Start::header-element -->
             <div class="header-element header-theme-mode">
@@ -784,7 +759,6 @@
             </div>
             <!-- End::header-element --> --}}
 
->>>>>>> 7fa8e2330ce2d1ca7174b041708d2cf92c2c11e9
         </div>
         <!-- End::header-content-right -->
 

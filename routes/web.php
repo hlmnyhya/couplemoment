@@ -59,23 +59,7 @@ Route::get('/affiliate', [AffiliateController::class, 'index'])->name('affiliate
 Route::get('/history-bonus', [HistoryBonusController::class, 'index'])->name('history-bonus');
 
 // CMS Route
-Route::controller(GalleryController::class)->group(function () {
-    Route::get('/cms/gallery', [GalleryController::class, 'index'])->name('gallery.index');
-    Route::get('/cms/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
-    Route::post('/cms/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
-    Route::get('/cms/gallery/show/{id}', [GalleryController::class, 'show'])->name('gallery.show');
-
-    // delete gallery
-    Route::get('/gallery/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('gallery.delete');
-
-    // delete photo
-    Route::get('/photo/delete/{id}', [GalleryController::class, 'deletePhoto'])->name('photo.delete');
-
-    // delete all gallery
-    Route::get('/gallery/delete-all', [GalleryController::class, 'deleteAllGallery'])->name('gallery.delete-all');
-
-});
-Route::prefix('cms')->group(function () {
+Route::prefix('cms')->middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::resource('soundbank', SoundBankController::class)->names([
         'index' => 'soundbank.index',
         'create' => 'soundbank.create',
@@ -132,14 +116,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
-Route::controller(GuestBookController::class)->group(function () {
-    Route::get('/cms/guestbook', [GuestBookController::class, 'index'])->name('guestbook.index');
-    Route::get('/cms/guestbook/create', [GuestBookController::class, 'create'])->name('guestbook.create');
-    Route::post('/cms/guestbook/store', [GuestBookController::class, 'store'])->name('guestbook.store');
-    Route::get('/cms/guestbook/edit/{id}', [GuestBookController::class, 'edit'])->name('guestbook.edit');
-    Route::patch('/cms/guestbook/update/{id}', [GuestBookController::class, 'update'])->name('guestbook.update');
-    Route::delete('/cms/guestbook/destroy/{id}', [GuestBookController::class, 'destroy'])->name('guestbook.destroy');
-    Route::post('/cms/guestbook/import', [GuestBookController::class, 'import'])->name('guestbook.import');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/themes', [UserThemeController::class, 'index'])->name('theme_user.index');
+    Route::get('/themes/{id}', [UserThemeController::class, 'detail'])->name('theme.detail');
+    Route::get('demo/theme/{id}', [UserThemeController::class, 'demo'])->name('demo.theme');
 });
 
 
