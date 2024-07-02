@@ -1,4 +1,4 @@
-<footer class="footer mt-auto py-3 text-center">
+{{-- <footer class="footer mt-auto py-3 text-center">
     <div class="container">
         <span class=""> Copyright © <span id="year"></span> <a
                 href="javascript:void(0);" class="text-primary">Sash</a>.
@@ -9,4 +9,4 @@
             reserved
         </span>
     </div>
-</footer>
+</footer> --}}

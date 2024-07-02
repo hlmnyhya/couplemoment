@@ -7,7 +7,7 @@
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Couple Moment </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
@@ -15,8 +15,9 @@
     <meta name="keywords"
         content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('backend') }}/dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <!-- Favicons -->
+    <link href="{{ asset('frontend/img/icon-couple.png') }}" rel="icon">
+    <link href="{{ asset('frontend/img/icon-couple.png') }}" rel="apple-touch-icon">
 
     <!-- Choices JS -->
     <script src="{{ asset('backend') }}/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
@@ -29,7 +30,7 @@
         rel="stylesheet">
 
     <!-- Style Css -->
-    <link href="{{ asset('backend') }}/dist/assets/css/styles.min.css" rel="stylesheet">
+    <link href="{{ asset('backend') }}/dist/assets/css/styles.css" rel="stylesheet">
 
     <!-- Icons Css -->
     <link href="{{ asset('backend') }}/dist/assets/css/icons.css" rel="stylesheet">
@@ -63,14 +64,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
 
     <!-- Sweetalerts CSS -->
-    {{-- <link rel="stylesheet" href="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.css"> --}}
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link rel="stylesheet" href="{{asset('backend/dist/assets/libs/sweetalert2/sweetalert2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
-    <link rel="stylesheet" href="{{ asset('backend') }}/dist/assets/libs/filepond/filepond.min.css">
-    <link rel="stylesheet"
-        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
-    <link rel="stylesheet"
-        href="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css">
 </head>
 
 <body>
@@ -540,7 +536,6 @@
         </div>
     </div>
     <!-- End Switcher -->
-
 
     <!-- Loader -->
     <div id="loader">
@@ -1172,8 +1167,14 @@
     <script src="{{ asset('backend') }}/dist/assets/js/index.js"></script>
 
 
+    <!-- Internal Choices JS -->
+    <script src="{{ asset('backend') }}/src/assets/js/choices.js"></script>
+
     <!-- Custom-Switcher JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="{{ asset('backend') }}/dist/assets/libs/swiper/swiper-bundle.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/custom.js"></script>
@@ -1182,6 +1183,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+    <script src="{{asset('backend')}}/dist/assets/js/code.js"></script>
     <!-- Datatables Cdn -->
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
@@ -1193,10 +1195,42 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
+    <script>
+		$(document).ready(function() {
+			$('#table').DataTable();
+		} );
+	</script>
+
     <!-- Internal Datatables JS -->
     <script src="{{ asset('backend') }}/dist/assets/js/datatables.js"></script>
 
     <!-- Sweetalerts JS -->
+    <script src="{{asset('backend')}}/dist/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{asset('backend')}}/dist/assets/js/sweet-alerts.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+            @if(Session::has('message'))
+            let type = "{{ Session::get('alert-type','info') }}"
+            switch(type){
+                case 'info':
+                toastr.info(" {{ Session::get('message') }} ");
+                break;
+        
+                case 'success':
+                toastr.success(" {{ Session::get('message') }} ");
+                break;
+        
+                case 'warning':
+                toastr.warning(" {{ Session::get('message') }} ");
+                break;
+        
+                case 'error':
+                toastr.error(" {{ Session::get('message') }} ");
+                break; 
+            }
+            @endif 
+        </script>
 
     {{-- <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script> --}}
@@ -1230,8 +1264,8 @@
         src="{{ asset('backend') }}/dist/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js">
     </script>
 
-    <script src="{{asset('backend')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
-    <script src="{{asset('backend')}}/assets/js/sweet-alerts.js"></script>
+    <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/sweet-alerts.js"></script>
 
     {{-- Plus and Minus Guest Book Form --}}
     <script>

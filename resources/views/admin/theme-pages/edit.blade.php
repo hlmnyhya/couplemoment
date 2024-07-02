@@ -44,6 +44,26 @@
 
                                 <div class="row g-2">
                                     <div class="col-sm-6">
+                                        <label for="cover" class="form-label">Cover</label>
+                                        <input type="file" class="form-control" id="cover" name="cover"
+                                            placeholder="Cover Image" onchange="previewImage_1(event)">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        @if ($theme->cover)
+                                            <img id="image_preview_1" src="{{ asset($theme->cover) }}"
+                                                class="img-fluid rounded mt-2" alt="Current Image"
+                                                style="max-width: 250px; max-height: 200px;">
+                                        @else
+                                            <img id="image_preview_1"
+                                                src="{{ asset('backend') }}/dist/assets/images/media/media-49.jpg"
+                                                class="img-fluid rounded mt-2" alt="Preview"
+                                                style="max-width: 250px; max-height: 200px;">
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="row g-2 mt-3">
+                                    <div class="col-sm-6">
                                         <label for="background_img" class="form-label">Background Image</label>
                                         <input type="file" class="form-control" id="background_img" name="background_img"
                                             placeholder="Background Image" onchange="previewImage(event)">
@@ -85,6 +105,35 @@
                                         placeholder="Name" value="{{ $theme->name }}" required>
                                 </div>
 
+                                <!-- Tampilkan kategori yang sudah dipilih sebelumnya -->
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-lg-12 mb-3">
+                                    <label for="categories" class="form-label">Categories</label>
+                                    <select class="form-control" name="categories[]" id="categories" multiple>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}"
+                                                @if (in_array($category->id, $selectedCategories)) selected @endif>{{ $category->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-lg-12 mb-3">
+                                    <label for="color_palette" class="form-label">Color Palette</label>
+                                    <select class="form-select" id="color_palette" name="color_palette" required>
+                                        <option value="dark" {{ $theme->color_palette == 'dark' ? 'selected' : '' }}>
+                                            Dark</option>
+                                        <option value="light" {{ $theme->color_palette == 'light' ? 'selected' : '' }}>
+                                            Light</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-lg-12 mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea class="form-control" id="description" name="description" placeholder="Description" required
+                                        cols="30" rows="10">{{ $theme->description }}</textarea>
+                                </div>
+
+
                                 <button type="submit" class="btn btn-primary">Update</button>
                             </form>
 
@@ -97,6 +146,20 @@
 
         </div>
     </div>
+
+    {{-- Preview Image JS START --}}
+    <script>
+        function previewImage_1(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var imgElement = document.getElementById('image_preview_1');
+                imgElement.src = reader.result;
+                imgElement.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+    {{-- Preview Image JS END --}}
 
     {{-- Preview Image JS START --}}
     <script>

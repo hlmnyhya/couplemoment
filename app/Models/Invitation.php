@@ -9,5 +9,25 @@ class Invitation extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['user_id', 'theme_id', 'soundbank_id', 'title_invitation', 'panggilan_pria', 'panggilan_perempuan', 'name', 'name2', 'wali_name', 'wali_name2', 'code', 'thumbnail_img', 'language', 'url', 'description', 'date_invitation', 'time_invitation', 'timezone', 'address_invitation', 'address_url', 'address_maps', 'nama_bank', 'no_rekening', 'name_rekening'];
+
+    public function theme()
+    {
+        return $this->belongsTo(Theme::class, 'theme_id');
+    }
+
+    public function soundbank()
+    {
+        return $this->belongsTo(SoundBank::class, 'soundbank_id');
+    }
+
+    public function invitationGreetings()
+    {
+        return $this->hasMany(InvitationGreeting::class, 'invitation_id');
+    }
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'invitation_id');
+    }
 }
