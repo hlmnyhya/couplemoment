@@ -1616,11 +1616,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<< HEAD
-            "time": "2023-12-22T14:39:10+00:00"
-=======
             "time": "2024-01-30T16:25:02+00:00"
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
         },
         {
             "name": "laravel/prompts",
