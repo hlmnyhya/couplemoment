@@ -145,28 +145,10 @@
                     <!-- End::slide -->
                     <!-- Start::slide -->
                     <li class="slide">
-<<<<<<< HEAD
-                        <a href="{{route('gallery.index')}}" class="side-menu__item">All Galery</a>
-                    </li>
-                </ul>
-            </li>
-            <!-- End::slide -->
-              <!-- Start::slide -->
-              <li class="slide has-sub">
-                <a href="javascript:void(0);" class="side-menu__item">
-                    <i class="fe fe-slack side-menu__icon"></i>
-                    <span class="side-menu__label">Manage Assets</span>
-                    <i class="fe fe-chevron-right side-menu__angle"></i>
-                </a>
-                <ul class="slide-menu child1">
-                    <li class="slide side-menu__label1">
-                        <a href="javascript:void(0)">Assets</a>
-=======
                         <a href="{{ route('my-undangan') }}" class="side-menu__item">
                             <i class="fe fe-folder side-menu__icon"></i>
                             <span class="side-menu__label">My Undangan</span>
                         </a>
->>>>>>> 6046cce4b268caee4da34dfe670fa94f3793067b
                     </li>
                     <!-- End::slide -->
 
