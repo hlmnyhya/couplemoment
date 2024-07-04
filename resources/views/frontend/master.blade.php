@@ -224,22 +224,6 @@
                         </div>
 
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> caffab85aeeacec537403ae57a87ead86b439a84
-                    <div class="row mt-4">
-                        <div class="col-lg-4 mx-auto">
-                            <a href="#" class="btn btn-primary btn-block">See All Posts</a>
-                        </div>
-                    </div>
-                </div>
-=======
-
-                </div><!-- End Feature Icons -->
-
->>>>>>> 6046cce4b268caee4da34dfe670fa94f3793067b
             </div>
 
         </section><!-- End Features Section -->
