@@ -123,110 +123,98 @@
             <i class="bi bi-whatsapp"></i>
             <span class="button-text">Hubungi Kami</span></a>
 
-        <!-- ======= Features Section ======= -->
-        <section class="features">
+       <!-- ======= Features Section ======= -->
+<section class="features">
 
-            <div class="container" data-aos="fade-up">
-                <!-- Feature Icons -->
-                <div class="row feature-icons" data-aos="fade-up">
-                    <h3>Fitur yang Ditawarkan</h3>
+    <div class="container" data-aos="fade-up">
+        <!-- Feature Icons -->
+        <div class="row feature-icons" data-aos="fade-up">
+            <h3>Fitur yang Ditawarkan</h3>
 
-                    <div class="row">
+            <div class="row">
 
-                        <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                            <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4"
-                                alt="" style="max-width: 85%;margin-bottom: 20px;">
+                <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                    <img src="{{ asset('frontend/img/features-3.png') }}" class="img-fluid p-4" alt="" style="max-width: 85%; margin-bottom: 20px;">
+                </div>
+
+                <div class="col-xl-8 d-flex content">
+                    <div class="row align-self-center gy-4">
+
+                        <div class="col-md-6 icon-box" data-aos="fade-up">
+                            <i class="bi bi-envelope-heart"></i>
+                            <div>
+                                <h4>Costum Nama Tamu Sepuasnya</h4>
+                                <p style="text-align: justify;">Undang sebanyak mungkin tamu yang kamu inginkan tanpa batasan. Buat secara personal, untuk mengundang tamu yang lebih sopan.</p>
+                            </div>
                         </div>
 
-                        <div class="col-xl-8 d-flex content">
-                            <div class="row align-self-center gy-4">
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <i class="bi bi-person-hearts"></i>
+                            <div>
+                                <h4>Detail Mempelai</h4>
+                                <p style="text-align: justify;">Lihat informasi lengkap kedua mempelai, seperti nama mempelai, nama orang tua, dan tautan akun instagram mempelai.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up">
-                                    <i class="bi bi-envelope-heart"></i>
-                                    <div>
-                                        <h4>Costum Nama Tamu Sepuasnya</h4>
-                                        <p style="text-align:justify;">Undang sebanyak mungkin tamu yang kamu inginkan
-                                            tanpa batasan. Buat secara personal, untuk mengundang tamu yang lebih sopan.
-                                        </p>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-calendar-heart"></i>
+                            <div>
+                                <h4>Detail Acara</h4>
+                                <p style="text-align: justify;">Menampilkan tanggal, waktu, dan lokasi untuk akad & resepsi pernikahanmu.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <i class="bi bi-person-hearts"></i>
-                                    <div>
-                                        <h4>Detail Mempelai</h4>
-                                        <p style="text-align:justify;">Lihat informasi lengkap kedua mempelai, seperti
-                                            nama mempelai, nama orang tua, dan tautan akun instagram mempelai.</p>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-camera"></i>
+                            <div>
+                                <h4>Galeri Foto & Video</h4>
+                                <p style="text-align: justify;">Unggah foto & video spesial atau momen prewedding di dalam undangan digitalmu.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                                    <i class="bi bi-calendar-heart"></i>
-                                    <div>
-                                        <h4>Detail Acara</h4>
-                                        <p style="text-align:justify;">Menampilkan tanggal, waktu, dan lokasi untuk
-                                            akad & resepsi pernikahanmu.</p>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-hourglass-split"></i>
+                            <div>
+                                <h4>Hitung Mundur</h4>
+                                <p style="text-align: justify;">Menampilkan waktu hitung mundur mulai dari saat pembuatan undangan hingga hari H resepsi. Jangan biarkan tamu kamu kehilangan momen spesialmu.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                                    <i class="bi bi-camera"></i>
-                                    <div>
-                                        <h4>Galeri Foto & Video</h4>
-                                        <p style="text-align:justify;">Unggah foto & video spesial atau momen
-                                            prewedding di dalam undangan digitalmu.</p>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-house-heart"></i>
+                            <div>
+                                <h4>Navigasi Lokal</h4>
+                                <p style="text-align: justify;">Jangan khawatir tamu undangan akan susah mencari tempat resepsimu. Couple Moment menyediakan petunjuk lokasi dengan integrasi dengan Google Maps.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                                    <i class="bi bi-hourglass-split"></i>
-                                    <div>
-                                        <h4>Hitung Mundur</h4>
-                                        <p style="text-align:justify;">Menampilkan waktu hitung mundur mulai dari saat
-                                            pembuatan undangan hingga hari H resepsi. Jangan biarkan tamu kamu
-                                            kehilangan momen spesialmu.</p>
-                                    </div>
-                                </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-arrow-through-heart"></i>
+                            <div>
+                                <h4>Kisah Cintamu</h4>
+                                <p style="text-align: justify;">Beritahu tamu undangan kisah cintamu, contohnya kapan kalian bertemu, kapan kalian menyatakan cinta, dan kapan akhirnya lamaran itu tiba. Kisah cintamu akan terpajang rapi di undangan digitalmu.</p>
+                            </div>
+                        </div>
 
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="bi bi-house-heart"></i>
-                                    <div>
-                                        <h4>Navigasi Lokal</h4>
-                                        <p style="text-align:justify;">Jangan khawatir tamu undangan akan susah mencari
-                                            tempat resepsimu. Couple Moment menyediakan petunjuk lokasi dengan integrasi
-                                            dengan Google Maps.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                                    <i class="bi bi-arrow-through-heart"></i>
-                                    <div>
-                                        <h4>Kisah Cintamu</h4>
-                                        <p style="text-align:justify;">Beritahu tamu undangan kisah cintamu, contohnya
-                                            kapan kalian bertemu, kapan kalian menyatakan cinta, dan kapan akhirnya
-                                            lamaran itu tiba. Kisah cintamu akan terpajang rapi di undangan digitalmu.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="bi bi-chat-heart reversed-icon"></i>
-                                    <div>
-                                        <h4>Kirim Salam dan Pastikan Kehadiran</h4>
-                                        <p style="text-align:justify;">Mau mengetahui siapa saja yang hadir dan
-                                            mengirimkan ucapan manis untuk pernikahanmu? Couple Moment menyediakan fitur
-                                            kepada tamu undangan untuk dapat memberikan ucapan dan konfirmasi kehadiran
-                                            langsung dalam undangan digitalmu.</p>
-                                    </div>
-                                </div>
-
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-chat-heart"></i>
+                            <div>
+                                <h4>Kirim Salam dan Pastikan Kehadiran</h4>
+                                <p style="text-align: justify;">Mau mengetahui siapa saja yang hadir dan mengirimkan ucapan manis untuk pernikahanmu? Couple Moment menyediakan fitur kepada tamu undangan untuk dapat memberikan ucapan dan konfirmasi kehadiran langsung dalam undangan digitalmu.</p>
                             </div>
                         </div>
 
                     </div>
-            </div>
+                </div>
 
-        </section><!-- End Features Section -->
+            </div><!-- End row -->
+
+        </div><!-- End Feature Icons -->
+
+    </div>
+
+</section><!-- End Features Section -->
+
 
         <!-- ======= About Section ======= -->
         <section class="about">
@@ -768,12 +756,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section><!-- End Pricing Section -->
 
         <!-- ======= Testimonials Section ======= -->
-        <section id="portofolio" class="testimonials" style="background-image: url('frontend/img/hero-bg.png')">
+       {{-- <section id="portofolio" class="testimonials" style="background-image: url('frontend/img/hero-bg.png')">
 
             <div class="container" data-aos="fade-up">
 
@@ -791,7 +778,7 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                {{-- buatkan perulangan nya disini, dari data testimonial dan ambil data yang terbaru --}}
+                                
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                         class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -894,7 +881,9 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
-            </div>
+            </div>        <!-- End Contact Section -->
+
+        </section> --}}
             <!-- ======= Contact Section ======= -->
             <section class="contact" style="background-image: url('frontend/img/hero-bg1.png')">
                 <header class="section-header">
@@ -938,39 +927,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            {{-- <form action="" method="post" class="php-email-form">
-                                <div class="row gy-4">
 
-                                    <div class="col-md-6">
-                                        <input type="text" name="name" class="form-control"
-                                            placeholder="Your Name" required>
-                                    </div>
-
-                                    <div class="col-md-6 ">
-                                        <input type="email" class="form-control" name="email"
-                                            placeholder="Your Email" required>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" name="subject"
-                                            placeholder="Subject" required>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <textarea class="form-control" name="message" rows="6" placeholder="Maksimal 100 Karakter" maxlength="100"
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="col-md-12 text-center">
-                                        <div class="loading">Loading</div>
-                                        <div class="error-message"></div>
-                                        <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                        <button type="submit">Send Message</button>
-                                    </div>
-
-                                </div>
-                            </form> --}}
                             <form action="" method="post" class="php-email-form"
                                 onsubmit="sendMessage(event)">
                                 <div class="row gy-4">
@@ -991,10 +948,10 @@
                                             required></textarea>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                        <div class="loading">Loading</div>
+                                        {{-- <div class="loading">Loading</div> --}}
                                         {{-- <div class="error-message"></div> --}}
-                                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                                        <button type="submit">Kirim Pesan</button>
+                                        {{-- <div class="sent-message">Your message has been sent. Thank you!</div> --}}
+                                        <button type="submit" class="btn-get-started">Kirim Pesan</button>
                                     </div>
                                 </div>
                             </form>
@@ -1005,8 +962,6 @@
                 </div>
 
             </section><!-- End Contact Section -->
-
-        </section><!-- End Testimonials Section -->
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -1047,13 +1002,6 @@
                                     href="https://wa.me/+6281528464820?text=Hi!%20Couple Moment,%20apakah%20saya%20bisa%20bisa%20bergabung%20menjadi%20bagian%20dari%20reseller%20?">Menjadi
                                     Reseller</a></li>
                         </ul>
-
-                        {{-- <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Whatsapp</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Instagram</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Email</a></li>
-                        </ul> --}}
                     </div>
 
                     <div class="col-lg-2 col-6 footer-links">
@@ -1081,33 +1029,11 @@
         </div>
     </footer><!-- End Footer -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="example">
-                        <h1>
-                            <img src="{{ asset('frontend/img/icon-couple.png') }}"
-                                alt=""style="padding-bottom: 5px;height: 70px;">
-                            Couple Moment.
-                        </h1>
-                        <p>⏰ Segera Hadir, Website Kami Akan Meluncur Dalam Waktu...</p>
-                        <div id="flipdown" class="flipdown"></div>
-                    </div>
-                    <div id="messageAfterCountdown" style="display: none;">
-                        <p>Waktu telah habis! Pesan atau aksi lain dapat ditambahkan di sini.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Preloader Section -->
     <div class="preloader">
         <img src="{{ asset('frontend/img/icon-footer.svg') }}" alt="Couple Moment">
-        <p class="couple-moment-text">Couple Moment</p>
+        <p class="couple-moment-text">Couplemoment</p>
     </div>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -1137,25 +1063,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        // Fungsi untuk menampilkan modal saat halaman dimuat
-        $(document).ready(function() {
-            $('#exampleModalCenter').modal('show');
-
-            // Fungsi untuk menutup modal setelah 7 detik
-            setTimeout(function() {
-                $('#exampleModalCenter').modal('hide');
-            }, 5000);
-        });
-    </script>
-
-    <!-- Skrip untuk membuka modal saat dokumen dimuat -->
-    <script>
-        $(document).ready(function() {
-            $('#exampleModalCenter').modal('show');
-        });
-    </script>
 
     <!-- Skrip Audio JavaScript -->
     <script>
@@ -1196,18 +1103,18 @@
             // Simulasi pengiriman pesan (gunakan AJAX atau cara pengiriman pesan yang sesuai)
             // Di sini, kita hanya menampilkan pesan berhasil
             const sentMessage = document.querySelector('.sent-message');
-            sentMessage.style.display = 'block';
+            sentMessage.style.display = 'btn-get-started';
 
             // Sembunyikan loading message
             const loadingMessage = document.querySelector('.loading');
-            loadingMessage.style.display = 'none';
+            loadingMessage.style.display = 'btn-get-started';
 
             // Reset form
             document.querySelector('.php-email-form').reset();
 
             // Optional: Tambahkan delay sebelum menyembunyikan pesan
             setTimeout(() => {
-                sentMessage.style.display = 'none';
+                sentMessage.style.display = 'btn-get-started';
             }, 3000); // Tampilkan pesan selama 3 detik (3000 milidetik)
         }
     </script>

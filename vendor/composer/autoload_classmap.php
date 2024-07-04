@@ -3992,8 +3992,6 @@ return array(
     'PHPUnit\\Logging\\TestDox\\TestResultCollectionIterator' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/TestResultCollectionIterator.php',
     'PHPUnit\\Logging\\TestDox\\TestResultCollector' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/TestResultCollector.php',
     'PHPUnit\\Logging\\TestDox\\TestSkippedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestSkippedSubscriber.php',
-<<<<<<< HEAD
-=======
     'PHPUnit\\Logging\\TestDox\\TestTriggeredDeprecationSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredDeprecationSubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestTriggeredNoticeSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredNoticeSubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestTriggeredPhpDeprecationSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredPhpDeprecationSubscriber.php',
@@ -4003,7 +4001,6 @@ return array(
     'PHPUnit\\Logging\\TestDox\\TestTriggeredPhpunitErrorSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredPhpunitErrorSubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestTriggeredPhpunitWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredPhpunitWarningSubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestTriggeredWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredWarningSubscriber.php',
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
     'PHPUnit\\Metadata\\After' => $vendorDir . '/phpunit/phpunit/src/Metadata/After.php',
     'PHPUnit\\Metadata\\AfterClass' => $vendorDir . '/phpunit/phpunit/src/Metadata/AfterClass.php',
     'PHPUnit\\Metadata\\Annotation\\Parser\\DocBlock' => $vendorDir . '/phpunit/phpunit/src/Metadata/Parser/Annotation/DocBlock.php',

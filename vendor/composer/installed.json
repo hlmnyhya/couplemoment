@@ -1644,19 +1644,6 @@
         },
         {
             "name": "laravel/breeze",
-<<<<<<< HEAD
-            "version": "v1.27.0",
-            "version_normalized": "1.27.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/breeze.git",
-                "reference": "b0ac214483b5cf42fe5a8007d643d0fe9f95e2e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/b0ac214483b5cf42fe5a8007d643d0fe9f95e2e1",
-                "reference": "b0ac214483b5cf42fe5a8007d643d0fe9f95e2e1",
-=======
             "version": "v1.28.1",
             "version_normalized": "1.28.1.0",
             "source": {
@@ -1668,7 +1655,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/breeze/zipball/e853918e770822780efd160a73fd676992340aca",
                 "reference": "e853918e770822780efd160a73fd676992340aca",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
                 "shasum": ""
             },
             "require": {
@@ -1682,11 +1668,7 @@
                 "orchestra/testbench": "^8.0",
                 "phpstan/phpstan": "^1.10"
             },
-<<<<<<< HEAD
             "time": "2023-12-19T14:44:20+00:00",
-=======
-            "time": "2024-01-15T16:14:10+00:00",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1727,19 +1709,6 @@
         },
         {
             "name": "laravel/framework",
-<<<<<<< HEAD
-            "version": "v10.38.2",
-            "version_normalized": "10.38.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "43da808391da3540d44a8dfeb4e46da4ad8f5723"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/43da808391da3540d44a8dfeb4e46da4ad8f5723",
-                "reference": "43da808391da3540d44a8dfeb4e46da4ad8f5723",
-=======
             "version": "v10.43.0",
             "version_normalized": "10.43.0.0",
             "source": {
@@ -1751,7 +1720,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/4f7802dfc9993cb57cf69615491ce1a7eb2e9529",
                 "reference": "4f7802dfc9993cb57cf69615491ce1a7eb2e9529",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
                 "shasum": ""
             },
             "require": {
@@ -1900,11 +1868,7 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
             },
-<<<<<<< HEAD
-            "time": "2023-12-22T14:39:10+00:00",
-=======
             "time": "2024-01-30T16:25:02+00:00",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4445,19 +4409,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-            "version": "10.5.3",
-            "version_normalized": "10.5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6fce887c71076a73f32fd3e0774a6833fc5c7f19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6fce887c71076a73f32fd3e0774a6833fc5c7f19",
-                "reference": "6fce887c71076a73f32fd3e0774a6833fc5c7f19",
-=======
             "version": "10.5.10",
             "version_normalized": "10.5.10.0",
             "source": {
@@ -4469,7 +4420,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50b8e314b6d0dd06521dc31d1abffa73f25f850c",
                 "reference": "50b8e314b6d0dd06521dc31d1abffa73f25f850c",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
                 "shasum": ""
             },
             "require": {
@@ -4503,11 +4453,7 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
-<<<<<<< HEAD
             "time": "2023-12-13T07:25:23+00:00",
-=======
-            "time": "2024-02-04T09:07:51+00:00",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
             "bin": [
                 "phpunit"
             ],
@@ -4547,11 +4493,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.3"
-=======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.10"
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
             },
             "funding": [
                 {
@@ -6599,19 +6541,6 @@
         },
         {
             "name": "spatie/laravel-ignition",
-<<<<<<< HEAD
-            "version": "2.3.3",
-            "version_normalized": "2.3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "66499cd3c858642ded56dafb8fa0352057ca20dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/66499cd3c858642ded56dafb8fa0352057ca20dd",
-                "reference": "66499cd3c858642ded56dafb8fa0352057ca20dd",
-=======
             "version": "2.4.1",
             "version_normalized": "2.4.1.0",
             "source": {
@@ -6623,7 +6552,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/005e1e7b1232f3b22d7e7be3f602693efc7dba67",
                 "reference": "005e1e7b1232f3b22d7e7be3f602693efc7dba67",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
                 "shasum": ""
             },
             "require": {
@@ -6652,11 +6580,7 @@
                 "openai-php/client": "Require get solutions from OpenAI",
                 "psr/simple-cache-implementation": "Needed to cache solutions from OpenAI"
             },
-<<<<<<< HEAD
-            "time": "2023-12-21T09:43:05+00:00",
-=======
             "time": "2024-01-12T13:14:58+00:00",
->>>>>>> 4be0ce12f5555f1f938b4b7f534a7010f8e43ade
             "type": "library",
             "extra": {
                 "laravel": {
